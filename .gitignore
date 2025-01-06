@@ -1,0 +1,78 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+anki-cards-env/
+.env/
+.venv/
+env/
+venv/
+
+# Logs and Debug Files
+*.log
+*.out
+*.err
+*.bak
+
+# IDE and Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.sublime-workspace
+
+# Dependencies
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Cache Files
+.cache/
+*.pytest_cache/
+*.mypy_cache/
+
+# Environment Variables and Secrets
+*.env
+.envrc
+*.key
+*.pem
+
+# Data and Output Files
+data/cards.csv
+
+# Anki Exported Decks
+*.apkg
+*.colpkg
+*.anki2
+
+# Temporary or Backup Files
+*.tmp
+*.~*
+.DS_Store
+Thumbs.db
+
+# Git hooks (optional: exclude custom hooks)
+# .git/hooks/*.sample
+
+# Testing and Coverage Reports
+.coverage
+coverage.xml
+htmlcov/
+nosetests.xml
+*.cover
+*.coverage
+.cache/
+junit.xml
+pytestdebug.log
+
+# Tooling Output (optional)
+*.log
+*.lock
+*.pid
+
+
