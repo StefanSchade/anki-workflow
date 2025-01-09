@@ -3,7 +3,7 @@
 set -euo pipefail
 
 echo "Setting up environment..."
-./setup_env.sh
+./utilities/scripts/setup_env.sh
 
 echo "Validating flashcard JSON files..."
 python3 utilities/src/validate_cards.py

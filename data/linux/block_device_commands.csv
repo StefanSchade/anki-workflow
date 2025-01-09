@@ -1,0 +1,4 @@
+ID,Front,Back,Tags
+linux-block_device_commands-blk_command_1,What is the command to list block devices?,lsblk,linux;block_device_commands;block_device_commands
+linux-block_device_commands-blk_command_2,What does the 'dmesg' command do?,Displays kernel ring buffer messages.,linux;block_device_commands;block_device_commands
+linux-block_device_commands-fdisk_command_1,What command manipulates partition tables?,fdisk,linux;block_device_commands;block_device_commands
