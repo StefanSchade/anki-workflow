@@ -1,0 +1,37 @@
+{
+  "cards": [
+    {
+      "id": "linux-net_devices-ip_command",
+      "type": "basic",
+      "question": "What command is used to display network devices and their states?",
+      "answer": "ip link",
+      "tags": ["linux", "networking", "devices"]
+    },
+    {
+      "id": "linux-rename-net_device",
+      "type": "cloze",
+      "question": "To rename a network device, use the {{c1::ip link set}} command.",
+      "tags": ["linux", "networking", "devices"]
+    },
+    {
+      "id": "linux-static-ip-setup",
+      "type": "typing",
+      "question": "What command sets a static IP address for a device?",
+      "answer": "ip addr add",
+      "tags": ["linux", "networking", "configuration"]
+    },
+    {
+      "id": "linux-net_devices-static_route",
+      "type": "multiple-choice",
+      "question": "Which command adds a static route to a network?",
+      "choices": [
+        {"text": "ip route add", "correct": true},
+        {"text": "ip addr add", "correct": false},
+        {"text": "ip link set", "correct": false}
+      ],
+      "tags": ["linux", "networking", "routing"]
+    }
+  ],
+  "tags": ["linux", "networking"]
+}
+

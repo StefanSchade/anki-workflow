@@ -1,23 +1,24 @@
 import json
 import os
+from jsonschema import validate, ValidationError
+
+# Load the schema
+SCHEMA_PATH = "./utilities/templates/flashcard_schema.json"
+with open(SCHEMA_PATH, 'r') as schema_file:
+    SCHEMA = json.load(schema_file)
 
 def validate_json(file_path):
     try:
         with open(file_path, 'r') as f:
             data = json.load(f)
 
-        # Validate required keys
-        if 'type' not in data or 'fields' not in data:
-            return False, "Missing 'type' or 'fields'."
-
-        # Validate fields
-        for field in data['fields']:
-            if 'question' not in field or 'answer' not in field:
-                return False, f"Field error in {file_path}."
-
+        # Validate using the schema
+        validate(instance=data, schema=SCHEMA)
         return True, "Valid."
     except json.JSONDecodeError as e:
         return False, f"Invalid JSON: {str(e)}"
+    except ValidationError as e:
+        return False, f"Schema validation error: {str(e)}"
 
 def check_all_topics():
     base_dir = "../topics"
