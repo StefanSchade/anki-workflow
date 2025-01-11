@@ -2,11 +2,9 @@ import json
 import csv
 import os
 
-
 def safe_deck_name(path):
     """Replaces only slashes with underscores while preserving existing underscores."""
     return path.replace("/", "__")  # Double underscore to avoid conflicts
-
 
 def export_to_csv(input_dir, output_dir):
     # Ensure output directory exists
@@ -40,18 +38,24 @@ def export_to_csv(input_dir, output_dir):
                             # Construct full ID
                             card_id = f"{deck_name}-{tag_name}-{card['id']}"
 
+                            # Determine 'Back' (answer or placeholder for multiple-choice)
+                            if card['type'] == 'multiple-choice':
+                                back = "; ".join([f"{choice['text']} ({'✔' if choice['correct'] else '✘'})" for choice in card.get('choices', [])])
+                            else:
+                                back = card.get('answer', "N/A")
+
                             # Combine tags
                             tags = ";".join(data.get('tags', [])) + f";{tag_name}"
 
                             # Write to CSV
-                            writer.writerow([card_id, card['question'], card['answer'], tags])
+                            writer.writerow([card_id, card['question'], back, tags])
 
                 print(f"Exported deck: {deck_name}/{tag_name} → {output_file}")
 
-
 if __name__ == "__main__":
-    # Define paths
-    input_dir = os.path.join(os.path.dirname(__file__), "../../topics")
-    output_dir = os.path.join(os.path.dirname(__file__), "../../data")
+    # Define default paths for input and output
+    input_dir = "./topics"
+    output_dir = "./data"
+    
     export_to_csv(input_dir, output_dir)
 
