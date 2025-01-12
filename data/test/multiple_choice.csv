@@ -1,3 +1,0 @@
-ID,Front,Back,Tags
-test-multiple_choice-test-multiple-choice-1,"Which command adds a static route to a network?<br><br>1. ip route add<br>2. ip addr add<br>3. ip link set<br><br>Please give the number(s) of the correct answer(s), separated by spaces.",Correct Answer(s): 1<br><br>,test;multiple_choice
-test-multiple_choice-test-multiple-choice-2,"Which command is used to configure an IP address?<br><br>1. ip addr add<br>2. ip route add<br>3. ip link set<br><br>Please give the number(s) of the correct answer(s), separated by spaces.",Correct Answer(s): 1<br><br>,test;multiple_choice

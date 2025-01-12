@@ -43,7 +43,8 @@ build/
 *.pem
 
 # Data and Output Files
-data/cards.csv
+data/
+/*.txt
 
 # Anki Exported Decks
 *.apkg
