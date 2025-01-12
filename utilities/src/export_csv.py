@@ -45,10 +45,10 @@ def export_to_csv(input_dir, output_dir):
                                 correct_answers = [str(idx+1) for idx, choice in enumerate(choices) if choice['correct']]
                                 if correct_answers:
                                     back = f"Correct Answer(s): {' '.join(correct_answers)}\n\n"
-                                    back += "Explanations:\n"
-                                    for idx, choice in enumerate(choices):
-                                        explanation = choice.get('explanation', "No explanation provided.")
-                                        back += f"{idx+1}. {choice['text']}: {explanation}\n"
+                                #    back += "Explanations:\t"
+                                #    for idx, choice in enumerate(choices):
+                                #        explanation = choice.get('explanation', "No explanation provided.")
+                                #        back += f"{idx+1}. {choice['text']}: {explanation}\n"
                                 else:
                                     back = "This was a trick question - there was no correct answer."
 
@@ -57,10 +57,13 @@ def export_to_csv(input_dir, output_dir):
                                 front = card.get('question', "N/A")
                                 back = card.get('answer', "N/A")
 
+                            # Replace line breaks with <br>
+                            front = front.replace("\n", "<br>")
+                            back = back.replace("\n", "<br>")
+
                             writer.writerow([card_id, front, back, tags])
 
                 print(f"Exported deck: {deck_name}/{tag_name} → {output_file}")
-
 
 
 if __name__ == "__main__":

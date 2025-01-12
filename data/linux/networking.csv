@@ -2,16 +2,4 @@ ID,Front,Back,Tags
 linux-networking-linux-net_devices-ip_command,What command is used to display network devices and their states?,ip link,linux;networking;networking
 linux-networking-linux-rename-net_device,"To rename a network device, use the {{c1::ip link set}} command.",N/A,linux;networking;networking
 linux-networking-linux-static-ip-setup,What command sets a static IP address for a device?,ip addr add,linux;networking;networking
-linux-networking-linux-net_devices-static_route,"Which command adds a static route to a network?
-
-1. ip route add
-2. ip addr add
-3. ip link set
-
-Please give the number(s) of the correct answer(s), separated by spaces.","Correct Answer(s): 1
-
-Explanations:
-1. ip route add: No explanation provided.
-2. ip addr add: No explanation provided.
-3. ip link set: No explanation provided.
-",linux;networking;networking
+linux-networking-linux-net_devices-static_route,"Which command adds a static route to a network?<br><br>1. ip route add<br>2. ip addr add<br>3. ip link set<br><br>Please give the number(s) of the correct answer(s), separated by spaces.",Correct Answer(s): 1<br><br>,linux;networking;networking
