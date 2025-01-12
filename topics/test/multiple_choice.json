@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "id": "test-multiple-choice-1",
+      "type": "multiple-choice",
+      "question": "Which command adds a static route to a network?",
+      "choices": [
+        {"text": "ip route add", "correct": true, "explanation": "This is the correct command to add a static route."},
+        {"text": "ip addr add", "correct": false, "explanation": "This command configures an IP address, not a route."},
+        {"text": "ip link set", "correct": false, "explanation": "This command configures network devices."}
+      ],
+      "tags": ["test", "multiple-choice"]
+    },
+    {
+      "id": "test-multiple-choice-2",
+      "type": "multiple-choice",
+      "question": "Which command is used to configure an IP address?",
+      "choices": [
+        {"text": "ip addr add", "correct": true, "explanation": "This is the correct command to configure an IP address."},
+        {"text": "ip route add", "correct": false, "explanation": "This command adds a static route."},
+        {"text": "ip link set", "correct": false, "explanation": "This command configures network devices."}
+      ],
+      "tags": ["test", "multiple-choice"]
+    }
+  ],
+  "tags": ["test"]
+}
+

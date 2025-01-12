@@ -1,0 +1,27 @@
+ID,Front,Back,Tags
+test-multiple_choice-test-multiple-choice-1,"Which command adds a static route to a network?
+
+1. ip route add
+2. ip addr add
+3. ip link set
+
+Please give the number(s) of the correct answer(s), separated by spaces.","Correct Answer(s): 1
+
+Explanations:
+1. ip route add: This is the correct command to add a static route.
+2. ip addr add: This command configures an IP address, not a route.
+3. ip link set: This command configures network devices.
+",test;multiple_choice
+test-multiple_choice-test-multiple-choice-2,"Which command is used to configure an IP address?
+
+1. ip addr add
+2. ip route add
+3. ip link set
+
+Please give the number(s) of the correct answer(s), separated by spaces.","Correct Answer(s): 1
+
+Explanations:
+1. ip addr add: This is the correct command to configure an IP address.
+2. ip route add: This command adds a static route.
+3. ip link set: This command configures network devices.
+",test;multiple_choice

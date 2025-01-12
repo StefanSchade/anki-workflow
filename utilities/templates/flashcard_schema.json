@@ -1,69 +1,26 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Flashcard Schema",
-  "description": "Schema for validating flashcard JSON files for multiple card types.",
   "type": "object",
   "properties": {
-    "cards": {
+    "id": { "type": "string" },
+    "type": { "enum": ["multiple-choice"] },
+    "question": { "type": "string" },
+    "choices": {
       "type": "array",
-      "description": "Array of cards for this file.",
       "items": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "description": "Unique identifier for the card."
-          },
-          "type": {
-            "type": "string",
-            "enum": ["basic", "cloze", "typing", "multiple-choice"],
-            "description": "Type of the flashcard."
-          },
-          "question": {
-            "type": "string",
-            "description": "Question or prompt for the card."
-          },
-          "answer": {
-            "type": "string",
-            "description": "Answer for the card (used for basic, typing, or cloze types)."
-          },
-          "choices": {
-            "type": "array",
-            "description": "List of choices for multiple-choice questions.",
-            "items": {
-              "type": "object",
-              "properties": {
-                "text": {
-                  "type": "string",
-                  "description": "Text of the choice."
-                },
-                "correct": {
-                  "type": "boolean",
-                  "description": "Specifies whether this choice is a correct answer for the card."
-                }
-              },
-              "required": ["text", "correct"]
-            }
-          },
-          "tags": {
-            "type": "array",
-            "description": "Tags for categorizing the card.",
-            "items": {
-              "type": "string"
-            }
-          }
+          "text": { "type": "string" },
+          "correct": { "type": "boolean" },
+          "explanation": { "type": "string" }
         },
-        "required": ["id", "type", "question"]
+        "required": ["text", "correct"]
       }
     },
     "tags": {
       "type": "array",
-      "description": "Tags that apply to all cards in this file.",
-      "items": {
-        "type": "string"
-      }
+      "items": { "type": "string" }
     }
   },
-  "required": ["cards"]
+  "required": ["id", "type", "question", "choices"]
 }
 

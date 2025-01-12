@@ -1,10 +1,4 @@
-import json
-import csv
-import os
-
-def safe_deck_name(path):
-    """Replaces only slashes with underscores while preserving existing underscores."""
-    return path.replace("/", "__")  # Double underscore to avoid conflicts
+==== File: ./utilities/src/export_csv.py ====
 
 def export_to_csv(input_dir, output_dir):
     # Ensure output directory exists
@@ -62,9 +56,11 @@ def export_to_csv(input_dir, output_dir):
                 print(f"Exported deck: {deck_name}/{tag_name} → {output_file}")
 
 
+==== File: ./data/linux/networking.csv ====
 
-if __name__ == "__main__":
-    # Define default paths for input and output
-    input_dir = "./topics"
-    output_dir = "./data"
-    export_to_csv(input_dir, output_dir)
+ID,Front,Back,Tags
+linux-networking-linux-net_devices-ip_command,What command is used to display network devices and their states?,ip link,linux;networking;networking
+linux-networking-linux-rename-net_device,"To rename a network device, use the {{c1::ip link set}} command.",N/A,linux;networking;networking
+linux-networking-linux-static-ip-setup,What command sets a static IP address for a device?,ip addr add,linux;networking;networking
+linux-networking-linux-net_devices-static_route,Which command adds a static route to a network?,ip route add (✔); ip addr add (✘); ip link set (✘),linux;networking;networking
+
