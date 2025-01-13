@@ -37,20 +37,23 @@ def export_to_csv(input_dir, output_dir):
                         if output_file not in writers:
                             csvfile = open(output_file, 'w', newline='')
                             writer = csv.writer(csvfile)
-                            # writer.writerow(["Front", "Back"])  # No header, Anki-specific format
                             writers[output_file] = (writer, csvfile)
 
                         writer, _ = writers[output_file]
                         front = card["question"].replace("\n", "<br>")
                         back = card.get("answer", "N/A").replace("\n", "<br>")
-                        writer.writerow([front, back])
+
+                        # Add the filename tag to the existing tags
+                        all_tags = card.get("tags", []) + [tag_name]
+                        tags_str = ";".join(all_tags)
+
+                        writer.writerow([front, back, tags_str])
 
                     elif card_type == "multiple-choice":
                         output_file = os.path.join(output_dir, f"{deck_name}-{tag_name}-typing.csv")
                         if output_file not in writers:
                             csvfile = open(output_file, 'w', newline='')
                             writer = csv.writer(csvfile)
-                            # writer.writerow(["Front", "Back"])  # No header
                             writers[output_file] = (writer, csvfile)
 
                         writer, _ = writers[output_file]
@@ -62,7 +65,12 @@ def export_to_csv(input_dir, output_dir):
                         back += ", ".join(correct_answers) + "<br><br>"
                         back += "Explanations:<br>"
                         back += "<br>".join([f"{idx+1}. {choice['text']}: {choice.get('explanation', 'No explanation provided.')}" for idx, choice in enumerate(choices)])
-                        writer.writerow([front, back])
+
+                        # Add the filename tag to the existing tags
+                        all_tags = card.get("tags", []) + [tag_name]
+                        tags_str = ";".join(all_tags)
+
+                        writer.writerow([front, back, tags_str])
 
                     else:
                         print(f"Skipping unknown card type: {card_type}")
