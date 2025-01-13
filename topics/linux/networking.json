@@ -1,37 +1,107 @@
 {
   "cards": [
     {
-      "id": "linux-net_devices-ip_command",
+      "id": "networking_ipv4_ipv6",
       "type": "basic",
-      "question": "What command is used to display network devices and their states?",
-      "answer": "ip link",
-      "tags": ["linux", "networking", "devices"]
+      "question": "What are IPv4 and IPv6 addresses?",
+      "answer": "IPv4 addresses are 32-bit addresses represented in decimal format (e.g., 192.168.1.1), while IPv6 addresses are 128-bit addresses represented in hexadecimal format (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). IPv6 provides a much larger address space."
     },
     {
-      "id": "linux-rename-net_device",
-      "type": "cloze",
-      "question": "To rename a network device, use the {{c1::ip link set}} command.",
-      "tags": ["linux", "networking", "devices"]
+      "id": "networking_cidr",
+      "type": "basic",
+      "question": "What is CIDR?",
+      "answer": "CIDR (Classless Inter-Domain Routing) is a method for IP address allocation and routing. It uses a prefix length (e.g., /24) to define the division between the network and host portions of an IP address, allowing flexible and efficient IP address use."
     },
     {
-      "id": "linux-static-ip-setup",
+      "id": "networking_subnet_mask",
+      "type": "basic",
+      "question": "What is a subnet mask?",
+      "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines the range of IP addresses within a subnet. For example, 255.255.255.0 indicates a subnet with 256 possible addresses."
+    },
+    {
+      "id": "networking_static_dynamic_ips",
+      "type": "basic",
+      "question": "What is the difference between static and dynamically assigned IP addresses?",
+      "answer": "A static IP address is manually assigned to a device and does not change, while a dynamically assigned IP address is allocated by a DHCP server and may change over time."
+    },
+    {
+      "id": "linux_check_nic",
       "type": "typing",
-      "question": "What command sets a static IP address for a device?",
-      "answer": "ip addr add",
-      "tags": ["linux", "networking", "configuration"]
+      "question": "What command can you use to find network interfaces in Linux?",
+      "answer": "ip link show"
     },
     {
-      "id": "linux-net_devices-static_route",
+      "id": "linux_assign_static_ip",
+      "type": "basic",
+      "question": "How do you assign a static IP to a network interface in Linux?",
+      "answer": "Use the command `ip addr add [IP]/[CIDR] dev [interface]`, e.g., `ip addr add 192.168.1.100/24 dev eth0`. Abbr: IP ip address CIDR classless inter domain routing"
+    },
+    {
+      "id": "linux_troubleshoot_connectivity",
       "type": "multiple-choice",
-      "question": "Which command adds a static route to a network?",
+      "question": "What steps can you take to troubleshoot connectivity issues in Linux?",
       "choices": [
-        {"text": "ip route add", "correct": true},
-        {"text": "ip addr add", "correct": false},
-        {"text": "ip link set", "correct": false}
-      ],
-      "tags": ["linux", "networking", "routing"]
+        { "text": "Ping the default gateway", "correct": true, "explanation": "This checks if the network connection to the gateway is functional." },
+        { "text": "Check DNS configuration", "correct": true, "explanation": "Incorrect DNS settings can cause connectivity issues." },
+        { "text": "Restart the network interface", "correct": true, "explanation": "This can resolve temporary network interface issues." },
+        { "text": "Reinstall Linux", "correct": false, "explanation": "This is not a typical troubleshooting step for network issues." }
+      ]
+    },
+    {
+      "id": "network_scan_devices",
+      "type": "basic",
+      "question": "What command can you use to scan for devices on a network?",
+      "answer": "Use the `nmap` command, e.g., `nmap -sn 192.168.1.0/24` to perform a ping scan of the network."
+    },
+    {
+      "id": "network_router_config",
+      "type": "basic",
+      "question": "How do you access and configure a router?",
+      "answer": "Access the router's web interface via its IP address (e.g., 192.168.1.1) in a web browser, and log in using the admin credentials to configure settings like DHCP, static IPs, and port forwarding."
+    },
+    {
+      "id": "wireless_network_analysis",
+      "type": "basic",
+      "question": "What tools can you use to analyze wireless networks?",
+      "answer": "Tools like `iwconfig`, `nmcli`, or GUI tools such as Wireshark can be used to analyze wireless networks in Linux."
+    },
+    {
+      "id": "recipe_troubleshooting",
+      "type": "basic",
+      "question": "What is the step-by-step process to troubleshoot a connectivity issue?",
+      "answer": "1. Check physical connections. 2. Verify the network interface state (`ip link show`). 3. Check IP configuration (`ip addr show`). 4. Ping the default gateway. 5. Check DNS settings. 6. Restart the network interface if needed. 7. Check logs with `journalctl -u NetworkManager`."
+    },
+    {
+      "id": "network_command_iwconfig",
+      "type": "basic",
+      "question": "What is the purpose of the `iwconfig` command in Linux?",
+      "answer": "The `iwconfig` command is used to configure wireless network interfaces. It can display or set parameters like SSID, mode, frequency, and encryption key."
+    },
+    {
+      "id": "network_command_nmcli",
+      "type": "basic",
+      "question": "What does the `nmcli` command do?",
+      "answer": "The `nmcli` command is a command-line tool for managing NetworkManager. It allows users to configure, monitor, and troubleshoot network connections, including both wired and wireless networks."
+    },
+    {
+      "id": "network_command_nmap",
+      "type": "basic",
+      "question": "What is the purpose of the `nmap` command?",
+      "answer": "The `nmap` command is a network scanning tool used to discover devices, open ports, and services running on a network. It is also useful for security auditing and troubleshooting network issues."
+    },
+    {
+      "id": "network_command_installation",
+      "type": "basic",
+      "question": "How do you install networking tools like `iwconfig`, `nmcli`, and `nmap` on Linux?",
+      "answer": "To install these tools, use your distribution's package manager:\n- On Debian-based systems (e.g., Ubuntu):\n  - Install `iwconfig` via `sudo apt install wireless-tools`.\n  - Install `nmcli` as part of `NetworkManager` via `sudo apt install network-manager`.\n  - Install `nmap` via `sudo apt install nmap`.\n- On Red Hat-based systems (e.g., Fedora, CentOS):\n  - Install `iwconfig` via `sudo dnf install wireless-tools`.\n  - Install `nmcli` as part of `NetworkManager` via `sudo dnf install NetworkManager`.\n  - Install `nmap` via `sudo dnf install nmap`.\nThese packages are commonly available in the default repositories of both Debian and Red Hat-based distributions."
+    },
+    {
+      "id": "network_tools_packages",
+      "type": "basic",
+      "question": "What are the most important packages for networking tools in Linux?",
+      "answer": "Some of the key packages for networking tools include:\n- `wireless-tools`: Contains commands like `iwconfig` for wireless management.\n- `network-manager`: Includes tools like `nmcli` and manages network configurations.\n- `nmap`: A versatile network scanning tool.\n- `net-tools`: Provides legacy tools like `ifconfig` and `route`.\n- `iproute2`: Modern replacement for `net-tools`, includes commands like `ip` and `ss`.\nThese packages are available in both Debian and Red Hat-based distributions and cover most networking requirements."
     }
   ],
-  "tags": ["linux", "networking"]
+  "tags": ["networking", "linux", "troubleshooting"]
 }
 
