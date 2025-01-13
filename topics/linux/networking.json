@@ -3,14 +3,8 @@
     {
       "id": "networking_ipv4_ipv6",
       "type": "basic",
-      "question": "What are IPv4 and IPv6 addresses?",
-      "answer": "IPv4 addresses are 32-bit addresses represented in decimal format (e.g., 192.168.1.1), while IPv6 addresses are 128-bit addresses represented in hexadecimal format (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). IPv6 provides a much larger address space."
-    },
-    {
-      "id": "networking_cidr",
-      "type": "basic",
-      "question": "What is CIDR?",
-      "answer": "CIDR (Classless Inter-Domain Routing) is a method for IP address allocation and routing. It uses a prefix length (e.g., /24) to define the division between the network and host portions of an IP address, allowing flexible and efficient IP address use."
+      "question": "What are IPv4 and IPv6 addresses and what is their difference?",
+      "answer": "IPv4 addresses are 32-bit addresses represented in decimal format (e.g., 192.168.1.1), while IPv6 addresses are 128-bit addresses represented in hexadecimal format (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). That IPv6 provides a much larger address space was the reason for the introduction of the new standard. IPv4 is still widely used as NAT (Network Address Translation), a technique used to modify IP addresses in packet headers as they move through a router or firewall enables private networks to share a single public IP address."
     },
     {
       "id": "networking_subnet_mask",
@@ -19,10 +13,16 @@
       "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines the range of IP addresses within a subnet. For example, 255.255.255.0 indicates a subnet with 256 possible addresses."
     },
     {
+      "id": "networking_subnet_mask_nat",
+      "type": "basic",
+      "question": "How do the concepts of nat and subnetmasks relate to each other?",
+      "answer": "subnetmask: deals with logical segmentation of the internal network / determins how devices within a private network are devided into subnets (VLANs) and groups of hosts / determins if an address is local or requires routing across subnets. <br> NAT: deals with the translation of addresses between the internal network and the internet / translates private ips to public ip as traffic corsses the networks boundary (router) / from the outside all devices share the same IP irrespective of their particular subnet."
+    },
+    {
       "id": "networking_static_dynamic_ips",
       "type": "basic",
       "question": "What is the difference between static and dynamically assigned IP addresses?",
-      "answer": "A static IP address is manually assigned to a device and does not change, while a dynamically assigned IP address is allocated by a DHCP server and may change over time."
+      "answer": "A static IP address is manually assigned to a device and does not change, while a dynamically assigned IP address is allocated by a DHCP (Dynamic Host Configuration Protocol) server and may change over time."
     },
     {
       "id": "linux_check_nic",
@@ -34,7 +34,139 @@
       "id": "linux_assign_static_ip",
       "type": "basic",
       "question": "How do you assign a static IP to a network interface in Linux?",
-      "answer": "Use the command `ip addr add [IP]/[CIDR] dev [interface]`, e.g., `ip addr add 192.168.1.100/24 dev eth0`. Abbr: IP ip address CIDR classless inter domain routing"
+      "answer": "Use the command `ip addr add [IP]/[CIDR] dev [interface]`, e.g., `ip addr add 192.168.1.100/24 dev eth0`. Note that this change is temporary and will be lost after a reboot."
+    },
+    {
+      "id": "linux_static_ip_persistent_ubuntu",
+      "type": "basic",
+      "question": "How do you configure a persistent static IP in Ubuntu?",
+      "answer": "In Ubuntu, you can configure a persistent static IP by editing the Netplan configuration file (e.g., `/etc/netplan/01-netcfg.yaml`). Add the following content:\n\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      dhcp4: no\n      addresses:\n        - 192.168.1.100/24\n      gateway4: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n\nAfter editing, apply the changes using the command `sudo netplan apply`. To apply this config without reboot, use `sudo netplan apply`. This configuration is specific to Ubuntu and some other Debian-based distributions."
+    },
+    {
+      "id": "linux_netplan_apply_restart",
+      "type": "basic",
+      "question": "What is the purpose of the `sudo netplan apply` command?",
+      "answer": "The `sudo netplan apply` command applies changes made to Netplan configuration files. It ensures the network settings defined in YAML files take effect without requiring a system reboot."
+    },
+    {
+      "id": "linux_static_ip_persistent_redhat",
+      "type": "basic",
+      "question": "How do you configure a persistent static IP in Red Hat-based distributions?",
+      "answer": "In Red Hat-based distributions (e.g., Fedora, CentOS), you can configure a persistent static IP by editing the interface configuration file located in `/etc/sysconfig/network-scripts/`. For example, for the `eth0` interface, edit the file `/etc/sysconfig/network-scripts/ifcfg-eth0` and add:\n\nBOOTPROTO=none\nIPADDR=192.168.1.100\nPREFIX=24\nGATEWAY=192.168.1.1\nDNS1=8.8.8.8\nNAME=eth0\nDEVICE=eth0\nONBOOT=yes\n\nThen restart the network service using `sudo systemctl restart network` or `nmcli` commands. This method is specific to Red Hat-based distributions."
+    } ,
+    {
+      "id": "linux_network_manager_name",
+      "type": "basic",
+      "question": "If access to the NetworkManager in Linux fails - what could be the problem?",
+      "answer": "Depending on the distro the service might have a slightly different name (a common variant is `network-manager`), search for it using `sudo systemctl list-units --type=service | grep -i network`."
+    },
+    {
+      "id": "linux_network_manager",
+      "type": "basic",
+      "question": "What is the NetworkManager and what are its repsonsibilities?",
+      "answer": "The Linux Network Manager is a system service designed to simplify and manage network configurations by abstracting lower level config. Its responsibilities include: configuration of wired and wireless nics based on static and dynamic ip configs. Management and priorization of network connections. Seamlessly switch between networks (for instance when a cable is connected) / scan for wireless networks and connecting with protocols like WPA / configure dns / briging, tunneling, configuring proxys / provide information to various tools (e.g. nmcli) or graphical tools of Linux desktops"
+    },
+   {
+      "id": "linux_start_network_manager",
+      "type": "typing",
+      "question": "Asuming the network manager goes by the name `NetworkManager`, how do you start it?",
+      "answer": "sudo sysctl start NetworkManager"
+    },
+    {
+      "id": "linux_stop_network_manager",
+      "type": "typing",
+      "question": "Asuming the network manager goes by the name `NetworkManager`, how do you stop it?",
+      "answer": "sudo sysctl stop NetworkManager"
+    },
+    {
+      "id": "linux_enable_network_manager",
+      "type": "typing",
+      "question": "Asuming the network manager goes by the name `NetworkManager`, how do you ensure it starts at boot time?",
+      "answer": "sudo sysctl enable NetworkManager"
+    },
+    {
+      "id": "linux_disable_network_manager",
+      "type": "typing",
+      "question": "Asuming the network manager goes by the name `NetworkManager`, how do you prevent it from starting boot time?",
+      "answer": "sudo sysctl disable NetworkManager"
+    },
+    {
+      "id": "linux_status_network_manager",
+      "type": "typing",
+      "question": "Asuming the network manager goes by the name `NetworkManager`, how do you check the status?",
+      "answer": "sudo sysctl status NetworkManager"
+    },
+    {
+      "id": "linux_restart_network_manager",
+      "type": "typing",
+      "question": "Asuming the network manager goes by the name `NetworkManager`, how do you restart it?",
+      "answer": "sudo sysctl restart NetworkManager"
+    },
+    {
+      "id": "linux_logs_network_manager",
+      "type": "typing",
+      "question": "Asuming the network manager goes by the name `NetworkManager`, how do you check its logs?",
+      "answer": "sudo journalctl -u NetworkManager"
+    },
+    {
+      "id": "linux_interface_state",
+      "type": "basic",
+      "question": "How do you change the state of a network interface (e.g., bring it up or down)?",
+      "answer": "To bring a network interface up, use the command `sudo ip link set [interface] up`. To bring it down, use `sudo ip link set [interface] down`. Replace `[interface]` with the name of your network interface (e.g., `enp0s25`)."
+    },
+    {
+      "id": "linux_ip_addr_show",
+      "type": "basic",
+      "question": "What can you learn from the `ip addr show` command?",
+      "answer": "The `ip addr show` command displays detailed information about network interfaces, including:\n- Interface name and state (e.g., `enp0s25` and `DOWN`)\n- Flags indicating the interface's capabilities (e.g., `BROADCAST`, `MULTICAST`, `UP`)\n- MTU (Maximum Transmission Unit)\n- IP addresses assigned to the interface\n- Qdisc (queuing discipline) settings\n- MAC address."
+    },
+    {
+      "id": "linux_naming_interfaces",
+      "type": "basic",
+      "question": "How can you give a network interface a human-readable name?",
+      "answer": "You can create a human-readable name for a network interface using the `ip link set` command. For example, `sudo ip link set [interface] alias \"Wireless Network\"` assigns the alias 'Wireless Network' to the specified interface."
+    },
+    {
+      "id": "linux_routing_conflict",
+      "type": "basic",
+      "question": "How do you resolve a routing conflict, such as ensuring HTTP traffic uses a specific connection?",
+      "answer": "To resolve a routing conflict, you can adjust the routing table using the `ip route` command. For example, if your LAN connection lacks internet access but your WLAN does, you can ensure HTTP traffic uses WLAN by setting a default route with a higher priority for the WLAN interface:\n\n`sudo ip route add default via [gateway_IP] dev [wlan_interface] metric 100`\n\nReplace `[gateway_IP]` with the WLAN gateway's IP and `[wlan_interface]` with the interface name. The `metric` value determines priority, with lower numbers having higher precedence."
+    },
+    {
+      "id": "dmesg_network_troubleshooting",
+      "type": "basic",
+      "question": "How can you use `dmesg` logs to troubleshoot networking hardware issues?",
+      "answer": "Use the `dmesg` command to check kernel logs for hardware-related issues. Look for messages about network interfaces (e.g., `eth0`, `wlan0`) indicating driver problems, hardware failures, or firmware errors. Combine it with `grep`, e.g., `dmesg | grep eth0`."
+    },
+    {
+      "id": "nmcli_wifi_list",
+      "type": "basic",
+      "question": "What command lists all available wireless networks in a colorful terminal output?",
+      "answer": "The `nmcli dev wifi list` command lists all available wireless networks in a detailed, colorful output. It shows SSID, signal strength, security protocols, and more."
+    },
+    {
+      "id": "nmcli_wifi_connect",
+      "type": "basic",
+      "question": "How do you connect to a wireless network using a WPA key in Linux?",
+      "answer": "Use the `nmcli` command: `nmcli dev wifi connect [SSID] password [WPA_KEY]`. Replace `[SSID]` with the network name and `[WPA_KEY]` with the router's WPA password."
+    },
+    {
+      "id": "wifi_encryption_standards",
+      "type": "basic",
+      "question": "What are the common Wi-Fi encryption standards, and how do they differ?",
+      "answer": "Common Wi-Fi encryption standards include:\n- **WEP**: Weak and outdated.\n- **WPA**: Stronger than WEP but vulnerable to attacks.\n- **WPA2**: Standard for modern networks, secure with AES encryption.\n- **WPA3**: Latest standard, offering enhanced security features."
+    },
+    {
+      "id": "wifi_reset_connection",
+      "type": "basic",
+      "question": "How do you reset a wireless connection in Linux?",
+      "answer": "Restart the interface: `sudo ip link set [wlan_interface] down && sudo ip link set [wlan_interface] up`. You can also reconnect using NetworkManager: `nmcli dev wifi rescan` and `nmcli dev wifi connect [SSID]`."
+    },
+    {
+      "id": "networking_cidr",
+      "type": "basic",
+      "question": "What is CIDR?",
+      "answer": "CIDR (Classless Inter-Domain Routing) is a method for IP address allocation and routing. It uses a prefix length (e.g., /24) to define the division between the network and host portions of an IP address, allowing flexible and efficient IP address use."
     },
     {
       "id": "linux_troubleshoot_connectivity",
@@ -44,7 +176,10 @@
         { "text": "Ping the default gateway", "correct": true, "explanation": "This checks if the network connection to the gateway is functional." },
         { "text": "Check DNS configuration", "correct": true, "explanation": "Incorrect DNS settings can cause connectivity issues." },
         { "text": "Restart the network interface", "correct": true, "explanation": "This can resolve temporary network interface issues." },
-        { "text": "Reinstall Linux", "correct": false, "explanation": "This is not a typical troubleshooting step for network issues." }
+        { "text": "Restart NetworkManager", "correct": true, "explanation": "Restarting NetworkManager can apply new configurations or resolve connectivity issues." },
+        { "text": "Reinstall Linux", "correct": false, "explanation": "This is not a typical troubleshooting step for network issues." },
+        { "text": "Disable the firewall permanently", "correct": false, "explanation": "Disabling the firewall can expose the system to security risks and is not a recommended troubleshooting step." },
+        { "text": "Run a network speed test", "correct": false, "explanation": "While useful for performance checks, this does not directly help with connectivity troubleshooting." }
       ]
     },
     {
@@ -72,36 +207,73 @@
       "answer": "1. Check physical connections. 2. Verify the network interface state (`ip link show`). 3. Check IP configuration (`ip addr show`). 4. Ping the default gateway. 5. Check DNS settings. 6. Restart the network interface if needed. 7. Check logs with `journalctl -u NetworkManager`."
     },
     {
-      "id": "network_command_iwconfig",
+      "id": "linux_network_manager_overview",
       "type": "basic",
-      "question": "What is the purpose of the `iwconfig` command in Linux?",
-      "answer": "The `iwconfig` command is used to configure wireless network interfaces. It can display or set parameters like SSID, mode, frequency, and encryption key."
+      "question": "What is NetworkManager, and what are its responsibilities?",
+      "answer": "NetworkManager is a network management tool that automates network configuration and management. It is responsible for managing network interfaces, establishing connections (wired, wireless, or VPN), handling DNS configuration, and applying user-defined settings. It simplifies networking tasks on Linux systems."
+    },
+
+    {
+      "id": "netplan_permissions_warning",
+      "type": "basic",
+      "question": "Why does Netplan warn about permissions being too open for configuration files?",
+      "answer": "Netplan requires its configuration files to be readable only by root for security reasons. If the permissions are too open, it triggers warnings. Use `sudo chmod 600 /etc/netplan/<file>.yaml` to fix the permissions."
     },
     {
-      "id": "network_command_nmcli",
+      "id": "netplan_gateway4_deprecation",
       "type": "basic",
-      "question": "What does the `nmcli` command do?",
-      "answer": "The `nmcli` command is a command-line tool for managing NetworkManager. It allows users to configure, monitor, and troubleshoot network connections, including both wired and wireless networks."
+      "question": "Why does Netplan warn about the deprecation of `gateway4`?",
+      "answer": "The `gateway4` directive has been deprecated in favor of using default routes. Replace `gateway4` with:/n/nroutes:/n  - to: 0.0.0.0/0/n    via: [gateway_IP]/n/nThis aligns with updated Netplan configurations."
     },
     {
-      "id": "network_command_nmap",
+      "id": "ping_failure_analysis",
       "type": "basic",
-      "question": "What is the purpose of the `nmap` command?",
-      "answer": "The `nmap` command is a network scanning tool used to discover devices, open ports, and services running on a network. It is also useful for security auditing and troubleshooting network issues."
+      "question": "What could cause a `Destination Host Unreachable` error when pinging an IP address?",
+      "answer": "A `Destination Host Unreachable` error indicates no route to the target. Possible causes include:/n1. The target device is on a different subnet and no route exists./n2. The target device has an incorrect IP configuration or is not powered on./n3. The network interface on your device is not correctly configured./n4. The routing table may need verification using `ip route show` to ensure a valid route exists./n5. Use `traceroute [IP]` to trace the path and identify where the connection fails."
     },
     {
-      "id": "network_command_installation",
+      "id": "netplan_config_example",
       "type": "basic",
-      "question": "How do you install networking tools like `iwconfig`, `nmcli`, and `nmap` on Linux?",
-      "answer": "To install these tools, use your distribution's package manager:\n- On Debian-based systems (e.g., Ubuntu):\n  - Install `iwconfig` via `sudo apt install wireless-tools`.\n  - Install `nmcli` as part of `NetworkManager` via `sudo apt install network-manager`.\n  - Install `nmap` via `sudo apt install nmap`.\n- On Red Hat-based systems (e.g., Fedora, CentOS):\n  - Install `iwconfig` via `sudo dnf install wireless-tools`.\n  - Install `nmcli` as part of `NetworkManager` via `sudo dnf install NetworkManager`.\n  - Install `nmap` via `sudo dnf install nmap`.\nThese packages are commonly available in the default repositories of both Debian and Red Hat-based distributions."
+      "question": "How do you configure a Netplan YAML file with default routes instead of `gateway4`?",
+      "answer": "Example configuration:/n/nnetwork:/n  version: 2/n  ethernets:/n    enp2s0:/n      addresses:/n        - 192.168.1.10/24/n      routes:/n        - to: 0.0.0.0/0/n          via: 192.168.1.1/n/nApply the configuration using `sudo netplan apply`."
     },
     {
-      "id": "network_tools_packages",
+      "id": "ping_link_local",
       "type": "basic",
-      "question": "What are the most important packages for networking tools in Linux?",
-      "answer": "Some of the key packages for networking tools include:\n- `wireless-tools`: Contains commands like `iwconfig` for wireless management.\n- `network-manager`: Includes tools like `nmcli` and manages network configurations.\n- `nmap`: A versatile network scanning tool.\n- `net-tools`: Provides legacy tools like `ifconfig` and `route`.\n- `iproute2`: Modern replacement for `net-tools`, includes commands like `ip` and `ss`.\nThese packages are available in both Debian and Red Hat-based distributions and cover most networking requirements."
+      "question": "What is a link-local address, and why might it fail to communicate with devices on a different subnet?",
+      "answer": "A link-local address (e.g., 169.254.x.x) is auto-assigned when no DHCP server is available. Devices with link-local addresses can communicate only if they are on the same subnet and link-local range."
+    },
+    {
+      "id": "subnet_change_example",
+      "type": "basic",
+      "question": "How do you temporarily change a device's IP to match a link-local subnet?",
+      "answer": "Use Netplan or `ip addr` to temporarily change the IP to match the subnet of the target device. Example:/n/n`sudo ip addr add 169.254.100.1/24 dev enp2s0`/n/nThis allows communication with devices on the same link-local subnet."
+    },
+    {
+      "id": "network_static_ip_debugging",
+      "type": "basic",
+      "question": "What steps can you take to troubleshoot static IP issues?",
+      "answer": "1. Check Netplan YAML syntax./n2. Verify file permissions (`sudo chmod 600`)./n3. Use `ip addr show` to confirm the interface IP./n4. Verify the routing table with `ip route show`./n5. Ensure the target device is in the same subnet."
+    },
+    {
+      "id": "ip_addr_show_fields",
+      "type": "basic",
+      "question": "What information can you derive from the output of `ip addr show`?",
+      "answer": "The `ip addr show` command provides:/n- Interface name and state (e.g., `enp2s0` and `UP`)./n- Flags like `BROADCAST`, `MULTICAST`, `UP`, `LOWER_UP`./n- MTU (Maximum Transmission Unit) and queueing discipline (e.g., `fq_codel`)./n- Assigned IPv4 and IPv6 addresses (e.g., `inet` and `inet6`)./n- Broadcast and link-local addresses."
+    },
+    {
+      "id": "ip_route_show_analysis",
+      "type": "basic",
+      "question": "What does the `ip route show` command reveal about network routing?",
+      "answer": "The `ip route show` command reveals:/n- Default routes for external traffic./n- Routes to specific subnets or devices./n- Metrics for route priority (lower is preferred)./n- Interfaces used for specific routes./n- Kernel auto-added routes (proto kernel)."
+    },
+    {
+      "id": "ssh_connection_outdated_encryption",
+      "type": "basic",
+      "question": "What might cause an SSH connection to fail with an older device?",
+      "answer": "SSH connections can fail due to outdated encryption mechanisms on older devices. Update your SSH client configuration to include legacy ciphers or key exchange algorithms if necessary. Example: Add `-oKexAlgorithms=+diffie-hellman-group1-sha1` to your SSH command."
     }
   ],
-  "tags": ["networking", "linux", "troubleshooting"]
+  "tags": ["networking", "linux", "commands"]
 }
 
