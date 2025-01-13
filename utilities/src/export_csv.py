@@ -24,34 +24,36 @@ def export_to_csv(input_dir, output_dir):
                     data = json.load(f)
                     cards = data.get('cards', [])
 
-                # Create CSV writers for each Anki type
+                # Create a dictionary to track CSV writers for each output file
                 writers = {}
-                csv_files = {}
-                for anki_type in ["basic", "typing"]:
-                    output_file = os.path.join(output_dir, f"{deck_name}-{anki_type}.csv")
-                    csv_files[anki_type] = output_file
-                    csvfile = open(output_file, 'w', newline='')
-                    writer = csv.writer(csvfile)
-                    writers[anki_type] = (writer, csvfile)
 
                 # Process each card
                 for card in cards:
                     card_type = card.get("type")
 
-                    if card_type == "basic":
-                        writer, _ = writers["basic"]
-                        front = card["question"].replace("\n", "<br>")
-                        back = card.get("answer", "N/A").replace("\n", "<br>")
-                        writer.writerow([front, back])
+                    if card_type in ["basic", "typing"]:
+                        anki_type = "typing" if card_type == "typing" else "basic"
+                        output_file = os.path.join(output_dir, f"{deck_name}-{tag_name}-{anki_type}.csv")
+                        if output_file not in writers:
+                            csvfile = open(output_file, 'w', newline='')
+                            writer = csv.writer(csvfile)
+                            # writer.writerow(["Front", "Back"])  # No header, Anki-specific format
+                            writers[output_file] = (writer, csvfile)
 
-                    elif card_type == "typing":
-                        writer, _ = writers["typing"]
+                        writer, _ = writers[output_file]
                         front = card["question"].replace("\n", "<br>")
                         back = card.get("answer", "N/A").replace("\n", "<br>")
                         writer.writerow([front, back])
 
                     elif card_type == "multiple-choice":
-                        writer, _ = writers["typing"]
+                        output_file = os.path.join(output_dir, f"{deck_name}-{tag_name}-typing.csv")
+                        if output_file not in writers:
+                            csvfile = open(output_file, 'w', newline='')
+                            writer = csv.writer(csvfile)
+                            # writer.writerow(["Front", "Back"])  # No header
+                            writers[output_file] = (writer, csvfile)
+
+                        writer, _ = writers[output_file]
                         choices = card.get("choices", [])
                         front = card["question"].replace("\n", "<br>") + "<br><br>"
                         front += "<br>".join([f"{idx+1}. {choice['text']}" for idx, choice in enumerate(choices)])
@@ -69,7 +71,7 @@ def export_to_csv(input_dir, output_dir):
                 for _, csvfile in writers.values():
                     csvfile.close()
 
-                print(f"Exported deck: {deck_name} → {', '.join(csv_files.values())}")
+                print(f"Exported deck: {deck_name}-{tag_name} → {', '.join(writers.keys())}")
 
 if __name__ == "__main__":
     input_dir = "./topics"

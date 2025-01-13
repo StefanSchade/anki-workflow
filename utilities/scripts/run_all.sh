@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+rm -rf ./data/*
+
 echo "Setting up environment..."
 ./utilities/scripts/setup_env.sh
 
