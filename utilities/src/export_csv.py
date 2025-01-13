@@ -44,7 +44,8 @@ def export_to_csv(input_dir, output_dir):
                         back = card.get("answer", "N/A").replace("\n", "<br>")
 
                         # Add the filename tag to the existing tags
-                        all_tags = card.get("tags", []) + [tag_name]
+                        json_filename_tag = os.path.splitext(tag_name)[0]  # Extract filename without extension
+                        all_tags = card.get("tags", []) + [json_filename_tag]
                         tags_str = ";".join(all_tags)
 
                         writer.writerow([front, back, tags_str])
@@ -60,14 +61,23 @@ def export_to_csv(input_dir, output_dir):
                         choices = card.get("choices", [])
                         front = card["question"].replace("\n", "<br>") + "<br><br>"
                         front += "<br>".join([f"{idx+1}. {choice['text']}" for idx, choice in enumerate(choices)])
-                        back = "Correct Answer(s): "
-                        correct_answers = [str(idx+1) for idx, choice in enumerate(choices) if choice.get("correct")]
-                        back += ", ".join(correct_answers) + "<br><br>"
-                        back += "Explanations:<br>"
-                        back += "<br>".join([f"{idx+1}. {choice['text']}: {choice.get('explanation', 'No explanation provided.')}" for idx, choice in enumerate(choices)])
+
+                        correct_choices = [choice for idx, choice in enumerate(choices) if choice.get("correct")]
+                        incorrect_choices = [choice for idx, choice in enumerate(choices) if not choice.get("correct")]
+
+                        if correct_choices:
+                            back = "Correct Answer(s):<br>"
+                            back += "<br>".join([f"{idx+1}. {choice['text']}: {choice.get('explanation', 'No explanation provided.')}"
+                                                 for idx, choice in enumerate(choices) if choice.get("correct")])
+                            back += "<br><br>Incorrect Answer(s):<br>"
+                            back += "<br>".join([f"{idx+1}. {choice['text']}: {choice.get('explanation', 'No explanation provided.')}"
+                                                 for idx, choice in enumerate(choices) if not choice.get("correct")])
+                        else:
+                            back = "This was a trick question - there were no correct answers."
 
                         # Add the filename tag to the existing tags
-                        all_tags = card.get("tags", []) + [tag_name]
+                        json_filename_tag = os.path.splitext(tag_name)[0]  # Extract filename without extension
+                        all_tags = card.get("tags", []) + [json_filename_tag]
                         tags_str = ";".join(all_tags)
 
                         writer.writerow([front, back, tags_str])
