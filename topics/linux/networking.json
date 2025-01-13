@@ -272,6 +272,96 @@
       "type": "basic",
       "question": "What might cause an SSH connection to fail with an older device?",
       "answer": "SSH connections can fail due to outdated encryption mechanisms on older devices. Update your SSH client configuration to include legacy ciphers or key exchange algorithms if necessary. Example: Add `-oKexAlgorithms=+diffie-hellman-group1-sha1` to your SSH command."
+    },
+{
+      "id": "dns_resolvconf_overview",
+      "type": "basic",
+      "question": "What is resolvconf and what is its purpose?",
+      "answer": "`resolvconf` is a utility used to manage the contents of the `/etc/resolv.conf` file dynamically. It handles DNS configuration for multiple programs or network interfaces, updating the file as interfaces come up or go down."
+    },
+    {
+      "id": "dns_systemd_resolved_overview",
+      "type": "basic",
+      "question": "What is systemd-resolved and what does it do?",
+      "answer": "`systemd-resolved` is a system service that provides network name resolution for local applications. It integrates with DNS, LLMNR (Link-Local Multicast Name Resolution), and MDNS (Multicast DNS) to resolve hostnames. It also manages the `/etc/resolv.conf` file."
+    },
+    {
+      "id": "resolvconf_vs_systemd_resolved",
+      "type": "basic",
+      "question": "How does `resolvconf` differ from `systemd-resolved`?",
+      "answer": "`resolvconf` is a lightweight utility for managing DNS configurations, while `systemd-resolved` is part of the `systemd` suite and provides a broader set of features like LLMNR and MDNS support. Modern distributions often use `systemd-resolved` as the default."
+    },
+    {
+      "id": "dns_systemd_resolved_configuration",
+      "type": "basic",
+      "question": "How do you configure `systemd-resolved` for DNS resolution?",
+      "answer": "To configure `systemd-resolved`, edit the `/etc/systemd/resolved.conf` file. Example configuration:/n/n[Resolve]/nDNS=8.8.8.8 8.8.4.4/nDomains=example.com/n/nAfter editing, restart the service with `sudo systemctl restart systemd-resolved`."
+    },
+    {
+      "id": "resolvconf_update_dns",
+      "type": "basic",
+      "question": "How do you update DNS entries using `resolvconf`?",
+      "answer": "To update DNS entries using `resolvconf`, modify the relevant interface configuration file (e.g., `/etc/network/interfaces`) to include DNS settings, such as:/n/niface eth0 inet static/n    address 192.168.1.100/n    netmask 255.255.255.0/n    dns-nameservers 8.8.8.8 8.8.4.4/n/nRestart the networking service or reconfigure the interface to apply the changes."
+    },
+    {
+      "id": "dns_check_effective_configuration",
+      "type": "basic",
+      "question": "How can you check the effective DNS configuration on a system?",
+      "answer": "To check the effective DNS configuration:/n- If using `resolvconf`, view the `/etc/resolv.conf` file directly./n- If using `systemd-resolved`, use `resolvectl status` or `systemd-resolve --status` to see detailed information about DNS settings."
+    },
+    {
+      "id": "nmcli_connect_wifi",
+      "type": "basic",
+      "question": "How do you connect to a Wi-Fi network using `nmcli`?",
+      "answer": "Use the following command to connect to a Wi-Fi network:/n`nmcli dev wifi connect [SSID] password [WPA_KEY]`/nReplace `[SSID]` with the network name and `[WPA_KEY]` with the Wi-Fi password."
+    },
+    {
+      "id": "nmcli_show_active_connections",
+      "type": "basic",
+      "question": "How can you display active network connections using `nmcli`?",
+      "answer": "Run the command `nmcli connection show --active` to list all currently active network connections, including their UUIDs, types, and device names."
+    },
+    {
+      "id": "nmcli_create_static_ip",
+      "type": "basic",
+      "question": "How do you set up a static IP address using `nmcli`?",
+      "answer": "Use the following command to create a connection with a static IP:/n`nmcli connection add type ethernet ifname [interface] con-name [name] ip4 [IP_ADDRESS]/[CIDR] gw4 [GATEWAY]`/nReplace `[interface]`, `[name]`, `[IP_ADDRESS]`, and `[GATEWAY]` with the appropriate values."
+    },
+    {
+      "id": "nmcli_disconnect_device",
+      "type": "basic",
+      "question": "How can you disconnect a network device using `nmcli`?",
+      "answer": "To disconnect a network device, use the command `nmcli device disconnect [DEVICE]`. Replace `[DEVICE]` with the name of the network interface you want to disconnect."
+    },
+    {
+      "id": "nmcli_rescan_wifi",
+      "type": "basic",
+      "question": "How do you rescan for available Wi-Fi networks using `nmcli`?",
+      "answer": "Run the command `nmcli device wifi rescan` to rescan for available Wi-Fi networks. Afterward, use `nmcli device wifi list` to display the updated list of networks."
+    },
+    {
+      "id": "systemd_networkd_overview",
+      "type": "basic",
+      "question": "What is systemd-networkd and what is its purpose?",
+      "answer": "`systemd-networkd` is a system service that manages network configurations for Linux systems. It handles static and dynamic IP configurations, routes, VLANs, bridges, and other networking settings."
+    },
+    {
+      "id": "systemd_networkd_configuration",
+      "type": "basic",
+      "question": "How do you configure network settings using systemd-networkd?",
+      "answer": "Create a `.network` file in `/etc/systemd/network/`. Example configuration:/n/n[Match]/nName=eth0/n/n[Network]/nAddress=192.168.1.100/24/nGateway=192.168.1.1/nDNS=8.8.8.8 8.8.4.4/n/nThen restart the service with `sudo systemctl restart systemd-networkd`."
+    },
+    {
+      "id": "etc_network_interfaces_configuration",
+      "type": "basic",
+      "question": "How do you configure networking in `/etc/network/interfaces`?",
+      "answer": "Edit `/etc/network/interfaces` to configure networking. Example:/n/niface eth0 inet static/n    address 192.168.1.100/n    netmask 255.255.255.0/n    gateway 192.168.1.1/n    dns-nameservers 8.8.8.8 8.8.4.4/n/nRestart networking with `sudo systemctl restart networking`."
+    },
+    {
+      "id": "etc_netplan_configuration",
+      "type": "basic",
+      "question": "How do you configure networking using Netplan?",
+      "answer": "Edit the YAML configuration file in `/etc/netplan/`. Example:/n/nnetwork:/n  version: 2/n  ethernets:/n    eth0:/n      addresses:/n        - 192.168.1.100/24/n      gateway4: 192.168.1.1/n      nameservers:/n        addresses:/n          - 8.8.8.8/n          - 8.8.4.4/n/nApply changes with `sudo netplan apply`."
     }
   ],
   "tags": ["networking", "linux", "commands"]
