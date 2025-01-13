@@ -44,11 +44,10 @@ def export_to_csv(input_dir, output_dir):
                         back = card.get("answer", "N/A").replace("\n", "<br>")
 
                         # Add the filename tag to the existing tags
-                        json_filename_tag = os.path.splitext(tag_name)[0]  # Extract filename without extension
-                        all_tags = card.get("tags", []) + [json_filename_tag]
-                        tags_str = ";".join(all_tags)
+                        all_tags = card.get("tags", []) + [tag_name]
+                        # tags_str = ";".join(all_tags)
 
-                        writer.writerow([front, back, tags_str])
+                        writer.writerow([front, back, tag_name])
 
                     elif card_type == "multiple-choice":
                         output_file = os.path.join(output_dir, f"{deck_name}-{tag_name}-typing.csv")
@@ -76,11 +75,11 @@ def export_to_csv(input_dir, output_dir):
                             back = "This was a trick question - there were no correct answers."
 
                         # Add the filename tag to the existing tags
-                        json_filename_tag = os.path.splitext(tag_name)[0]  # Extract filename without extension
-                        all_tags = card.get("tags", []) + [json_filename_tag]
-                        tags_str = ";".join(all_tags)
+                        all_tags = card.get("tags", []) + [tag_name]
+                        print(f"Tags are: {tag_name}")
+                        # tags_str = ";".join(all_tags)
 
-                        writer.writerow([front, back, tags_str])
+                        writer.writerow([front, back, tag_name])
 
                     else:
                         print(f"Skipping unknown card type: {card_type}")
