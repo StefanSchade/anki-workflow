@@ -1,6 +1,254 @@
 {
-  "cards": [
+  "cards":  [
     {
+      "id": "lan_definition",
+      "type": "basic",
+      "question": "What is a LAN?",
+      "answer": "A LAN (Local Area Network) is a group of interconnected devices located in a single physical location. Its range can vary from small (e.g., a private residence) to large (e.g., an enterprise campus), but it is limited by its physical boundaries."
+    },
+    {
+      "id": "wan_definition",
+      "type": "basic",
+      "question": "What is a WAN?",
+      "answer": "A WAN (Wide Area Network) is a network of networks, consisting of multiple distributed LANs communicating with each other. The internet is the largest WAN, but the private network of a multinational corporation is also considered a WAN."
+    },
+    {
+      "id": "pan_definition",
+      "type": "basic",
+      "question": "What is a PAN?",
+      "answer": "A PAN (Personal Area Network) is a specialized type of LAN formed by personal devices interconnected using short-range technologies like Bluetooth, USB, or Infrared. It is typically used for personal communication between devices within a few meters."
+    },
+    {
+      "id": "man_definition",
+      "type": "basic",
+      "question": "What is a MAN?",
+      "answer": "A MAN (Metropolitan Area Network) spans a city or urban area, often implemented with high-speed technologies such as fiber optics. MANs are typically larger than LANs but smaller than WANs."
+    },
+    {
+      "id": "ian_definition",
+      "type": "basic",
+      "question": "What is an IAN?",
+      "answer": "An IAN (Internet Area Network), as referenced by Balog in Mastering Linux Administration, is not a widely recognized or generally defined term and should be avoided in most contexts to prevent confusion."
+    },
+    {
+      "id": "vlan_definition",
+      "type": "basic",
+      "question": "What is a VLAN?",
+      "answer": "A VLAN (Virtual Local Area Network) is a logical segmentation of a LAN into separate virtual networks. It can group devices logically regardless of their physical location, improving security, performance, and manageability. VLANs are created using network switches and routers, utilizing tagging protocols like IEEE 802.1Q."
+    },
+    {
+      "id": "osi_model_overview",
+      "type": "basic",
+      "question": "What is the OSI model?",
+      "answer": "The OSI (Open Systems Interconnection) model is a conceptual framework with 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application) used to standardize and understand how data is transmitted across networks."
+    },
+    {
+      "id": "osi_physical_layer",
+      "type": "basic",
+      "question": "What is the role of the Physical layer in the OSI model?",
+      "answer": "The Physical layer (Layer 1) is responsible for the transmission of raw binary data over physical mediums like cables, fiber optics, or radio waves."
+    },
+    {
+      "id": "osi_data_link_layer",
+      "type": "basic",
+      "question": "What does the Data Link layer do in the OSI model?",
+      "answer": "The Data Link layer (Layer 2) ensures reliable data transfer across a physical link, handles MAC addresses, and defines protocols for error detection and flow control."
+    },
+    {
+      "id": "osi_network_layer",
+      "type": "basic",
+      "question": "What is the purpose of the Network layer in the OSI model?",
+      "answer": "The Network layer (Layer 3) is responsible for routing and forwarding data, and defines logical addressing (e.g., IP addresses)."
+    },
+    {
+      "id": "osi_transport_layer",
+      "type": "basic",
+      "question": "What is the role of the Transport layer in the OSI model?",
+      "answer": "The Transport layer (Layer 4) manages end-to-end communication, error checking, and flow control, using protocols like TCP and UDP."
+    },
+    {
+      "id": "osi_session_layer",
+      "type": "basic",
+      "question": "What does the Session layer do in the OSI model?",
+      "answer": "The Session layer (Layer 5) establishes, manages, and terminates sessions between applications on different devices."
+    },
+    {
+      "id": "osi_presentation_layer",
+      "type": "basic",
+      "question": "What is the purpose of the Presentation layer in the OSI model?",
+      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems."
+    },
+    {
+      "id": "osi_application_layer",
+      "type": "basic",
+      "question": "What is the role of the Application layer in the OSI model?",
+      "answer": "The Application layer (Layer 7) provides network services directly to user applications, such as web browsing (HTTP), email (SMTP), and file transfer (FTP)."
+    },
+    {
+      "id": "dns_protocol_overview",
+      "type": "basic",
+      "question": "What is the DNS protocol?",
+      "answer": "The DNS (Domain Name System) protocol translates human-readable domain names into IP addresses, allowing devices to locate each other on a network. DNS operates at the Application layer (Layer 7) in the OSI model."
+    },
+    {
+      "id": "http_protocol_overview",
+      "type": "basic",
+      "question": "What is the HTTP protocol?",
+      "answer": "HTTP (Hypertext Transfer Protocol) is a stateless protocol used for transferring web resources, such as HTML files, images, and videos. HTTP operates at the Application layer (Layer 7) in the OSI model."
+    },
+    {
+      "id": "ftp_protocol_overview",
+      "type": "basic",
+      "question": "What is the FTP protocol?",
+      "answer": "FTP (File Transfer Protocol) is a standard protocol for transferring files between a client and a server. FTP operates at the Application layer (Layer 7) in the OSI model."
+    },
+    {
+      "id": "smtp_protocol_overview",
+      "type": "basic",
+      "question": "What is the SMTP protocol?",
+      "answer": "SMTP (Simple Mail Transfer Protocol) is a protocol for sending and receiving emails. It supports encryption and host authentication, and it operates at the Application layer (Layer 7) in the OSI model."
+    },
+    {
+      "id": "arp_protocol_overview",
+      "type": "basic",
+      "question": "What is the ARP protocol?",
+      "answer": "ARP (Address Resolution Protocol) maps IP addresses to MAC addresses for communication within a local network. It operates at the Data Link layer (Layer 2) in the OSI model."
+    },
+    {
+      "id": "ndp_protocol_overview",
+      "type": "basic",
+      "question": "What is the NDP protocol?",
+      "answer": "NDP (Neighbor Discovery Protocol) is similar to ARP but designed for IPv6. It maps IPv6 addresses to MAC addresses and operates at the Data Link layer (Layer 2) in the OSI model."
+    },
+    {
+      "id": "tcp_protocol_overview",
+      "type": "basic",
+      "question": "What is the TCP protocol?",
+      "answer": "TCP (Transmission Control Protocol) is a connection-oriented protocol that ensures reliable data delivery through error checking and retransmissions. TCP operates at the Transport layer (Layer 4) in the OSI model."
+    },
+    {
+      "id": "udp_protocol_overview",
+      "type": "basic",
+      "question": "What is the UDP protocol?",
+      "answer": "UDP (User Datagram Protocol) is a connectionless protocol that offers low-latency communication without error checking. It operates at the Transport layer (Layer 4) in the OSI model."
+    },
+    {
+      "id": "dhcp_protocol_overview",
+      "type": "basic",
+      "question": "What is the DHCP protocol?",
+      "answer": "DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP addresses and other network configuration details to devices on a network. DHCP operates at the Application layer (Layer 7) in the OSI model."
+    },
+    {
+      "id": "icmp_protocol_overview",
+      "type": "basic",
+      "question": "What is ICMP?",
+      "answer": "ICMP (Internet Control Message Protocol) reports errors and diagnostic information, commonly used by tools like ping. It operates at the Network layer (Layer 3) in the OSI model."
+    },
+    {
+      "id": "ntp_protocol_overview",
+      "type": "basic",
+      "question": "What is the NTP protocol?",
+      "answer": "NTP (Network Time Protocol) synchronizes system clocks across networks, ensuring accurate timekeeping. It operates at the Application layer (Layer 7) in the OSI model."
+    },
+    {
+      "id": "snmp_protocol_overview",
+      "type": "basic",
+      "question": "What is the SNMP protocol?",
+      "answer": "SNMP (Simple Network Management Protocol) allows remote monitoring and management of network devices. It operates at the Application layer (Layer 7) in the OSI model."
+    },
+    {
+      "id": "ssh_protocol_overview",
+      "type": "basic",
+      "question": "What is the SSH protocol?",
+      "answer": "SSH (Secure Shell) provides encrypted communication for secure remote access and file transfers. It operates at the Application layer (Layer 7) in the OSI model."
+    },
+  {
+      "id": "osi_encapsulation_process",
+      "type": "basic",
+      "question": "What happens during the encapsulation process in the OSI model?",
+      "answer": "In encapsulation, data passes from the Application layer (Layer 7) to the Physical layer (Layer 1). Each layer adds its own header: Layer 4 (Transport) adds a TCP/UDP header, Layer 3 (Network) adds an IP header, Layer 2 (Data Link) adds a MAC header and FCS, and Layer 1 transmits the raw bits."
+    },
+    {
+      "id": "osi_decapsulation_process",
+      "type": "basic",
+      "question": "What happens during the decapsulation process in the OSI model?",
+      "answer": "In decapsulation, data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7). Each layer removes its corresponding header: Layer 2 verifies the FCS, Layer 3 processes the IP header, and Layer 4 reassembles the data."
+    },
+    {
+      "id": "osi_tcpip_relationship",
+      "type": "basic",
+      "question": "How do the OSI model and the TCP/IP model relate?",
+      "answer": "The OSI model has 7 layers, while the TCP/IP model has 4 layers. The OSI Application, Presentation, and Session layers map to the TCP/IP Application layer. The OSI Transport layer corresponds to the TCP/IP Transport layer. The OSI Network layer maps to the TCP/IP Internet layer, and the OSI Data Link and Physical layers correspond to the TCP/IP Network Access layer."
+    },
+    {
+      "id": "ethernet_frames_overview",
+      "type": "basic",
+      "question": "What is an Ethernet frame?",
+      "answer": "An Ethernet frame is a data packet format used in Ethernet networks. It contains fields like the destination MAC address, source MAC address, EtherType, payload (data), and a Frame Check Sequence (FCS) for error detection."
+    },
+    {
+      "id": "ethernet_frame_structure",
+      "type": "basic",
+      "question": "What are the main fields in an Ethernet frame?",
+      "answer": "An Ethernet frame contains: Destination MAC address, Source MAC address, EtherType, Payload (data), and Frame Check Sequence (FCS) for error detection."
+    },
+    {
+      "id": "snap_protocol_overview",
+      "type": "basic",
+      "question": "What is the 802.3 SubNetwork Access Protocol (SNAP)?",
+      "answer": "The 802.3 SubNetwork Access Protocol (SNAP) is a protocol used in Ethernet frames to extend the EtherType field, enabling support for additional protocols beyond those defined by IEEE 802.3."
+    },
+    {
+      "id": "snap_protocol_use_case",
+      "type": "basic",
+      "question": "Why is the 802.3 SNAP protocol important?",
+      "answer": "The 802.3 SNAP protocol allows Ethernet frames to support non-standard or proprietary protocols by extending the EtherType field."
+    },
+    {
+      "id": "icmp_overview",
+      "type": "basic",
+      "question": "What is ICMP (Internet Control Message Protocol)?",
+      "answer": "ICMP is a network protocol used for diagnostic and error-reporting purposes. It is commonly used by tools like ping and traceroute to check connectivity and troubleshoot network issues."
+    },
+    {
+      "id": "data_segments",
+      "type": "basic",
+      "question": "What are data segments in networking?",
+      "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers, such as TCP or UDP headers."
+    },
+    {
+      "id": "network_datagrams",
+      "type": "basic",
+      "question": "What are datagrams in networking?",
+      "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes."
+    },
+    {
+      "type": "basic",
+      "question": "abc",
+      "answer": "abc"
+    },
+
+    {
+      "id": "networking_basic_lan",
+      "type": "basic",
+      "question": "abc",
+      "answer": "abc"
+    },
+
+    {
+      "id": "networking_basic_lan",
+      "type": "basic",
+      "question": "abc",
+      "answer": "abc"
+    },
+
+    {
+      "id": "networking_basic_lan",
+      "type": "basic",
+      "question": "abc",
+      "answer": "abc"
+    },
+   {
       "id": "networking_ipv4_ipv6",
       "type": "basic",
       "question": "What are IPv4 and IPv6 addresses and what is their difference?",
@@ -53,7 +301,31 @@
       "type": "basic",
       "question": "How do you configure a persistent static IP in Red Hat-based distributions?",
       "answer": "In Red Hat-based distributions (e.g., Fedora, CentOS), you can configure a persistent static IP by editing the interface configuration file located in `/etc/sysconfig/network-scripts/`. For example, for the `eth0` interface, edit the file `/etc/sysconfig/network-scripts/ifcfg-eth0` and add:\n\nBOOTPROTO=none\nIPADDR=192.168.1.100\nPREFIX=24\nGATEWAY=192.168.1.1\nDNS1=8.8.8.8\nNAME=eth0\nDEVICE=eth0\nONBOOT=yes\n\nThen restart the network service using `sudo systemctl restart network` or `nmcli` commands. This method is specific to Red Hat-based distributions."
-    } ,
+    },
+    {
+      "id": "linux_static_ip_persistent_redhat",
+      "type": "basic",
+      "question": "How do you configure a persistent static IP in Red Hat-based distributions?",
+      "answer": "Starting with Fedora 33 and RHEL 9, network configuration files are no longer stored in `/etc/sysconfig/network-scripts/`. Instead, the preferred method is to use the nmcli utility. The new NetworkManager keyfiles are located in `/etc/NetworkManager/system-connections/`. For example, to configure a static IP using nmcli, use the following command:\n\n`sudo nmcli connection modify 'Wired connection 1' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes`\n\nAfter modifying the connection, restart it using:\n\n`sudo nmcli connection up 'Wired connection 1'`\n\nThis is the recommended method for configuring network settings in modern Fedora and RHEL systems."
+    },
+    {
+      "id": "nmcli_dynamic_ip_configuration",
+      "type": "basic",
+      "question": "How do you configure a dynamic IP address using nmcli?",
+      "answer": "To configure a dynamic IP address using nmcli, use the command:\n\n`sudo nmcli connection modify 'Wired connection 1' ipv4.method auto`\n\nThis enables DHCP for the specified connection. You can verify the change by checking the keyfile in `/etc/NetworkManager/system-connections/`."
+    },
+    {
+      "id": "nmcli_view_connections",
+      "type": "basic",
+      "question": "How do you view information about active network connections using nmcli?",
+      "answer": "Use the command `nmcli connection show` to view details about active network connections, including the name, UUID, type, and device used."
+    },
+    {
+      "id": "nmcli_keyfiles_location",
+      "type": "basic",
+      "question": "Where are the new NetworkManager keyfiles stored in Fedora and RHEL?",
+      "answer": "The new NetworkManager keyfiles are stored in `/etc/NetworkManager/system-connections/`. These keyfiles are used to store network configuration details for connections managed by NetworkManager."
+    },
     {
       "id": "linux_network_manager_name",
       "type": "basic",
@@ -66,7 +338,7 @@
       "question": "What is the NetworkManager and what are its repsonsibilities?",
       "answer": "The Linux Network Manager is a system service designed to simplify and manage network configurations by abstracting lower level config. Its responsibilities include: configuration of wired and wireless nics based on static and dynamic ip configs. Management and priorization of network connections. Seamlessly switch between networks (for instance when a cable is connected) / scan for wireless networks and connecting with protocols like WPA / configure dns / briging, tunneling, configuring proxys / provide information to various tools (e.g. nmcli) or graphical tools of Linux desktops"
     },
-   {
+    {
       "id": "linux_start_network_manager",
       "type": "typing",
       "question": "Asuming the network manager goes by the name `NetworkManager`, how do you start it?",
@@ -362,8 +634,79 @@
       "type": "basic",
       "question": "How do you configure networking using Netplan?",
       "answer": "Edit the YAML configuration file in `/etc/netplan/`. Example:/n/nnetwork:/n  version: 2/n  ethernets:/n    eth0:/n      addresses:/n        - 192.168.1.100/24/n      gateway4: 192.168.1.1/n      nameservers:/n        addresses:/n          - 8.8.8.8/n          - 8.8.4.4/n/nApply changes with `sudo netplan apply`."
+    },
+    {
+      "id": "netplan_installer_config",
+      "type": "basic",
+      "question": "What is the purpose of the /etc/netplan/00-installer-config.yaml file?",
+      "answer": "The /etc/netplan/00-installer-config.yaml file is a default configuration file used by Netplan on Ubuntu systems to define network settings. It typically contains settings for interfaces, IP addresses, gateways, and DNS. Changes to this file require running 'sudo netplan apply' to take effect."
+    },
+    {
+      "id": "opensuse_wicked_overview",
+      "type": "basic",
+      "question": "What is Wicked in openSUSE?",
+      "answer": "Wicked is openSUSE's native network management service, used for configuring and managing network connections. It is often used for static configurations on servers."
+    },
+    {
+      "id": "opensuse_wicked_commands",
+      "type": "basic",
+      "question": "What are some common Wicked commands in openSUSE?",
+      "answer": "- `wicked show all`: Displays the current network status.\n- `wicked ifup [interface]`: Brings an interface up.\n- `wicked ifdown [interface]`: Brings an interface down."
+    },
+    {
+      "id": "opensuse_networkmanager_overview",
+      "type": "basic",
+      "question": "Does openSUSE support NetworkManager?",
+      "answer": "Yes, openSUSE supports NetworkManager, which is commonly used in desktop environments for dynamic network management. Tools like `nmcli` and `nmtui` can be used to manage NetworkManager connections."
+    },
+    {
+      "id": "opensuse_nmcli_dynamic_ip",
+      "type": "basic",
+      "question": "How do you configure a dynamic IP address in openSUSE using NetworkManager?",
+      "answer": "Use the following command: \n`sudo nmcli connection modify 'Wired connection 1' ipv4.method auto` \nThis enables DHCP for the specified connection."
+    },
+    {
+      "id": "opensuse_nmcli_static_ip",
+      "type": "basic",
+      "question": "How do you configure a static IP address in openSUSE using NetworkManager?",
+      "answer": "Use the following command: \n`sudo nmcli connection modify 'Wired connection 1' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes` \nThen apply the changes using: \n`sudo nmcli connection up 'Wired connection 1'`."
+    },
+    {
+      "id": "hostnamectl_overview",
+      "type": "basic",
+      "question": "What is the `hostnamectl` command used for?",
+      "answer": "The `hostnamectl` command is used to view and modify the system's hostname and related settings."
+    },
+    {
+      "id": "hostnamectl_view_hostname",
+      "type": "basic",
+      "question": "How do you view the current hostname using `hostnamectl`?",
+      "answer": "Run the command `hostnamectl status` to view the current hostname and related metadata."
+    },
+    {
+      "id": "hostnamectl_set_hostname",
+      "type": "basic",
+      "question": "How do you set a new hostname using `hostnamectl`?",
+      "answer": "Use the command `sudo hostnamectl set-hostname [new-hostname]` to set a new static hostname. Replace `[new-hostname]` with the desired name."
+    },
+    {
+      "id": "ports_definition",
+      "type": "basic",
+      "question": "What is a network port?",
+      "answer": "A network port is a logical endpoint for communication, identified by a number (e.g., 80 for HTTP or 22 for SSH), that allows network services to differentiate traffic."
+    },
+    {
+      "id": "sockets_definition",
+      "type": "basic",
+      "question": "What is a socket in networking?",
+      "answer": "A socket is an endpoint for communication between two devices over a network. It consists of an IP address and a port number, enabling applications to send and receive data."
+    },
+    {
+      "id": "common_ports_examples",
+      "type": "basic",
+      "question": "What are some common network ports and their purposes?",
+      "answer": "- 80: HTTP (web traffic)\n- 443: HTTPS (secure web traffic)\n- 22: SSH (remote login)\n- 25: SMTP (email sending)\n- 53: DNS (domain name resolution)\n- 3306: MySQL (database communication)"
     }
   ],
   "tags": ["networking", "linux", "commands"]
 }
-
