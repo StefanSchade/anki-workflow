@@ -223,32 +223,6 @@
       "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes."
     },
     {
-      "type": "basic",
-      "question": "abc",
-      "answer": "abc"
-    },
-
-    {
-      "id": "networking_basic_lan",
-      "type": "basic",
-      "question": "abc",
-      "answer": "abc"
-    },
-
-    {
-      "id": "networking_basic_lan",
-      "type": "basic",
-      "question": "abc",
-      "answer": "abc"
-    },
-
-    {
-      "id": "networking_basic_lan",
-      "type": "basic",
-      "question": "abc",
-      "answer": "abc"
-    },
-   {
       "id": "networking_ipv4_ipv6",
       "type": "basic",
       "question": "What are IPv4 and IPv6 addresses and what is their difference?",
@@ -706,7 +680,38 @@
       "type": "basic",
       "question": "What are some common network ports and their purposes?",
       "answer": "- 80: HTTP (web traffic)\n- 443: HTTPS (secure web traffic)\n- 22: SSH (remote login)\n- 25: SMTP (email sending)\n- 53: DNS (domain name resolution)\n- 3306: MySQL (database communication)"
+    },
+    {
+      "id": "dnsutils_package_overview",
+      "type": "basic",
+      "question": "What is the dnsutils package used for?",
+      "answer": "The dnsutils package provides tools for querying and managing DNS, including commands like `dig` and `nslookup`."
+    },
+    {
+      "id": "dig_overview",
+      "type": "basic",
+      "question": "What is the purpose of the `dig` command?",
+      "answer": "The `dig` command is used to query DNS servers for information about domains, such as IP addresses, mail servers, and other DNS records."
+    },
+    {
+      "id": "dig_a_record_query",
+      "type": "basic",
+      "question": "How do you use `dig` to retrieve the A record of a domain?",
+      "answer": "Use the command `dig [domain-name]`, e.g., `dig example.com`, to retrieve the A record (IPv4 address) of the specified domain."
+    },
+    {
+      "id": "dig_specific_dns_server",
+      "type": "basic",
+      "question": "How do you query a specific DNS server using `dig`?",
+      "answer": "Use the `@` symbol followed by the DNS server's IP address, e.g., `dig @8.8.8.8 example.com`."
+    },
+    {
+      "id": "dig_query_dns_record_types",
+      "type": "basic",
+      "question": "How do you query specific DNS record types using `dig`?",
+      "answer": "Use the command `dig [domain-name] [record-type]`, e.g., `dig example.com MX` to query the MX (mail exchange) records."
     }
+
   ],
   "tags": ["networking", "linux", "commands"]
 }
