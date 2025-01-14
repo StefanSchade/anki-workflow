@@ -7,10 +7,22 @@
       "answer": "A LAN (Local Area Network) is a group of interconnected devices located in a single physical location. Its range can vary from small (e.g., a private residence) to large (e.g., an enterprise campus), but it is limited by its physical boundaries."
     },
     {
+      "id": "lan_definition_typing",
+      "type": "typing",
+      "question": "How do you call a network made of devices located in a single physical location?",
+      "answer": "LAN (Local Area Network)"
+    },
+    {
       "id": "wan_definition",
       "type": "basic",
       "question": "What is a WAN?",
       "answer": "A WAN (Wide Area Network) is a network of networks, consisting of multiple distributed LANs communicating with each other. The internet is the largest WAN, but the private network of a multinational corporation is also considered a WAN."
+    },
+     {
+      "id": "wan_definition_typing",
+      "type": "typing",
+      "question": "How do you call a network of multiple distributed LANs?",
+      "answer": "WAN (Wide Area Network)"
     },
     {
       "id": "pan_definition",
@@ -18,11 +30,23 @@
       "question": "What is a PAN?",
       "answer": "A PAN (Personal Area Network) is a specialized type of LAN formed by personal devices interconnected using short-range technologies like Bluetooth, USB, or Infrared. It is typically used for personal communication between devices within a few meters."
     },
+     {
+      "id": "pan_definition_typing",
+      "type": "typing",
+      "question": "How do you call a special LAN formed by personal devices?",
+      "answer": "PAN (Personal Area Network)"
+    },
     {
       "id": "man_definition",
       "type": "basic",
       "question": "What is a MAN?",
       "answer": "A MAN (Metropolitan Area Network) spans a city or urban area, often implemented with high-speed technologies such as fiber optics. MANs are typically larger than LANs but smaller than WANs."
+    },
+     {
+      "id": "man_definition_typing",
+      "type": "typing",
+      "question": "How do you call a network that spans a city or urban area?",
+      "answer": "A MAN (Metropolitan Area Network)"
     },
     {
       "id": "ian_definition",
@@ -36,11 +60,23 @@
       "question": "What is a VLAN?",
       "answer": "A VLAN (Virtual Local Area Network) is a logical segmentation of a LAN into separate virtual networks. It can group devices logically regardless of their physical location, improving security, performance, and manageability. VLANs are created using network switches and routers, utilizing tagging protocols like IEEE 802.1Q."
     },
+     {
+      "id": "vlan_definition_typing",
+      "type": "typing",
+      "question": "How do you call a logical segment of a LAN?",
+      "answer": "VLAN (Virtual Local Area Network)"
+    },
     {
       "id": "osi_model_overview",
       "type": "basic",
       "question": "What is the OSI model?",
       "answer": "The OSI (Open Systems Interconnection) model is a conceptual framework with 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application) used to standardize and understand how data is transmitted across networks."
+    },
+     {
+      "id": "osi_model_overview_typing",
+      "type": "typing",
+      "question": "What does OSI stand for? Give the number of Layers in the model and list them in correct sequence?",
+      "answer": "OSI (Open Systems Interconnection) model is formed of 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application)."
     },
     {
       "id": "osi_physical_layer",
@@ -90,11 +126,23 @@
       "question": "What is the DNS protocol?",
       "answer": "The DNS (Domain Name System) protocol translates human-readable domain names into IP addresses, allowing devices to locate each other on a network. DNS operates at the Application layer (Layer 7) in the OSI model."
     },
+     {
+      "id": "dns_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol translates human-readable domain names into IP adresses - Which OSI layer does it operate at?",
+      "answer": "The DNS (Domain Name System) protocol operates at the Application layer (Layer 7) in the OSI model."
+    },
     {
       "id": "http_protocol_overview",
       "type": "basic",
       "question": "What is the HTTP protocol?",
       "answer": "HTTP (Hypertext Transfer Protocol) is a stateless protocol used for transferring web resources, such as HTML files, images, and videos. HTTP operates at the Application layer (Layer 7) in the OSI model."
+    },
+     {
+      "id": "http_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol transfers web resources - Which OSI layer does it operate at?",
+      "answer": "The HTTP (Hypertext Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model."
     },
     {
       "id": "ftp_protocol_overview",
@@ -102,11 +150,23 @@
       "question": "What is the FTP protocol?",
       "answer": "FTP (File Transfer Protocol) is a standard protocol for transferring files between a client and a server. FTP operates at the Application layer (Layer 7) in the OSI model."
     },
+     {
+      "id": "ftp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol transfers files between a client and a server - Which OSI layer does it operate at?",
+      "answer": "The FTP (File Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model."
+    },
     {
       "id": "smtp_protocol_overview",
       "type": "basic",
       "question": "What is the SMTP protocol?",
       "answer": "SMTP (Simple Mail Transfer Protocol) is a protocol for sending and receiving emails. It supports encryption and host authentication, and it operates at the Application layer (Layer 7) in the OSI model."
+    },
+     {
+      "id": "smtp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Whcih protocol sends and receives emails - Which OSI layer does it operate at?",
+      "answer": "The SMTP (Simple Mail Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model."
     },
     {
       "id": "arp_protocol_overview",
@@ -114,11 +174,23 @@
       "question": "What is the ARP protocol?",
       "answer": "ARP (Address Resolution Protocol) maps IP addresses to MAC addresses for communication within a local network. It operates at the Data Link layer (Layer 2) in the OSI model."
     },
+     {
+      "id": "arp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Whcih protocol maps IP addresses to MAC addresses - Which OSI layer does it operate at?",
+      "answer": "The ARP (Address Resolution Protocol) operates at the Data Link layer (Layer 2) in the OSI model."
+    },
     {
       "id": "ndp_protocol_overview",
       "type": "basic",
       "question": "What is the NDP protocol?",
       "answer": "NDP (Neighbor Discovery Protocol) is similar to ARP but designed for IPv6. It maps IPv6 addresses to MAC addresses and operates at the Data Link layer (Layer 2) in the OSI model."
+    },
+     {
+      "id": "ndp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol is similar to ARP, but designed for IPv6 - Which OSI layer does it operate at?",
+      "answer": "The NDP (Neighbor Discovery Protocol) operates at the Data Link layer (Layer 2) in the OSI model."
     },
     {
       "id": "tcp_protocol_overview",
@@ -126,11 +198,23 @@
       "question": "What is the TCP protocol?",
       "answer": "TCP (Transmission Control Protocol) is a connection-oriented protocol that ensures reliable data delivery through error checking and retransmissions. TCP operates at the Transport layer (Layer 4) in the OSI model."
     },
+     {
+      "id": "tcp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol ensures reliable data delivery throguh error checking and retransmissions - Which OSI layer does it operate at?",
+      "answer": "The TCP (Transmission Control Protocol) operates at the Transport layer (Layer 4) in the OSI model."
+    },
     {
       "id": "udp_protocol_overview",
       "type": "basic",
       "question": "What is the UDP protocol?",
       "answer": "UDP (User Datagram Protocol) is a connectionless protocol that offers low-latency communication without error checking. It operates at the Transport layer (Layer 4) in the OSI model."
+    },
+     {
+      "id": "udp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol offers low-latency communication without error checking - Which OSI layer does it operate at?",
+      "answer": "The UDP (User Datagram Protocol) operates at the Transport layer (Layer 4) in the OSI model."
     },
     {
       "id": "dhcp_protocol_overview",
@@ -138,11 +222,23 @@
       "question": "What is the DHCP protocol?",
       "answer": "DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP addresses and other network configuration details to devices on a network. DHCP operates at the Application layer (Layer 7) in the OSI model."
     },
+     {
+      "id": "dhcp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol dynammically assigns ip addresses to devices on a network - Which OSI layer does it operate at?",
+      "answer": "The DHCP (Dynamic Host Configuration Protocol) operates at the Application layer (Layer 7) in the OSI model."
+    },
     {
       "id": "icmp_protocol_overview",
       "type": "basic",
       "question": "What is ICMP?",
       "answer": "ICMP (Internet Control Message Protocol) reports errors and diagnostic information, commonly used by tools like ping. It operates at the Network layer (Layer 3) in the OSI model."
+    },
+     {
+      "id": "icmp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol reports errors and diagnostics and is used by the tool ping - Which OSI layer does it operate on?",
+      "answer": "The ICMP (Internet Control Message Protocol) operates at the Network layer (Layer 3) in the OSI model."
     },
     {
       "id": "ntp_protocol_overview",
@@ -150,11 +246,23 @@
       "question": "What is the NTP protocol?",
       "answer": "NTP (Network Time Protocol) synchronizes system clocks across networks, ensuring accurate timekeeping. It operates at the Application layer (Layer 7) in the OSI model."
     },
+     {
+      "id": "ntp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol synchronizes system clocks across networks - Which OSI layer does it operate at?",
+      "answer": "The NTP (Network Time Protocol) operates at the Application layer (Layer 7) in the OSI model."
+    },
     {
       "id": "snmp_protocol_overview",
       "type": "basic",
       "question": "What is the SNMP protocol?",
       "answer": "SNMP (Simple Network Management Protocol) allows remote monitoring and management of network devices. It operates at the Application layer (Layer 7) in the OSI model."
+    },
+     {
+      "id": "snmp_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol allows remote monitoring of network devices - Which OSI layer does it operate at?",
+      "answer": "The SNMP (Simple Network Management Protocol) operates at the Application layer (Layer 7) in the OSI model."
     },
     {
       "id": "ssh_protocol_overview",
@@ -162,23 +270,47 @@
       "question": "What is the SSH protocol?",
       "answer": "SSH (Secure Shell) provides encrypted communication for secure remote access and file transfers. It operates at the Application layer (Layer 7) in the OSI model."
     },
-  {
+     {
+      "id": "ssh_protocol_overview_typing",
+      "type": "typing",
+      "question": "Which protocol provides encrypted communication for remote access and file transfers - Which OSI layer does it operate at?",
+      "answer": "The SSH (Secure Shell) operates at the Application layer (Layer 7) in the OSI model."
+    },
+    {
       "id": "osi_encapsulation_process",
       "type": "basic",
       "question": "What happens during the encapsulation process in the OSI model?",
-      "answer": "In encapsulation, data passes from the Application layer (Layer 7) to the Physical layer (Layer 1). Each layer adds its own header: Layer 4 (Transport) adds a TCP/UDP header, Layer 3 (Network) adds an IP header, Layer 2 (Data Link) adds a MAC header and FCS, and Layer 1 transmits the raw bits."
+      "answer": "In encapsulation, data passes from the Application layer (Layer 7) to the Physical layer (Layer 1). Each layer has distinct responsibilities: Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, and encoding, Layer 5 (Session) includes session identifiers to manage communication sessions, Layer 4 (Transport) adds the TCP/UDP header, Layer 3 (Network) adds the IP header, Layer 2 (Data Link) adds the MAC header and FCS, and Layer 1 (Physical) transmits the raw bits."
+    },
+    {
+      "id": "osi_encapsulation_process_typing",
+      "type": "typing",
+      "question": "What is the name of the process that passes data from the Application layer (Layer 7) to the Physical layer (Layer 1) in the OSI model? What are the responsibilities of the different layers during the process?",
+      "answer": "Encapsulation, Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, encoding, Layer 5 (Session) includes session identifiers, Layer 4 (Transport) adds TCP/UDP header, Layer 3 (Network) adds IP header, Layer 2 (Data Link) adds MAC header and FCS, Layer 1 (Physical) transmits raw bits."
     },
     {
       "id": "osi_decapsulation_process",
       "type": "basic",
       "question": "What happens during the decapsulation process in the OSI model?",
-      "answer": "In decapsulation, data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7). Each layer removes its corresponding header: Layer 2 verifies the FCS, Layer 3 processes the IP header, and Layer 4 reassembles the data."
+      "answer": "In decapsulation, data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7). Each layer removes its corresponding header: Layer 1 converts signals to raw bits, Layer 2 verifies the FCS and removes the MAC header, Layer 3 processes the IP header, Layer 4 reassembles the data using the TCP/UDP header, Layer 5 identifies the session, Layer 6 decrypts and decodes the data, and Layer 7 interprets the payload for the application."
     },
     {
-      "id": "osi_tcpip_relationship",
-      "type": "basic",
-      "question": "How do the OSI model and the TCP/IP model relate?",
-      "answer": "The OSI model has 7 layers, while the TCP/IP model has 4 layers. The OSI Application, Presentation, and Session layers map to the TCP/IP Application layer. The OSI Transport layer corresponds to the TCP/IP Transport layer. The OSI Network layer maps to the TCP/IP Internet layer, and the OSI Data Link and Physical layers correspond to the TCP/IP Network Access layer."
+      "id": "osi_decapsulation_process_typing",
+      "type": "typing",
+      "question": "What is the name of the process where data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7) in the OSI model? What are the responsibilities of the different layers during the process?",
+      "answer": "Decapsulation, Layer 1 (Physical) converts signals to raw bits, Layer 2 (Data Link) verifies the FCS and removes the MAC header, Layer 3 (Network) processes the IP header, Layer 4 (Transport) reassembles the data using the TCP/UDP header, Layer 5 (Session) identifies the session, Layer 6 (Presentation) decrypts and decodes the data, Layer 7 (Application) interprets the payload for the application."
+    },
+    {
+    "id": "osi_tcpip_relationship",
+    "type": "basic",
+    "question": "How do the OSI model and the TCP/IP model relate?",
+    "answer": "The OSI model has 7 layers, while the TCP/IP model has 4 layers. The OSI Application, Presentation, and Session layers map to the TCP/IP Application layer. The OSI Transport layer corresponds to the TCP/IP Transport layer. The OSI Network layer maps to the TCP/IP Internet layer, and the OSI Data Link and Physical layers correspond to the TCP/IP Network Access layer."
+    },
+    {
+    "id": "osi_tcpip_relationship_typing",
+    "type": "typing",
+    "question": "Type in the OSI model layers and their respective counterparts in the TCP/IP model. Use the form: OSI layer -> TCP/IP",
+    "answer": "Layers 7, 6, 5 -> Application, Layer 4 -> Transport, Layer 3 -> Internet, Layers 2, 1 -> Network Access"
     },
     {
       "id": "ethernet_frames_overview",
