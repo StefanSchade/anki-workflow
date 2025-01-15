@@ -4,13 +4,13 @@ import os
 
 # Define custom tag replacements
 tag_replacements = {
-    "<{start-terminal}>": "<div style=\"font-family: 'Courier New', monospace; background-color: #000; color: #00ff00; padding: 5px; border-radius: 3px; white-space: pre-wrap;\">",
+    "<{start-terminal}>": "<div style=\"font-family: 'Courier New', monospace; background-color: #000; color: #00ff00; padding: 5px; border-radius: 3px; white-space: pre-wrap; text-align: left;\">",
     "<{end-terminal}>": "</div>",
     "<{start-bold}>": "<b>",
     "<{end-bold}>": "</b>",
-    "<{start-h1}>": "<h1>",
+    "<{start-h1}>": "<h1 style='text-align: left;'>",
     "<{end-h1}>": "</h1>",
-    "<{start-h2}>": "<h2>",
+    "<{start-h2}>": "<h2 style='text-align: left;'>",
     "<{end-h2}>": "</h2>",
     "<{bullet-item}>": "<li>",
     "<{end-bullet-item}>": "</li>",
@@ -34,7 +34,7 @@ def replace_custom_tags(text):
     """Replace custom tags with styled HTML elements."""
     for tag, replacement in tag_replacements.items():
         text = text.replace(tag, replacement)
-    return text
+    return text.replace("/n", "<br>")  # Ensure `/n` is replaced with `<br>`
 
 def export_to_csv(input_dir, output_dir):
     # Ensure output directory exists
