@@ -499,85 +499,190 @@
       "answer": "ICMP is a Layer 3 (Network Layer) protocol used for diagnostic and error-reporting purposes. It operates directly on top of IP and is commonly used by tools like ping and traceroute to check connectivity and troubleshoot network issues."
     },
 
+{
+  "id": "data_segments_definition",
+  "type": "basic",
+  "question": "What are data segments in networking?",
+  "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers, such as TCP or UDP headers."
+},
+{
+  "id": "network_datagrams_definition",
+  "type": "basic",
+  "question": "What are datagrams in networking?",
+  "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes."
+},
+{
+  "id": "ethernet_frames_definition",
+  "type": "basic",
+  "question": "What are Ethernet frames in networking?",
+  "answer": "Ethernet frames are units of data used in the Data Link layer (OSI Layer 2). They encapsulate datagrams from the Network layer with MAC addresses and error-checking fields for local transmission."
+},
+{
+  "id": "segments_vs_datagrams_vs_frames",
+  "type": "basic",
+  "question": "What are the roles of data segments, datagrams, and Ethernet frames in the OSI model?",
+  "answer": "Data segments operate at Layer 4 (Transport Layer) to ensure proper delivery of application data. Datagrams operate at Layer 3 (Network Layer) to handle routing between networks. Ethernet frames operate at Layer 2 (Data Link Layer) for local transmission using MAC addresses."
+},
+{
+  "id": "osi_layer_encapsulation_hierarchy",
+  "type": "basic",
+  "question": "How are data segments, datagrams, and Ethernet frames related in the OSI encapsulation process?",
+  "answer": "Application data is encapsulated into a data segment (Layer 4), which is then encapsulated into a datagram (Layer 3) with an IP header. The datagram is further encapsulated into an Ethernet frame (Layer 2) for local transmission."
+},
+{
+  "id": "osi_addressing_differences",
+  "type": "basic",
+  "question": "How do data segments, datagrams, and Ethernet frames handle addressing?",
+  "answer": "Data segments use port numbers (e.g., TCP/UDP headers) for transport-layer addressing. Datagrams use IP addresses for routing across networks. Ethernet frames use MAC addresses for local device identification."
+},
+{
+  "id": "osi_encapsulation_process",
+  "type": "basic",
+  "question": "What happens during the encapsulation process in the OSI model?",
+  "answer": "Application data is encapsulated into a transport-layer segment, then into a network-layer datagram, and finally into a data link-layer frame for physical transmission."
+},
+{
+  "id": "osi_end_to_end_vs_local",
+  "type": "basic",
+  "question": "What is the difference between end-to-end delivery and local delivery in the OSI model?",
+  "answer": "End-to-end delivery involves data segments (Layer 4) and datagrams (Layer 3) to ensure the message reaches the correct application on the destination device. Local delivery involves Ethernet frames (Layer 2) for transmitting data across a single network segment."
+},
+{
+  "id": "osi_real_world_encapsulation",
+  "type": "basic",
+  "question": "How is an HTTP request encapsulated and transmitted across the OSI layers?",
+  "answer": "An HTTP request (Layer 7) is encapsulated into a TCP segment (Layer 4), which is encapsulated into an IP datagram (Layer 3), and finally into an Ethernet frame (Layer 2) for transmission."
+},
+{
+  "id": "osi_encapsulation_visualized",
+  "type": "basic",
+  "question": "What does the encapsulation structure of an Ethernet frame containing a datagram and a segment look like?",
+  "answer": "The structure is: | Ethernet Header (MAC addresses) | IP Header (source/destination IP) | TCP/UDP Header (source/destination port) | Application Data |."
+},
+{
+  "id": "ipv4_definition",
+  "type": "basic",
+  "question": "What is an IPv4 address?",
+  "answer": "An IPv4 address is a 32-bit address represented in decimal format, consisting of four octets separated by dots (e.g., 192.168.1.1). It is widely used in modern networks."
+},
+{
+  "id": "ipv6_definition",
+  "type": "basic",
+  "question": "What is an IPv6 address?",
+  "answer": "An IPv6 address is a 128-bit address represented in hexadecimal format, consisting of eight groups of four hexadecimal digits separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334)."
+},
+{
+  "id": "ipv4_vs_ipv6",
+  "type": "basic",
+  "question": "What is the primary difference between IPv4 and IPv6?",
+  "answer": "IPv4 uses 32-bit addresses, supporting approximately 4.3 billion unique addresses. IPv6 uses 128-bit addresses, supporting a vastly larger address space to accommodate the growing number of internet-connected devices."
+},
+{
+  "id": "why_ipv6_introduced",
+  "type": "basic",
+  "question": "Why was IPv6 introduced?",
+  "answer": "IPv6 was introduced to address the limitations of IPv4's address space. IPv4's 4.3 billion addresses are insufficient for the growing number of devices, while IPv6 provides an almost unlimited address space."
+},
+{
+  "id": "ipv4_nat",
+  "type": "basic", 
+  "question": "How does IPv4 use NAT (Network Address Translation) to overcome address limitations?",
+  "answer": "NAT allows multiple devices on a private network to share a single public IPv4 address by modifying IP addresses in packet headers as they pass through a router." 
+},
+{
+  "id": "ipv6_replace_ipv4_commands",
+  "type": "basic",
+  "question": "Can IPv6 be used in commands where IPv4 is shown, such as 'ip addr add'? Should there be separate examples?",
+  "answer": "Yes, IPv6 can replace IPv4 in commands like 'ip addr add' by using an IPv6 address instead of IPv4. It can be useful to provide both IPv4 and IPv6 examples to ensure learners understand the syntax for both."
+},
+{
+  "id": "dual_stack_networks",
+  "type": "basic",
+  "question": "What is a dual-stack network?",
+  "answer": "A dual-stack network supports both IPv4 and IPv6 protocols, allowing devices to communicate using either address format depending on the destination."
+},
+{
+  "id": "subnet_mask_definition",
+  "type": "basic",
+  "question": "What is a subnet mask?",
+  "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines which part of the address identifies the network and which part identifies the host."
+},
+{
+  "id": "subnet_mask_example",
+  "type": "basic",
+  "question": "What does the subnet mask 255.255.255.0 indicate?",
+  "answer": "The subnet mask 255.255.255.0 indicates that the first 24 bits of the IP address represent the network, leaving 8 bits for host addresses. This allows for 256 addresses within the subnet, including network and broadcast addresses."
+},
+{
+  "id": "subnet_mask_purpose",
+  "type": "basic",
+  "question": "What is the purpose of a subnet mask in networking?",
+  "answer": "The purpose of a subnet mask is to determine whether an IP address belongs to the same subnet or requires routing to another subnet."
+},
+{
+  "id": "subnet_mask_internal_networks",
+  "type": "basic",
+  "question": "How are subnet masks used in internal networks?",
+  "answer": "Subnet masks are used to segment an internal network into subnets, grouping devices and determining whether an IP address is local or requires routing across subnets."
+},
+{
+  "id": "nat_subnet_mask_relationship",
+  "type": "basic",
+  "question": "How do NAT and subnet masks work together in a network?",
+  "answer": "NAT translates private IP addresses to a public IP address for internet communication, while subnet masks divide the internal network into subnets and determine local routing. NAT hides the internal structure, including subnets, from external networks."
+},
+{
+  "id": "static_ip_address_definition",
+  "type": "basic",
+  "question": "What is a static IP address?",
+  "answer": "A static IP address is manually assigned to a device and does not change over time. It is commonly used for servers, printers, and other devices requiring consistent addresses."
+},
+{
+  "id": "dynamic_ip_address_definition",
+  "type": "basic",
+  "question": "What is a dynamically assigned IP address?",
+  "answer": "A dynamically assigned IP address is automatically allocated by a DHCP server and may change over time. It is commonly used for client devices like laptops and smartphones."
+},
+{
+  "id": "subnetting_benefits",
+  "type": "basic",
+  "question": "What are the benefits of subnetting in a network?",
+  "answer": "Subnetting improves network organization, reduces congestion, enhances security by isolating groups of devices, and optimizes the use of IP address space."
+},
+{
+  "id": "cidr_notation",
+  "type": "basic",
+  "question": "What is CIDR notation, and how is it related to subnet masks?",
+  "answer": "CIDR (Classless Inter-Domain Routing) notation represents a subnet mask as a suffix to an IP address, indicating the number of bits used for the network. For example, 192.168.1.0/24 means the first 24 bits represent the network."
+},
+{
+  "id": "ip_link_show_output",
+  "type": "basic",
+  "question": "What information can you learn from the output of 'ip link show'?",
+  "answer": "The output of 'ip link show' provides details about network interfaces:\n- **Interface index and name:** E.g., 1: lo, 2: enp0s25.\n- **State:** E.g., UP, DOWN, or UNKNOWN.\n- **MTU:** Maximum Transmission Unit (e.g., 1500).\n- **MAC address:** Hardware address (e.g., 60:67:20:b7:33:40).\n- **Additional flags:** Indicate properties like BROADCAST, MULTICAST, or LOOPBACK."
+},
+{
+  "id": "linux_check_nic",
+  "type": "typing",
+  "question": "What command can you use to find network interfaces in Linux?",
+  "answer": "ip link show"
+},
+{
+  "id": "ip_link_show_output",
+  "type": "basic",
+  "question": "What information can you learn from the output of 'ip link show'?",
+  "answer": "The output of 'ip link show' provides details about network interfaces:\n- **Interface index and name:** E.g., 1: lo, 2: enp0s25.\n- **State:** E.g., UP, DOWN, or UNKNOWN.\n- **MTU:** Maximum Transmission Unit (e.g., 1500).\n- **MAC address:** Hardware address (e.g., 60:67:20:b7:33:40).\n- **Additional flags:** Indicate properties like BROADCAST, MULTICAST, or LOOPBACK."
+},
+{
+  "id": "count_network_interfaces",
+  "type": "typing",
+  "question": "How many network interfaces are shown in the output of 'ip link show'?",
+  "answer": "11"
+},
 
 
 
 
-
-    {
-      "id": "data_segments",
-      "type": "basic",
-      "question": "What are data segments in networking?",
-      "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers, such as TCP or UDP headers."
-    },
-    {
-      "id": "network_datagrams",
-      "type": "basic",
-      "question": "What are datagrams in networking?",
-      "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes."
-    },
-    {
-      "id": "frame_vs_datagram_encapsulation",
-      "type": "basic",
-      "question": "How are datagrams and Ethernet frames related in terms of encapsulation?",
-      "answer": "A datagram (Layer 3) is encapsulated within an Ethernet frame (Layer 2) for transmission. The Ethernet frame's payload contains the datagram, along with additional addressing and error-checking fields."
-    },
-    {
-      "id": "frame_vs_datagram_layers",
-      "type": "basic",
-      "question": "At which OSI layers do Ethernet frames and datagrams operate, and what are their purposes?",
-      "answer": "Ethernet frames operate at Layer 2 (Data Link Layer) and are used for local transmission within a network. Datagrams operate at Layer 3 (Network Layer) and enable end-to-end delivery across interconnected networks."
-    },
-    {
-      "id": "frame_vs_datagram_addressing",
-      "type": "basic",
-      "question": "How do Ethernet frames and datagrams handle addressing?",
-      "answer": "Ethernet frames use MAC addresses for local device identification within a LAN. Datagrams use IP addresses for logical routing across networks."
-    },
-    {
-      "id": "frame_vs_datagram_encapsulation",
-      "type": "basic",
-      "question": "How are datagrams and Ethernet frames related in terms of encapsulation?",
-      "answer": "A datagram (Layer 3) is encapsulated within an Ethernet frame (Layer 2) for transmission. The Ethernet frame's payload contains the datagram, along with additional addressing and error-checking fields."
-    },
-
-
-
-
-
-
-
-
-    {
-      "id": "networking_ipv4_ipv6",
-      "type": "basic",
-      "question": "What are IPv4 and IPv6 addresses and what is their difference?",
-      "answer": "IPv4 addresses are 32-bit addresses represented in decimal format (e.g., 192.168.1.1), while IPv6 addresses are 128-bit addresses represented in hexadecimal format (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). That IPv6 provides a much larger address space was the reason for the introduction of the new standard. IPv4 is still widely used as NAT (Network Address Translation), a technique used to modify IP addresses in packet headers as they move through a router or firewall enables private networks to share a single public IP address."
-    },
-    {
-      "id": "networking_subnet_mask",
-      "type": "basic",
-      "question": "What is a subnet mask?",
-      "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines the range of IP addresses within a subnet. For example, 255.255.255.0 indicates a subnet with 256 possible addresses."
-    },
-    {
-      "id": "networking_subnet_mask_nat",
-      "type": "basic",
-      "question": "How do the concepts of nat and subnetmasks relate to each other?",
-      "answer": "subnetmask: deals with logical segmentation of the internal network / determins how devices within a private network are devided into subnets (VLANs) and groups of hosts / determins if an address is local or requires routing across subnets. <br> NAT: deals with the translation of addresses between the internal network and the internet / translates private ips to public ip as traffic corsses the networks boundary (router) / from the outside all devices share the same IP irrespective of their particular subnet."
-    },
-    {
-      "id": "networking_static_dynamic_ips",
-      "type": "basic",
-      "question": "What is the difference between static and dynamically assigned IP addresses?",
-      "answer": "A static IP address is manually assigned to a device and does not change, while a dynamically assigned IP address is allocated by a DHCP (Dynamic Host Configuration Protocol) server and may change over time."
-    },
-    {
-      "id": "linux_check_nic",
-      "type": "typing",
-      "question": "What command can you use to find network interfaces in Linux?",
-      "answer": "ip link show"
-    },
     {
       "id": "linux_assign_static_ip",
       "type": "basic",

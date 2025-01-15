@@ -2,9 +2,39 @@ import json
 import csv
 import os
 
+# Define custom tag replacements
+tag_replacements = {
+    "<{start-terminal}>": "<div style=\"font-family: 'Courier New', monospace; background-color: #000; color: #00ff00; padding: 5px; border-radius: 3px; white-space: pre-wrap;\">",
+    "<{end-terminal}>": "</div>",
+    "<{start-bold}>": "<b>",
+    "<{end-bold}>": "</b>",
+    "<{start-h1}>": "<h1>",
+    "<{end-h1}>": "</h1>",
+    "<{start-h2}>": "<h2>",
+    "<{end-h2}>": "</h2>",
+    "<{bullet-item}>": "<li>",
+    "<{end-bullet-item}>": "</li>",
+    "<{start-table}>": "<table>",
+    "<{end-table}>": "</table>",
+    "<{start-tr}>": "<tr>",
+    "<{end-tr}>": "</tr>",
+    "<{start-td}>": "<td>",
+    "<{end-td}>": "</td>",
+    "<{start-numbered-item}>": "<li>",
+    "<{end-numbered-item}>": "</li>",
+    "<{start-ol}>": "<ol>",
+    "<{end-ol}>": "</ol>",
+}
+
 def safe_deck_name(path):
     """Replaces slashes with double underscores to avoid conflicts."""
     return path.replace("/", "__")
+
+def replace_custom_tags(text):
+    """Replace custom tags with styled HTML elements."""
+    for tag, replacement in tag_replacements.items():
+        text = text.replace(tag, replacement)
+    return text
 
 def export_to_csv(input_dir, output_dir):
     # Ensure output directory exists
@@ -40,12 +70,13 @@ def export_to_csv(input_dir, output_dir):
                             writers[output_file] = (writer, csvfile)
 
                         writer, _ = writers[output_file]
-                        front = card["question"].replace("\n", "<br>")
-                        back = card.get("answer", "N/A").replace("\n", "<br>")
+
+                        # Replace custom tags in question and answer
+                        front = replace_custom_tags(card["question"]).replace("\n", "<br>")
+                        back = replace_custom_tags(card.get("answer", "N/A")).replace("\n", "<br>")
 
                         # Add the filename tag to the existing tags
                         all_tags = card.get("tags", []) + [tag_name]
-                        # tags_str = ";".join(all_tags)
 
                         writer.writerow([front, back, tag_name])
 
@@ -58,7 +89,7 @@ def export_to_csv(input_dir, output_dir):
 
                         writer, _ = writers[output_file]
                         choices = card.get("choices", [])
-                        front = card["question"].replace("\n", "<br>") + "<br><br>"
+                        front = replace_custom_tags(card["question"]).replace("\n", "<br>") + "<br><br>"
                         front += "<br>".join([f"{idx+1}. {choice['text']}" for idx, choice in enumerate(choices)])
 
                         correct_choices = [choice for idx, choice in enumerate(choices) if choice.get("correct")]
@@ -76,8 +107,6 @@ def export_to_csv(input_dir, output_dir):
 
                         # Add the filename tag to the existing tags
                         all_tags = card.get("tags", []) + [tag_name]
-                        print(f"Tags are: {tag_name}")
-                        # tags_str = ";".join(all_tags)
 
                         writer.writerow([front, back, tag_name])
 
