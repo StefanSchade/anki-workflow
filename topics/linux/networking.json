@@ -46,7 +46,7 @@
       "id": "man_definition_typing",
       "type": "typing",
       "question": "How do you call a network that spans a city or urban area?",
-      "answer": "A MAN (Metropolitan Area Network)"
+      "answer": "MAN (Metropolitan Area Network)"
     },
     {
       "id": "ian_definition",
@@ -280,68 +280,230 @@
       "id": "osi_encapsulation_process",
       "type": "basic",
       "question": "What happens during the encapsulation process in the OSI model?",
-      "answer": "In encapsulation, data passes from the Application layer (Layer 7) to the Physical layer (Layer 1). Each layer has distinct responsibilities: Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, and encoding, Layer 5 (Session) includes session identifiers to manage communication sessions, Layer 4 (Transport) adds the TCP/UDP header, Layer 3 (Network) adds the IP header, Layer 2 (Data Link) adds the MAC header and FCS, and Layer 1 (Physical) transmits the raw bits."
+      "answer": "In encapsulation, data passes from the Application layer (Layer 7) to the Physical layer (Layer 1). Each layer has distinct responsibilities: Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, and encoding, Layer 5 (Session) includes session identifiers to manage communication sessions, Layer 4 (Transport) adds the TCP/UDP header, Layer 3 (Network) adds the IP header, Layer 2 (Data Link) adds the MAC header for addressing and Frame Check Sequence (FCS) for error detection, and Layer 1 (Physical) transmits the raw bits."
     },
     {
       "id": "osi_encapsulation_process_typing",
       "type": "typing",
       "question": "What is the name of the process that passes data from the Application layer (Layer 7) to the Physical layer (Layer 1) in the OSI model? What are the responsibilities of the different layers during the process?",
-      "answer": "Encapsulation, Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, encoding, Layer 5 (Session) includes session identifiers, Layer 4 (Transport) adds TCP/UDP header, Layer 3 (Network) adds IP header, Layer 2 (Data Link) adds MAC header and FCS, Layer 1 (Physical) transmits raw bits."
+      "answer": "Encapsulation, Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, encoding, Layer 5 (Session) includes session identifiers, Layer 4 (Transport) adds TCP/UDP header, Layer 3 (Network) adds IP header, Layer 2 (Data Link) adds MAC header and Frame Check Seuqence (FCS), Layer 1 (Physical) transmits raw bits."
     },
     {
       "id": "osi_decapsulation_process",
       "type": "basic",
       "question": "What happens during the decapsulation process in the OSI model?",
-      "answer": "In decapsulation, data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7). Each layer removes its corresponding header: Layer 1 converts signals to raw bits, Layer 2 verifies the FCS and removes the MAC header, Layer 3 processes the IP header, Layer 4 reassembles the data using the TCP/UDP header, Layer 5 identifies the session, Layer 6 decrypts and decodes the data, and Layer 7 interprets the payload for the application."
+      "answer": "In decapsulation, data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7). Each layer removes its corresponding header: Layer 1 converts signals to raw bits, Layer 2 deals with error detection and addressing, so during decapsulation it verifies the Frame Check Sequence (FCS) and removes the MAC header, Layer 3 processes the IP header, Layer 4 reassembles the data using the TCP/UDP header, Layer 5 identifies the session, Layer 6 decrypts and decodes the data, and Layer 7 interprets the payload for the application."
     },
     {
       "id": "osi_decapsulation_process_typing",
       "type": "typing",
       "question": "What is the name of the process where data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7) in the OSI model? What are the responsibilities of the different layers during the process?",
-      "answer": "Decapsulation, Layer 1 (Physical) converts signals to raw bits, Layer 2 (Data Link) verifies the FCS and removes the MAC header, Layer 3 (Network) processes the IP header, Layer 4 (Transport) reassembles the data using the TCP/UDP header, Layer 5 (Session) identifies the session, Layer 6 (Presentation) decrypts and decodes the data, Layer 7 (Application) interprets the payload for the application."
+      "answer": "Decapsulation, Layer 1 (Physical) converts signals to raw bits, Layer 2 (Data Link) verifies the Frame Check Sequence FCS and removes the MAC hader, Layer 3 (Network) processes the IP header, Layer 4 (Transport) reassembles the data that was fragmented during transport using the TCP/UDP header, Layer 5 (Session) identifies the session, Layer 6 (Presentation) decrypts and decodes the data, Layer 7 (Application) interprets the payload for the application."
     },
     {
-    "id": "osi_tcpip_relationship",
-    "type": "basic",
-    "question": "How do the OSI model and the TCP/IP model relate?",
-    "answer": "The OSI model has 7 layers, while the TCP/IP model has 4 layers. The OSI Application, Presentation, and Session layers map to the TCP/IP Application layer. The OSI Transport layer corresponds to the TCP/IP Transport layer. The OSI Network layer maps to the TCP/IP Internet layer, and the OSI Data Link and Physical layers correspond to the TCP/IP Network Access layer."
+      "id": "osi_tcpip_relationship",
+      "type": "basic",
+      "question": "How do the OSI model and the TCP/IP model relate?",
+      "answer": "The OSI model has 7 layers, while the TCP/IP model has 4 layers. The OSI Application, Presentation, and Session layers map to the TCP/IP Application layer. The OSI Transport layer corresponds to the TCP/IP Transport layer. The OSI Network layer maps to the TCP/IP Internet layer, and the OSI Data Link and Physical layers correspond to the TCP/IP Network Access layer."
     },
     {
-    "id": "osi_tcpip_relationship_typing",
-    "type": "typing",
-    "question": "Type in the OSI model layers and their respective counterparts in the TCP/IP model. Use the form: OSI layer -> TCP/IP",
-    "answer": "Layers 7, 6, 5 -> Application, Layer 4 -> Transport, Layer 3 -> Internet, Layers 2, 1 -> Network Access"
+      "id": "osi_tcpip_relationship_typing",
+      "type": "typing",
+      "question": "Type in the OSI model layers and their respective counterparts in the TCP/IP model.  OSI layer number(s) -> TCP/IP layer name",
+      "answer": "Layers 7, 6, 5 -> Application, Layer 4 -> Transport, Layer 3 -> Internet, Layers 2, 1 -> Network Access"
+    },
+    {
+      "id": "osi_processing_end_to_end_vs_hop",
+      "type": "basic",
+      "question": "How does OSI layer processing differ between end-to-end communication and at network hops?",
+      "answer": "End-to-end communication involves processing all OSI layers from the application layer to the physical layer. At network hops, devices like routers only process up to Layer 3 (Network Layer), stripping and re-encapsulating Layer 2 frames for forwarding."
+    },
+    {
+      "id": "osi_router_role",
+      "type": "basic",
+      "question": "Which OSI layers do routers operate on, and what is their role?",
+      "answer": "Routers operate primarily at Layer 3 (Network Layer). They inspect IP packets for destination addresses, determine the best path for forwarding, and re-encapsulate the packet in a new Layer 2 frame for the next hop."
+    },
+    {
+      "id": "osi_layer2_re_encapsulation",
+      "type": "basic",
+      "question": "What happens to Layer 2 frames at each network hop?",
+      "answer": "At each network hop, the Layer 2 frame is stripped off and replaced with a new frame for the next link. This ensures compatibility with the specific physical and data link layers of each hop."
+    },
+    {
+      "id": "osi_hop_processing_efficiency",
+      "type": "basic",
+      "question": "Why do intermediate devices like routers only process data up to Layer 3 in the OSI model?",
+      "answer": "Processing only up to Layer 3 minimizes overhead, ensures modularity between network layers, and allows efficient forwarding without needing to inspect higher-layer data. This also enables encrypted data to remain untouched during transit, preserving end-to-end security."
     },
     {
       "id": "ethernet_frames_overview",
       "type": "basic",
       "question": "What is an Ethernet frame?",
-      "answer": "An Ethernet frame is a data packet format used in Ethernet networks. It contains fields like the destination MAC address, source MAC address, EtherType, payload (data), and a Frame Check Sequence (FCS) for error detection."
+      "answer": "An Ethernet frame is a data packet format used in Ethernet networks. It contains fields like the destination MAC address, source MAC address, EtherType, payload (data), and a Frame Check Sequence (FCS) for error detection. Ethernet frames are typically between 64 and 1518 bytes in size for standard Ethernet. EtherType is a 16-bit field in the Ethernet frame that specifies the protocol encapsulated in the payload of the frame. Comon values include 0x0800 IPv4, 0x86DD ARP (Adress Resolution Protocol)"
     },
     {
-      "id": "ethernet_frame_structure",
-      "type": "basic",
+      "id": "ethernet_frames_overview_typing",
+      "type": "typing",
+      "question": "What is the name of the data packet format used in Ethernet networks?",
+      "answer": "Ethernet frame"
+    },
+    {
+      "id": "ethernet_frame_structure_typing",
+      "type": "typing",
       "question": "What are the main fields in an Ethernet frame?",
-      "answer": "An Ethernet frame contains: Destination MAC address, Source MAC address, EtherType, Payload (data), and Frame Check Sequence (FCS) for error detection."
+      "answer": "Destination MAC address, source MAC address, EtherType, Payload (data), and Frame Check Sequence (FCS) for error detection."
     },
     {
-      "id": "snap_protocol_overview",
+      "id": "ethernet_frame_size_range",
       "type": "basic",
-      "question": "What is the 802.3 SubNetwork Access Protocol (SNAP)?",
-      "answer": "The 802.3 SubNetwork Access Protocol (SNAP) is a protocol used in Ethernet frames to extend the EtherType field, enabling support for additional protocols beyond those defined by IEEE 802.3."
+      "question": "What is the standard size range of an Ethernet frame in IEEE 802.3?",
+      "answer": "The standard size range is 64 to 1518 bytes."
     },
     {
-      "id": "snap_protocol_use_case",
+      "id": "ethernet_runt_frames",
       "type": "basic",
-      "question": "Why is the 802.3 SNAP protocol important?",
-      "answer": "The 802.3 SNAP protocol allows Ethernet frames to support non-standard or proprietary protocols by extending the EtherType field."
+      "question": "What are 'runt frames' in Ethernet, and what typically causes them?",
+      "answer": "'Runt frames' are Ethernet frames smaller than 64 bytes, typically caused by errors during transmission."
+    },
+    {
+      "id": "ethernet_jumbo_frames",
+      "type": "basic",
+      "question": "What are 'jumbo frames' in Ethernet, and when are they used?",
+      "answer": "'Jumbo frames' are Ethernet frames larger than 1518 bytes. They are used in some networks, such as high-speed or storage networks, to optimize performance. All devices on the network must explicitly support jumbo frames."
+    },
+    {
+      "id": "ethernet_standard_vs_nonstandard",
+      "type": "basic",
+      "question": "What does 'standard Ethernet' refer to, and how does it differ from non-standard implementations?",
+      "answer": "'Standard Ethernet' refers to IEEE 802.3, which governs wired Ethernet connections. Non-standard implementations include wireless networking (IEEE 802.11) or specialized Ethernet variants like InfiniBand or proprietary setups."
+    },
+    {
+      "id": "ethernet_frame_components",
+      "type": "basic",
+      "question": "What components are included in an Ethernet frame?",
+      "answer": "An Ethernet frame includes the destination MAC address, source MAC address, EtherType, payload (data), and Frame Check Sequence (FCS)."
+    },
+    {
+      "id": "ethernet_frame_mtu",
+      "type": "basic",
+      "question": "What does MTU (Maximum Transmission Unit) refer to in Ethernet?",
+      "answer": "MTU refers to the maximum payload size that can be transmitted in an Ethernet frame without fragmentation."
+    },
+    {
+      "id": "ethernet_frame_size_efficiency",
+      "type": "basic",
+      "question": "Why is the size range of Ethernet frames (64–1518 bytes) so large?",
+      "answer": "The range accounts for different applications. Larger sizes generally increase efficiency during normal operations but can lead to higher latency in the event of retransmissions due to errors."
+    },
+    {
+      "id": "ieee_802_curriculum_relevance",
+      "type": "basic",
+      "question": "Which IEEE 802 standards are most relevant for a networking curriculum?",
+      "answer": "The most relevant are IEEE 802.3 (Ethernet), IEEE 802.11 (Wi-Fi), IEEE 802.1 (VLANs), IEEE 802.15 (Bluetooth/Zigbee), and IEEE 802.16 (WiMAX)."
+    },
+    {
+      "id": "ethernet_frame_etherType",
+      "type": "basic",
+      "question": "What is the purpose of the EtherType field in an Ethernet frame?",
+      "answer": "The EtherType field is a 16-bit field in the Ethernet frame that specifies the protocol encapsulated in the payload of the frame."
+    },
+    {
+      "id": "ethernet_frame_etherType_values",
+      "type": "basic",
+      "question": "What are common values for the EtherType field in an Ethernet frame?",
+      "answer": "Common values include 0x0800 for IPv4 and 0x86DD for ARP (Address Resolution Protocol)."
+    },
+    {
+      "id": "ieee_definition",
+      "type": "basic",
+      "question": "What does IEEE stand for?",
+      "answer": "IEEE stands for the Institute of Electrical and Electronics Engineers."
+    },
+    {
+      "id": "ieee_role_in_networking",
+      "type": "basic",
+      "question": "What is the role of IEEE in networking?",
+      "answer": "IEEE defines standards for networking technologies, including Ethernet (IEEE 802.3) and Wi-Fi (IEEE 802.11)."
+    },
+    {
+      "id": "ieee_802_definition",
+      "type": "basic",
+      "question": "What is IEEE 802?",
+      "answer": "IEEE 802 is a set of standards for local and metropolitan area networks (LANs and MANs), focusing on physical and data link layers of the OSI model."
+    },
+    {
+      "id": "ieee_802_layer_focus",
+      "type": "basic",
+      "question": "Which layers of the OSI model do IEEE 802 standards focus on?",
+      "answer": "IEEE 802 standards focus on the physical and data link layers of the OSI model."
+    },
+    {
+      "id": "ieee_802_3_ethernet",
+      "type": "basic",
+      "question": "What does IEEE 802.3 define?",
+      "answer": "IEEE 802.3 defines Ethernet standards for wired local area networks (LANs)."
+    },
+    {
+      "id": "ieee_802_3_ethernet_detail",
+      "type": "basic",
+      "question": "What does the IEEE 802.3 standard cover in detail?",
+      "answer": "The IEEE 802.3 standard covers Ethernet, including specifications for wired LANs, Ethernet frame structure, MAC addressing, and physical layer characteristics."
+    },
+    {
+      "id": "ieee_802_11_wifi",
+      "type": "basic",
+      "question": "What does IEEE 802.11 define?",
+      "answer": "IEEE 802.11 defines standards for wireless local area networks (Wi-Fi)."
+    },
+    {
+      "id": "ieee_802_1_vlan",
+      "type": "basic",
+      "question": "What does IEEE 802.1 focus on?",
+      "answer": "IEEE 802.1 focuses on network architecture, bridging, and management, including VLANs and Spanning Tree Protocol (STP)."
+    },
+    {
+      "id": "ieee_802_15_bluetooth",
+      "type": "basic",
+      "question": "What does IEEE 802.15 define?",
+      "answer": "IEEE 802.15 defines standards for Wireless Personal Area Networks (WPANs), including Bluetooth and Zigbee."
+    },
+    {
+      "id": "ieee_802_16_wimax",
+      "type": "basic",
+      "question": "What does IEEE 802.16 define?",
+      "answer": "IEEE 802.16 defines standards for broadband wireless access, including WiMAX."
+    },
+    {
+      "id": "ieee_ethernet_wifi_comparison",
+      "type": "basic",
+      "question": "What is the difference between IEEE 802.3 (Ethernet) and IEEE 802.11 (Wi-Fi)?",
+      "answer": "IEEE 802.3 defines standards for wired networks (Ethernet), while IEEE 802.11 defines standards for wireless networks (Wi-Fi)."
+    },
+    {
+      "id": "ieee_common_protocols",
+      "type": "basic",
+      "question": "What are common protocols defined by IEEE 802 standards?",
+      "answer": "Common protocols include Ethernet (802.3), Wi-Fi (802.11), VLANs (802.1), Bluetooth/Zigbee (802.15), and WiMAX (802.16)."
+    },
+    {
+      "id": "snap_protocol_definition",
+      "type": "basic",
+      "question": "What is the SubNetwork Access Protocol (SNAP)?",
+      "answer": "The SubNetwork Access Protocol (SNAP) is a mechanism used in Ethernet frames to extend the EtherType field, enabling support for additional protocols beyond those defined by IEEE 802.3. This is used for proprietary solutions and uncomon in modern general purpouse networks."
     },
     {
       "id": "icmp_overview",
       "type": "basic",
       "question": "What is ICMP (Internet Control Message Protocol)?",
-      "answer": "ICMP is a network protocol used for diagnostic and error-reporting purposes. It is commonly used by tools like ping and traceroute to check connectivity and troubleshoot network issues."
+      "answer": "ICMP is a Layer 3 (Network Layer) protocol used for diagnostic and error-reporting purposes. It operates directly on top of IP and is commonly used by tools like ping and traceroute to check connectivity and troubleshoot network issues."
     },
+
+
+
+
+
+
     {
       "id": "data_segments",
       "type": "basic",
@@ -354,6 +516,38 @@
       "question": "What are datagrams in networking?",
       "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes."
     },
+    {
+      "id": "frame_vs_datagram_encapsulation",
+      "type": "basic",
+      "question": "How are datagrams and Ethernet frames related in terms of encapsulation?",
+      "answer": "A datagram (Layer 3) is encapsulated within an Ethernet frame (Layer 2) for transmission. The Ethernet frame's payload contains the datagram, along with additional addressing and error-checking fields."
+    },
+    {
+      "id": "frame_vs_datagram_layers",
+      "type": "basic",
+      "question": "At which OSI layers do Ethernet frames and datagrams operate, and what are their purposes?",
+      "answer": "Ethernet frames operate at Layer 2 (Data Link Layer) and are used for local transmission within a network. Datagrams operate at Layer 3 (Network Layer) and enable end-to-end delivery across interconnected networks."
+    },
+    {
+      "id": "frame_vs_datagram_addressing",
+      "type": "basic",
+      "question": "How do Ethernet frames and datagrams handle addressing?",
+      "answer": "Ethernet frames use MAC addresses for local device identification within a LAN. Datagrams use IP addresses for logical routing across networks."
+    },
+    {
+      "id": "frame_vs_datagram_encapsulation",
+      "type": "basic",
+      "question": "How are datagrams and Ethernet frames related in terms of encapsulation?",
+      "answer": "A datagram (Layer 3) is encapsulated within an Ethernet frame (Layer 2) for transmission. The Ethernet frame's payload contains the datagram, along with additional addressing and error-checking fields."
+    },
+
+
+
+
+
+
+
+
     {
       "id": "networking_ipv4_ipv6",
       "type": "basic",
