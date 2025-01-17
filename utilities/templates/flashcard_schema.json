@@ -1,51 +1,61 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Flashcard Schema",
-  "description": "Schema for validating flashcard JSON files for multiple card types.",
   "type": "object",
   "properties": {
     "cards": {
       "type": "array",
-      "description": "Array of flashcards.",
       "items": {
         "type": "object",
         "properties": {
-          "id": { "type": "string", "description": "Unique identifier for the card." },
+          "id": { "type": "string" },
           "type": {
             "type": "string",
-            "enum": ["basic", "typing", "multiple-choice"],
-            "description": "Type of flashcard."
+            "enum": [
+              "basic",
+              "typing",
+              "multiple-choice",
+              "vocabulary"
+              
+            ]
           },
-          "question": { "type": "string", "description": "Question or prompt for the card." },
-          "answer": { "type": "string", "description": "Answer for basic and typing card types." },
+          "question":  { "type": "string" },
+          "answer":    { "type": "string" },
           "choices": {
             "type": "array",
-            "description": "Array of choices for multiple-choice cards.",
             "items": {
               "type": "object",
               "properties": {
-                "text": { "type": "string", "description": "Choice text." },
-                "correct": { "type": "boolean", "description": "Indicates if the choice is correct." },
-                "explanation": { "type": "string", "description": "Explanation for the choice." }
+                "text":        { "type": "string" },
+                "correct":     { "type": "boolean" },
+                "explanation": { "type": "string" }
+              }
+            }
+          },
+          "native":  { "type": "string" },
+          "context": { "type": "string" },
+          "foreign": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "word":       { "type": "string" },
+                "definition": { "type": "string" }
               },
-              "required": ["text", "correct"]
+              "required": [ "word" ]
+              
             }
           },
           "tags": {
             "type": "array",
-            "description": "Tags categorizing the card.",
             "items": { "type": "string" }
           }
         },
-        "required": ["id", "type", "question"]
+        "required": [
+          "id",
+          "type"
+        ]
       }
-    },
-    "tags": {
-      "type": "array",
-      "description": "Tags applicable to all cards in this file.",
-      "items": { "type": "string" }
     }
-  },
-  "required": ["cards"]
+  }
 }
-

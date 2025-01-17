@@ -1,0 +1,25 @@
+{
+  "cards": [
+    {
+      "id": "vocab_green",
+      "type": "vocabulary",
+      "native": "grün",
+      "context": "Farbe",
+      "foreign": [
+        { "word": "green", "definition": "The color formed by mixing yellow and blue." },
+        { "word": "jade" },
+        { "word": "olive" }
+      ]
+    },
+    {
+      "id": "vocab_unripe",
+      "type": "vocabulary",
+      "native": "grün",
+      "context": "unreif",
+      "foreign": [
+        { "word": "unripe", "definition": "Not fully matured, either in plants or people." }
+      ]
+    }
+  ]
+}
+
