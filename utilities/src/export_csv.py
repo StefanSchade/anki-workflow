@@ -12,6 +12,14 @@ tag_replacements = {
     "<{end-h1}>": "</h1>",
     "<{start-h2}>": "<h2 style='text-align: left;'>",
     "<{end-h2}>": "</h2>",
+    "<{start-h3}>": "<h3 style='text-align: left;'>",
+    "<{end-h3}>": "</h3>",
+     "<{start-h4}>": "<h4 style='text-align: left;'>",
+    "<{end-h4}>": "</h4>",
+    "<{start-h5}>": "<h5 style='text-align: left;'>",
+    "<{end-h5}>": "</h5>",
+    "<{start-h6}>": "<h6 style='text-align: left;'>",
+    "<{end-h6}>": "</h6>",
     "<{bullet-item}>": "<li>",
     "<{end-bullet-item}>": "</li>",
     "<{start-table}>": "<table>",
@@ -22,8 +30,9 @@ tag_replacements = {
     "<{end-td}>": "</td>",
     "<{start-numbered-item}>": "<li>",
     "<{end-numbered-item}>": "</li>",
-    "<{start-ol}>": "<ol>",
+    "<{start-ol}>": "<ol style=\"text-align: left;\">",
     "<{end-ol}>": "</ol>",
+    "<{break}>": "<br>",
 }
 
 def safe_deck_name(path):
@@ -34,7 +43,7 @@ def replace_custom_tags(text):
     """Replace custom tags with styled HTML elements."""
     for tag, replacement in tag_replacements.items():
         text = text.replace(tag, replacement)
-    return text.replace("/n", "<br>")  # Ensure `/n` is replaced with `<br>`
+    return text
 
 def export_to_csv(input_dir, output_dir):
     # Ensure output directory exists

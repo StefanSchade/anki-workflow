@@ -1,10 +1,39 @@
 {
 "cards": [
+
 {
-  "id": "ip_link_show_output",
+  "id": "linux_static_ip_persistent_ubuntu1",
   "type": "basic",
-  "question": "What can you learn from this output?<br><br>/n <{start-terminal}> /n $ ip link show /n stefan@Melian:~$ ip link show /n 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000 /n link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 /n 2: enp0s25: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000 /n link/ether 3c:97:0e:be:c4:9d brd ff:ff:ff:ff:ff:ff /n 4: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000 /n link/ether 60:67:20:b7:33:40 brd ff:ff:ff:ff:ff:ff /n 5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:45:be:22:62 brd ff:ff:ff:ff:ff:ff /n 6: br-cd55516d845e: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:84:81:e9:09 brd ff:ff:ff:ff:ff:ff /n 7: br-f31e1b65f3fc: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:4a:b4:7d:6a brd ff:ff:ff:ff:ff:ff /n 8: br-f5d3455a961d: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:cd:ef:5c:14 brd ff:ff:ff:ff:ff:ff /n 9: br-0416cfb330e8: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:84:3b:84:f2 brd ff:ff:ff:ff:ff:ff /n 10: br-385ac45e7493: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:e7:be:6d:03 brd ff:ff:ff:ff:ff:ff /n 49: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 /n link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff /n stefan@Melian:~$ ls^C /n stefan@Melian:~$  /n /n /n /n <{end-terminal}>",
-  "answer": "This output provides detials on the network interfaces on your system. <{start-h1}>Interface Index and Name<{end-h1}><{start-numbered-item}><{start-ol}>lo -> loopback interface<{end-ol}><end-numbered-item}>",
-  "tags": ["linux", "networking"]
+  "question": "How do you configure a persistent static IP in Ubuntu?",
+  "answer": "In Ubuntu, a persistent static IP can be configured using Netplan. Follow these updated steps to avoid warnings:<{break}><{break}>1. Edit the Netplan configuration file, e.g., `/etc/netplan/01-netcfg.yaml`:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      dhcp4: no<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      routes:<{break}>        - to: 0.0.0.0/0<{break}>          via: 192.168.1.1<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>2. Apply the configuration using the terminal command:<{break}><{break}><{start-terminal}><{break}>sudo netplan apply<{break}><{end-terminal}><{break}><{break}>This setup avoids warnings and ensures the changes are persistent across reboots."
+},
+
+
+	{
+  "id": "linux_static_ip_persistent_ubuntu",
+  "type": "basic",
+  "question": "How do you configure a persistent static IP in Ubuntu?",
+  "answer": "In Ubuntu, a persistent static IP can be configured using Netplan. This is specific to Ubuntu and some other Debian-based distributions. Follow these steps:<{break}><{break}>1. Edit the Netplan configuration file, e.g., `/etc/netplan/01-netcfg.yaml`:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      dhcp4: no<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      gateway4: 192.168.1.1<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>2. Apply the configuration using the terminal command:<{break}><{break}><{start-terminal}><{break}>sudo netplan apply<{break}><{end-terminal}><{break}><{break}>This setup ensures the changes are persistent across reboots."
+},
+
+	
+	
+	{
+  "id": "bridge_interface_details",
+  "type": "basic",
+  "question": "How can you identify and associate bridge interfaces in Linux using `nmcli` and `brctl`?",
+  "answer": "<{start-h2}>Bridge Interface Identification:<{end-h2}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>nmcli connection show<{end-terminal}>` to list bridges managed by NetworkManager, showing UUIDs and associated devices.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>nmcli connection show<{break}>NAME                UUID                                  TYPE      DEVICE          <{break}>br-0416cfb330e8     3f586c70-4b29-40a0-89b9-25a0b7738ecd  bridge    br-0416cfb330e8<{break}><{end-terminal}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>brctl show<{end-terminal}>` to list bridges, their IDs, and STP status.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>brctl show<{break}>bridge name\tbridge id\t\tSTP enabled\tinterfaces<{break}>br-0416cfb330e8\t8000.0242afeb4189\tno<{break}><{end-terminal}>",
+  "tags": ["linux", "networking", "bridges"]
+},
+
+
+{
+  "id": "linux_static_ip_persistent_redhat",
+  "type": "basic",
+  "question": "How do you configure a persistent static IP in Red Hat-based distributions?",
+  "answer": "<{start-h2}>Configuring a Persistent Static IP in Red Hat-based Distributions:<{end-h2}><{break}><{break}><{start-h3}>1. Older Method: `/etc/sysconfig/network-scripts/` (Pre-Fedora 33 and RHEL 9)<{end-h3}><{break}><{break}><{start-terminal}><{break}>File: /etc/sysconfig/network-scripts/ifcfg-eth0<{break}><{break}>BOOTPROTO=none<{break}>IPADDR=192.168.1.100<{break}>PREFIX=24<{break}>GATEWAY=192.168.1.1<{break}>DNS1=8.8.8.8<{break}>NAME=eth0<{break}>DEVICE=eth0<{break}>ONBOOT=yes<{break}><{end-terminal}><{break}><{break}>After editing the file, restart the network service:<{break}><{start-terminal}>sudo systemctl restart network<{end-terminal}><{break}><{break}><{break}><{start-h3}>2. Modern Method: Using `nmcli` (Fedora 33+, RHEL 9+)<{end-h3}><{break}><{break}>Use the `nmcli` utility to configure a static IP:<{break}><{start-terminal}>sudo nmcli connection modify 'Wired connection 1' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}><{break}>Activate the connection:<{break}><{start-terminal}>sudo nmcli connection up 'Wired connection 1'<{end-terminal}><{break}><{break}>Configuration files for NetworkManager are stored in:<{break}><{start-terminal}>/etc/NetworkManager/system-connections/<{end-terminal}>",
+  "tags": ["linux", "networking", "redhat"]
 }
-], "tags": ["a","b"]}
+
+],
+"tags": ["a","b"]}
