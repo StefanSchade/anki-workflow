@@ -40,7 +40,12 @@
               "type": "object",
               "properties": {
                 "word":       { "type": "string" },
-                "definition": { "type": "string" }
+                "definition": { "type": "string" },
+		"commonality": { "type": "number", "minimum": 1, "maximum": 10 },
+      		"attributes": {
+        		"type": "array",
+        	"items": { "type": "string" }
+                }
               },
               "required": [ "word" ]
               
