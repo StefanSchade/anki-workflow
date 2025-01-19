@@ -1,25 +1,32 @@
 {
   "cards": [
     {
-      "id": "vocab_green",
+      "id": "vocab_abate",
       "type": "vocabulary",
-      "native": "grün",
-      "context": "Farbe",
+      "native": "nachlassen; abklingen",
       "foreign": [
-        { "word": "green", "definition": "The color formed by mixing yellow and blue." },
-        { "word": "jade" },
-        { "word": "olive" }
-      ]
-    },
-    {
-      "id": "vocab_unripe",
-      "type": "vocabulary",
-      "native": "grün",
-      "context": "unreif",
-      "foreign": [
-        { "word": "unripe", "definition": "Not fully matured, either in plants or people." }
+        {
+          "word": "abate, to",
+          "definition": "To reduce in intensity, amount, or degree; often used for things like pain, weather, or legal matters.",
+	  "example": "The storm began to abate as the night progressed.",
+          "frequency": 6,
+          "attributes": ["formal", "legal", "literary"]
+        },{
+	  "word": "diminisih, to",
+	  "definition": "To reduce or make something appear smaller, often with a focus on perceived value or importance.",
+	  "example": "The harsh criticism did not diminish her confidence.",
+	  "freqency": 7,
+	  "attributes": ["formal", "general", "perceptual"]
+	},{
+	  "word": "lessen, to",
+	  "definition": "To make something smaller or weaker in size, intensity, or degree; often a general term used for everyday contexts.",
+	  "freqency": 8,
+	  "attributes": ["general"]
+	}
+      ],
+      "tags": [
+        "common"
       ]
     }
   ]
 }
-

@@ -8,7 +8,9 @@
       "items": {
         "type": "object",
         "properties": {
-          "id": { "type": "string" },
+          "id": {
+            "type": "string"
+          },
           "type": {
             "type": "string",
             "enum": [
@@ -16,44 +18,89 @@
               "typing",
               "multiple-choice",
               "vocabulary"
-              
             ]
           },
-          "question":  { "type": "string" },
-          "answer":    { "type": "string" },
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
           "choices": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "text":        { "type": "string" },
-                "correct":     { "type": "boolean" },
-                "explanation": { "type": "string" }
+                "text": {
+                  "type": "string"
+                },
+                "correct": {
+                  "type": "boolean"
+                },
+                "explanation": {
+                  "type": "string"
+                }
               }
             }
           },
-          "native":  { "type": "string" },
-          "context": { "type": "string" },
+          "native": {
+            "type": "string"
+          },
+          "context": {
+            "type": "string"
+          },
           "foreign": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "word":       { "type": "string" },
-                "definition": { "type": "string" },
-		"commonality": { "type": "number", "minimum": 1, "maximum": 10 },
-      		"attributes": {
-        		"type": "array",
-        	"items": { "type": "string" }
+                "word": {
+                  "type": "string"
+                },
+                "definition": {
+                  "type": "string"
+                },
+                "frequency": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 10
+                },
+		"hint":{
+		  "type": "string"
+		},
+                "attributes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "part_of_speech": {
+                  "type": "string",
+                  "enum": [
+                    "noun",
+                    "verb",
+                    "adjective",
+                    "adverb",
+                    "pronoun",
+                    "preposition",
+                    "conjunction",
+                    "interjection"
+                  ]
+                },
+                "example": {
+                  "type": "string"
                 }
               },
-              "required": [ "word" ]
-              
+              "required": [
+                "word"
+              ]
             }
           },
           "tags": {
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": [

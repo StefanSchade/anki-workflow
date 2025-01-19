@@ -1,0 +1,215 @@
+{
+  "cards": [
+    {
+      "id": "vocab_aesthetic",
+      "type": "vocabulary",
+      "native": "ästhetisch",
+      "foreign": [
+        {
+          "word": "aesthetic",
+          "definition": "Concerned with beauty or the appreciation of beauty.",
+          "frequency": 5,
+          "attributes": ["general", "art"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_affinity",
+      "type": "vocabulary",
+      "native": "Affinität; natürliche Neigung",
+      "foreign": [
+        {
+          "word": "affinity",
+          "definition": "A natural liking for or attraction to something.",
+          "frequency": 6,
+          "attributes": ["formal"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_aforementioned",
+      "type": "vocabulary",
+      "native": "oben erwähnt; zuvor genannt",
+      "foreign": [
+        {
+          "word": "aforementioned",
+          "definition": "Denoting something that has been previously mentioned.",
+          "frequency": 7,
+          "attributes": ["formal", "written"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_agile",
+      "type": "vocabulary",
+      "native": "agil; flink",
+      "foreign": [
+        {
+          "word": "agile",
+          "definition": "Able to move quickly and easily.",
+          "frequency": 8,
+          "attributes": ["general"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_akimbo",
+      "type": "vocabulary",
+      "native": "mit in die Hüften gestützten Armen",
+      "foreign": [
+        {
+          "word": "akimbo",
+          "definition": "With hands on the hips and elbows turned outward.",
+          "frequency": 3,
+          "attributes": ["literary"]
+        }
+      ],
+      "tags": ["uncommon"]
+    },
+    {
+      "id": "vocab_alchemy",
+      "type": "vocabulary",
+      "native": "Alchemie",
+      "foreign": [
+        {
+          "word": "alchemy",
+          "definition": "A medieval chemical science aiming to transform base metals into gold.",
+          "frequency": 4,
+          "attributes": ["history", "science"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_alibi",
+      "type": "vocabulary",
+      "native": "Alibi",
+      "foreign": [
+        {
+          "word": "alibi",
+          "definition": "A claim or piece of evidence that one was elsewhere when an act took place.",
+          "frequency": 8,
+          "attributes": ["legal"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_allegator",
+      "type": "vocabulary",
+      "native": "Ankläger; Beschuldiger",
+      "foreign": [
+        {
+          "word": "allegator",
+          "definition": "A person who alleges something, typically in a legal setting.",
+          "frequency": 2,
+          "attributes": ["legal", "rare"]
+        }
+      ],
+      "tags": ["uncommon"]
+    },
+    {
+      "id": "vocab_allegory",
+      "type": "vocabulary",
+      "native": "Allegorie; bildliche Darstellung",
+      "foreign": [
+        {
+          "word": "allegory",
+          "definition": "A story, poem, or picture that can be interpreted to reveal a hidden meaning.",
+          "frequency": 5,
+          "attributes": ["literary"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_alleviate",
+      "type": "vocabulary",
+      "native": "lindern; erleichtern",
+      "foreign": [
+        {
+          "word": "alleviate",
+          "definition": "To make suffering, deficiency, or a problem less severe.",
+          "frequency": 6,
+          "attributes": ["general"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_alliteration",
+      "type": "vocabulary",
+      "native": "Alliteration; Stabreim",
+      "foreign": [
+        {
+          "word": "alliteration",
+          "definition": "The occurrence of the same letter or sound at the beginning of closely connected words.",
+          "frequency": 5,
+          "attributes": ["literary"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_allusion",
+      "type": "vocabulary",
+      "native": "Anspielung; Hinweis",
+      "foreign": [
+        {
+          "word": "allusion",
+          "definition": "An expression designed to call something to mind without mentioning it explicitly.",
+          "frequency": 5,
+          "attributes": ["general"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_altercation",
+      "type": "vocabulary",
+      "native": "Streit; hitzige Auseinandersetzung",
+      "foreign": [
+        {
+          "word": "altercation",
+          "definition": "A noisy argument or disagreement, especially in public.",
+          "frequency": 6,
+          "attributes": ["general"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_ambiance",
+      "type": "vocabulary",
+      "native": "Ambiente; Stimmung",
+      "foreign": [
+        {
+          "word": "ambiance",
+          "definition": "The character and atmosphere of a place.",
+          "frequency": 7,
+          "attributes": ["general"]
+        }
+      ],
+      "tags": ["common"]
+    },
+    {
+      "id": "vocab_ambiguity",
+      "type": "vocabulary",
+      "native": "Mehrdeutigkeit; Unklarheit",
+      "foreign": [
+        {
+          "word": "ambiguity",
+          "definition": "The quality of being open to more than one interpretation.",
+          "frequency": 6,
+          "attributes": ["general"]
+        }
+      ],
+      "tags": ["common"]
+    }
+  ]
+}
+
