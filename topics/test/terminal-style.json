@@ -2,33 +2,33 @@
 "cards": [
 
 {
-  "id": "linux_static_ip_persistent_ubuntu1",
+  "id": "linux_static_ip_persistent_ubuntu1i",
   "type": "basic",
-  "question": "How do you configure a persistent static IP in Ubuntu?",
+  "question": "How do you configure a persisxtent static IP in Ubuntu?",
   "answer": "In Ubuntu, a persistent static IP can be configured using Netplan. Follow these updated steps to avoid warnings:<{break}><{break}>1. Edit the Netplan configuration file, e.g., `/etc/netplan/01-netcfg.yaml`:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      dhcp4: no<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      routes:<{break}>        - to: 0.0.0.0/0<{break}>          via: 192.168.1.1<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>2. Apply the configuration using the terminal command:<{break}><{break}><{start-terminal}><{break}>sudo netplan apply<{break}><{end-terminal}><{break}><{break}>This setup avoids warnings and ensures the changes are persistent across reboots."
 },
 
 
 	{
-  "id": "linux_static_ip_persistent_ubuntu",
+  "id": "linux_static_ip_persistent_ubuntux",
   "type": "basic",
-  "question": "How do you configure a persistent static IP in Ubuntu?",
+  "question": "How do you configure a persixstent static IP in Ubuntu?",
   "answer": "In Ubuntu, a persistent static IP can be configured using Netplan. This is specific to Ubuntu and some other Debian-based distributions. Follow these steps:<{break}><{break}>1. Edit the Netplan configuration file, e.g., `/etc/netplan/01-netcfg.yaml`:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      dhcp4: no<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      gateway4: 192.168.1.1<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>2. Apply the configuration using the terminal command:<{break}><{break}><{start-terminal}><{break}>sudo netplan apply<{break}><{end-terminal}><{break}><{break}>This setup ensures the changes are persistent across reboots."
 },
 
 	
 	
 	{
-  "id": "bridge_interface_details",
+  "id": "bridge_interface_detailsx",
   "type": "basic",
-  "question": "How can you identify and associate bridge interfaces in Linux using `nmcli` and `brctl`?",
+  "question": "How can you identifxy and associate bridge interfaces in Linux using `nmcli` and `brctl`?",
   "answer": "<{start-h2}>Bridge Interface Identification:<{end-h2}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>nmcli connection show<{end-terminal}>` to list bridges managed by NetworkManager, showing UUIDs and associated devices.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>nmcli connection show<{break}>NAME                UUID                                  TYPE      DEVICE          <{break}>br-0416cfb330e8     3f586c70-4b29-40a0-89b9-25a0b7738ecd  bridge    br-0416cfb330e8<{break}><{end-terminal}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>brctl show<{end-terminal}>` to list bridges, their IDs, and STP status.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>brctl show<{break}>bridge name\tbridge id\t\tSTP enabled\tinterfaces<{break}>br-0416cfb330e8\t8000.0242afeb4189\tno<{break}><{end-terminal}>",
   "tags": ["linux", "networking", "bridges"]
 },
 
 
 {
-  "id": "linux_static_ip_persistent_redhat",
+  "id": "linux_static_ip_persistentx_redhat",
   "type": "basic",
   "question": "How do you configure a persistent static IP in Red Hat-based distributions?",
   "answer": "<{start-h2}>Configuring a Persistent Static IP in Red Hat-based Distributions:<{end-h2}><{break}><{break}><{start-h3}>1. Older Method: `/etc/sysconfig/network-scripts/` (Pre-Fedora 33 and RHEL 9)<{end-h3}><{break}><{break}><{start-terminal}><{break}>File: /etc/sysconfig/network-scripts/ifcfg-eth0<{break}><{break}>BOOTPROTO=none<{break}>IPADDR=192.168.1.100<{break}>PREFIX=24<{break}>GATEWAY=192.168.1.1<{break}>DNS1=8.8.8.8<{break}>NAME=eth0<{break}>DEVICE=eth0<{break}>ONBOOT=yes<{break}><{end-terminal}><{break}><{break}>After editing the file, restart the network service:<{break}><{start-terminal}>sudo systemctl restart network<{end-terminal}><{break}><{break}><{break}><{start-h3}>2. Modern Method: Using `nmcli` (Fedora 33+, RHEL 9+)<{end-h3}><{break}><{break}>Use the `nmcli` utility to configure a static IP:<{break}><{start-terminal}>sudo nmcli connection modify 'Wired connection 1' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}><{break}>Activate the connection:<{break}><{start-terminal}>sudo nmcli connection up 'Wired connection 1'<{end-terminal}><{break}><{break}>Configuration files for NetworkManager are stored in:<{break}><{start-terminal}>/etc/NetworkManager/system-connections/<{end-terminal}>",

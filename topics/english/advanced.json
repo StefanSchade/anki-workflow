@@ -1,56 +1,256 @@
 {
   "cards": [
     {
-      "id": "vocab_lackadaisical",
+      "id": "vocab_abate",
       "type": "vocabulary",
-      "native": "lustlos; unenthusiastisch",
-      "context": "Er wirkte bei den Hausaufgaben sehr lustlos und unenthusiastisch.",
+      "native": "nachlassen; abklingen",
       "foreign": [
         {
-          "word": "lackadaisical",
-          "definition": "Lacking enthusiasm and determination; carelessly lazy."
+          "word": "abate",
+          "definition": "To become less intense or widespread."
         }
       ],
-      "tags": ["advanced", "qa_spelling"]
+      "tags": [
+        "common"
+      ]
     },
     {
-      "id": "vocab_ensconce",
+      "id": "vocab_abhor",
       "type": "vocabulary",
-      "native": "es sich gemütlich machen; sich behaglich niederlassen",
-      "context": "Nach dem Abendessen machte sie es sich gemütlich am Kaminfeuer.",
+      "native": "verabscheuen; hassen",
       "foreign": [
         {
-          "word": "ensconce",
-          "definition": "To settle snugly or securely; to hide securely."
+          "word": "abhor",
+          "definition": "Regard with disgust and hatred."
         }
       ],
-      "tags": ["advanced", "qa_spelling"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
-      "id": "vocab_conniption",
+      "id": "vocab_absolve",
       "type": "vocabulary",
-      "native": "Wutanfall oder hysterischer Anfall",
-      "context": "Er hatte beinahe einen Wutanfall, als er den Schaden sah.",
+      "native": "freisprechen; entlasten",
       "foreign": [
         {
-          "word": "conniption",
-          "definition": "A fit of rage or hysterical excitement."
+          "word": "absolve",
+          "definition": "Set or declare someone free from blame, guilt, or responsibility."
         }
       ],
-      "tags": ["advanced", "qa_spelling"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
-      "id": "vocab_kerfuffle",
+      "id": "vocab_abstemious",
       "type": "vocabulary",
-      "native": "Aufregung oder Durcheinander, oft durch Meinungsverschiedenheiten",
-      "context": "Es gab ein kleines Durcheinander wegen der Sitzordnung.",
+      "native": "enthaltsam; genügsam",
       "foreign": [
         {
-          "word": "kerfuffle",
-          "definition": "A commotion or fuss, especially one caused by conflicting views."
+          "word": "abstemious",
+          "definition": "Not self-indulgent, especially when eating and drinking."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_abstruse",
+      "type": "vocabulary",
+      "native": "schwer verständlich; abstrus",
+      "foreign": [
+        {
+          "word": "abstruse",
+          "definition": "Difficult to understand; obscure."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_accolade",
+      "type": "vocabulary",
+      "native": "Auszeichnung; Lob",
+      "foreign": [
+        {
+          "word": "accolade",
+          "definition": "An award or privilege granted as a special honor or as an acknowledgment of merit."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_adulation",
+      "type": "vocabulary",
+      "native": "Bewunderung; Schmeichelei",
+      "foreign": [
+        {
+          "word": "adulation",
+          "definition": "Excessive admiration or praise."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_aesthetic",
+      "type": "vocabulary",
+      "native": "ästhetisch; schöngeistig",
+      "foreign": [
+        {
+          "word": "aesthetic",
+          "definition": "Concerned with beauty or the appreciation of beauty."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_affable",
+      "type": "vocabulary",
+      "native": "freundlich; umgänglich",
+      "foreign": [
+        {
+          "word": "affable",
+          "definition": "Friendly, good-natured, or easy to talk to."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_alacrity",
+      "type": "vocabulary",
+      "native": "Bereitwilligkeit; Eifer",
+      "foreign": [
+        {
+          "word": "alacrity",
+          "definition": "Brisk and cheerful readiness."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_allay",
+      "type": "vocabulary",
+      "native": "lindern; beruhigen",
+      "foreign": [
+        {
+          "word": "allay",
+          "definition": "Diminish or put at rest (fear, suspicion, or worry)."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_altruism",
+      "type": "vocabulary",
+      "native": "Selbstlosigkeit; Uneigennützigkeit",
+      "foreign": [
+        {
+          "word": "altruism",
+          "definition": "The belief in or practice of selfless concern for the well-being of others."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_amorphous",
+      "type": "vocabulary",
+      "native": "formlos; unbestimmt",
+      "foreign": [
+        {
+          "word": "amorphous",
+          "definition": "Without a clearly defined shape or form."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_arid",
+      "type": "vocabulary",
+      "native": "trocken; öde",
+      "foreign": [
+        {
+          "word": "arid",
+          "definition": "Lacking in interest, excitement, or meaning; extremely dry."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_assuage",
+      "type": "vocabulary",
+      "native": "besänftigen; lindern",
+      "foreign": [
+        {
+          "word": "assuage",
+          "definition": "To make an unpleasant feeling less intense."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_beguiling",
+      "type": "vocabulary",
+      "native": "verführerisch; bezaubernd",
+      "foreign": [
+        {
+          "word": "beguiling",
+          "definition": "Charming or enchanting, often in a deceptive way."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_benevolent",
+      "type": "vocabulary",
+      "native": "wohlwollend; gütig",
+      "foreign": [
+        {
+          "word": "benevolent",
+          "definition": "Well-meaning and kindly."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_blatant",
+      "type": "vocabulary",
+      "native": "offensichtlich; unverhohlen",
+      "foreign": [
+        {
+          "word": "blatant",
+          "definition": "Done openly and unashamedly; completely lacking in subtlety."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_bucolic",
@@ -63,33 +263,209 @@
           "definition": "Relating to the countryside or pastoral life; rural and peaceful."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
-      "id": "vocab_lugubrious",
+      "id": "vocab_cacophony",
       "type": "vocabulary",
-      "native": "schwermütig; düster, traurig",
-      "context": "Er sprach auf der Beerdigung in sehr schwermütigem Ton.",
+      "native": "Missklang; lautes Durcheinander von Geräuschen",
       "foreign": [
         {
-          "word": "lugubrious",
-          "definition": "Looking or sounding sad and dismal; mournful."
+          "word": "cacophony",
+          "definition": "A harsh, discordant mixture of sounds."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
-      "id": "vocab_labyrinth",
+      "id": "vocab_capitulate",
       "type": "vocabulary",
-      "native": "Labyrinth oder Irrgarten",
-      "context": "Das alte Schloss hatte ein Labyrinth geheimer Gänge.",
+      "native": "kapitulieren; sich ergeben",
       "foreign": [
         {
-          "word": "labyrinth",
-          "definition": "A complicated network of passages in which it is difficult to find one’s way; a maze."
+          "word": "capitulate",
+          "definition": "Cease to resist an opponent or an unwelcome demand; surrender."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_clairvoyant",
+      "type": "vocabulary",
+      "native": "hellseherisch; übersinnlich",
+      "foreign": [
+        {
+          "word": "clairvoyant",
+          "definition": "Having or exhibiting an ability to perceive events in the future or beyond normal sensory contact."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_conniption",
+      "type": "vocabulary",
+      "native": "Wutanfall oder hysterischer Anfall",
+      "context": "Er hatte beinahe einen Wutanfall, als er den Schaden sah.",
+      "foreign": [
+        {
+          "word": "conniption",
+          "definition": "A fit of rage or hysterical excitement."
+        }
+      ],
+      "tags": [
+        "advanced",
+        "qa_spelling"
+      ]
+    },
+    {
+      "id": "vocab_credulous",
+      "type": "vocabulary",
+      "native": "leichtgläubig; gutgläubig",
+      "foreign": [
+        {
+          "word": "credulous",
+          "definition": "Having or showing too great a readiness to believe things."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_debilitate",
+      "type": "vocabulary",
+      "native": "schwächen; lähmen",
+      "foreign": [
+        {
+          "word": "debilitate",
+          "definition": "Make (someone) weak and infirm."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_diligent",
+      "type": "vocabulary",
+      "native": "fleißig; gewissenhaft",
+      "foreign": [
+        {
+          "word": "diligent",
+          "definition": "Having or showing care and conscientiousness in one's work or duties."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_dulcet",
+      "type": "vocabulary",
+      "native": "angenehm; süßlich",
+      "foreign": [
+        {
+          "word": "dulcet",
+          "definition": "Sweet and soothing (often used ironically)."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_effervescent",
+      "type": "vocabulary",
+      "native": "sprudelnd; lebhaft",
+      "foreign": [
+        {
+          "word": "effervescent",
+          "definition": "Vivacious and enthusiastic; giving off bubbles."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_egregious",
+      "type": "vocabulary",
+      "native": "gravierend; ungeheuerlich",
+      "foreign": [
+        {
+          "word": "egregious",
+          "definition": "Outstandingly bad; shocking."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_eloquent",
+      "type": "vocabulary",
+      "native": "redegewandt; beredt",
+      "foreign": [
+        {
+          "word": "eloquent",
+          "definition": "Fluent or persuasive in speaking or writing."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_elucidate",
+      "type": "vocabulary",
+      "native": "erläutern; erklären",
+      "foreign": [
+        {
+          "word": "elucidate",
+          "definition": "To make something clear; to explain."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_enervate",
+      "type": "vocabulary",
+      "native": "entkräften; schwächen",
+      "foreign": [
+        {
+          "word": "enervate",
+          "definition": "Cause (someone) to feel drained of energy or vitality; weaken."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_ensconce",
+      "type": "vocabulary",
+      "native": "es sich gemütlich machen; sich behaglich niederlassen",
+      "context": "Nach dem Abendessen machte sie es sich gemütlich am Kaminfeuer.",
+      "foreign": [
+        {
+          "word": "ensconce",
+          "definition": "To settle snugly or securely; to hide securely."
+        }
+      ],
+      "tags": [
+        "advanced",
+        "qa_spelling"
+      ]
     },
     {
       "id": "vocab_ephemeral",
@@ -102,7 +478,252 @@
           "definition": "Lasting for a very short time; transient."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_epistolary",
+      "type": "vocabulary",
+      "native": "Briefform; zur Korrespondenz gehörend",
+      "foreign": [
+        {
+          "word": "epistolary",
+          "definition": "Relating to the writing of letters or literary works in the form of letters."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_esoteric",
+      "type": "vocabulary",
+      "native": "nur für Eingeweihte verständlich; geheimnisvoll",
+      "foreign": [
+        {
+          "word": "esoteric",
+          "definition": "Intended for or likely to be understood by only a small number of people with a specialized knowledge or interest."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_euphonious",
+      "type": "vocabulary",
+      "native": "wohlklingend",
+      "foreign": [
+        {
+          "word": "euphonious",
+          "definition": "Pleasing to the ear."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_fervent",
+      "type": "vocabulary",
+      "native": "leidenschaftlich; glühend",
+      "foreign": [
+        {
+          "word": "fervent",
+          "definition": "Having or displaying a passionate intensity."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_fortuitous",
+      "type": "vocabulary",
+      "native": "zufällig; glücklich",
+      "foreign": [
+        {
+          "word": "fortuitous",
+          "definition": "Happening by a lucky chance; fortunate."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_furtive",
+      "type": "vocabulary",
+      "native": "verstohlen; heimlich",
+      "foreign": [
+        {
+          "word": "furtive",
+          "definition": "Attempting to avoid notice or attention, typically because of guilt or a belief that discovery would lead to trouble."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_gobsmacked",
+      "type": "vocabulary",
+      "native": "sprachlos vor Überraschung",
+      "foreign": [
+        {
+          "word": "gobsmacked",
+          "definition": "Utterly astonished; astounded."
+        }
+      ],
+      "tags": [
+        "advanced",
+        "qa_spelling"
+      ]
+    },
+    {
+      "id": "vocab_gullible",
+      "type": "vocabulary",
+      "native": "leichtgläubig; naiv",
+      "foreign": [
+        {
+          "word": "gullible",
+          "definition": "Easily persuaded to believe something; credulous."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_hubris",
+      "type": "vocabulary",
+      "native": "Überheblichkeit; Selbstüberschätzung",
+      "foreign": [
+        {
+          "word": "hubris",
+          "definition": "Excessive pride or self-confidence."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_iconoclast",
+      "type": "vocabulary",
+      "native": "Bilderstürmer; Traditionsbrecher",
+      "foreign": [
+        {
+          "word": "iconoclast",
+          "definition": "A person who attacks or criticizes cherished beliefs or institutions."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_idiosyncrasy",
+      "type": "vocabulary",
+      "native": "Eigenart; spezielle Gewohnheit",
+      "foreign": [
+        {
+          "word": "idiosyncrasy",
+          "definition": "A distinctive or peculiar feature or characteristic of a person, place, or thing."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_ineffable",
+      "type": "vocabulary",
+      "native": "unaussprechlich; unbeschreiblich",
+      "foreign": [
+        {
+          "word": "ineffable",
+          "definition": "Too great or extreme to be expressed or described in words."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_insidious",
+      "type": "vocabulary",
+      "native": "heimtückisch; schleichend gefährlich",
+      "foreign": [
+        {
+          "word": "insidious",
+          "definition": "Proceeding in a gradual, subtle way, but with harmful effects."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_jocular",
+      "type": "vocabulary",
+      "native": "scherzhaft; witzig",
+      "foreign": [
+        {
+          "word": "jocular",
+          "definition": "Fond of or characterized by joking; humorous or playful."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_kerfuffle",
+      "type": "vocabulary",
+      "native": "Aufregung oder Durcheinander, oft durch Meinungsverschiedenheiten",
+      "context": "Es gab ein kleines Durcheinander wegen der Sitzordnung.",
+      "foreign": [
+        {
+          "word": "kerfuffle",
+          "definition": "A commotion or fuss, especially one caused by conflicting views."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_labyrinth",
+      "type": "vocabulary",
+      "native": "Labyrinth oder Irrgarten",
+      "context": "Das alte Schloss hatte ein Labyrinth geheimer Gänge.",
+      "foreign": [
+        {
+          "word": "labyrinth",
+          "definition": "A complicated network of passages in which it is difficult to find one’s way; a maze."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_lackadaisical",
+      "type": "vocabulary",
+      "native": "lustlos; unenthusiastisch",
+      "context": "Er wirkte bei den Hausaufgaben sehr lustlos und unenthusiastisch.",
+      "foreign": [
+        {
+          "word": "lackadaisical",
+          "definition": "Lacking enthusiasm and determination; carelessly lazy."
+        }
+      ],
+      "tags": [
+        "advanced",
+        "qa_spelling"
+      ]
     },
     {
       "id": "vocab_lackluster",
@@ -115,7 +736,206 @@
           "definition": "Lacking in vitality, force, or conviction; uninspired."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_lament",
+      "type": "vocabulary",
+      "native": "beklagen; betrauern",
+      "foreign": [
+        {
+          "word": "lament",
+          "definition": "To express sorrow, regret, or unhappiness about something."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_loquacious",
+      "type": "vocabulary",
+      "native": "gesprächig; redselig",
+      "foreign": [
+        {
+          "word": "loquacious",
+          "definition": "Tending to talk a great deal; talkative."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_lucid",
+      "type": "vocabulary",
+      "native": "klar; verständlich",
+      "foreign": [
+        {
+          "word": "lucid",
+          "definition": "Expressed clearly; easy to understand."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_lugubrious",
+      "type": "vocabulary",
+      "native": "schwermütig; düster, traurig",
+      "context": "Er sprach auf der Beerdigung in sehr schwermütigem Ton.",
+      "foreign": [
+        {
+          "word": "lugubrious",
+          "definition": "Looking or sounding sad and dismal; mournful."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_magnanimous",
+      "type": "vocabulary",
+      "native": "großmütig; großzügig",
+      "foreign": [
+        {
+          "word": "magnanimous",
+          "definition": "Generous or forgiving, especially towards a rival or someone less powerful."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_meticulous",
+      "type": "vocabulary",
+      "native": "akribisch; sorgfältig",
+      "foreign": [
+        {
+          "word": "meticulous",
+          "definition": "Showing great attention to detail; very careful and precise."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_nonchalant",
+      "type": "vocabulary",
+      "native": "gleichgültig; lässig",
+      "foreign": [
+        {
+          "word": "nonchalant",
+          "definition": "Feeling or appearing casually calm and relaxed; not displaying anxiety, interest, or enthusiasm."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_noxious",
+      "type": "vocabulary",
+      "native": "schädlich; giftig",
+      "foreign": [
+        {
+          "word": "noxious",
+          "definition": "Harmful, poisonous, or very unpleasant."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_obfuscate",
+      "type": "vocabulary",
+      "native": "verschleiern; vernebeln",
+      "foreign": [
+        {
+          "word": "obfuscate",
+          "definition": "To render obscure, unclear, or unintelligible."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_obsequious",
+      "type": "vocabulary",
+      "native": "unterwürfig; kriecherisch",
+      "foreign": [
+        {
+          "word": "obsequious",
+          "definition": "Obedient or attentive to an excessive or servile degree."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_ominous",
+      "type": "vocabulary",
+      "native": "unheilvoll; bedrohlich",
+      "foreign": [
+        {
+          "word": "ominous",
+          "definition": "Giving the impression that something bad or unpleasant is going to happen."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_ostentatious",
+      "type": "vocabulary",
+      "native": "prahlerisch; protzig",
+      "foreign": [
+        {
+          "word": "ostentatious",
+          "definition": "Characterized by vulgar or pretentious display; designed to impress or attract notice."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_paradigm",
+      "type": "vocabulary",
+      "native": "Muster; Modell",
+      "foreign": [
+        {
+          "word": "paradigm",
+          "definition": "A typical example or pattern of something; a model."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_pedantic",
+      "type": "vocabulary",
+      "native": "pedantisch; schulmeisterlich",
+      "foreign": [
+        {
+          "word": "pedantic",
+          "definition": "Excessively concerned with minor details or rules; overly scholarly."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_penultimate",
@@ -128,163 +948,9 @@
           "definition": "Occurring immediately before the last one; next to last."
         }
       ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_gobsmacked",
-      "type": "vocabulary",
-      "native": "sprachlos vor Überraschung",
-      "foreign": [
-        {
-          "word": "gobsmacked",
-          "definition": "Utterly astonished; astounded."
-        }
-      ],
-      "tags": ["advanced", "qa_spelling"]
-    },
-    {
-      "id": "vocab_cacophony",
-      "type": "vocabulary",
-      "native": "Missklang; lautes Durcheinander von Geräuschen",
-      "foreign": [
-        {
-          "word": "cacophony",
-          "definition": "A harsh, discordant mixture of sounds."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_epistolary",
-      "type": "vocabulary",
-      "native": "Briefform; zur Korrespondenz gehörend",
-      "foreign": [
-        {
-          "word": "epistolary",
-          "definition": "Relating to the writing of letters or literary works in the form of letters."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_egregious",
-      "type": "vocabulary",
-      "native": "gravierend; ungeheuerlich",
-      "foreign": [
-        {
-          "word": "egregious",
-          "definition": "Outstandingly bad; shocking."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_seminal",
-      "type": "vocabulary",
-      "native": "bahnbrechend; richtungweisend",
-      "foreign": [
-        {
-          "word": "seminal",
-          "definition": "Strongly influencing later developments; highly original and important."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_idiosyncrasy",
-      "type": "vocabulary",
-      "native": "Eigenart; spezielle Gewohnheit",
-      "foreign": [
-        {
-          "word": "idiosyncrasy",
-          "definition": "A distinctive or peculiar feature or characteristic of a person, place, or thing."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_insidious",
-      "type": "vocabulary",
-      "native": "heimtückisch; schleichend gefährlich",
-      "foreign": [
-        {
-          "word": "insidious",
-          "definition": "Proceeding in a gradual, subtle way, but with harmful effects."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_esoteric",
-      "type": "vocabulary",
-      "native": "nur für Eingeweihte verständlich; geheimnisvoll",
-      "foreign": [
-        {
-          "word": "esoteric",
-          "definition": "Intended for or likely to be understood by only a small number of people with a specialized knowledge or interest."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_umbrage",
-      "type": "vocabulary",
-      "native": "Verstimmung; Anstoß",
-      "foreign": [
-        {
-          "word": "umbrage",
-          "definition": "Offense or annoyance."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_pulchritudinous",
-      "type": "vocabulary",
-      "native": "außergewöhnlich schön",
-      "foreign": [
-        {
-          "word": "pulchritudinous",
-          "definition": "Having great physical beauty and appeal."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_beguiling",
-      "type": "vocabulary",
-      "native": "verführerisch; bezaubernd",
-      "foreign": [
-        {
-          "word": "beguiling",
-          "definition": "Charming or enchanting, often in a deceptive way."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_abhor",
-      "type": "vocabulary",
-      "native": "verabscheuen; hassen",
-      "foreign": [
-        {
-          "word": "abhor",
-          "definition": "Regard with disgust and hatred."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_absolve",
-      "type": "vocabulary",
-      "native": "freisprechen; entlasten",
-      "foreign": [
-        {
-          "word": "absolve",
-          "definition": "Set or declare someone free from blame, guilt, or responsibility."
-        }
-      ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_placate",
@@ -296,403 +962,9 @@
           "definition": "Make (someone) less angry or hostile."
         }
       ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_cacophony",
-      "type": "vocabulary",
-      "native": "Missklang; lautes Durcheinander von Geräuschen",
-      "foreign": [
-        {
-          "word": "cacophony",
-          "definition": "A harsh, discordant mixture of sounds."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_benevolent",
-      "type": "vocabulary",
-      "native": "wohlwollend; gütig",
-      "foreign": [
-        {
-          "word": "benevolent",
-          "definition": "Well-meaning and kindly."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_dulcet",
-      "type": "vocabulary",
-      "native": "angenehm; süßlich",
-      "foreign": [
-        {
-          "word": "dulcet",
-          "definition": "Sweet and soothing (often used ironically)."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_effervescent",
-      "type": "vocabulary",
-      "native": "sprudelnd; lebhaft",
-      "foreign": [
-        {
-          "word": "effervescent",
-          "definition": "Vivacious and enthusiastic; giving off bubbles."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_pugnacious",
-      "type": "vocabulary",
-      "native": "kampflustig; streitsüchtig",
-      "foreign": [
-        {
-          "word": "pugnacious",
-          "definition": "Eager or quick to argue, quarrel, or fight."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_rambunctious",
-      "type": "vocabulary",
-      "native": "wild; ungestüm",
-      "foreign": [
-        {
-          "word": "rambunctious",
-          "definition": "Uncontrollably exuberant; boisterous."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_enervate",
-      "type": "vocabulary",
-      "native": "entkräften; schwächen",
-      "foreign": [
-        {
-          "word": "enervate",
-          "definition": "Cause (someone) to feel drained of energy or vitality; weaken."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_altruism",
-      "type": "vocabulary",
-      "native": "Selbstlosigkeit; Uneigennützigkeit",
-      "foreign": [
-        {
-          "word": "altruism",
-          "definition": "The belief in or practice of selfless concern for the well-being of others."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_umbrage",
-      "type": "vocabulary",
-      "native": "Anstoß; Beleidigung",
-      "foreign": [
-        {
-          "word": "umbrage",
-          "definition": "Offense or annoyance."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_hubris",
-      "type": "vocabulary",
-      "native": "Überheblichkeit; Selbstüberschätzung",
-      "foreign": [
-        {
-          "word": "hubris",
-          "definition": "Excessive pride or self-confidence."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_clairvoyant",
-      "type": "vocabulary",
-      "native": "hellseherisch; übersinnlich",
-      "foreign": [
-        {
-          "word": "clairvoyant",
-          "definition": "Having or exhibiting an ability to perceive events in the future or beyond normal sensory contact."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_amorphous",
-      "type": "vocabulary",
-      "native": "formlos; unbestimmt",
-      "foreign": [
-        {
-          "word": "amorphous",
-          "definition": "Without a clearly defined shape or form."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_allay",
-      "type": "vocabulary",
-      "native": "lindern; beruhigen",
-      "foreign": [
-        {
-          "word": "allay",
-          "definition": "Diminish or put at rest (fear, suspicion, or worry)."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_debilitate",
-      "type": "vocabulary",
-      "native": "schwächen; lähmen",
-      "foreign": [
-        {
-          "word": "debilitate",
-          "definition": "Make (someone) weak and infirm."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_ineffable",
-      "type": "vocabulary",
-      "native": "unaussprechlich; unbeschreiblich",
-      "foreign": [
-        {
-          "word": "ineffable",
-          "definition": "Too great or extreme to be expressed or described in words."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_rescind",
-      "type": "vocabulary",
-      "native": "aufheben; widerrufen",
-      "foreign": [
-        {
-          "word": "rescind",
-          "definition": "Revoke, cancel, or repeal (a law, order, or agreement)."
-        }
-      ],
-      "tags": ["advanced"]
-    },
- {
-      "id": "vocab_ubiquitous",
-      "type": "vocabulary",
-      "native": "allgegenwärtig; überall vorhanden",
-      "foreign": [
-        {
-          "word": "ubiquitous",
-          "definition": "Present, appearing, or found everywhere."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_abstruse",
-      "type": "vocabulary",
-      "native": "schwer verständlich; abstrus",
-      "foreign": [
-        {
-          "word": "abstruse",
-          "definition": "Difficult to understand; obscure."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_fortuitous",
-      "type": "vocabulary",
-      "native": "zufällig; glücklich",
-      "foreign": [
-        {
-          "word": "fortuitous",
-          "definition": "Happening by a lucky chance; fortunate."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_loquacious",
-      "type": "vocabulary",
-      "native": "gesprächig; redselig",
-      "foreign": [
-        {
-          "word": "loquacious",
-          "definition": "Tending to talk a great deal; talkative."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_insidious",
-      "type": "vocabulary",
-      "native": "heimtückisch; schleichend",
-      "foreign": [
-        {
-          "word": "insidious",
-          "definition": "Proceeding in a gradual, subtle way, but with harmful effects."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_placate",
-      "type": "vocabulary",
-      "native": "besänftigen; beschwichtigen",
-      "foreign": [
-        {
-          "word": "placate",
-          "definition": "Make (someone) less angry or hostile."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_sagacious",
-      "type": "vocabulary",
-      "native": "weise; scharfsinnig",
-      "foreign": [
-        {
-          "word": "sagacious",
-          "definition": "Having or showing keen mental discernment and good judgment; wise."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_obsequious",
-      "type": "vocabulary",
-      "native": "unterwürfig; kriecherisch",
-      "foreign": [
-        {
-          "word": "obsequious",
-          "definition": "Obedient or attentive to an excessive or servile degree."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_adulation",
-      "type": "vocabulary",
-      "native": "Bewunderung; Schmeichelei",
-      "foreign": [
-        {
-          "word": "adulation",
-          "definition": "Excessive admiration or praise."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_ephemeral",
-      "type": "vocabulary",
-      "native": "vergänglich; kurzlebig",
-      "foreign": [
-        {
-          "word": "ephemeral",
-          "definition": "Lasting for a very short time."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-{
-      "id": "vocab_fervent",
-      "type": "vocabulary",
-      "native": "leidenschaftlich; glühend",
-      "foreign": [
-        {
-          "word": "fervent",
-          "definition": "Having or displaying a passionate intensity."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_gullible",
-      "type": "vocabulary",
-      "native": "leichtgläubig; naiv",
-      "foreign": [
-        {
-          "word": "gullible",
-          "definition": "Easily persuaded to believe something; credulous."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_jocular",
-      "type": "vocabulary",
-      "native": "scherzhaft; witzig",
-      "foreign": [
-        {
-          "word": "jocular",
-          "definition": "Fond of or characterized by joking; humorous or playful."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_noxious",
-      "type": "vocabulary",
-      "native": "schädlich; giftig",
-      "foreign": [
-        {
-          "word": "noxious",
-          "definition": "Harmful, poisonous, or very unpleasant."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_lucid",
-      "type": "vocabulary",
-      "native": "klar; verständlich",
-      "foreign": [
-        {
-          "word": "lucid",
-          "definition": "Expressed clearly; easy to understand."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_lament",
-      "type": "vocabulary",
-      "native": "beklagen; betrauern",
-      "foreign": [
-        {
-          "word": "lament",
-          "definition": "To express sorrow, regret, or unhappiness about something."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_prudent",
-      "type": "vocabulary",
-      "native": "umsichtig; klug",
-      "foreign": [
-        {
-          "word": "prudent",
-          "definition": "Acting with or showing care and thought for the future."
-        }
-      ],
-      "tags": ["common"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_precocious",
@@ -704,247 +976,65 @@
           "definition": "Having developed certain abilities or inclinations at an earlier age than is usual or expected."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
-      "id": "vocab_serendipity",
+      "id": "vocab_prudent",
       "type": "vocabulary",
-      "native": "Glücklicher Zufall",
+      "native": "umsichtig; klug",
       "foreign": [
         {
-          "word": "serendipity",
-          "definition": "The occurrence of events by chance in a happy or beneficial way."
+          "word": "prudent",
+          "definition": "Acting with or showing care and thought for the future."
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
-      "id": "vocab_sagacity",
+      "id": "vocab_pugnacious",
       "type": "vocabulary",
-      "native": "Klugheit; Scharfsinn",
+      "native": "kampflustig; streitsüchtig",
       "foreign": [
         {
-          "word": "sagacity",
-          "definition": "The quality of being sagacious; wisdom."
+          "word": "pugnacious",
+          "definition": "Eager or quick to argue, quarrel, or fight."
         }
       ],
-      "tags": ["advanced"]
-    },
-     {
-      "id": "vocab_ubiquitous",
-      "type": "vocabulary",
-      "native": "allgegenwärtig",
-      "foreign": [
-        {
-          "word": "ubiquitous",
-          "definition": "Present, appearing, or found everywhere."
-        }
-      ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
-      "id": "vocab_insidious",
+      "id": "vocab_pulchritudinous",
       "type": "vocabulary",
-      "native": "heimtückisch; hinterhältig",
+      "native": "außergewöhnlich schön",
       "foreign": [
         {
-          "word": "insidious",
-          "definition": "Proceeding in a gradual, subtle way, but with harmful effects."
+          "word": "pulchritudinous",
+          "definition": "Having great physical beauty and appeal."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
-      "id": "vocab_eloquent",
+      "id": "vocab_rambunctious",
       "type": "vocabulary",
-      "native": "redegewandt; beredt",
+      "native": "wild; ungestüm",
       "foreign": [
         {
-          "word": "eloquent",
-          "definition": "Fluent or persuasive in speaking or writing."
+          "word": "rambunctious",
+          "definition": "Uncontrollably exuberant; boisterous."
         }
       ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_sanguine",
-      "type": "vocabulary",
-      "native": "optimistisch; zuversichtlich",
-      "foreign": [
-        {
-          "word": "sanguine",
-          "definition": "Optimistic or positive, especially in an apparently bad or difficult situation."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_ostentatious",
-      "type": "vocabulary",
-      "native": "prahlerisch; protzig",
-      "foreign": [
-        {
-          "word": "ostentatious",
-          "definition": "Characterized by vulgar or pretentious display; designed to impress or attract notice."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_benevolent",
-      "type": "vocabulary",
-      "native": "wohlwollend; gütig",
-      "foreign": [
-        {
-          "word": "benevolent",
-          "definition": "Well-meaning and kindly."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_altruism",
-      "type": "vocabulary",
-      "native": "Selbstlosigkeit; Uneigennützigkeit",
-      "foreign": [
-        {
-          "word": "altruism",
-          "definition": "The belief in or practice of disinterested and selfless concern for the well-being of others."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_nonchalant",
-      "type": "vocabulary",
-      "native": "gleichgültig; lässig",
-      "foreign": [
-        {
-          "word": "nonchalant",
-          "definition": "Feeling or appearing casually calm and relaxed; not displaying anxiety, interest, or enthusiasm."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_meticulous",
-      "type": "vocabulary",
-      "native": "akribisch; sorgfältig",
-      "foreign": [
-        {
-          "word": "meticulous",
-          "definition": "Showing great attention to detail; very careful and precise."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_placate",
-      "type": "vocabulary",
-      "native": "besänftigen; beschwichtigen",
-      "foreign": [
-        {
-          "word": "placate",
-          "definition": "To make someone less angry or hostile."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_sagacious",
-      "type": "vocabulary",
-      "native": "weise; klug",
-      "foreign": [
-        {
-          "word": "sagacious",
-          "definition": "Having or showing keen mental discernment and good judgment; wise."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_obfuscate",
-      "type": "vocabulary",
-      "native": "verschleiern; vernebeln",
-      "foreign": [
-        {
-          "word": "obfuscate",
-          "definition": "To render obscure, unclear, or unintelligible."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_ephemeral",
-      "type": "vocabulary",
-      "native": "vergänglich; kurzlebig",
-      "foreign": [
-        {
-          "word": "ephemeral",
-          "definition": "Lasting for a very short time."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_abhor",
-      "type": "vocabulary",
-      "native": "verabscheuen; hassen",
-      "foreign": [
-        {
-          "word": "abhor",
-          "definition": "To regard with disgust and hatred."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_blatant",
-      "type": "vocabulary",
-      "native": "offensichtlich; unverhohlen",
-      "foreign": [
-        {
-          "word": "blatant",
-          "definition": "Done openly and unashamedly; completely lacking in subtlety."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_credulous",
-      "type": "vocabulary",
-      "native": "leichtgläubig; gutgläubig",
-      "foreign": [
-        {
-          "word": "credulous",
-          "definition": "Having or showing too great a readiness to believe things."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_hubris",
-      "type": "vocabulary",
-      "native": "Überheblichkeit; Hybris",
-      "foreign": [
-        {
-          "word": "hubris",
-          "definition": "Excessive pride or self-confidence."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_paradigm",
-      "type": "vocabulary",
-      "native": "Muster; Modell",
-      "foreign": [
-        {
-          "word": "paradigm",
-          "definition": "A typical example or pattern of something; a model."
-        }
-      ],
-      "tags": ["common"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_recalcitrant",
@@ -956,7 +1046,107 @@
           "definition": "Having an obstinately uncooperative attitude toward authority or discipline."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_rescind",
+      "type": "vocabulary",
+      "native": "aufheben; widerrufen",
+      "foreign": [
+        {
+          "word": "rescind",
+          "definition": "Revoke, cancel, or repeal (a law, order, or agreement)."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_sagacious",
+      "type": "vocabulary",
+      "native": "weise; scharfsinnig",
+      "foreign": [
+        {
+          "word": "sagacious",
+          "definition": "Having or showing keen mental discernment and good judgment; wise."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_sagacity",
+      "type": "vocabulary",
+      "native": "Klugheit; Scharfsinn",
+      "foreign": [
+        {
+          "word": "sagacity",
+          "definition": "The quality of being sagacious; wisdom."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_sanguine",
+      "type": "vocabulary",
+      "native": "optimistisch; zuversichtlich",
+      "foreign": [
+        {
+          "word": "sanguine",
+          "definition": "Optimistic or positive, especially in an apparently bad or difficult situation."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_seminal",
+      "type": "vocabulary",
+      "native": "bahnbrechend; richtungweisend",
+      "foreign": [
+        {
+          "word": "seminal",
+          "definition": "Strongly influencing later developments; highly original and important."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_serendipity",
+      "type": "vocabulary",
+      "native": "Glücklicher Zufall",
+      "foreign": [
+        {
+          "word": "serendipity",
+          "definition": "The occurrence of events by chance in a happy or beneficial way."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
+    },
+    {
+      "id": "vocab_superfluous",
+      "type": "vocabulary",
+      "native": "überflüssig",
+      "foreign": [
+        {
+          "word": "superfluous",
+          "definition": "Unnecessary, especially through being more than enough."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_surreptitious",
@@ -968,237 +1158,11 @@
           "definition": "Kept secret, especially because it would not be approved of."
         }
       ],
-      "tags": ["advanced"]
-    },
-       {
-      "id": "vocab_superfluous",
-      "type": "vocabulary",
-      "native": "überflüssig",
-      "foreign": [
-        {
-          "word": "superfluous",
-          "definition": "Unnecessary, especially through being more than enough."
-        }
-      ],
-      "tags": ["common"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
-      "id": "vocab_altruism",
-      "type": "vocabulary",
-      "native": "Selbstlosigkeit; Altruismus",
-      "foreign": [
-        {
-          "word": "altruism",
-          "definition": "The belief in or practice of selfless concern for the well-being of others."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_arid",
-      "type": "vocabulary",
-      "native": "trocken; öde",
-      "foreign": [
-        {
-          "word": "arid",
-          "definition": "Lacking in interest, excitement, or meaning; extremely dry."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_assuage",
-      "type": "vocabulary",
-      "native": "besänftigen; lindern",
-      "foreign": [
-        {
-          "word": "assuage",
-          "definition": "To make an unpleasant feeling less intense."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_benevolent",
-      "type": "vocabulary",
-      "native": "wohlwollend; gütig",
-      "foreign": [
-        {
-          "word": "benevolent",
-          "definition": "Well-meaning and kindly."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_cacophony",
-      "type": "vocabulary",
-      "native": "Missklang; Kakophonie",
-      "foreign": [
-        {
-          "word": "cacophony",
-          "definition": "A harsh, discordant mixture of sounds."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_capitulate",
-      "type": "vocabulary",
-      "native": "kapitulieren; sich ergeben",
-      "foreign": [
-        {
-          "word": "capitulate",
-          "definition": "Cease to resist an opponent or an unwelcome demand; surrender."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_clairvoyant",
-      "type": "vocabulary",
-      "native": "hellseherisch",
-      "foreign": [
-        {
-          "word": "clairvoyant",
-          "definition": "Having or exhibiting an ability to perceive events in the future or beyond normal sensory contact."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_diligent",
-      "type": "vocabulary",
-      "native": "fleißig; gewissenhaft",
-      "foreign": [
-        {
-          "word": "diligent",
-          "definition": "Having or showing care and conscientiousness in one's work or duties."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_elucidate",
-      "type": "vocabulary",
-      "native": "erläutern; erklären",
-      "foreign": [
-        {
-          "word": "elucidate",
-          "definition": "To make something clear; to explain."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-{
-      "id": "vocab_ephemeral",
-      "type": "vocabulary",
-      "native": "vergänglich; kurzlebig",
-      "foreign": [
-        {
-          "word": "ephemeral",
-          "definition": "Lasting for a very short time."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_euphonious",
-      "type": "vocabulary",
-      "native": "wohlklingend",
-      "foreign": [
-        {
-          "word": "euphonious",
-          "definition": "Pleasing to the ear."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_furtive",
-      "type": "vocabulary",
-      "native": "verstohlen; heimlich",
-      "foreign": [
-        {
-          "word": "furtive",
-          "definition": "Attempting to avoid notice or attention, typically because of guilt or a belief that discovery would lead to trouble."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_gullible",
-      "type": "vocabulary",
-      "native": "leichtgläubig",
-      "foreign": [
-        {
-          "word": "gullible",
-          "definition": "Easily persuaded to believe something; credulous."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_iconoclast",
-      "type": "vocabulary",
-      "native": "Bilderstürmer; Traditionsbrecher",
-      "foreign": [
-        {
-          "word": "iconoclast",
-          "definition": "A person who attacks or criticizes cherished beliefs or institutions."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_loquacious",
-      "type": "vocabulary",
-      "native": "gesprächig; redselig",
-      "foreign": [
-        {
-          "word": "loquacious",
-          "definition": "Tending to talk a great deal; talkative."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_magnanimous",
-      "type": "vocabulary",
-      "native": "großmütig; großzügig",
-      "foreign": [
-        {
-          "word": "magnanimous",
-          "definition": "Generous or forgiving, especially towards a rival or someone less powerful."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-    {
-      "id": "vocab_ominous",
-      "type": "vocabulary",
-      "native": "unheilvoll; bedrohlich",
-      "foreign": [
-        {
-          "word": "ominous",
-          "definition": "Giving the impression that something bad or unpleasant is going to happen."
-        }
-      ],
-      "tags": ["common"]
-    },
-    {
-      "id": "vocab_pedantic",
-      "type": "vocabulary",
-      "native": "pedantisch; schulmeisterlich",
-      "foreign": [
-        {
-          "word": "pedantic",
-          "definition": "Excessively concerned with minor details or rules; overly scholarly."
-        }
-      ],
-      "tags": ["advanced"]
-    },
-{
       "id": "vocab_tangible",
       "type": "vocabulary",
       "native": "greifbar; konkret",
@@ -1208,7 +1172,9 @@
           "definition": "Perceptible by touch; clear and definite, real."
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_tenacious",
@@ -1220,7 +1186,9 @@
           "definition": "Holding firmly to something; persistent and determined."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_tranquility",
@@ -1232,19 +1200,37 @@
           "definition": "The state of being calm, peaceful, and untroubled."
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_ubiquitous",
       "type": "vocabulary",
-      "native": "allgegenwärtig",
+      "native": "allgegenwärtig; überall vorhanden",
       "foreign": [
         {
           "word": "ubiquitous",
           "definition": "Present, appearing, or found everywhere."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
+    },
+    {
+      "id": "vocab_umbrage",
+      "type": "vocabulary",
+      "native": "Verstimmung; Anstoß",
+      "foreign": [
+        {
+          "word": "umbrage",
+          "definition": "Offense or annoyance."
+        }
+      ],
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_venerable",
@@ -1256,7 +1242,9 @@
           "definition": "Accorded a great deal of respect, especially because of age, wisdom, or character."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_vicarious",
@@ -1268,7 +1256,9 @@
           "definition": "Experienced through the feelings or actions of another person."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_voluble",
@@ -1280,7 +1270,9 @@
           "definition": "Speaking or spoken incessantly and fluently."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_wary",
@@ -1292,7 +1284,9 @@
           "definition": "Feeling or showing caution about possible dangers or problems."
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_xenophile",
@@ -1304,7 +1298,9 @@
           "definition": "A person who is attracted to foreign peoples, cultures, or customs."
         }
       ],
-      "tags": ["advanced"]
+      "tags": [
+        "advanced"
+      ]
     },
     {
       "id": "vocab_zealous",
@@ -1316,130 +1312,205 @@
           "definition": "Having or showing zeal; fervent and enthusiastic."
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
-      "id": "vocab_abate",
-      "type": "vocabulary",
-      "native": "nachlassen; abklingen",
-      "foreign": [
-        {
-          "word": "abate",
-          "definition": "To become less intense or widespread."
-        }
-      ],
-      "tags": ["common"]
+        "id": "vocab_abdicate",
+        "type": "vocabulary",
+        "native": "abdanken; verzichten",
+        "foreign": [
+            {
+                "word": "abdicate",
+                "definition": "To formally renounce a throne, high office, responsibility, or duty."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
     },
     {
-      "id": "vocab_abhor",
-      "type": "vocabulary",
-      "native": "etw. verabscheuen",
-      "foreign": [
-        {
-          "word": "abhor",
-          "definition": "To regard with disgust and hatred."
-        }
-      ],
-      "tags": ["common"]
+        "id": "vocab_abet",
+        "type": "vocabulary",
+        "native": "unterstützen; begünstigen (meist negativ)",
+        "foreign": [
+            {
+                "word": "abet",
+                "definition": "To encourage or assist someone to do something wrong, such as committing a crime."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
     },
     {
-      "id": "vocab_absolve",
-      "type": "vocabulary",
-      "native": "jmdn. freisprechen; entlasten",
-      "foreign": [
-        {
-          "word": "absolve",
-          "definition": "To declare someone free from guilt or responsibility."
-        }
-      ],
-      "tags": ["advanced"]
+        "id": "vocab_abhor",
+        "type": "vocabulary",
+        "native": "etw. verabscheuen; hassen",
+        "foreign": [
+            {
+                "word": "abhor",
+                "definition": "To regard something with disgust and hatred."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
     },
     {
-      "id": "vocab_abstemious",
-      "type": "vocabulary",
-      "native": "enthaltsam; genügsam",
-      "foreign": [
-        {
-          "word": "abstemious",
-          "definition": "Not self-indulgent, especially when eating and drinking."
-        }
-      ],
-      "tags": ["advanced"]
+        "id": "vocab_abode_dwelling",
+        "type": "vocabulary",
+        "native": "Wohnsitz; Heim",
+        "foreign": [
+            {
+                "word": "abode",
+                "definition": "A place of residence; a house or home."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
     },
     {
-      "id": "vocab_abstruse",
-      "type": "vocabulary",
-      "native": "schwer verständlich; tiefgründig",
-      "foreign": [
-        {
-          "word": "abstruse",
-          "definition": "Difficult to understand; obscure."
-        }
-      ],
-      "tags": ["advanced"]
+        "id": "vocab_abode_abide",
+        "type": "vocabulary",
+        "native": "verharren; verweilen",
+        "foreign": [
+            {
+                "word": "abode",
+                "definition": "The past tense of 'abide,' meaning to remain or continue."
+            }
+        ],
+        "tags": [
+            "less_common"
+        ]
     },
     {
-      "id": "vocab_accolade",
-      "type": "vocabulary",
-      "native": "Auszeichnung; Lob",
-      "foreign": [
-        {
-          "word": "accolade",
-          "definition": "An award or privilege granted as a special honor or as an acknowledgment of merit."
-        }
-      ],
-      "tags": ["common"]
+        "id": "vocab_absolve",
+        "type": "vocabulary",
+        "native": "jmd. von etw. freisprechen",
+        "foreign": [
+            {
+                "word": "absolve",
+                "definition": "To declare someone free from guilt, blame, or responsibility."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
     },
     {
-      "id": "vocab_aesthetic",
-      "type": "vocabulary",
-      "native": "ästhetisch; schöngeistig",
-      "foreign": [
-        {
-          "word": "aesthetic",
-          "definition": "Concerned with beauty or the appreciation of beauty."
-        }
-      ],
-      "tags": ["common"]
+        "id": "vocab_abstain",
+        "type": "vocabulary",
+        "native": "auf etw. verzichten; sich enthalten",
+        "foreign": [
+            {
+                "word": "abstain",
+                "definition": "To voluntarily refrain from something."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
     },
     {
-      "id": "vocab_affable",
-      "type": "vocabulary",
-      "native": "freundlich; umgänglich",
-      "foreign": [
-        {
-          "word": "affable",
-          "definition": "Friendly, good-natured, or easy to talk to."
-        }
-      ],
-      "tags": ["common"]
+        "id": "vocab_acronym",
+        "type": "vocabulary",
+        "native": "Akronym; Initialwort",
+        "foreign": [
+            {
+                "word": "acronym",
+                "definition": "An abbreviation formed from the initial letters of other words and pronounced as a word."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
     },
     {
-      "id": "vocab_alacrity",
-      "type": "vocabulary",
-      "native": "Bereitwilligkeit; Eifer",
-      "foreign": [
-        {
-          "word": "alacrity",
-          "definition": "Brisk and cheerful readiness."
-        }
-      ],
-      "tags": ["advanced"]
+        "id": "vocab_actor",
+        "type": "vocabulary",
+        "native": "Schauspieler",
+        "foreign": [
+            {
+                "word": "actor",
+                "definition": "A person who performs in plays, movies, or television productions."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
     },
     {
-      "id": "vocab_allay",
-      "type": "vocabulary",
-      "native": "besänftigen; beruhigen",
-      "foreign": [
-        {
-          "word": "allay",
-          "definition": "To diminish or put to rest (fear, suspicion, or worry)."
-        }
-      ],
-      "tags": ["common"]
+        "id": "vocab_adduct",
+        "type": "vocabulary",
+        "native": "heranziehen; adduzieren (Körperteil)",
+        "foreign": [
+            {
+                "word": "adduct",
+                "definition": "To move a limb or other part of the body toward the midline of the body or toward another part."
+            }
+        ],
+        "tags": [
+            "medical"
+        ]
+    },
+    {
+        "id": "vocab_adversity",
+        "type": "vocabulary",
+        "native": "Widrigkeit; Unglück",
+        "foreign": [
+            {
+                "word": "adversity",
+                "definition": "A difficult or unpleasant situation."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
+    },
+    {
+        "id": "vocab_advocate",
+        "type": "vocabulary",
+        "native": "Befürworter; Anwalt",
+        "foreign": [
+            {
+                "word": "advocate",
+                "definition": "A person who publicly supports or recommends a particular cause or policy."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
+    },
+    {
+        "id": "vocab_advocate_action",
+        "type": "vocabulary",
+        "native": "etw. befürworten; unterstützen",
+        "foreign": [
+            {
+                "word": "advocate sth.",
+                "definition": "To publicly support or recommend a particular cause or policy."
+            }
+        ],
+        "tags": [
+            "common"
+        ]
+    },
+    {
+        "id": "vocab_aerobe",
+        "type": "vocabulary",
+        "native": "Aerobier; Sauerstoffverbraucher",
+        "foreign": [
+            {
+                "word": "aerobe",
+                "definition": "An organism that requires oxygen for survival and growth."
+            }
+        ],
+        "tags": [
+            "biology"
+        ]
     }
-
-
-
-]
+  ]
 }
