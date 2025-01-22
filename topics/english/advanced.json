@@ -3,65 +3,89 @@
     {
       "id": "vocab_abate",
       "type": "vocabulary",
-      "native": "nachlassen; abklingen",
+      "native": "nachlassen; abklingen; mindern",
       "foreign": [
         {
           "word": "to abate",
-          "definition": "To reduce in intensity, amount, or degree; often used for things like pain, weather, or legal matters.",
-	  "hint": "legal",
-	  "example": "The storm began to abate as the night progressed.",
-	  "part_of_speech": "verb",
+          "definition": "To reduce in intensity, amount, or degree; often used for natural or situational changes, such as pain, weather, or legal matters.",
+          "hint": "Often describes something fading or changing on its own.",
+          "example": "The storm began to abate as the night progressed.",
+          "part_of_speech": "verb",
           "frequency": 6,
-          "attributes": ["formal", "legal", "literary"]
-        },{
-	  "word": "to diminisih",
-	  "definition": "To reduce or make something appear smaller, often with a focus on perceived value or importance.",
-	  "hint": "value",
-	  "example": "The harsh criticism did not diminish her confidence.",
-	  "part_of_speech": "verb",
-	  "freqency": 7,
-	  "attributes": ["formal", "general", "perceptual"]
-	},{
-	  "word": "to lessen",
-	  "definition": "To make something smaller or weaker in size, intensity, or degree; often a general term used for everyday contexts.",
-	  "part_of_speech": "verb",
-	  "hint": "general",
-	  "example": "She tried to lessen her workload by delegating tasks.",
-	  "freqency": 8,
-	  "attributes": ["general"]
-	}
+          "attributes": [
+            "formal",
+            "legal",
+            "literary"
+          ]
+        },
+        {
+          "word": "to diminish",
+          "definition": "To reduce or make something appear smaller, often actively, with a focus on perceived value, importance, or size.",
+          "hint": "Can imply action by someone, especially in reducing importance.",
+          "example": "He diminished her achievements by refusing to acknowledge them.",
+          "part_of_speech": "verb",
+          "frequency": 7,
+          "attributes": [
+            "formal",
+            "general",
+            "agency"
+          ]
+        },
+        {
+          "word": "to lessen",
+          "definition": "To make something smaller or weaker in size, intensity, or degree; commonly used in everyday contexts.",
+          "hint": "Most commonly used for general reduction.",
+          "example": "She tried to lessen her workload by delegating tasks.",
+          "part_of_speech": "verb",
+          "frequency": 8,
+          "attributes": [
+            "general"
+          ]
+        }
       ],
       "tags": [
         "common"
       ]
     },
     {
-      "id": "vocab_abhor",
+
+      
+   "id": "vocab_abhor",
       "type": "vocabulary",
-      "native": "verabscheuen; hassen",
+      "native": "verabscheuen; abscheuen; hassen",
       "foreign": [
         {
-          "word": "abhor",
-          "definition": "Regard with disgust and hatred."
+          "word": "to abhor s.o./s.th.",
+          "definition": "To regard someone or something with disgust and intense hatred.",
+          "hint": "Primarily used in formal or literary contexts.",
+          "example": "He abhors injustice and works tirelessly to combat it.",
+          "part_of_speech": "verb",
+          "frequency": 5,
+          "attributes": ["formal", "literary", "emotive"]
+        },
+        {
+          "word": "to loathe s.o./s.th.",
+          "definition": "To feel intense dislike or disgust for someone or something.",
+          "hint": "Common in everyday language; less formal than 'abhor.'",
+          "example": "She loathes having to wake up early on weekends.",
+          "part_of_speech": "verb",
+          "frequency": 7,
+          "attributes": ["general", "emotive"]
+        },
+        {
+          "word": "to detest s.o./s.th.",
+          "definition": "To strongly dislike or hate someone or something.",
+          "hint": "Commonly used; less extreme than 'abhor.'",
+          "example": "He detests dishonesty in all its forms.",
+          "part_of_speech": "verb",
+          "frequency": 7,
+          "attributes": ["general", "emotive"]
         }
       ],
       "tags": [
         "advanced"
       ]
-    },
-    {
-      "id": "vocab_absolve",
-      "type": "vocabulary",
-      "native": "freisprechen; entlasten",
-      "foreign": [
-        {
-          "word": "absolve",
-          "definition": "Set or declare someone free from blame, guilt, or responsibility."
-        }
-      ],
-      "tags": [
-        "advanced"
-      ]
+
     },
     {
       "id": "vocab_abstemious",
@@ -1338,202 +1362,202 @@
       ]
     },
     {
-        "id": "vocab_abdicate",
-        "type": "vocabulary",
-        "native": "abdanken; verzichten",
-        "foreign": [
-            {
-                "word": "abdicate",
-                "definition": "To formally renounce a throne, high office, responsibility, or duty."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_abdicate",
+      "type": "vocabulary",
+      "native": "abdanken; verzichten",
+      "foreign": [
+        {
+          "word": "abdicate",
+          "definition": "To formally renounce a throne, high office, responsibility, or duty."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_abet",
-        "type": "vocabulary",
-        "native": "unterstützen; begünstigen (meist negativ)",
-        "foreign": [
-            {
-                "word": "abet",
-                "definition": "To encourage or assist someone to do something wrong, such as committing a crime."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_abet",
+      "type": "vocabulary",
+      "native": "unterstützen; begünstigen (meist negativ)",
+      "foreign": [
+        {
+          "word": "abet",
+          "definition": "To encourage or assist someone to do something wrong, such as committing a crime."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_abhor",
-        "type": "vocabulary",
-        "native": "etw. verabscheuen; hassen",
-        "foreign": [
-            {
-                "word": "abhor",
-                "definition": "To regard something with disgust and hatred."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_abhor",
+      "type": "vocabulary",
+      "native": "etw. verabscheuen; hassen",
+      "foreign": [
+        {
+          "word": "abhor",
+          "definition": "To regard something with disgust and hatred."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_abode_dwelling",
-        "type": "vocabulary",
-        "native": "Wohnsitz; Heim",
-        "foreign": [
-            {
-                "word": "abode",
-                "definition": "A place of residence; a house or home."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_abode_dwelling",
+      "type": "vocabulary",
+      "native": "Wohnsitz; Heim",
+      "foreign": [
+        {
+          "word": "abode",
+          "definition": "A place of residence; a house or home."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_abode_abide",
-        "type": "vocabulary",
-        "native": "verharren; verweilen",
-        "foreign": [
-            {
-                "word": "abode",
-                "definition": "The past tense of 'abide,' meaning to remain or continue."
-            }
-        ],
-        "tags": [
-            "less_common"
-        ]
+      "id": "vocab_abode_abide",
+      "type": "vocabulary",
+      "native": "verharren; verweilen",
+      "foreign": [
+        {
+          "word": "abode",
+          "definition": "The past tense of 'abide,' meaning to remain or continue."
+        }
+      ],
+      "tags": [
+        "less_common"
+      ]
     },
     {
-        "id": "vocab_absolve",
-        "type": "vocabulary",
-        "native": "jmd. von etw. freisprechen",
-        "foreign": [
-            {
-                "word": "absolve",
-                "definition": "To declare someone free from guilt, blame, or responsibility."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_absolve",
+      "type": "vocabulary",
+      "native": "jmd. von etw. freisprechen",
+      "foreign": [
+        {
+          "word": "absolve",
+          "definition": "To declare someone free from guilt, blame, or responsibility."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_abstain",
-        "type": "vocabulary",
-        "native": "auf etw. verzichten; sich enthalten",
-        "foreign": [
-            {
-                "word": "abstain",
-                "definition": "To voluntarily refrain from something."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_abstain",
+      "type": "vocabulary",
+      "native": "auf etw. verzichten; sich enthalten",
+      "foreign": [
+        {
+          "word": "abstain",
+          "definition": "To voluntarily refrain from something."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_acronym",
-        "type": "vocabulary",
-        "native": "Akronym; Initialwort",
-        "foreign": [
-            {
-                "word": "acronym",
-                "definition": "An abbreviation formed from the initial letters of other words and pronounced as a word."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_acronym",
+      "type": "vocabulary",
+      "native": "Akronym; Initialwort",
+      "foreign": [
+        {
+          "word": "acronym",
+          "definition": "An abbreviation formed from the initial letters of other words and pronounced as a word."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_actor",
-        "type": "vocabulary",
-        "native": "Schauspieler",
-        "foreign": [
-            {
-                "word": "actor",
-                "definition": "A person who performs in plays, movies, or television productions."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_actor",
+      "type": "vocabulary",
+      "native": "Schauspieler",
+      "foreign": [
+        {
+          "word": "actor",
+          "definition": "A person who performs in plays, movies, or television productions."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_adduct",
-        "type": "vocabulary",
-        "native": "heranziehen; adduzieren (Körperteil)",
-        "foreign": [
-            {
-                "word": "adduct",
-                "definition": "To move a limb or other part of the body toward the midline of the body or toward another part."
-            }
-        ],
-        "tags": [
-            "medical"
-        ]
+      "id": "vocab_adduct",
+      "type": "vocabulary",
+      "native": "heranziehen; adduzieren (Körperteil)",
+      "foreign": [
+        {
+          "word": "adduct",
+          "definition": "To move a limb or other part of the body toward the midline of the body or toward another part."
+        }
+      ],
+      "tags": [
+        "medical"
+      ]
     },
     {
-        "id": "vocab_adversity",
-        "type": "vocabulary",
-        "native": "Widrigkeit; Unglück",
-        "foreign": [
-            {
-                "word": "adversity",
-                "definition": "A difficult or unpleasant situation."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_adversity",
+      "type": "vocabulary",
+      "native": "Widrigkeit; Unglück",
+      "foreign": [
+        {
+          "word": "adversity",
+          "definition": "A difficult or unpleasant situation."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_advocate",
-        "type": "vocabulary",
-        "native": "Befürworter; Anwalt",
-        "foreign": [
-            {
-                "word": "advocate",
-                "definition": "A person who publicly supports or recommends a particular cause or policy."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_advocate",
+      "type": "vocabulary",
+      "native": "Befürworter; Anwalt",
+      "foreign": [
+        {
+          "word": "advocate",
+          "definition": "A person who publicly supports or recommends a particular cause or policy."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_advocate_action",
-        "type": "vocabulary",
-        "native": "etw. befürworten; unterstützen",
-        "foreign": [
-            {
-                "word": "advocate sth.",
-                "definition": "To publicly support or recommend a particular cause or policy."
-            }
-        ],
-        "tags": [
-            "common"
-        ]
+      "id": "vocab_advocate_action",
+      "type": "vocabulary",
+      "native": "etw. befürworten; unterstützen",
+      "foreign": [
+        {
+          "word": "advocate sth.",
+          "definition": "To publicly support or recommend a particular cause or policy."
+        }
+      ],
+      "tags": [
+        "common"
+      ]
     },
     {
-        "id": "vocab_aerobe",
-        "type": "vocabulary",
-        "native": "Aerobier; Sauerstoffverbraucher",
-        "foreign": [
-            {
-                "word": "aerobe",
-                "definition": "An organism that requires oxygen for survival and growth."
-            }
-        ],
-        "tags": [
-            "biology"
-        ]
+      "id": "vocab_aerobe",
+      "type": "vocabulary",
+      "native": "Aerobier; Sauerstoffverbraucher",
+      "foreign": [
+        {
+          "word": "aerobe",
+          "definition": "An organism that requires oxygen for survival and growth."
+        }
+      ],
+      "tags": [
+        "biology"
+      ]
     },
-       {
+    {
       "id": "vocab_aesthetic",
       "type": "vocabulary",
       "native": "ästhetisch",
@@ -1542,10 +1566,15 @@
           "word": "aesthetic",
           "definition": "Concerned with beauty or the appreciation of beauty.",
           "frequency": 5,
-          "attributes": ["general", "art"]
+          "attributes": [
+            "general",
+            "art"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_affinity",
@@ -1556,10 +1585,14 @@
           "word": "affinity",
           "definition": "A natural liking for or attraction to something.",
           "frequency": 6,
-          "attributes": ["formal"]
+          "attributes": [
+            "formal"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_aforementioned",
@@ -1570,10 +1603,15 @@
           "word": "aforementioned",
           "definition": "Denoting something that has been previously mentioned.",
           "frequency": 7,
-          "attributes": ["formal", "written"]
+          "attributes": [
+            "formal",
+            "written"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_agile",
@@ -1584,10 +1622,14 @@
           "word": "agile",
           "definition": "Able to move quickly and easily.",
           "frequency": 8,
-          "attributes": ["general"]
+          "attributes": [
+            "general"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_akimbo",
@@ -1598,10 +1640,14 @@
           "word": "akimbo",
           "definition": "With hands on the hips and elbows turned outward.",
           "frequency": 3,
-          "attributes": ["literary"]
+          "attributes": [
+            "literary"
+          ]
         }
       ],
-      "tags": ["uncommon"]
+      "tags": [
+        "uncommon"
+      ]
     },
     {
       "id": "vocab_alchemy",
@@ -1612,10 +1658,15 @@
           "word": "alchemy",
           "definition": "A medieval chemical science aiming to transform base metals into gold.",
           "frequency": 4,
-          "attributes": ["history", "science"]
+          "attributes": [
+            "history",
+            "science"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_alibi",
@@ -1626,10 +1677,14 @@
           "word": "alibi",
           "definition": "A claim or piece of evidence that one was elsewhere when an act took place.",
           "frequency": 8,
-          "attributes": ["legal"]
+          "attributes": [
+            "legal"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_allegator",
@@ -1640,10 +1695,15 @@
           "word": "allegator",
           "definition": "A person who alleges something, typically in a legal setting.",
           "frequency": 2,
-          "attributes": ["legal", "rare"]
+          "attributes": [
+            "legal",
+            "rare"
+          ]
         }
       ],
-      "tags": ["uncommon"]
+      "tags": [
+        "uncommon"
+      ]
     },
     {
       "id": "vocab_allegory",
@@ -1654,10 +1714,14 @@
           "word": "allegory",
           "definition": "A story, poem, or picture that can be interpreted to reveal a hidden meaning.",
           "frequency": 5,
-          "attributes": ["literary"]
+          "attributes": [
+            "literary"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_alleviate",
@@ -1668,10 +1732,14 @@
           "word": "alleviate",
           "definition": "To make suffering, deficiency, or a problem less severe.",
           "frequency": 6,
-          "attributes": ["general"]
+          "attributes": [
+            "general"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_alliteration",
@@ -1682,10 +1750,14 @@
           "word": "alliteration",
           "definition": "The occurrence of the same letter or sound at the beginning of closely connected words.",
           "frequency": 5,
-          "attributes": ["literary"]
+          "attributes": [
+            "literary"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_allusion",
@@ -1696,10 +1768,14 @@
           "word": "allusion",
           "definition": "An expression designed to call something to mind without mentioning it explicitly.",
           "frequency": 5,
-          "attributes": ["general"]
+          "attributes": [
+            "general"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_altercation",
@@ -1710,10 +1786,14 @@
           "word": "altercation",
           "definition": "A noisy argument or disagreement, especially in public.",
           "frequency": 6,
-          "attributes": ["general"]
+          "attributes": [
+            "general"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_ambiance",
@@ -1724,10 +1804,14 @@
           "word": "ambiance",
           "definition": "The character and atmosphere of a place.",
           "frequency": 7,
-          "attributes": ["general"]
+          "attributes": [
+            "general"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     },
     {
       "id": "vocab_ambiguity",
@@ -1738,10 +1822,14 @@
           "word": "ambiguity",
           "definition": "The quality of being open to more than one interpretation.",
           "frequency": 6,
-          "attributes": ["general"]
+          "attributes": [
+            "general"
+          ]
         }
       ],
-      "tags": ["common"]
+      "tags": [
+        "common"
+      ]
     }
   ]
 }
