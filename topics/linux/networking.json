@@ -4,588 +4,886 @@
       "id": "lan_definition",
       "type": "basic",
       "question": "What is a LAN?",
-      "answer": "A LAN (Local Area Network) is a group of interconnected devices located in a single physical location. Its range can vary from small (e.g., a private residence) to large (e.g., an enterprise campus), but it is limited by its physical boundaries."
+      "answer": "A LAN (Local Area Network) is a group of interconnected devices located in a single physical location. Its range can vary from small (e.g., a private residence) to large (e.g., an enterprise campus), but it is limited by its physical boundaries.",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "lan_definition_typing",
       "type": "typing",
       "question": "How do you call a network made of devices located in a single physical location?",
-      "answer": "LAN (Local Area Network)"
+      "answer": "LAN (Local Area Network)",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "wan_definition",
       "type": "basic",
       "question": "What is a WAN?",
-      "answer": "A WAN (Wide Area Network) is a network of networks, consisting of multiple distributed LANs communicating with each other. The internet is the largest WAN, but the private network of a multinational corporation is also considered a WAN."
+      "answer": "A WAN (Wide Area Network) is a network of networks, consisting of multiple distributed LANs communicating with each other. The internet is the largest WAN, but the private network of a multinational corporation is also considered a WAN.",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "wan_definition_typing",
       "type": "typing",
       "question": "How do you call a network of multiple distributed LANs?",
-      "answer": "WAN (Wide Area Network)"
+      "answer": "WAN (Wide Area Network)",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "pan_definition",
       "type": "basic",
       "question": "What is a PAN?",
-      "answer": "A PAN (Personal Area Network) is a specialized type of LAN formed by personal devices interconnected using short-range technologies like Bluetooth, USB, or Infrared. It is typically used for personal communication between devices within a few meters."
+      "answer": "A PAN (Personal Area Network) is a specialized type of LAN formed by personal devices interconnected using short-range technologies like Bluetooth, USB, or Infrared. It is typically used for personal communication between devices within a few meters.",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "pan_definition_typing",
       "type": "typing",
       "question": "How do you call a special LAN formed by personal devices?",
-      "answer": "PAN (Personal Area Network)"
+      "answer": "PAN (Personal Area Network)",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "man_definition",
       "type": "basic",
       "question": "What is a MAN?",
-      "answer": "A MAN (Metropolitan Area Network) spans a city or urban area, often implemented with high-speed technologies such as fiber optics. MANs are typically larger than LANs but smaller than WANs."
+      "answer": "A MAN (Metropolitan Area Network) spans a city or urban area, often implemented with high-speed technologies such as fiber optics. MANs are typically larger than LANs but smaller than WANs.",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "man_definition_typing",
       "type": "typing",
       "question": "How do you call a network that spans a city or urban area?",
-      "answer": "MAN (Metropolitan Area Network)"
+      "answer": "MAN (Metropolitan Area Network)",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "ian_definition",
       "type": "basic",
       "question": "What is an IAN?",
-      "answer": "An IAN (Internet Area Network), as referenced by Balog in Mastering Linux Administration, is not a widely recognized or generally defined term and should be avoided in most contexts to prevent confusion."
+      "answer": "An IAN (Internet Area Network), as referenced by Balog in Mastering Linux Administration, is not a widely recognized or generally defined term and should be avoided in most contexts to prevent confusion.",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "vlan_definition",
       "type": "basic",
       "question": "What is a VLAN?",
-      "answer": "A VLAN (Virtual Local Area Network) is a logical segmentation of a LAN into separate virtual networks. It can group devices logically regardless of their physical location, improving security, performance, and manageability. VLANs are created using network switches and routers, utilizing tagging protocols like IEEE 802.1Q."
+      "answer": "A VLAN (Virtual Local Area Network) is a logical segmentation of a LAN into separate virtual networks. It allows devices to be grouped logically regardless of their physical location, improving security, performance, and network manageability. VLANs are defined by the IEEE 802.1Q standard, which specifies VLAN tagging, enabling the identification of VLANs in Ethernet frames. VLANs are implemented using network switches and routers, allowing multiple VLANs to share a single physical link via VLAN tagging (802.1Q trunking).",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "vlan_definition_typing",
       "type": "typing",
       "question": "How do you call a logical segment of a LAN?",
-      "answer": "VLAN (Virtual Local Area Network)"
+      "answer": "VLAN (Virtual Local Area Network)",
+      "tags": [
+        "definitions"
+      ]
     },
     {
       "id": "osi_model_establishment",
       "type": "basic",
       "question": "When was the OSI model established, and why?",
-      "answer": "The OSI model was established in 1984 by the ISO (International Organization for Standardization) to provide a standardized framework for networking, ensuring interoperability between systems from different vendors."
+      "answer": "The OSI model was established in 1984 by the ISO (International Organization for Standardization) to provide a standardized framework for networking, ensuring interoperability between systems from different vendors.",
+      "tags": [
+        "definitions",
+        "osi"
+      ]
     },
     {
       "id": "ieee_802_standard",
       "type": "basic",
       "question": "When was the IEEE 802 standard published, and what was its purpose?",
-      "answer": "The IEEE 802 standard was published in 1983 to define standards for Local Area Networks (LANs), such as Ethernet (802.3) and Wi-Fi (802.11). Its purpose was to ensure compatibility between devices and simplify network implementations."
+      "answer": "The IEEE 802 standard was published in 1983 to define standards for Local Area Networks (LANs), such as Ethernet (802.3) and Wi-Fi (802.11). Its purpose was to ensure compatibility between devices and simplify network implementations.",
+      "tags": [
+        "definitions",
+        "ieee_802",
+        "standard_bodies"
+      ]
     },
     {
       "id": "tcp_ip_vs_osi",
       "type": "basic",
       "question": "How do the TCP/IP model and the OSI model relate?",
-      "answer": "The TCP/IP model is a practical implementation of networking that predates the OSI model and focuses on a four-layer architecture. The OSI model is a theoretical seven-layer framework, designed for standardization and education. TCP/IP aligns with OSI, but combines the Application, Presentation, and Session layers into one, and the Data Link and Physical layers into a single Network Access layer."
+      "answer": "The TCP/IP model is a practical implementation of networking that predates the OSI model and focuses on a four-layer architecture. The OSI model is a theoretical seven-layer framework, designed for standardization and education. TCP/IP aligns with OSI, but combines the Application, Presentation, and Session layers into one, and the Data Link and Physical layers into a single Network Access layer.",
+      "tags": [
+        "definitions",
+        "osi",
+        "tcp/ip"
+      ]
     },
     {
       "id": "osi_standardization_organization",
       "type": "basic",
       "question": "Which organization established the OSI model, and how is it curated today?",
-      "answer": "The OSI model was established by the ISO (International Organization for Standardization) and the ITU-T (International Telecommunication Union). Today, networking standards are curated by organizations like the ISO, IEEE (Institute of Electrical and Electronics Engineers), and the IETF (Internet Engineering Task Force)."
+      "answer": "The OSI model was established by the ISO (International Organization for Standardization) and the ITU-T (International Telecommunication Union). Today, networking standards are curated by organizations like the ISO, IEEE (Institute of Electrical and Electronics Engineers), and the IETF (Internet Engineering Task Force).",
+      "tags": [
+        "osi",
+        "standard_bodies"
+      ]
     },
     {
       "id": "tcp_ip_standardization",
       "type": "basic",
       "question": "Which organization maintains and curates the TCP/IP standards?",
-      "answer": "The TCP/IP standards are maintained by the Internet Engineering Task Force (IETF), which publishes standards as Request for Comments (RFCs)."
+      "answer": "The TCP/IP standards are maintained by the Internet Engineering Task Force (IETF), which publishes standards as Request for Comments (RFCs).",
+      "tags": [
+        "tcp/ip",
+        "standard_bodies"
+      ]
     },
     {
       "id": "networking_standards_organizations",
-      "type": "multiple-choice",
-      "question": "Which organizations are responsible for networking standards, and what do they oversee?\n\n1. ISO\n2. IEEE\n3. IETF\n4. ITU-T",
-      "choices": [
-        {
-          "text": "ISO: Establishes frameworks like the OSI model.",
-          "correct": true
-        },
-        {
-          "text": "IEEE: Publishes hardware-level standards like Ethernet (802.3) and Wi-Fi (802.11).",
-          "correct": true
-        },
-        {
-          "text": "IETF: Maintains internet protocols like TCP/IP.",
-          "correct": true
-        },
-        {
-          "text": "ITU-T: Focuses on telecommunications standards, such as PSTN and broadband.",
-          "correct": true
-        }
+      "type": "basic",
+      "question": "Which networking standards are overseen by each of these organizations?\n- ISO\n- IEEE\n- IETF\n- ITU-T",
+      "answer": "<{bullet-item}><{start-bold}>ISO<{end-bold}>: Establishes frameworks like the OSI model.<{end-bullet-item}><{break}> <{bullet-item}><{start-bold}>IEEE<{end-bold}>: Publishes hardware-level standards like Ethernet (802.3) and Wi-Fi (802.11).<{end-bullet-item}><{break}> <{bullet-item}><{start-bold}>IETF<{end-bold}>: Maintains internet protocols like TCP/IP and publishes standards as RFCs.<{end-bullet-item}><{break}> <{bullet-item}><{start-bold}>ITU-T<{end-bold}>: Focuses on telecommunications standards, such as PSTN, broadband, and fiber optics.<{end-bullet-item}>",
+      "tags": [
+        "standard_bodies"
       ]
     },
     {
       "id": "osi_model_layers_typing",
       "type": "typing",
       "question": "What are the 7 layers of the OSI model, in order?",
-      "answer": "Physical, Data Link, Network, Transport, Session, Presentation, Application"
+      "answer": "Physical, Data Link, Network, Transport, Session, Presentation, Application",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "tcp_ip_layers_typing",
       "type": "typing",
       "question": "What are the 4 layers of the TCP/IP model?",
-      "answer": "Network Access, Internet, Transport, Application"
+      "answer": "Network Access, Internet, Transport, Application",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_model_overview",
       "type": "basic",
       "question": "What is the OSI model?",
-      "answer": "The OSI (Open Systems Interconnection) model is a conceptual framework with 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application) used to standardize and understand how data is transmitted across networks."
+      "answer": "The OSI (Open Systems Interconnection) model is a conceptual framework with 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application) used to standardize and understand how data is transmitted across networks.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_model_overview_typing",
       "type": "typing",
       "question": "What does OSI stand for? Give the number of Layers in the model and list them in correct sequence?",
-      "answer": "OSI (Open Systems Interconnection) model is formed of 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application)."
+      "answer": "OSI (Open Systems Interconnection) model is formed of 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application).",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_physical_layer",
       "type": "basic",
       "question": "What is the role of the Physical layer in the OSI model?",
-      "answer": "The Physical layer (Layer 1) is responsible for the transmission of raw binary data over physical mediums like cables, fiber optics, or radio waves."
+      "answer": "The Physical layer (Layer 1) is responsible for the transmission of raw binary data over physical mediums like cables, fiber optics, or radio waves.",
+      "tags": [
+        "osi"
+      ]
     },
-
-{
-  "id": "osi_data_link_layer",
-  "type": "basic",
-  "question": "What are the responsibilities of the Data Link layer in the OSI model?",
-  "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control adapts the sender's transmission rate to match the receiver's capabilities and the network's utilization. Additionally, the Data Link layer manages MAC addresses to ensure correct delivery of data within a LAN (local area network). For inter-network communication, routers handle forwarding to the next hop using higher OSI layers."
-}
-,
-{
-	"id": "osi_data_link_flow_control_routing_diff",
-	"type": "basic",
-	"question": "What is flow control, and how does it differ from routing in the OSI model?",
-	"answer": "Flow control manages data transmission rates to prevent overwhelming the receiver and optimize network utilization. Routing is handled at higher layers (Network layer) and directs data beyond the LAN using IP addresses"
-},
-
-{
-	"id": "osi_data_link_scenario_congested",
-	"type": "basic",
-	"question": "A device in a LAN sends a frame to another device, but the network is congested. How does the Data Link layer handle this?",
-	"answer": "The Data Link layer uses flow control to slow down the sender’s transmission rate to avoid overwhelming the network and ensures data is delivered to the correct MAC address within the LAN."
-},
-
-
-
+    {
+      "id": "osi_data_link_layer",
+      "type": "basic",
+      "question": "What are the responsibilities of the Data Link layer in the OSI model?",
+      "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control adapts the sender's transmission rate to match the receiver's capabilities and the network's utilization. Additionally, the Data Link layer manages MAC addresses to ensure correct delivery of data within a LAN (local area network). For inter-network communication, routers handle forwarding to the next hop using higher OSI layers.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_data_link_flow_control_routing_diff",
+      "type": "basic",
+      "question": "What is flow control, and how does it differ from routing in the OSI model?",
+      "answer": "Flow control manages data transmission rates to prevent overwhelming the receiver and optimize network utilization. Routing is handled at higher layers (Network layer) and directs data beyond the LAN using IP addresses",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_data_link_scenario_congested",
+      "type": "basic",
+      "question": "A device in a LAN sends a frame to another device, but the network is congested. How does the Data Link layer handle this?",
+      "answer": "The Data Link layer uses flow control to slow down the sender’s transmission rate to avoid overwhelming the network and ensures data is delivered to the correct MAC address within the LAN.",
+      "tags": [
+        "osi"
+      ]
+    },
     {
       "id": "osi_network_layer",
       "type": "basic",
       "question": "What is the purpose of the Network layer in the OSI model?",
-      "answer": "The Network layer (Layer 3) is responsible for routing and forwarding data, and defines logical addressing (e.g., IP addresses)."
+      "answer": "The Network layer (Layer 3) is responsible for routing and forwarding data, and defines logical addressing (e.g., IP addresses).",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_transport_layer",
       "type": "basic",
       "question": "What is the role of the Transport layer in the OSI model?",
-      "answer": "The Transport layer (Layer 4) manages end-to-end communication, error checking, and flow control, using protocols like TCP and UDP."
+      "answer": "The Transport layer (Layer 4) manages end-to-end communication, error checking, and flow control, using protocols like TCP and UDP.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_session_layer",
       "type": "basic",
       "question": "What does the Session layer do in the OSI model?",
-      "answer": "The Session layer (Layer 5) establishes, manages, and terminates sessions between applications on different devices."
+      "answer": "The Session layer (Layer 5) establishes, manages, and terminates sessions between applications on different devices.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_presentation_layer",
       "type": "basic",
       "question": "What is the purpose of the Presentation layer in the OSI model?",
-      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems."
+      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_application_layer",
       "type": "basic",
       "question": "What is the role of the Application layer in the OSI model?",
-      "answer": "The Application layer (Layer 7) provides network services directly to user applications, such as web browsing (HTTP), email (SMTP), and file transfer (FTP)."
+      "answer": "The Application layer (Layer 7) provides network services directly to user applications, such as web browsing (HTTP), email (SMTP), and file transfer (FTP).",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "dns_protocol_overview",
       "type": "basic",
       "question": "What is the DNS protocol?",
-      "answer": "The DNS (Domain Name System) protocol translates human-readable domain names into IP addresses, allowing devices to locate each other on a network. DNS operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The DNS (Domain Name System) protocol translates human-readable domain names into IP addresses, allowing devices to locate each other on a network. DNS operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols"
+      ]
     },
     {
       "id": "dns_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol translates human-readable domain names into IP adresses - Which OSI layer does it operate at?",
-      "answer": "The DNS (Domain Name System) protocol operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The DNS (Domain Name System) protocol operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols"
+      ]
     },
     {
       "id": "http_protocol_overview",
       "type": "basic",
       "question": "What is the HTTP protocol?",
-      "answer": "HTTP (Hypertext Transfer Protocol) is a stateless protocol used for transferring web resources, such as HTML files, images, and videos. HTTP operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "HTTP (Hypertext Transfer Protocol) is a stateless protocol used for transferring web resources, such as HTML files, images, and videos. HTTP operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols"
+      ]
     },
     {
       "id": "http_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol transfers web resources - Which OSI layer does it operate at?",
-      "answer": "The HTTP (Hypertext Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The HTTP (Hypertext Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols"
+      ]
     },
     {
       "id": "ftp_protocol_overview",
       "type": "basic",
       "question": "What is the FTP protocol?",
-      "answer": "FTP (File Transfer Protocol) is a standard protocol for transferring files between a client and a server. FTP operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "FTP (File Transfer Protocol) is a standard protocol for transferring files between a client and a server. FTP operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "ftp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol transfers files between a client and a server - Which OSI layer does it operate at?",
-      "answer": "The FTP (File Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The FTP (File Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "smtp_protocol_overview",
       "type": "basic",
       "question": "What is the SMTP protocol?",
-      "answer": "SMTP (Simple Mail Transfer Protocol) is a protocol for sending and receiving emails. It supports encryption and host authentication, and it operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "SMTP (Simple Mail Transfer Protocol) is a protocol for sending and receiving emails. It supports encryption and host authentication, and it operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "smtp_protocol_overview_typing",
       "type": "typing",
       "question": "Whcih protocol sends and receives emails - Which OSI layer does it operate at?",
-      "answer": "The SMTP (Simple Mail Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The SMTP (Simple Mail Transfer Protocol) operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "arp_protocol_overview",
       "type": "basic",
       "question": "What is the ARP protocol?",
-      "answer": "ARP (Address Resolution Protocol) maps IP addresses to MAC addresses for communication within a local network. It operates at the Data Link layer (Layer 2) in the OSI model."
+      "answer": "ARP (Address Resolution Protocol) maps IP addresses to MAC addresses for communication within a local network. It operates at the Data Link layer (Layer 2) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "arp_protocol_overview_typing",
       "type": "typing",
       "question": "Whcih protocol maps IP addresses to MAC addresses - Which OSI layer does it operate at?",
-      "answer": "The ARP (Address Resolution Protocol) operates at the Data Link layer (Layer 2) in the OSI model."
+      "answer": "The ARP (Address Resolution Protocol) operates at the Data Link layer (Layer 2) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "ndp_protocol_overview",
       "type": "basic",
       "question": "What is the NDP protocol?",
-      "answer": "NDP (Neighbor Discovery Protocol) is similar to ARP but designed for IPv6. It maps IPv6 addresses to MAC addresses and operates at the Data Link layer (Layer 2) in the OSI model."
+      "answer": "NDP (Neighbor Discovery Protocol) is similar to ARP but designed for IPv6. It maps IPv6 addresses to MAC addresses and operates at the Data Link layer (Layer 2) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "ndp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol is similar to ARP, but designed for IPv6 - Which OSI layer does it operate at?",
-      "answer": "The NDP (Neighbor Discovery Protocol) operates at the Data Link layer (Layer 2) in the OSI model."
+      "answer": "The NDP (Neighbor Discovery Protocol) operates at the Data Link layer (Layer 2) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "tcp_protocol_overview",
       "type": "basic",
       "question": "What is the TCP protocol?",
-      "answer": "TCP (Transmission Control Protocol) is a connection-oriented protocol that ensures reliable data delivery through error checking and retransmissions. TCP operates at the Transport layer (Layer 4) in the OSI model."
+      "answer": "TCP (Transmission Control Protocol) is a connection-oriented protocol that ensures reliable data delivery through error checking and retransmissions. TCP operates at the Transport layer (Layer 4) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "tcp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol ensures reliable data delivery throguh error checking and retransmissions - Which OSI layer does it operate at?",
-      "answer": "The TCP (Transmission Control Protocol) operates at the Transport layer (Layer 4) in the OSI model."
+      "answer": "The TCP (Transmission Control Protocol) operates at the Transport layer (Layer 4) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "udp_protocol_overview",
       "type": "basic",
       "question": "What is the UDP protocol?",
-      "answer": "UDP (User Datagram Protocol) is a connectionless protocol that offers low-latency communication without error checking. It operates at the Transport layer (Layer 4) in the OSI model."
+      "answer": "UDP (User Datagram Protocol) is a connectionless protocol that offers low-latency communication without error checking. It operates at the Transport layer (Layer 4) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "udp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol offers low-latency communication without error checking - Which OSI layer does it operate at?",
-      "answer": "The UDP (User Datagram Protocol) operates at the Transport layer (Layer 4) in the OSI model."
+      "answer": "The UDP (User Datagram Protocol) operates at the Transport layer (Layer 4) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "dhcp_protocol_overview",
       "type": "basic",
       "question": "What is the DHCP protocol?",
-      "answer": "DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP addresses and other network configuration details to devices on a network. DHCP operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP addresses and other network configuration details to devices on a network. DHCP operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "dhcp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol dynammically assigns ip addresses to devices on a network - Which OSI layer does it operate at?",
-      "answer": "The DHCP (Dynamic Host Configuration Protocol) operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The DHCP (Dynamic Host Configuration Protocol) operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "icmp_protocol_overview",
       "type": "basic",
       "question": "What is ICMP?",
-      "answer": "ICMP (Internet Control Message Protocol) reports errors and diagnostic information, commonly used by tools like ping. It operates at the Network layer (Layer 3) in the OSI model."
+      "answer": "ICMP (Internet Control Message Protocol) reports errors and diagnostic information, commonly used by tools like ping. It operates at the Network layer (Layer 3) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "icmp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol reports errors and diagnostics and is used by the tool ping - Which OSI layer does it operate on?",
-      "answer": "The ICMP (Internet Control Message Protocol) operates at the Network layer (Layer 3) in the OSI model."
+      "answer": "The ICMP (Internet Control Message Protocol) operates at the Network layer (Layer 3) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "ntp_protocol_overview",
       "type": "basic",
       "question": "What is the NTP protocol?",
-      "answer": "NTP (Network Time Protocol) synchronizes system clocks across networks, ensuring accurate timekeeping. It operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "NTP (Network Time Protocol) synchronizes system clocks across networks, ensuring accurate timekeeping. It operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "ntp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol synchronizes system clocks across networks - Which OSI layer does it operate at?",
-      "answer": "The NTP (Network Time Protocol) operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The NTP (Network Time Protocol) operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "snmp_protocol_overview",
       "type": "basic",
       "question": "What is the SNMP protocol?",
-      "answer": "SNMP (Simple Network Management Protocol) allows remote monitoring and management of network devices. It operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "SNMP (Simple Network Management Protocol) allows remote monitoring and management of network devices. It operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "snmp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol allows remote monitoring of network devices - Which OSI layer does it operate at?",
-      "answer": "The SNMP (Simple Network Management Protocol) operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The SNMP (Simple Network Management Protocol) operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "ssh_protocol_overview",
       "type": "basic",
       "question": "What is the SSH protocol?",
-      "answer": "SSH (Secure Shell) provides encrypted communication for secure remote access and file transfers. It operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "SSH (Secure Shell) provides encrypted communication for secure remote access and file transfers. It operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "ssh_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol provides encrypted communication for remote access and file transfers - Which OSI layer does it operate at?",
-      "answer": "The SSH (Secure Shell) operates at the Application layer (Layer 7) in the OSI model."
+      "answer": "The SSH (Secure Shell) operates at the Application layer (Layer 7) in the OSI model.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "osi_encapsulation_process",
       "type": "basic",
       "question": "What happens during the encapsulation process in the OSI model?",
-      "answer": "In encapsulation, data passes from the Application layer (Layer 7) to the Physical layer (Layer 1). Each layer has distinct responsibilities: Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, and encoding, Layer 5 (Session) includes session identifiers to manage communication sessions, Layer 4 (Transport) adds the TCP/UDP header, Layer 3 (Network) adds the IP header, Layer 2 (Data Link) adds the MAC header for addressing and Frame Check Sequence (FCS) for error detection, and Layer 1 (Physical) transmits the raw bits."
+      "answer": "In encapsulation, data passes from the Application layer (Layer 7) to the Physical layer (Layer 1). Each layer has distinct responsibilities: Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, and encoding, Layer 5 (Session) includes session identifiers to manage communication sessions, Layer 4 (Transport) adds the TCP/UDP header, Layer 3 (Network) adds the IP header, Layer 2 (Data Link) adds the MAC header for addressing and Frame Check Sequence (FCS) for error detection, and Layer 1 (Physical) transmits the raw bits.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_encapsulation_process_typing",
       "type": "typing",
       "question": "What is the name of the process that passes data from the Application layer (Layer 7) to the Physical layer (Layer 1) in the OSI model? What are the responsibilities of the different layers during the process?",
-      "answer": "Encapsulation, Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, encoding, Layer 5 (Session) includes session identifiers, Layer 4 (Transport) adds TCP/UDP header, Layer 3 (Network) adds IP header, Layer 2 (Data Link) adds MAC header and Frame Check Seuqence (FCS), Layer 1 (Physical) transmits raw bits."
+      "answer": "Encapsulation, Layer 7 (Application) defines the payload, Layer 6 (Presentation) manages compression, encryption, encoding, Layer 5 (Session) includes session identifiers, Layer 4 (Transport) adds TCP/UDP header, Layer 3 (Network) adds IP header, Layer 2 (Data Link) adds MAC header and Frame Check Seuqence (FCS), Layer 1 (Physical) transmits raw bits.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_decapsulation_process",
       "type": "basic",
       "question": "What happens during the decapsulation process in the OSI model?",
-      "answer": "In decapsulation, data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7). Each layer removes its corresponding header: Layer 1 converts signals to raw bits, Layer 2 deals with error detection and addressing, so during decapsulation it verifies the Frame Check Sequence (FCS) and removes the MAC header, Layer 3 processes the IP header, Layer 4 reassembles the data using the TCP/UDP header, Layer 5 identifies the session, Layer 6 decrypts and decodes the data, and Layer 7 interprets the payload for the application."
+      "answer": "In decapsulation, data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7). Each layer removes its corresponding header: Layer 1 converts signals to raw bits, Layer 2 deals with error detection and addressing, so during decapsulation it verifies the Frame Check Sequence (FCS) and removes the MAC header, Layer 3 processes the IP header, Layer 4 reassembles the data using the TCP/UDP header, Layer 5 identifies the session, Layer 6 decrypts and decodes the data, and Layer 7 interprets the payload for the application.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_decapsulation_process_typing",
       "type": "typing",
       "question": "What is the name of the process where data is received at the Physical layer (Layer 1) and passed to the Application layer (Layer 7) in the OSI model? What are the responsibilities of the different layers during the process?",
-      "answer": "Decapsulation, Layer 1 (Physical) converts signals to raw bits, Layer 2 (Data Link) verifies the Frame Check Sequence FCS and removes the MAC hader, Layer 3 (Network) processes the IP header, Layer 4 (Transport) reassembles the data that was fragmented during transport using the TCP/UDP header, Layer 5 (Session) identifies the session, Layer 6 (Presentation) decrypts and decodes the data, Layer 7 (Application) interprets the payload for the application."
+      "answer": "Decapsulation, Layer 1 (Physical) converts signals to raw bits, Layer 2 (Data Link) verifies the Frame Check Sequence FCS and removes the MAC hader, Layer 3 (Network) processes the IP header, Layer 4 (Transport) reassembles the data that was fragmented during transport using the TCP/UDP header, Layer 5 (Session) identifies the session, Layer 6 (Presentation) decrypts and decodes the data, Layer 7 (Application) interprets the payload for the application.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_tcpip_relationship",
       "type": "basic",
       "question": "How do the OSI model and the TCP/IP model relate?",
-      "answer": "The OSI model has 7 layers, while the TCP/IP model has 4 layers. The OSI Application, Presentation, and Session layers map to the TCP/IP Application layer. The OSI Transport layer corresponds to the TCP/IP Transport layer. The OSI Network layer maps to the TCP/IP Internet layer, and the OSI Data Link and Physical layers correspond to the TCP/IP Network Access layer."
+      "answer": "The OSI model has 7 layers, while the TCP/IP model has 4 layers. The OSI Application, Presentation, and Session layers map to the TCP/IP Application layer. The OSI Transport layer corresponds to the TCP/IP Transport layer. The OSI Network layer maps to the TCP/IP Internet layer, and the OSI Data Link and Physical layers correspond to the TCP/IP Network Access layer.",
+      "tags": [
+        "osi",
+        "tcp/ip"
+      ]
     },
     {
       "id": "osi_tcpip_relationship_typing",
       "type": "typing",
       "question": "Type in the OSI model layers and their respective counterparts in the TCP/IP model.  OSI layer number(s) -> TCP/IP layer name",
-      "answer": "Layers 7, 6, 5 -> Application, Layer 4 -> Transport, Layer 3 -> Internet, Layers 2, 1 -> Network Access"
+      "answer": "Layers 7, 6, 5 -> Application, Layer 4 -> Transport, Layer 3 -> Internet, Layers 2, 1 -> Network Access",
+      "tags": [
+        "osi",
+        "tcp/ip"
+      ]
     },
     {
       "id": "osi_processing_end_to_end_vs_hop",
       "type": "basic",
       "question": "How does OSI layer processing differ between end-to-end communication and at network hops?",
-      "answer": "End-to-end communication involves processing all OSI layers from the application layer to the physical layer. At network hops, devices like routers only process up to Layer 3 (Network Layer), stripping and re-encapsulating Layer 2 frames for forwarding."
+      "answer": "End-to-end communication involves processing all OSI layers from the application layer to the physical layer. At network hops, devices like routers only process up to Layer 3 (Network Layer), stripping and re-encapsulating Layer 2 frames for forwarding.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_router_role",
       "type": "basic",
       "question": "Which OSI layers do routers operate on, and what is their role?",
-      "answer": "Routers operate primarily at Layer 3 (Network Layer). They inspect IP packets for destination addresses, determine the best path for forwarding, and re-encapsulate the packet in a new Layer 2 frame for the next hop."
+      "answer": "Routers operate primarily at Layer 3 (Network Layer). They inspect IP packets for destination addresses, determine the best path for forwarding, and re-encapsulate the packet in a new Layer 2 frame for the next hop.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_layer2_re_encapsulation",
       "type": "basic",
       "question": "What happens to Layer 2 frames at each network hop?",
-      "answer": "At each network hop, the Layer 2 frame is stripped off and replaced with a new frame for the next link. This ensures compatibility with the specific physical and data link layers of each hop."
+      "answer": "At each network hop, the Layer 2 frame is stripped off and replaced with a new frame for the next link. This ensures compatibility with the specific physical and data link layers of each hop.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_hop_processing_efficiency",
       "type": "basic",
       "question": "Why do intermediate devices like routers only process data up to Layer 3 in the OSI model?",
-      "answer": "Processing only up to Layer 3 minimizes overhead, ensures modularity between network layers, and allows efficient forwarding without needing to inspect higher-layer data. This also enables encrypted data to remain untouched during transit, preserving end-to-end security."
+      "answer": "Processing only up to Layer 3 minimizes overhead, ensures modularity between network layers, and allows efficient forwarding without needing to inspect higher-layer data. This also enables encrypted data to remain untouched during transit, preserving end-to-end security.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "ethernet_frames_overview",
       "type": "basic",
       "question": "What is an Ethernet frame?",
-      "answer": "An Ethernet frame is a data packet format used in Ethernet networks. It contains fields like the destination MAC address, source MAC address, EtherType, payload (data), and a Frame Check Sequence (FCS) for error detection. Ethernet frames are typically between 64 and 1518 bytes in size for standard Ethernet. EtherType is a 16-bit field in the Ethernet frame that specifies the protocol encapsulated in the payload of the frame. Comon values include 0x0800 IPv4, 0x86DD ARP (Adress Resolution Protocol)"
+      "answer": "An Ethernet frame is a data packet format used in Ethernet networks. It contains fields like the destination MAC address, source MAC address, EtherType, payload (data), and a Frame Check Sequence (FCS) for error detection. Ethernet frames are typically between 64 and 1518 bytes in size for standard Ethernet. EtherType is a 16-bit field in the Ethernet frame that specifies the protocol encapsulated in the payload of the frame. Comon values include 0x0800 IPv4, 0x86DD ARP (Adress Resolution Protocol)",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_frames_overview_typing",
       "type": "typing",
       "question": "What is the name of the data packet format used in Ethernet networks?",
-      "answer": "Ethernet frame"
+      "answer": "Ethernet frame",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_frame_structure_typing",
       "type": "typing",
       "question": "What are the main fields in an Ethernet frame?",
-      "answer": "Destination MAC address, source MAC address, EtherType, Payload (data), and Frame Check Sequence (FCS) for error detection."
+      "answer": "Destination MAC address, source MAC address, EtherType, Payload (data), and Frame Check Sequence (FCS) for error detection.",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_frame_size_range",
       "type": "basic",
       "question": "What is the standard size range of an Ethernet frame in IEEE 802.3?",
-      "answer": "The standard size range is 64 to 1518 bytes."
+      "answer": "The standard size range is 64 to 1518 bytes.",
+      "tags": [
+        "802",
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_runt_frames",
       "type": "basic",
       "question": "What are 'runt frames' in Ethernet, and what typically causes them?",
-      "answer": "'Runt frames' are Ethernet frames smaller than 64 bytes, typically caused by errors during transmission."
+      "answer": "'Runt frames' are Ethernet frames smaller than 64 bytes, typically caused by errors during transmission.",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_jumbo_frames",
       "type": "basic",
       "question": "What are 'jumbo frames' in Ethernet, and when are they used?",
-      "answer": "'Jumbo frames' are Ethernet frames larger than 1518 bytes. They are used in some networks, such as high-speed or storage networks, to optimize performance. All devices on the network must explicitly support jumbo frames."
+      "answer": "'Jumbo frames' are Ethernet frames larger than 1518 bytes. They are used in some networks, such as high-speed or storage networks, to optimize performance. All devices on the network must explicitly support jumbo frames.",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_standard_vs_nonstandard",
       "type": "basic",
       "question": "What does 'standard Ethernet' refer to, and how does it differ from non-standard implementations?",
-      "answer": "'Standard Ethernet' refers to IEEE 802.3, which governs wired Ethernet connections. Non-standard implementations include wireless networking (IEEE 802.11) or specialized Ethernet variants like InfiniBand or proprietary setups."
+      "answer": "'Standard Ethernet' refers to IEEE 802.3, which governs wired Ethernet connections. Non-standard implementations include wireless networking (IEEE 802.11) or specialized Ethernet variants like InfiniBand or proprietary setups.",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_frame_components",
       "type": "basic",
       "question": "What components are included in an Ethernet frame?",
-      "answer": "An Ethernet frame includes the destination MAC address, source MAC address, EtherType, payload (data), and Frame Check Sequence (FCS)."
+      "answer": "An Ethernet frame includes the destination MAC address, source MAC address, EtherType, payload (data), and Frame Check Sequence (FCS).",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_frame_mtu",
       "type": "basic",
       "question": "What does MTU (Maximum Transmission Unit) refer to in Ethernet?",
-      "answer": "MTU refers to the maximum payload size that can be transmitted in an Ethernet frame without fragmentation."
+      "answer": "MTU refers to the maximum payload size that can be transmitted in an Ethernet frame without fragmentation.",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_frame_size_efficiency",
       "type": "basic",
       "question": "Why is the size range of Ethernet frames (64–1518 bytes) so large?",
-      "answer": "The range accounts for different applications. Larger sizes generally increase efficiency during normal operations but can lead to higher latency in the event of retransmissions due to errors."
+      "answer": "The range accounts for different applications. Larger sizes generally increase efficiency during normal operations but can lead to higher latency in the event of retransmissions due to errors.",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ieee_802_curriculum_relevance",
       "type": "basic",
       "question": "Which IEEE 802 standards are most relevant for a networking curriculum?",
-      "answer": "The most relevant are IEEE 802.3 (Ethernet), IEEE 802.11 (Wi-Fi), IEEE 802.1 (VLANs), IEEE 802.15 (Bluetooth/Zigbee), and IEEE 802.16 (WiMAX)."
+      "answer": "The most relevant are IEEE 802.3 (Ethernet), IEEE 802.11 (Wi-Fi), IEEE 802.1 (VLANs), IEEE 802.15 (Bluetooth/Zigbee), and IEEE 802.16 (WiMAX).",
+      "tags": [
+        "802"
+      ]
     },
     {
       "id": "ethernet_frame_etherType",
       "type": "basic",
       "question": "What is the purpose of the EtherType field in an Ethernet frame?",
-      "answer": "The EtherType field is a 16-bit field in the Ethernet frame that specifies the protocol encapsulated in the payload of the frame."
+      "answer": "The EtherType field is a 16-bit field in the Ethernet frame that specifies the protocol encapsulated in the payload of the frame.",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ethernet_frame_etherType_values",
       "type": "basic",
       "question": "What are common values for the EtherType field in an Ethernet frame?",
-      "answer": "Common values include 0x0800 for IPv4 and 0x86DD for ARP (Address Resolution Protocol)."
+      "answer": "Common values include 0x0800 for IPv4 and 0x86DD for ARP (Address Resolution Protocol).",
+      "tags": [
+        "ethernet"
+      ]
     },
     {
       "id": "ieee_definition",
       "type": "basic",
       "question": "What does IEEE stand for?",
-      "answer": "IEEE stands for the Institute of Electrical and Electronics Engineers."
+      "answer": "IEEE stands for the Institute of Electrical and Electronics Engineers.",
+      "tags": [
+        "standard_bodies"
+      ]
     },
     {
       "id": "ieee_role_in_networking",
       "type": "basic",
       "question": "What is the role of IEEE in networking?",
-      "answer": "IEEE defines standards for networking technologies, including Ethernet (IEEE 802.3) and Wi-Fi (IEEE 802.11)."
+      "answer": "IEEE defines standards for networking technologies, including Ethernet (IEEE 802.3) and Wi-Fi (IEEE 802.11).",
+      "tags": [
+        "standard_bodies"
+      ]
     },
     {
       "id": "ieee_802_definition",
       "type": "basic",
       "question": "What is IEEE 802?",
-      "answer": "IEEE 802 is a set of standards for local and metropolitan area networks (LANs and MANs), focusing on physical and data link layers of the OSI model."
+      "answer": "IEEE 802 is a set of standards for local and metropolitan area networks (LANs and MANs), focusing on physical and data link layers of the OSI model.",
+      "tags": [
+        "802"
+      ]
     },
     {
       "id": "ieee_802_layer_focus",
       "type": "basic",
       "question": "Which layers of the OSI model do IEEE 802 standards focus on?",
-      "answer": "IEEE 802 standards focus on the physical and data link layers of the OSI model."
+      "answer": "IEEE 802 standards focus on the physical and data link layers of the OSI model.",
+      "tags": [
+        "802",
+        "osi"
+      ]
     },
     {
       "id": "ieee_802_3_ethernet",
       "type": "basic",
       "question": "What does IEEE 802.3 define?",
-      "answer": "IEEE 802.3 defines Ethernet standards for wired local area networks (LANs)."
+      "answer": "IEEE 802.3 defines Ethernet standards for wired local area networks (LANs).",
+      "tags": [
+        "802",
+        "ethernet"
+      ]
     },
     {
       "id": "ieee_802_3_ethernet_detail",
       "type": "basic",
       "question": "What does the IEEE 802.3 standard cover in detail?",
-      "answer": "The IEEE 802.3 standard covers Ethernet, including specifications for wired LANs, Ethernet frame structure, MAC addressing, and physical layer characteristics."
+      "answer": "The IEEE 802.3 standard covers Ethernet, including specifications for wired LANs, Ethernet frame structure, MAC addressing, and physical layer characteristics.",
+      "tags": [
+        "802",
+        "ethernet"
+      ]
     },
     {
       "id": "ieee_802_11_wifi",
       "type": "basic",
       "question": "What does IEEE 802.11 define?",
-      "answer": "IEEE 802.11 defines standards for wireless local area networks (Wi-Fi)."
+      "answer": "IEEE 802.11 defines standards for wireless local area networks (Wi-Fi).",
+      "tags": [
+        "802",
+        "WiFi"
+      ]
     },
     {
       "id": "ieee_802_1_vlan",
       "type": "basic",
       "question": "What does IEEE 802.1 focus on?",
-      "answer": "IEEE 802.1 focuses on network architecture, bridging, and management, including VLANs and Spanning Tree Protocol (STP)."
+      "answer": "IEEE 802.1 focuses on network architecture, bridging, and management, including VLANs and Spanning Tree Protocol (STP).",
+      "tags": [
+        "802"
+      ]
     },
     {
       "id": "ieee_802_15_bluetooth",
       "type": "basic",
       "question": "What does IEEE 802.15 define?",
-      "answer": "IEEE 802.15 defines standards for Wireless Personal Area Networks (WPANs), including Bluetooth and Zigbee."
+      "answer": "IEEE 802.15 defines standards for Wireless Personal Area Networks (WPANs), including Bluetooth and Zigbee.",
+      "tags": [
+        "802"
+      ]
     },
     {
       "id": "ieee_802_16_wimax",
       "type": "basic",
       "question": "What does IEEE 802.16 define?",
-      "answer": "IEEE 802.16 defines standards for broadband wireless access, including WiMAX."
+      "answer": "IEEE 802.16 defines standards for broadband wireless access, including WiMAX.",
+      "tags": [
+        "802"
+      ]
     },
     {
       "id": "ieee_ethernet_wifi_comparison",
       "type": "basic",
       "question": "What is the difference between IEEE 802.3 (Ethernet) and IEEE 802.11 (Wi-Fi)?",
-      "answer": "IEEE 802.3 defines standards for wired networks (Ethernet), while IEEE 802.11 defines standards for wireless networks (Wi-Fi)."
+      "answer": "IEEE 802.3 defines standards for wired networks (Ethernet), while IEEE 802.11 defines standards for wireless networks (Wi-Fi).",
+      "tags": [
+        "802"
+      ]
     },
     {
       "id": "ieee_common_protocols",
       "type": "basic",
       "question": "What are common protocols defined by IEEE 802 standards?",
-      "answer": "Common protocols include Ethernet (802.3), Wi-Fi (802.11), VLANs (802.1), Bluetooth/Zigbee (802.15), and WiMAX (802.16)."
+      "answer": "Common protocols include Ethernet (802.3), Wi-Fi (802.11), VLANs (802.1), Bluetooth/Zigbee (802.15), and WiMAX (802.16).",
+      "tags": [
+        "802"
+      ]
     },
     {
       "id": "snap_protocol_definition",
       "type": "basic",
       "question": "What is the SubNetwork Access Protocol (SNAP)?",
-      "answer": "The SubNetwork Access Protocol (SNAP) is a mechanism used in Ethernet frames to extend the EtherType field, enabling support for additional protocols beyond those defined by IEEE 802.3. This is used for proprietary solutions and uncomon in modern general purpouse networks."
+      "answer": "The SubNetwork Access Protocol (SNAP) is a mechanism used in Ethernet frames to extend the EtherType field, enabling support for additional protocols beyond those defined by IEEE 802.3. This is used for proprietary solutions and uncomon in modern general purpouse networks.",
+      "tags": [
+        "802",
+        "protocols"
+      ]
     },
     {
       "id": "icmp_overview",
       "type": "basic",
       "question": "What is ICMP (Internet Control Message Protocol)?",
-      "answer": "ICMP is a Layer 3 (Network Layer) protocol used for diagnostic and error-reporting purposes. It operates directly on top of IP and is commonly used by tools like ping and traceroute to check connectivity and troubleshoot network issues."
+      "answer": "ICMP is a Layer 3 (Network Layer) protocol used for diagnostic and error-reporting purposes. It operates directly on top of IP and is commonly used by tools like ping and traceroute to check connectivity and troubleshoot network issues.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "data_segments_definition",
       "type": "basic",
       "question": "What are data segments in networking?",
-      "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers, such as TCP or UDP headers."
+      "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers, such as TCP or UDP headers.",
+      "tags": [
+        "802",
+        "osi"
+      ]
     },
     {
       "id": "network_datagrams_definition",
@@ -1237,18 +1535,17 @@
         "routes"
       ]
     },
-{
-  "id": "netplan_gateway_example",
-  "type": "basic",
-  "question": "Provide an example of a <{start-bold}>gateway<{end-bold}> configuration in Netplan.",
-  "answer": "<{start-terminal}>\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      addresses:\n        - 192.168.1.100/24\n      gateway4: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n<{end-terminal}>",
-  "tags": [
-    "netplan",
-    "gateway",
-    "example"
-  ]
-}
-,
+    {
+      "id": "netplan_gateway_example",
+      "type": "basic",
+      "question": "Provide an example of a <{start-bold}>gateway<{end-bold}> configuration in Netplan.",
+      "answer": "<{start-terminal}>\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      addresses:\n        - 192.168.1.100/24\n      gateway4: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n<{end-terminal}>",
+      "tags": [
+        "netplan",
+        "gateway",
+        "example"
+      ]
+    },
     {
       "id": "netplan_routes_example",
       "type": "basic",
