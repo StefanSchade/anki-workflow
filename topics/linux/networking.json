@@ -67,6 +67,71 @@
       "answer": "VLAN (Virtual Local Area Network)"
     },
     {
+      "id": "osi_model_establishment",
+      "type": "basic",
+      "question": "When was the OSI model established, and why?",
+      "answer": "The OSI model was established in 1984 by the ISO (International Organization for Standardization) to provide a standardized framework for networking, ensuring interoperability between systems from different vendors."
+    },
+    {
+      "id": "ieee_802_standard",
+      "type": "basic",
+      "question": "When was the IEEE 802 standard published, and what was its purpose?",
+      "answer": "The IEEE 802 standard was published in 1983 to define standards for Local Area Networks (LANs), such as Ethernet (802.3) and Wi-Fi (802.11). Its purpose was to ensure compatibility between devices and simplify network implementations."
+    },
+    {
+      "id": "tcp_ip_vs_osi",
+      "type": "basic",
+      "question": "How do the TCP/IP model and the OSI model relate?",
+      "answer": "The TCP/IP model is a practical implementation of networking that predates the OSI model and focuses on a four-layer architecture. The OSI model is a theoretical seven-layer framework, designed for standardization and education. TCP/IP aligns with OSI, but combines the Application, Presentation, and Session layers into one, and the Data Link and Physical layers into a single Network Access layer."
+    },
+    {
+      "id": "osi_standardization_organization",
+      "type": "basic",
+      "question": "Which organization established the OSI model, and how is it curated today?",
+      "answer": "The OSI model was established by the ISO (International Organization for Standardization) and the ITU-T (International Telecommunication Union). Today, networking standards are curated by organizations like the ISO, IEEE (Institute of Electrical and Electronics Engineers), and the IETF (Internet Engineering Task Force)."
+    },
+    {
+      "id": "tcp_ip_standardization",
+      "type": "basic",
+      "question": "Which organization maintains and curates the TCP/IP standards?",
+      "answer": "The TCP/IP standards are maintained by the Internet Engineering Task Force (IETF), which publishes standards as Request for Comments (RFCs)."
+    },
+    {
+      "id": "networking_standards_organizations",
+      "type": "multiple-choice",
+      "question": "Which organizations are responsible for networking standards, and what do they oversee?\n\n1. ISO\n2. IEEE\n3. IETF\n4. ITU-T",
+      "choices": [
+        {
+          "text": "ISO: Establishes frameworks like the OSI model.",
+          "correct": true
+        },
+        {
+          "text": "IEEE: Publishes hardware-level standards like Ethernet (802.3) and Wi-Fi (802.11).",
+          "correct": true
+        },
+        {
+          "text": "IETF: Maintains internet protocols like TCP/IP.",
+          "correct": true
+        },
+        {
+          "text": "ITU-T: Focuses on telecommunications standards, such as PSTN and broadband.",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "osi_model_layers_typing",
+      "type": "typing",
+      "question": "What are the 7 layers of the OSI model, in order?",
+      "answer": "Physical, Data Link, Network, Transport, Session, Presentation, Application"
+    },
+    {
+      "id": "tcp_ip_layers_typing",
+      "type": "typing",
+      "question": "What are the 4 layers of the TCP/IP model?",
+      "answer": "Network Access, Internet, Transport, Application"
+    },
+    {
       "id": "osi_model_overview",
       "type": "basic",
       "question": "What is the OSI model?",
@@ -570,6 +635,51 @@
       "answer": "Network switches primarily operate at Layer 2, where they forward frames within a LAN based on MAC addresses. Some switches, known as multi-layer switches, can operate at higher OSI layers, such as Layer 3, to perform routing functions."
     },
     {
+      "id": "lv7_lv5_session_comparison",
+      "type": "basic",
+      "question": "What is the relationship between Level 7 session management (e.g., cookies, tokens) and Level 5 session protocols?",
+      "answer": "Level 7 session management provides mechanisms like cookies and tokens for application-layer user session persistence. These are independent of Level 5 session protocols, such as TCP, which manage connection-oriented communication between systems. However, Level 5 sessions are still essential for reliable communication, even in REST-based systems that do not maintain application-layer session persistence."
+    },
+    {
+      "id": "websockets_rest_lv5",
+      "type": "basic",
+      "question": "How does WebSocket use Level 5 session protocols differently from REST, and what impact does this have on performance?",
+      "answer": "WebSocket uses a Level 5 session to establish a persistent connection, enabling real-time bidirectional communication. REST, in contrast, relies on stateless HTTP, where each request creates a new connection, adding overhead. Persistent connections in WebSocket can significantly reduce latency and improve performance in real-time applications."
+    },
+    {
+      "id": "websockets_rest_difference",
+      "type": "multiple-choice",
+      "question": "Which statements about WebSockets and REST are correct?",
+      "choices": [
+        {
+          "text": "WebSockets use a persistent Level 5 session.",
+          "correct": true,
+          "explanation": "WebSockets rely on Level 5 session management to maintain a persistent connection."
+        },
+        {
+          "text": "REST establishes a new Level 5 session for each request.",
+          "correct": true,
+          "explanation": "REST is stateless, and each request typically creates a new TCP connection."
+        },
+        {
+          "text": "WebSockets add overhead by requiring a new session for every message.",
+          "correct": false,
+          "explanation": "WebSockets reduce overhead by reusing the same session for all messages."
+        },
+        {
+          "text": "REST offers lower latency for real-time applications compared to WebSockets.",
+          "correct": false,
+          "explanation": "WebSockets provide lower latency for real-time applications by maintaining a persistent connection."
+        }
+      ]
+    },
+    {
+      "id": "check_network_interfaces",
+      "type": "typing",
+      "question": "What command lists all network interfaces on a Linux system?",
+      "answer": "ip link show"
+    },
+    {
       "id": "ipv4_definition",
       "type": "basic",
       "question": "What is an IPv4 address?",
@@ -634,6 +744,77 @@
       "answer": "A dual-stack network supports both IPv4 and IPv6 protocols, allowing devices to communicate using either address format depending on the destination."
     },
     {
+      "id": "ipv6_subnet_masks",
+      "type": "basic",
+      "question": "Does IPv6 use subnet masks? How are they represented?",
+      "answer": "Yes, IPv6 uses subnet masks, but they are represented as CIDR prefix lengths (e.g., /64) rather than dotted decimal notation. The prefix length indicates the number of bits in the network portion of the address."
+    },
+    {
+      "id": "ipv6_common_prefix",
+      "type": "basic",
+      "question": "What is the most common prefix length used for IPv6 subnets, and why?",
+      "answer": "/64 is the most common prefix length in IPv6 because it allows for a vast number of host addresses (2⁶⁴) and simplifies routing and network management."
+    },
+    {
+      "id": "ipv6_prefix_example",
+      "type": "basic",
+      "question": "What does the IPv6 address `2001:db8:abcd::/64` mean?",
+      "answer": "The `/64` indicates that the first 64 bits of the address are the network portion, and the remaining 64 bits are available for host addressing."
+    },
+    {
+      "id": "ipv6_vs_ipv4_subnetting",
+      "type": "basic",
+      "question": "How does subnetting in IPv6 differ from IPv4?",
+      "answer": "IPv6 uses CIDR prefix lengths (e.g., /64) instead of dotted decimal subnet masks (e.g., 255.255.255.0). IPv6 subnets are much larger, typically allocating 2⁶⁴ addresses per subnet."
+    },
+    {
+      "id": "ipv6_nat_difference",
+      "type": "basic",
+      "question": "Does IPv6 use NAT (Network Address Translation)? Why or why not?",
+      "answer": "No, IPv6 does not typically use NAT because its 128-bit address space provides enough unique addresses for every device to have a globally routable address, eliminating the need for address translation."
+    },
+    {
+      "id": "ipv4_nat_privacy",
+      "type": "basic",
+      "question": "How does NAT in IPv4 provide a level of privacy?",
+      "answer": "NAT hides internal private IP addresses behind a single public IP address, so external networks cannot directly identify individual devices on the LAN."
+    },
+    {
+      "id": "ipv6_privacy",
+      "type": "basic",
+      "question": "How does IPv6 address privacy concerns without NAT?",
+      "answer": "IPv6 uses privacy extensions, such as temporary, randomly generated addresses for outbound connections, to prevent tracking, while stable addresses are used for inbound traffic."
+    },
+    {
+      "id": "ip_address_change_hops",
+      "type": "basic",
+      "question": "Does the source IP address change as packets travel through different networks?",
+      "answer": "No, the source and destination IP addresses remain constant throughout the journey. Only the Layer 2 details (e.g., MAC addresses) change at each hop."
+    },
+    {
+      "id": "ipv4_vs_ipv6_concept",
+      "type": "multiple-choice",
+      "question": "Which of the following statements highlight key differences between IPv4 and IPv6?\n\n1. IPv4 relies on NAT, whereas IPv6 does not.\n2. IPv6 addresses are globally unique and routable by default.\n3. IPv4 provides better privacy due to NAT.\n4. IPv6 eliminates the need for address translation by expanding the address space.",
+      "choices": [
+        {
+          "text": "1. IPv4 relies on NAT, whereas IPv6 does not.",
+          "correct": true
+        },
+        {
+          "text": "2. IPv6 addresses are globally unique and routable by default.",
+          "correct": true
+        },
+        {
+          "text": "3. IPv4 provides better privacy due to NAT.",
+          "correct": true
+        },
+        {
+          "text": "4. IPv6 eliminates the need for address translation by expanding the address space.",
+          "correct": true
+        }
+      ]
+    },
+    {
       "id": "subnet_mask_definition",
       "type": "basic",
       "question": "What is a subnet mask?",
@@ -686,6 +867,60 @@
       "type": "basic",
       "question": "What is CIDR notation, and how is it related to subnet masks?",
       "answer": "CIDR (Classless Inter-Domain Routing) notation represents a subnet mask as a suffix to an IP address, indicating the number of bits used for the network. For example, 192.168.1.0/24 means the first 24 bits represent the network."
+    },
+    {
+      "id": "network_ports_definition",
+      "type": "basic",
+      "question": "What is a network port?",
+      "answer": "A network port is a logical endpoint for communication, identified by a number (e.g., 80 for HTTP, 22 for SSH). Ports allow applications to share the same IP address while communicating with different services."
+    },
+    {
+      "id": "socket_definition",
+      "type": "basic",
+      "question": "What is a socket in networking?",
+      "answer": "A socket is an endpoint for communication between two devices on a network. It consists of an IP address and a port number, enabling applications to send and receive data."
+    },
+    {
+      "id": "ports_vs_sockets",
+      "type": "basic",
+      "question": "What is the difference between a port and a socket in networking?",
+      "answer": "A port is a numbered endpoint that identifies specific services on a device (e.g., port 80 for HTTP). A socket combines an IP address and a port number to create a unique endpoint for communication."
+    },
+    {
+      "id": "common_ports",
+      "type": "basic",
+      "question": "What are some common network ports and their purposes?",
+      "answer": "- <{start-bold}>80<{end-bold}>: HTTP (web traffic)\n- <{start-bold}>443<{end-bold}>: HTTPS (secure web traffic)\n- <{start-bold}>22<{end-bold}>: SSH (secure shell for remote access)\n- <{start-bold}>25<{end-bold}>: SMTP (email sending)\n- <{start-bold}>53<{end-bold}>: DNS (domain name resolution)"
+    },
+    {
+      "id": "socket_communication_typing",
+      "type": "typing",
+      "question": "Which combination creates a unique network communication endpoint?",
+      "answer": "IP address + Port number"
+    },
+    {
+      "id": "socket_roles",
+      "type": "basic",
+      "question": "What roles do sockets play in network communication?",
+      "answer": "Sockets allow applications to send and receive data by creating unique communication endpoints using a combination of IP addresses and port numbers."
+    },
+    {
+      "id": "tcp_vs_udp_ports",
+      "type": "basic",
+      "question": "Do TCP and UDP use the same port numbers, and how are they different?",
+      "answer": "TCP and UDP can use the same port numbers, but they handle data differently. <{start-bold}>TCP<{end-bold}> provides reliable, connection-oriented communication, while <{start-bold}>UDP<{end-bold}> offers faster, connectionless communication without guarantees of delivery."
+    },
+    {
+      "id": "port_numbers_ranges",
+      "type": "basic",
+      "question": "What are the three main ranges of port numbers in networking?",
+      "answer": "- <{start-bold}>Well-Known Ports (0-1023)<{end-bold}>: Reserved for system services (e.g., HTTP, SSH).\n- <{start-bold}>Registered Ports (1024-49151)<{end-bold}>: Assigned for user applications by IANA.\n- <{start-bold}>Dynamic/Private Ports (49152-65535)<{end-bold}>: Used for ephemeral connections."
+    },
+    {
+      "id": "port_safety_typing",
+      "type": "typing",
+      "question": "Which port is used for secure web traffic?",
+      "answer": "443"
     },
     {
       "id": "ip_link_show_output",
@@ -939,6 +1174,18 @@
       "answer": "Use the command `ip addr add [IP]/[CIDR] dev [interface]`, e.g., `ip addr add 192.168.1.100/24 dev eth0`. Note that this change is temporary and will be lost after a reboot."
     },
     {
+      "id": "persist_static_ip_linux",
+      "type": "basic",
+      "question": "How do you configure a static IP address in Linux so it persists after a reboot?",
+      "answer": "To configure a persistent static IP address in Linux, use `systemd-networkd`:\n\n1. Create or edit a file like `/etc/systemd/network/10-static.network` with the following content:\n```ini\n[Match]\nName=eth0\n\n[Network]\nAddress=192.168.1.100/24\nGateway=192.168.1.1\nDNS=8.8.8.8\n```\n2. Restart `systemd-networkd`:\n<{start-terminal}>\nsudo systemctl restart systemd-networkd\n<{end-terminal}>"
+    },
+    {
+      "id": "revert_to_dynamic_ip",
+      "type": "basic",
+      "question": "How do you revert a network interface to use dynamic IP assignment in Linux?",
+      "answer": "To revert a network interface to dynamic IP assignment:\n\n1. If using `systemd-networkd`, modify the `.network` file, e.g., `/etc/systemd/network/10-static.network`:\n```ini\n[Match]\nName=eth0\n\n[Network]\nDHCP=yes\n```\n2. Restart `systemd-networkd`:\n<{start-terminal}>\nsudo systemctl restart systemd-networkd\n<{end-terminal}>\n\nAlternatively, if you're using a temporary setup, restart the network service or delete the static IP with:\n<{start-terminal}>\nsudo ip addr flush dev eth0\nsudo dhclient eth0\n<{end-terminal}>"
+    },
+    {
       "id": "linux_static_ip_persistent_ubuntu",
       "type": "basic",
       "question": "How do you configure a persistent static IP in Ubuntu?",
@@ -972,17 +1219,18 @@
         "routes"
       ]
     },
-    {
-      "id": "netplan_gateway_example",
-      "type": "basic",
-      "question": "Provide an example of a `gateway` configuration in Netplan.",
-      "answer": "```yaml\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      addresses:\n        - 192.168.1.100/24\n      gateway4: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n```",
-      "tags": [
-        "netplan",
-        "gateway",
-        "example"
-      ]
-    },
+{
+  "id": "netplan_gateway_example",
+  "type": "basic",
+  "question": "Provide an example of a <{start-bold}>gateway<{end-bold}> configuration in Netplan.",
+  "answer": "<{start-terminal}>\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      addresses:\n        - 192.168.1.100/24\n      gateway4: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n<{end-terminal}>",
+  "tags": [
+    "netplan",
+    "gateway",
+    "example"
+  ]
+}
+,
     {
       "id": "netplan_routes_example",
       "type": "basic",
