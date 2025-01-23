@@ -1,5 +1,5 @@
 {
-  "cards":  [
+  "cards": [
     {
       "id": "lan_definition",
       "type": "basic",
@@ -18,7 +18,7 @@
       "question": "What is a WAN?",
       "answer": "A WAN (Wide Area Network) is a network of networks, consisting of multiple distributed LANs communicating with each other. The internet is the largest WAN, but the private network of a multinational corporation is also considered a WAN."
     },
-     {
+    {
       "id": "wan_definition_typing",
       "type": "typing",
       "question": "How do you call a network of multiple distributed LANs?",
@@ -30,7 +30,7 @@
       "question": "What is a PAN?",
       "answer": "A PAN (Personal Area Network) is a specialized type of LAN formed by personal devices interconnected using short-range technologies like Bluetooth, USB, or Infrared. It is typically used for personal communication between devices within a few meters."
     },
-     {
+    {
       "id": "pan_definition_typing",
       "type": "typing",
       "question": "How do you call a special LAN formed by personal devices?",
@@ -42,7 +42,7 @@
       "question": "What is a MAN?",
       "answer": "A MAN (Metropolitan Area Network) spans a city or urban area, often implemented with high-speed technologies such as fiber optics. MANs are typically larger than LANs but smaller than WANs."
     },
-     {
+    {
       "id": "man_definition_typing",
       "type": "typing",
       "question": "How do you call a network that spans a city or urban area?",
@@ -60,7 +60,7 @@
       "question": "What is a VLAN?",
       "answer": "A VLAN (Virtual Local Area Network) is a logical segmentation of a LAN into separate virtual networks. It can group devices logically regardless of their physical location, improving security, performance, and manageability. VLANs are created using network switches and routers, utilizing tagging protocols like IEEE 802.1Q."
     },
-     {
+    {
       "id": "vlan_definition_typing",
       "type": "typing",
       "question": "How do you call a logical segment of a LAN?",
@@ -72,7 +72,7 @@
       "question": "What is the OSI model?",
       "answer": "The OSI (Open Systems Interconnection) model is a conceptual framework with 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application) used to standardize and understand how data is transmitted across networks."
     },
-     {
+    {
       "id": "osi_model_overview_typing",
       "type": "typing",
       "question": "What does OSI stand for? Give the number of Layers in the model and list them in correct sequence?",
@@ -126,7 +126,7 @@
       "question": "What is the DNS protocol?",
       "answer": "The DNS (Domain Name System) protocol translates human-readable domain names into IP addresses, allowing devices to locate each other on a network. DNS operates at the Application layer (Layer 7) in the OSI model."
     },
-     {
+    {
       "id": "dns_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol translates human-readable domain names into IP adresses - Which OSI layer does it operate at?",
@@ -138,7 +138,7 @@
       "question": "What is the HTTP protocol?",
       "answer": "HTTP (Hypertext Transfer Protocol) is a stateless protocol used for transferring web resources, such as HTML files, images, and videos. HTTP operates at the Application layer (Layer 7) in the OSI model."
     },
-     {
+    {
       "id": "http_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol transfers web resources - Which OSI layer does it operate at?",
@@ -150,7 +150,7 @@
       "question": "What is the FTP protocol?",
       "answer": "FTP (File Transfer Protocol) is a standard protocol for transferring files between a client and a server. FTP operates at the Application layer (Layer 7) in the OSI model."
     },
-     {
+    {
       "id": "ftp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol transfers files between a client and a server - Which OSI layer does it operate at?",
@@ -162,7 +162,7 @@
       "question": "What is the SMTP protocol?",
       "answer": "SMTP (Simple Mail Transfer Protocol) is a protocol for sending and receiving emails. It supports encryption and host authentication, and it operates at the Application layer (Layer 7) in the OSI model."
     },
-     {
+    {
       "id": "smtp_protocol_overview_typing",
       "type": "typing",
       "question": "Whcih protocol sends and receives emails - Which OSI layer does it operate at?",
@@ -174,7 +174,7 @@
       "question": "What is the ARP protocol?",
       "answer": "ARP (Address Resolution Protocol) maps IP addresses to MAC addresses for communication within a local network. It operates at the Data Link layer (Layer 2) in the OSI model."
     },
-     {
+    {
       "id": "arp_protocol_overview_typing",
       "type": "typing",
       "question": "Whcih protocol maps IP addresses to MAC addresses - Which OSI layer does it operate at?",
@@ -186,7 +186,7 @@
       "question": "What is the NDP protocol?",
       "answer": "NDP (Neighbor Discovery Protocol) is similar to ARP but designed for IPv6. It maps IPv6 addresses to MAC addresses and operates at the Data Link layer (Layer 2) in the OSI model."
     },
-     {
+    {
       "id": "ndp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol is similar to ARP, but designed for IPv6 - Which OSI layer does it operate at?",
@@ -198,7 +198,7 @@
       "question": "What is the TCP protocol?",
       "answer": "TCP (Transmission Control Protocol) is a connection-oriented protocol that ensures reliable data delivery through error checking and retransmissions. TCP operates at the Transport layer (Layer 4) in the OSI model."
     },
-     {
+    {
       "id": "tcp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol ensures reliable data delivery throguh error checking and retransmissions - Which OSI layer does it operate at?",
@@ -210,7 +210,7 @@
       "question": "What is the UDP protocol?",
       "answer": "UDP (User Datagram Protocol) is a connectionless protocol that offers low-latency communication without error checking. It operates at the Transport layer (Layer 4) in the OSI model."
     },
-     {
+    {
       "id": "udp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol offers low-latency communication without error checking - Which OSI layer does it operate at?",
@@ -222,7 +222,7 @@
       "question": "What is the DHCP protocol?",
       "answer": "DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP addresses and other network configuration details to devices on a network. DHCP operates at the Application layer (Layer 7) in the OSI model."
     },
-     {
+    {
       "id": "dhcp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol dynammically assigns ip addresses to devices on a network - Which OSI layer does it operate at?",
@@ -234,7 +234,7 @@
       "question": "What is ICMP?",
       "answer": "ICMP (Internet Control Message Protocol) reports errors and diagnostic information, commonly used by tools like ping. It operates at the Network layer (Layer 3) in the OSI model."
     },
-     {
+    {
       "id": "icmp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol reports errors and diagnostics and is used by the tool ping - Which OSI layer does it operate on?",
@@ -246,7 +246,7 @@
       "question": "What is the NTP protocol?",
       "answer": "NTP (Network Time Protocol) synchronizes system clocks across networks, ensuring accurate timekeeping. It operates at the Application layer (Layer 7) in the OSI model."
     },
-     {
+    {
       "id": "ntp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol synchronizes system clocks across networks - Which OSI layer does it operate at?",
@@ -258,7 +258,7 @@
       "question": "What is the SNMP protocol?",
       "answer": "SNMP (Simple Network Management Protocol) allows remote monitoring and management of network devices. It operates at the Application layer (Layer 7) in the OSI model."
     },
-     {
+    {
       "id": "snmp_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol allows remote monitoring of network devices - Which OSI layer does it operate at?",
@@ -270,7 +270,7 @@
       "question": "What is the SSH protocol?",
       "answer": "SSH (Secure Shell) provides encrypted communication for secure remote access and file transfers. It operates at the Application layer (Layer 7) in the OSI model."
     },
-     {
+    {
       "id": "ssh_protocol_overview_typing",
       "type": "typing",
       "question": "Which protocol provides encrypted communication for remote access and file transfers - Which OSI layer does it operate at?",
@@ -498,385 +498,593 @@
       "question": "What is ICMP (Internet Control Message Protocol)?",
       "answer": "ICMP is a Layer 3 (Network Layer) protocol used for diagnostic and error-reporting purposes. It operates directly on top of IP and is commonly used by tools like ping and traceroute to check connectivity and troubleshoot network issues."
     },
-
-{
-  "id": "data_segments_definition",
-  "type": "basic",
-  "question": "What are data segments in networking?",
-  "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers, such as TCP or UDP headers."
-},
-{
-  "id": "network_datagrams_definition",
-  "type": "basic",
-  "question": "What are datagrams in networking?",
-  "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes."
-},
-{
-  "id": "ethernet_frames_definition",
-  "type": "basic",
-  "question": "What are Ethernet frames in networking?",
-  "answer": "Ethernet frames are units of data used in the Data Link layer (OSI Layer 2). They encapsulate datagrams from the Network layer with MAC addresses and error-checking fields for local transmission."
-},
-{
-  "id": "segments_vs_datagrams_vs_frames",
-  "type": "basic",
-  "question": "What are the roles of data segments, datagrams, and Ethernet frames in the OSI model?",
-  "answer": "Data segments operate at Layer 4 (Transport Layer) to ensure proper delivery of application data. Datagrams operate at Layer 3 (Network Layer) to handle routing between networks. Ethernet frames operate at Layer 2 (Data Link Layer) for local transmission using MAC addresses."
-},
-{
-  "id": "osi_layer_encapsulation_hierarchy",
-  "type": "basic",
-  "question": "How are data segments, datagrams, and Ethernet frames related in the OSI encapsulation process?",
-  "answer": "Application data is encapsulated into a data segment (Layer 4), which is then encapsulated into a datagram (Layer 3) with an IP header. The datagram is further encapsulated into an Ethernet frame (Layer 2) for local transmission."
-},
-{
-  "id": "data_encapsulation_osi_layers",
-  "type": "basic",
-  "question": "How do Ethernet frames, datagrams, and segments relate to OSI layers, and how are they encapsulated?",
-  "answer": "<{start-table}><{break}><{start-tr}><{start-td}><{start-bold}>OSI Layer<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulation Unit<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulates<{end-bold}><{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 4 (Transport)<{end-td}><{start-td}>Segment<{end-td}><{start-td}>Application Data<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 3 (Network)<{end-td}><{start-td}>Datagram<{end-td}><{start-td}>Segment<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 2 (Data Link)<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Datagram<{end-td}>{<end-tr}><{break}><{end-table}>",
-  "tags": ["networking", "osi_model", "encapsulation"]
-},
-{
-  "id": "osi_end_to_end_vs_local",
-  "type": "basic",
-  "question": "What is the difference between end-to-end delivery and local delivery in the OSI model?",
-  "answer": "End-to-end delivery involves data segments (Layer 4) and datagrams (Layer 3) to ensure the message reaches the correct application on the destination device. Local delivery involves Ethernet frames (Layer 2) for transmitting data across a single network segment."
-},
-{
-  "id": "osi_real_world_encapsulation",
-  "type": "basic",
-  "question": "How is an HTTP request encapsulated and transmitted across the OSI layers?",
-  "answer": "An HTTP request (Layer 7) is encapsulated into a TCP segment (Layer 4), which is encapsulated into an IP datagram (Layer 3), and finally into an Ethernet frame (Layer 2) for transmission."
-},
-{
-  "id": "osi_encapsulation_visualized",
-  "type": "basic",
-  "question": "What does the encapsulation structure of an Ethernet frame containing a datagram and a segment look like?",
-  "answer": "The structure is: | Ethernet Header (MAC addresses) | IP Header (source/destination IP) | TCP/UDP Header (source/destination port) | Application Data |."
-},
-{
-  "id": "ipv4_definition",
-  "type": "basic",
-  "question": "What is an IPv4 address?",
-  "answer": "An IPv4 address is a 32-bit address represented in decimal format, consisting of four octets separated by dots (e.g., 192.168.1.1). It is widely used in modern networks."
-},
-{
-  "id": "ipv6_definition",
-  "type": "basic",
-  "question": "What is an IPv6 address?",
-  "answer": "An IPv6 address is a 128-bit address represented in hexadecimal format, consisting of eight groups of four hexadecimal digits separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334)."
-},
-{
-  "id": "multiple_ips_per_interface",
-  "type": "basic",
-  "question": "Can a single device have multiple IP addresses across different interfaces? How is this configured?",
-  "answer": "Yes, a single device can have multiple IP addresses, one for each network interface. Each interface (e.g., `eth0`, `wlp3s0`) can be configured independently with its own:<br><{break}><{bullet-item}>IP address<{end-bullet-item}><{break}><{bullet-item}>Subnet mask<{end-bullet-item}><{break}><{bullet-item}>Gateway and DNS settings<{end-bullet-item}><br><{break}><{break}>For example, using `nmcli`:<br><{break}><{start-terminal}>sudo nmcli connection modify 'eth0' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><br><{break}><{start-terminal}>sudo nmcli connection modify 'wlp3s0' ipv4.method manual ipv4.addresses 192.168.2.50/24 ipv4.gateway 192.168.2.1 ipv4.dns 8.8.4.4 connection.autoconnect yes<{end-terminal}>",
-  "tags": ["linux", "networking", "interfaces"]
-},
-{
-  "id": "port_aggregation_ip_assignment",
-  "type": "basic",
-  "question": "How is IP assignment handled when using port aggregation (e.g., LACP)?",
-  "answer": "<{start-h2}>IP Assignment with Port Aggregation:<{end-h2}><{break}><{break}><{bullet-item}>Port aggregation combines multiple physical interfaces (e.g., `eth0`, `eth1`) into a single logical interface (e.g., `bond0`).<{end-bullet-item}><{break}><{bullet-item}>The IP address is assigned to the logical interface (`bond0`), not the individual physical interfaces.<{end-bullet-item}><{break}><{break}><{start-h3}>Configuration Example (Using NetworkManager):<{end-h3}><{break}><{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{break}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{break}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{break}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{break}>sudo nmcli connection up bond0<{end-terminal}>",
-  "tags": ["linux", "networking", "port_aggregation"]
-},
-{
-  "id": "ipv4_vs_ipv6",
-  "type": "basic",
-  "question": "What is the primary difference between IPv4 and IPv6?",
-  "answer": "IPv4 uses 32-bit addresses, supporting approximately 4.3 billion unique addresses. IPv6 uses 128-bit addresses, supporting a vastly larger address space to accommodate the growing number of internet-connected devices."
-},
-{
-  "id": "why_ipv6_introduced",
-  "type": "basic",
-  "question": "Why was IPv6 introduced?",
-  "answer": "IPv6 was introduced to address the limitations of IPv4's address space. IPv4's 4.3 billion addresses are insufficient for the growing number of devices, while IPv6 provides an almost unlimited address space."
-},
-{
-  "id": "ipv4_nat",
-  "type": "basic", 
-  "question": "How does IPv4 use NAT (Network Address Translation) to overcome address limitations?",
-  "answer": "NAT allows multiple devices on a private network to share a single public IPv4 address by modifying IP addresses in packet headers as they pass through a router." 
-},
-{
-  "id": "ipv6_replace_ipv4_commands",
-  "type": "basic",
-  "question": "Can IPv6 be used in commands where IPv4 is shown, such as 'ip addr add'? Should there be separate examples?",
-  "answer": "Yes, IPv6 can replace IPv4 in commands like 'ip addr add' by using an IPv6 address instead of IPv4. It can be useful to provide both IPv4 and IPv6 examples to ensure learners understand the syntax for both."
-},
-{
-  "id": "dual_stack_networks",
-  "type": "basic",
-  "question": "What is a dual-stack network?",
-  "answer": "A dual-stack network supports both IPv4 and IPv6 protocols, allowing devices to communicate using either address format depending on the destination."
-},
-{
-  "id": "subnet_mask_definition",
-  "type": "basic",
-  "question": "What is a subnet mask?",
-  "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines which part of the address identifies the network and which part identifies the host."
-},
-{
-  "id": "subnet_mask_example",
-  "type": "basic",
-  "question": "What does the subnet mask 255.255.255.0 indicate?",
-  "answer": "The subnet mask 255.255.255.0 indicates that the first 24 bits of the IP address represent the network, leaving 8 bits for host addresses. This allows for 256 addresses within the subnet, including network and broadcast addresses."
-},
-{
-  "id": "subnet_mask_purpose",
-  "type": "basic",
-  "question": "What is the purpose of a subnet mask in networking?",
-  "answer": "The purpose of a subnet mask is to determine whether an IP address belongs to the same subnet or requires routing to another subnet."
-},
-{
-  "id": "subnet_mask_internal_networks",
-  "type": "basic",
-  "question": "How are subnet masks used in internal networks?",
-  "answer": "Subnet masks are used to segment an internal network into subnets, grouping devices and determining whether an IP address is local or requires routing across subnets."
-},
-{
-  "id": "nat_subnet_mask_relationship",
-  "type": "basic",
-  "question": "How do NAT and subnet masks work together in a network?",
-  "answer": "NAT translates private IP addresses to a public IP address for internet communication, while subnet masks divide the internal network into subnets and determine local routing. NAT hides the internal structure, including subnets, from external networks."
-},
-{
-  "id": "static_ip_address_definition",
-  "type": "basic",
-  "question": "What is a static IP address?",
-  "answer": "A static IP address is manually assigned to a device and does not change over time. It is commonly used for servers, printers, and other devices requiring consistent addresses."
-},
-{
-  "id": "dynamic_ip_address_definition",
-  "type": "basic",
-  "question": "What is a dynamically assigned IP address?",
-  "answer": "A dynamically assigned IP address is automatically allocated by a DHCP server and may change over time. It is commonly used for client devices like laptops and smartphones."
-},
-{
-  "id": "subnetting_benefits",
-  "type": "basic",
-  "question": "What are the benefits of subnetting in a network?",
-  "answer": "Subnetting improves network organization, reduces congestion, enhances security by isolating groups of devices, and optimizes the use of IP address space."
-},
-{
-  "id": "cidr_notation",
-  "type": "basic",
-  "question": "What is CIDR notation, and how is it related to subnet masks?",
-  "answer": "CIDR (Classless Inter-Domain Routing) notation represents a subnet mask as a suffix to an IP address, indicating the number of bits used for the network. For example, 192.168.1.0/24 means the first 24 bits represent the network."
-},
-{
-  "id": "ip_link_show_output",
-  "type": "basic",
-  "question": "What can you learn from this output?<br><br>/n <{start-terminal}> /n $ ip link show /n stefan@Melian:~$ ip link show /n 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000 /n link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 /n 2: enp0s25: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000 /n link/ether 3c:97:0e:be:c4:9d brd ff:ff:ff:ff:ff:ff /n 4: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000 /n link/ether 60:67:20:b7:33:40 brd ff:ff:ff:ff:ff:ff /n 5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:45:be:22:62 brd ff:ff:ff:ff:ff:ff /n 6: br-cd55516d845e: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:84:81:e9:09 brd ff:ff:ff:ff:ff:ff /n 7: br-f31e1b65f3fc: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:4a:b4:7d:6a brd ff:ff:ff:ff:ff:ff /n 8: br-f5d3455a961d: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:cd:ef:5c:14 brd ff:ff:ff:ff:ff:ff /n 9: br-0416cfb330e8: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:84:3b:84:f2 brd ff:ff:ff:ff:ff:ff /n 10: br-385ac45e7493: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:e7:be:6d:03 brd ff:ff:ff:ff:ff:ff /n 49: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 /n link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff /n stefan@Melian:~$ ls^C /n stefan@Melian:~$  /n /n /n /n <{end-terminal}>",
-  "answer": "This output provides details on the network interfaces on your system.<{start-ol}><{start-numbered-item}><{start-bold}>index and name for each interface:<{end-bold}> lo -> loopback, enp0s25 -> ethernet, wlp3s0 -> wireless, docker0 -> virtual interface used by docker, br* -> bridge interfaces created by virtualization software or sandbox enviroments (flatpack, snap), -> wwx* or wlx* are typically network devices connected via usb<{end-numbered-item}><{start-numbered-item}><{start-bold}>interface flags in angle brackets <...><{end-bold}> LOOPBACK used for internal communication, UP interface is operational, LOWER_UP physical link is acive, NO-CARRIER not connected, BROADCAST / MULTICAST indicates interface supports this traffic<{end-numbered-item}><{start-numbered-item}><{start-bold}>Maximum Transmission Unit (MTU):<{end-bold}> largest packet size the interface can handle<{end-numbered-item}><{start-numbered-item}><{start-bold}>Queueing Discipline (Qdisc):<{end-bold}> noqueue for loopback, fq_model is fair queue controlled delay<{end-numbered-item}><{start-numbered-item}><{start-bold}>State<{end-bold}> loopback is always operational<{end-numbered-item}><{start-numbered-item}><{start-bold}>MAC address<{end-bold}><{end-numbered-item}><{start-numbered-item}><{start-bold}>Queue length (qlen):<{end-bold}> max. nr. of packages to be queued<{end-numbered-item}><{start-numbered-item}><{start-bold}>Group:<{end-bold}> Standard Group is default<{end-numbered-item}><{start-numbered-item}><{start-bold}>Broadcast address (brd):<{end-bold}> messages sent to this address is processed by all devies on the subnet - used for adress resolution, discovery protocolls, DHCP (Dynamic Host Configuration Protocol) requests - ff:ff:ff:ff:ff:ff is a special address defined by IEEE 802.3<{end-numbered-item}><{end-ol}>",
-  "tags": ["linux", "networking"]
-},
-{ 
-  "id": "ip_link_show_typing",
-  "type": "typing",
-  "question": "What command can you use to gather information about the network interfaces on your machine?",
-  "answer": "ip link show"
-},
-{
-  "id": "usb_network_interface_details",
-  "type": "basic",
-  "question": "What does the following output for the interface `wwx0215e0ec0100` indicate?<{break}><{break}><{start-terminal}>11: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000<{break}>    link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff<{end-terminal}>",
-  "answer": "The interface `wwx0215e0ec0100` is likely a USB network device (e.g., a tethered smartphone or USB modem).<br><{break}>- **BROADCAST, MULTICAST:** Supports broadcast and multicast communication.<br><{break}>- **MTU 1500:** Standard maximum packet size for Ethernet.<br><{break}>- **qdisc noop:** No traffic shaping or scheduling is applied.<br><{break}>- **State DOWN:** The interface is inactive (not connected or configured).<br><{break}>- **MAC Address (link/ether):** `02:15:e0:ec:01:00` identifies the device.<br><{break}>- **Broadcast Address:** `ff:ff:ff:ff:ff:ff` for local network communication.",
-  "tags": ["linux", "networking", "usb"]
-},
-{
-  "id": "bridge_interfaces_sandboxing",
-  "type": "basic",
-  "question": "How do virtual bridges (`br-*`) relate to sandboxing environments like Flatpak, Snap, or Docker?",
-  "answer": "Virtual bridges (`br-*`) are used to create isolated network environments for sandboxed applications. In systems using Flatpak or Snap, these bridges provide secure communication between applications, the host, and the internet. They act as intermediaries, ensuring isolation and preventing direct access to the host system's network.",
-  "tags": ["linux", "networking", "flatpak", "snap"]
-},
-{
-  "id": "linux_bridges_inspection",
-  "type": "basic",
-  "question": "How can you inspect bridge interfaces in Linux?",
-  "answer": "<{start-h2}>To inspect bridge interfaces in Linux:<{end-h2}><{break}><{break}><{bullet-item}><{start-bold}>Install `bridge-utils`:<{end-bold}><{end-bullet-item}><{break}><{start-terminal}>sudo apt install bridge-utils<{end-terminal}><{break}><{break}><{bullet-item}><{start-bold}>Use `brctl`:<{end-bold}><{end-bullet-item}><{break}><{start-terminal}>brctl show<{end-terminal}><{break}><{break}><{bullet-item}><{start-bold}>Alternative Commands:<{end-bold}><{end-bullet-item}><{break}><{start-ol}><{break}><{start-numbered-item}>ip link show (view bridges as network interfaces).<{end-numbered-item}><{break}><{start-numbered-item}>nmcli connection show (if using NetworkManager).<{end-numbered-item}><{break}><{start-numbered-item}>docker network ls (for Docker bridges).<{end-numbered-item}><{break}><{end-ol}>",
-  "tags": ["linux", "networking", "bridges"]
-},
-{
-  "id": "broadcast_mac_address",
-  "type": "basic",
-  "question": "Why is the Ethernet broadcast MAC address always `ff:ff:ff:ff:ff:ff`?",
-  "answer": "The broadcast MAC address `ff:ff:ff:ff:ff:ff` is a special reserved address used to send frames to all devices on the local network segment (LAN).<br><{break}>- <{start-bold}>Binary Representation:<{end-bold}> All bits are set to 1 (`11111111:11111111:11111111:11111111:11111111:11111111`).<br><{break}>- <{start-bold}>Defined by Standard:<{end-bold}> It is specified by the IEEE 802.3 standard.<br><{break}>- <{start-bold}>Purpose:<{end-bold}> Used for network-wide communication, such as ARP requests, DHCP discovery, and service discovery.<br><{break}>- <{start-bold}>Local Use:<{end-bold}> Broadcast frames are confined to the local network and are forwarded to all devices by switches.<br><{break}>- <{start-bold}>Efficiency:<{end-bold}> Broadcasts are useful for small networks but can cause traffic issues on larger networks.",
-  "tags": ["linux", "networking", "broadcast"]
-},
+    {
+      "id": "data_segments_definition",
+      "type": "basic",
+      "question": "What are data segments in networking?",
+      "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers, such as TCP or UDP headers."
+    },
+    {
+      "id": "network_datagrams_definition",
+      "type": "basic",
+      "question": "What are datagrams in networking?",
+      "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes."
+    },
+    {
+      "id": "ethernet_frames_definition",
+      "type": "basic",
+      "question": "What are Ethernet frames in networking?",
+      "answer": "Ethernet frames are units of data used in the Data Link layer (OSI Layer 2). They encapsulate datagrams from the Network layer with MAC addresses and error-checking fields for local transmission."
+    },
+    {
+      "id": "segments_vs_datagrams_vs_frames",
+      "type": "basic",
+      "question": "What are the roles of data segments, datagrams, and Ethernet frames in the OSI model?",
+      "answer": "Data segments operate at Layer 4 (Transport Layer) to ensure proper delivery of application data. Datagrams operate at Layer 3 (Network Layer) to handle routing between networks. Ethernet frames operate at Layer 2 (Data Link Layer) for local transmission using MAC addresses."
+    },
+    {
+      "id": "osi_layer_encapsulation_hierarchy",
+      "type": "basic",
+      "question": "How are data segments, datagrams, and Ethernet frames related in the OSI encapsulation process?",
+      "answer": "Application data is encapsulated into a data segment (Layer 4), which is then encapsulated into a datagram (Layer 3) with an IP header. The datagram is further encapsulated into an Ethernet frame (Layer 2) for local transmission."
+    },
+    {
+      "id": "data_encapsulation_osi_layers",
+      "type": "basic",
+      "question": "How do Ethernet frames, datagrams, and segments relate to OSI layers, and how are they encapsulated?",
+      "answer": "<{start-table}><{break}><{start-tr}><{start-td}><{start-bold}>OSI Layer<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulation Unit<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulates<{end-bold}><{end-td}><{start-td}><{start-bold}>Adds<{end-bold}><{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 7 (Application)<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>N/A<{end-td}><{start-td}>Application-Specific Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 6 (Presentation)<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>Presentation Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 5 (Session)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Session Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 4 (Transport)<{end-td}><{start-td}>Segment (TCP) / Datagram (UDP)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>TCP/UDP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 3 (Network)<{end-td}><{start-td}>Datagram (Packet)<{end-td}><{start-td}>Transport Layer Data<{end-td}><{start-td}>IP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 2 (Data Link)<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Network Layer Data<{end-td}><{start-td}>MAC Header + FCS<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 1 (Physical)<{end-td}><{start-td}>Bits<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Physical Encoding<{end-td}>{<end-tr}><{break}><{end-table}>",
+      "tags": [
+        "networking",
+        "osi_model",
+        "encapsulation"
+      ]
+    },
+    {
+      "id": "osi_end_to_end_vs_local",
+      "type": "basic",
+      "question": "What is the difference between end-to-end delivery and local delivery in the OSI model?",
+      "answer": "End-to-end delivery involves data segments (Layer 4) and datagrams (Layer 3) to ensure the message reaches the correct application on the destination device. Local delivery involves Ethernet frames (Layer 2) for transmitting data across a single network segment."
+    },
+    {
+      "id": "osi_real_world_encapsulation",
+      "type": "basic",
+      "question": "How is an HTTP request encapsulated and transmitted across the OSI layers?",
+      "answer": "An HTTP request (Layer 7) is encapsulated into a TCP segment (Layer 4), which is encapsulated into an IP datagram (Layer 3), and finally into an Ethernet frame (Layer 2) for transmission."
+    },
+    {
+      "id": "osi_encapsulation_visualized",
+      "type": "basic",
+      "question": "What does the encapsulation structure of an Ethernet frame containing a datagram and a segment look like?",
+      "answer": "The structure is: | Ethernet Header (MAC addresses) | IP Header (source/destination IP) | TCP/UDP Header (source/destination port) | Application Data |."
+    },
+    {
+      "id": "osi_advantages",
+      "type": "basic",
+      "question": "What is the usefulness of the OSI model?",
+      "answer": "The OSI model provides a framework to understand how devices, protocols, and applications interact, ensuring interoperability and simplifying troubleshooting in networked systems."
+    },
+    {
+      "id": "osi_switches",
+      "type": "basic",
+      "question": "Which layer do network switches operate on in the OSI model?",
+      "answer": "Network switches primarily operate at Layer 2, where they forward frames within a LAN based on MAC addresses. Some switches, known as multi-layer switches, can operate at higher OSI layers, such as Layer 3, to perform routing functions."
+    },
+    {
+      "id": "ipv4_definition",
+      "type": "basic",
+      "question": "What is an IPv4 address?",
+      "answer": "An IPv4 address is a 32-bit address represented in decimal format, consisting of four octets separated by dots (e.g., 192.168.1.1). It is widely used in modern networks."
+    },
+    {
+      "id": "ipv6_definition",
+      "type": "basic",
+      "question": "What is an IPv6 address?",
+      "answer": "An IPv6 address is a 128-bit address represented in hexadecimal format, consisting of eight groups of four hexadecimal digits separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334)."
+    },
+    {
+      "id": "multiple_ips_per_interface",
+      "type": "basic",
+      "question": "Can a single device have multiple IP addresses across different interfaces? How is this configured?",
+      "answer": "Yes, a single device can have multiple IP addresses, one for each network interface. Each interface (e.g., `eth0`, `wlp3s0`) can be configured independently with its own:<br><{break}><{bullet-item}>IP address<{end-bullet-item}><{break}><{bullet-item}>Subnet mask<{end-bullet-item}><{break}><{bullet-item}>Gateway and DNS settings<{end-bullet-item}><br><{break}><{break}>For example, using `nmcli`:<br><{break}><{start-terminal}>sudo nmcli connection modify 'eth0' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><br><{break}><{start-terminal}>sudo nmcli connection modify 'wlp3s0' ipv4.method manual ipv4.addresses 192.168.2.50/24 ipv4.gateway 192.168.2.1 ipv4.dns 8.8.4.4 connection.autoconnect yes<{end-terminal}>",
+      "tags": [
+        "linux",
+        "networking",
+        "interfaces"
+      ]
+    },
+    {
+      "id": "port_aggregation_ip_assignment",
+      "type": "basic",
+      "question": "How is IP assignment handled when using port aggregation (e.g., LACP)?",
+      "answer": "<{start-h2}>IP Assignment with Port Aggregation:<{end-h2}><{break}><{break}><{bullet-item}>Port aggregation combines multiple physical interfaces (e.g., `eth0`, `eth1`) into a single logical interface (e.g., `bond0`).<{end-bullet-item}><{break}><{bullet-item}>The IP address is assigned to the logical interface (`bond0`), not the individual physical interfaces.<{end-bullet-item}><{break}><{break}><{start-h3}>Configuration Example (Using NetworkManager):<{end-h3}><{break}><{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{break}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{break}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{break}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{break}>sudo nmcli connection up bond0<{end-terminal}>",
+      "tags": [
+        "linux",
+        "networking",
+        "port_aggregation"
+      ]
+    },
+    {
+      "id": "ipv4_vs_ipv6",
+      "type": "basic",
+      "question": "What is the primary difference between IPv4 and IPv6?",
+      "answer": "IPv4 uses 32-bit addresses, supporting approximately 4.3 billion unique addresses. IPv6 uses 128-bit addresses, supporting a vastly larger address space to accommodate the growing number of internet-connected devices."
+    },
+    {
+      "id": "why_ipv6_introduced",
+      "type": "basic",
+      "question": "Why was IPv6 introduced?",
+      "answer": "IPv6 was introduced to address the limitations of IPv4's address space. IPv4's 4.3 billion addresses are insufficient for the growing number of devices, while IPv6 provides an almost unlimited address space."
+    },
+    {
+      "id": "ipv4_nat",
+      "type": "basic",
+      "question": "How does IPv4 use NAT (Network Address Translation) to overcome address limitations?",
+      "answer": "NAT allows multiple devices on a private network to share a single public IPv4 address by modifying IP addresses in packet headers as they pass through a router."
+    },
+    {
+      "id": "ipv6_replace_ipv4_commands",
+      "type": "basic",
+      "question": "Can IPv6 be used in commands where IPv4 is shown, such as 'ip addr add'? Should there be separate examples?",
+      "answer": "Yes, IPv6 can replace IPv4 in commands like 'ip addr add' by using an IPv6 address instead of IPv4. It can be useful to provide both IPv4 and IPv6 examples to ensure learners understand the syntax for both."
+    },
+    {
+      "id": "dual_stack_networks",
+      "type": "basic",
+      "question": "What is a dual-stack network?",
+      "answer": "A dual-stack network supports both IPv4 and IPv6 protocols, allowing devices to communicate using either address format depending on the destination."
+    },
+    {
+      "id": "subnet_mask_definition",
+      "type": "basic",
+      "question": "What is a subnet mask?",
+      "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines which part of the address identifies the network and which part identifies the host."
+    },
+    {
+      "id": "subnet_mask_example",
+      "type": "basic",
+      "question": "What does the subnet mask 255.255.255.0 indicate?",
+      "answer": "The subnet mask 255.255.255.0 indicates that the first 24 bits of the IP address represent the network, leaving 8 bits for host addresses. This allows for 256 addresses within the subnet, including network and broadcast addresses."
+    },
+    {
+      "id": "subnet_mask_purpose",
+      "type": "basic",
+      "question": "What is the purpose of a subnet mask in networking?",
+      "answer": "The purpose of a subnet mask is to determine whether an IP address belongs to the same subnet or requires routing to another subnet."
+    },
+    {
+      "id": "subnet_mask_internal_networks",
+      "type": "basic",
+      "question": "How are subnet masks used in internal networks?",
+      "answer": "Subnet masks are used to segment an internal network into subnets, grouping devices and determining whether an IP address is local or requires routing across subnets."
+    },
+    {
+      "id": "nat_subnet_mask_relationship",
+      "type": "basic",
+      "question": "How do NAT and subnet masks work together in a network?",
+      "answer": "NAT translates private IP addresses to a public IP address for internet communication, while subnet masks divide the internal network into subnets and determine local routing. NAT hides the internal structure, including subnets, from external networks."
+    },
+    {
+      "id": "static_ip_address_definition",
+      "type": "basic",
+      "question": "What is a static IP address?",
+      "answer": "A static IP address is manually assigned to a device and does not change over time. It is commonly used for servers, printers, and other devices requiring consistent addresses."
+    },
+    {
+      "id": "dynamic_ip_address_definition",
+      "type": "basic",
+      "question": "What is a dynamically assigned IP address?",
+      "answer": "A dynamically assigned IP address is automatically allocated by a DHCP server and may change over time. It is commonly used for client devices like laptops and smartphones."
+    },
+    {
+      "id": "subnetting_benefits",
+      "type": "basic",
+      "question": "What are the benefits of subnetting in a network?",
+      "answer": "Subnetting improves network organization, reduces congestion, enhances security by isolating groups of devices, and optimizes the use of IP address space."
+    },
+    {
+      "id": "cidr_notation",
+      "type": "basic",
+      "question": "What is CIDR notation, and how is it related to subnet masks?",
+      "answer": "CIDR (Classless Inter-Domain Routing) notation represents a subnet mask as a suffix to an IP address, indicating the number of bits used for the network. For example, 192.168.1.0/24 means the first 24 bits represent the network."
+    },
+    {
+      "id": "ip_link_show_output",
+      "type": "basic",
+      "question": "What can you learn from this output?<br><br>/n <{start-terminal}> /n $ ip link show /n stefan@Melian:~$ ip link show /n 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000 /n link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 /n 2: enp0s25: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000 /n link/ether 3c:97:0e:be:c4:9d brd ff:ff:ff:ff:ff:ff /n 4: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000 /n link/ether 60:67:20:b7:33:40 brd ff:ff:ff:ff:ff:ff /n 5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:45:be:22:62 brd ff:ff:ff:ff:ff:ff /n 6: br-cd55516d845e: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:84:81:e9:09 brd ff:ff:ff:ff:ff:ff /n 7: br-f31e1b65f3fc: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:4a:b4:7d:6a brd ff:ff:ff:ff:ff:ff /n 8: br-f5d3455a961d: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:cd:ef:5c:14 brd ff:ff:ff:ff:ff:ff /n 9: br-0416cfb330e8: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:84:3b:84:f2 brd ff:ff:ff:ff:ff:ff /n 10: br-385ac45e7493: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:e7:be:6d:03 brd ff:ff:ff:ff:ff:ff /n 49: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 /n link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff /n stefan@Melian:~$ ls^C /n stefan@Melian:~$  /n /n /n /n <{end-terminal}>",
+      "answer": "This output provides details on the network interfaces on your system.<{start-ol}><{start-numbered-item}><{start-bold}>index and name for each interface:<{end-bold}> lo -> loopback, enp0s25 -> ethernet, wlp3s0 -> wireless, docker0 -> virtual interface used by docker, br* -> bridge interfaces created by virtualization software or sandbox enviroments (flatpack, snap), -> wwx* or wlx* are typically network devices connected via usb<{end-numbered-item}><{start-numbered-item}><{start-bold}>interface flags in angle brackets <...><{end-bold}> LOOPBACK used for internal communication, UP interface is operational, LOWER_UP physical link is acive, NO-CARRIER not connected, BROADCAST / MULTICAST indicates interface supports this traffic<{end-numbered-item}><{start-numbered-item}><{start-bold}>Maximum Transmission Unit (MTU):<{end-bold}> largest packet size the interface can handle<{end-numbered-item}><{start-numbered-item}><{start-bold}>Queueing Discipline (Qdisc):<{end-bold}> noqueue for loopback, fq_model is fair queue controlled delay<{end-numbered-item}><{start-numbered-item}><{start-bold}>State<{end-bold}> loopback is always operational<{end-numbered-item}><{start-numbered-item}><{start-bold}>MAC address<{end-bold}><{end-numbered-item}><{start-numbered-item}><{start-bold}>Queue length (qlen):<{end-bold}> max. nr. of packages to be queued<{end-numbered-item}><{start-numbered-item}><{start-bold}>Group:<{end-bold}> Standard Group is default<{end-numbered-item}><{start-numbered-item}><{start-bold}>Broadcast address (brd):<{end-bold}> messages sent to this address is processed by all devies on the subnet - used for adress resolution, discovery protocolls, DHCP (Dynamic Host Configuration Protocol) requests - ff:ff:ff:ff:ff:ff is a special address defined by IEEE 802.3<{end-numbered-item}><{end-ol}>",
+      "tags": [
+        "linux",
+        "networking"
+      ]
+    },
+    {
+      "id": "ip_link_show_typing",
+      "type": "typing",
+      "question": "What command can you use to gather information about the network interfaces on your machine?",
+      "answer": "ip link show"
+    },
+    {
+      "id": "usb_network_interface_details",
+      "type": "basic",
+      "question": "What does the following output for the interface `wwx0215e0ec0100` indicate?<{break}><{break}><{start-terminal}>11: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000<{break}>    link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff<{end-terminal}>",
+      "answer": "The interface `wwx0215e0ec0100` is likely a USB network device (e.g., a tethered smartphone or USB modem).<br><{break}>- **BROADCAST, MULTICAST:** Supports broadcast and multicast communication.<br><{break}>- **MTU 1500:** Standard maximum packet size for Ethernet.<br><{break}>- **qdisc noop:** No traffic shaping or scheduling is applied.<br><{break}>- **State DOWN:** The interface is inactive (not connected or configured).<br><{break}>- **MAC Address (link/ether):** `02:15:e0:ec:01:00` identifies the device.<br><{break}>- **Broadcast Address:** `ff:ff:ff:ff:ff:ff` for local network communication.",
+      "tags": [
+        "linux",
+        "networking",
+        "usb"
+      ]
+    },
+    {
+      "id": "bridge_interfaces_sandboxing",
+      "type": "basic",
+      "question": "How do virtual bridges (`br-*`) relate to sandboxing environments like Flatpak, Snap, or Docker?",
+      "answer": "Virtual bridges (`br-*`) are used to create isolated network environments for sandboxed applications. In systems using Flatpak or Snap, these bridges provide secure communication between applications, the host, and the internet. They act as intermediaries, ensuring isolation and preventing direct access to the host system's network.",
+      "tags": [
+        "linux",
+        "networking",
+        "flatpak",
+        "snap"
+      ]
+    },
+    {
+      "id": "linux_bridges_inspection",
+      "type": "basic",
+      "question": "How can you inspect bridge interfaces in Linux?",
+      "answer": "<{start-h2}>To inspect bridge interfaces in Linux:<{end-h2}><{break}><{break}><{bullet-item}><{start-bold}>Install `bridge-utils`:<{end-bold}><{end-bullet-item}><{break}><{start-terminal}>sudo apt install bridge-utils<{end-terminal}><{break}><{break}><{bullet-item}><{start-bold}>Use `brctl`:<{end-bold}><{end-bullet-item}><{break}><{start-terminal}>brctl show<{end-terminal}><{break}><{break}><{bullet-item}><{start-bold}>Alternative Commands:<{end-bold}><{end-bullet-item}><{break}><{start-ol}><{break}><{start-numbered-item}>ip link show (view bridges as network interfaces).<{end-numbered-item}><{break}><{start-numbered-item}>nmcli connection show (if using NetworkManager).<{end-numbered-item}><{break}><{start-numbered-item}>docker network ls (for Docker bridges).<{end-numbered-item}><{break}><{end-ol}>",
+      "tags": [
+        "linux",
+        "networking",
+        "bridges"
+      ]
+    },
+    {
+      "id": "broadcast_mac_address",
+      "type": "basic",
+      "question": "Why is the Ethernet broadcast MAC address always `ff:ff:ff:ff:ff:ff`?",
+      "answer": "The broadcast MAC address `ff:ff:ff:ff:ff:ff` is a special reserved address used to send frames to all devices on the local network segment (LAN).<br><{break}>- <{start-bold}>Binary Representation:<{end-bold}> All bits are set to 1 (`11111111:11111111:11111111:11111111:11111111:11111111`).<br><{break}>- <{start-bold}>Defined by Standard:<{end-bold}> It is specified by the IEEE 802.3 standard.<br><{break}>- <{start-bold}>Purpose:<{end-bold}> Used for network-wide communication, such as ARP requests, DHCP discovery, and service discovery.<br><{break}>- <{start-bold}>Local Use:<{end-bold}> Broadcast frames are confined to the local network and are forwarded to all devices by switches.<br><{break}>- <{start-bold}>Efficiency:<{end-bold}> Broadcasts are useful for small networks but can cause traffic issues on larger networks.",
+      "tags": [
+        "linux",
+        "networking",
+        "broadcast"
+      ]
+    },
     {
       "id": "ip_link_vs_ip_addr",
       "type": "basic",
       "question": "What is the difference between the commands `ip link show` and `ip addr show`?",
       "answer": "`ip link show` focuses on link-layer details such as the MAC address, interface state (UP/DOWN), and MTU. `ip addr show` includes these details but also displays IP-layer information, such as assigned IP addresses, scopes, and broadcast addresses."
     },
- {
-    "id": "networkd_agnostic_1",
-    "type": "typing",
-    "question": "What is a distro-agnostic lightweight network management daemon for servers and minimal setups?",
-    "answer": "systemd-networkd",
-    "tags": ["networking", "distro-agnostic"]
-  },
-  {
-    "id": "networkm_agnostic_2",
-    "type": "typing",
-    "question": "What is the distro-agnostic desktop-oriented network manager for Wi-Fi, VPNs, Ethernet, and more?",
-    "answer": "NetworkManager",
-    "tags": ["networking", "distro-agnostic"]
-  },
-  {
-    "id": "nftables_agnostic_3",
-    "type": "typing",
-    "question": "What is the modern, distro-agnostic replacement for iptables, used for firewalls and packet filtering?",
-    "answer": "nftables",
-    "tags": ["networking", "distro-agnostic", "firewall"]
-  },
-  {
-    "id": "tcpdump_agnostic_4",
-    "type": "typing",
-    "question": "What is a distro-agnostic tool for analyzing packets to troubleshoot and monitor network traffic?",
-    "answer": "tcpdump",
-    "tags": ["networking", "distro-agnostic", "troubleshooting"]
-  },
-  {
-    "id": "dig_agnostic_5",
-    "type": "typing",
-    "question": "What is a distro-agnostic tool for querying DNS records and troubleshooting DNS resolution?",
-    "answer": "dig",
-    "tags": ["networking", "distro-agnostic", "dns"]
-  },
-  {
-    "id": "networkctl_agnostic_6",
-    "type": "typing",
-    "question": "What is the distro-agnostic command-line interface for inspecting and managing systemd-networkd configurations?",
-    "answer": "networkctl",
-    "tags": ["networking", "distro-agnostic"]
-  },
-  {
-    "id": "netplan_ubuntu_7",
-    "type": "typing",
-    "question": "Which is the abstraction used by Ubuntu to configure networks declaratively?",
-    "answer": "Netplan",
-    "tags": ["networking", "ubuntu", "abstraction"]
-  },
-  {
-    "id": "wicked_suse_8",
-    "type": "typing",
-    "question": "Which is the abstraction used by SUSE/openSUSE to manage networks with an enterprise-grade focus?",
-    "answer": "Wicked",
-    "tags": ["networking", "suse", "abstraction"]
-  },
-  {
-    "id": "networkm_fedora_9",
-    "type": "typing",
-    "question": "Which tool, commonly used in Fedora, acts as the default desktop-oriented network manager?",
-    "answer": "NetworkManager",
-    "tags": ["networking", "fedora", "desktop"]
-  },
-  {
-    "id": "ip_command_agnostic_10",
-    "type": "typing",
-    "question": "What is the distro-agnostic command-line tool for managing and displaying IP addresses, links, and routes? (e.g., ip addr show)",
-    "answer": "ip",
-    "tags": ["networking", "distro-agnostic", "iproute2"]
-  },
-  {
-    "id": "bind_utils_package_11",
-    "type": "typing",
-    "question": "Which package should you install to use tools like 'dig' and 'nslookup'?",
-    "answer": "bind-utils or dnsutils",
-    "tags": ["networking", "packages", "dns"]
-  },
-  {
-    "id": "iproute2_package_12",
-    "type": "typing",
-    "question": "Which package should you install to use the 'ip' command for managing IP addresses and routes?",
-    "answer": "iproute2",
-    "tags": ["networking", "packages"]
-  },
-  {
-    "id": "nftables_package_13",
-    "type": "typing",
-    "question": "Which package should you install to use the modern firewall management tool replacing iptables?",
-    "answer": "nftables",
-    "tags": ["networking", "packages", "firewall"]
-  },
-  {
-    "id": "tcpdump_package_14",
-    "type": "typing",
-    "question": "Which package should you install to use the packet analyzer 'tcpdump'?",
-    "answer": "tcpdump",
-    "tags": ["networking", "packages", "troubleshooting"]
-  },
-  {
-    "id": "ethtool_package_15",
-    "type": "typing",
-    "question": "Which package should you install to manage and inspect network interface hardware settings (e.g., speed, duplex)?",
-    "answer": "ethtool",
-    "tags": ["networking", "packages", "hardware"]
-  } ,
-
-{
-  "id": "linux_check_nic",
-  "type": "typing",
-  "question": "What command can you use to find network interfaces in Linux?",
-  "answer": "ip link show"
-},
-{
-  "id": "bridge_interface_details",
-  "type": "basic",
-  "question": "How can you identify and associate bridge interfaces in Linux using `nmcli` and `brctl`?",
-  "answer": "<{start-h2}>Bridge Interface Identification:<{end-h2}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>nmcli connection show<{end-terminal}>` to list bridges managed by NetworkManager, showing UUIDs and associated devices.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>nmcli connection show<{break}>NAME                UUID                                  TYPE      DEVICE          <{break}>br-0416cfb330e8     3f586c70-4b29-40a0-89b9-25a0b7738ecd  bridge    br-0416cfb330e8<{break}><{end-terminal}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>brctl show<{end-terminal}>` to list bridges, their IDs, and STP status.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>brctl show<{break}>bridge name\tbridge id\t\tSTP enabled\tinterfaces<{break}>br-0416cfb330e8\t8000.0242afeb4189\tno<{break}><{end-terminal}>",
-  "tags": ["linux", "networking", "bridges"]
-},
-
+    {
+      "id": "networkd_agnostic_1",
+      "type": "typing",
+      "question": "What is a distro-agnostic lightweight network management daemon for servers and minimal setups?",
+      "answer": "systemd-networkd",
+      "tags": [
+        "networking",
+        "distro-agnostic"
+      ]
+    },
+    {
+      "id": "networkm_agnostic_2",
+      "type": "typing",
+      "question": "What is the distro-agnostic desktop-oriented network manager for Wi-Fi, VPNs, Ethernet, and more?",
+      "answer": "NetworkManager",
+      "tags": [
+        "networking",
+        "distro-agnostic"
+      ]
+    },
+    {
+      "id": "nftables_agnostic_3",
+      "type": "typing",
+      "question": "What is the modern, distro-agnostic replacement for iptables, used for firewalls and packet filtering?",
+      "answer": "nftables",
+      "tags": [
+        "networking",
+        "distro-agnostic",
+        "firewall"
+      ]
+    },
+    {
+      "id": "tcpdump_agnostic_4",
+      "type": "typing",
+      "question": "What is a distro-agnostic tool for analyzing packets to troubleshoot and monitor network traffic?",
+      "answer": "tcpdump",
+      "tags": [
+        "networking",
+        "distro-agnostic",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "dig_agnostic_5",
+      "type": "typing",
+      "question": "What is a distro-agnostic tool for querying DNS records and troubleshooting DNS resolution?",
+      "answer": "dig",
+      "tags": [
+        "networking",
+        "distro-agnostic",
+        "dns"
+      ]
+    },
+    {
+      "id": "networkctl_agnostic_6",
+      "type": "typing",
+      "question": "What is the distro-agnostic command-line interface for inspecting and managing systemd-networkd configurations?",
+      "answer": "networkctl",
+      "tags": [
+        "networking",
+        "distro-agnostic"
+      ]
+    },
+    {
+      "id": "netplan_ubuntu_7",
+      "type": "typing",
+      "question": "Which is the abstraction used by Ubuntu to configure networks declaratively?",
+      "answer": "Netplan",
+      "tags": [
+        "networking",
+        "ubuntu",
+        "abstraction"
+      ]
+    },
+    {
+      "id": "wicked_suse_8",
+      "type": "typing",
+      "question": "Which is the abstraction used by SUSE/openSUSE to manage networks with an enterprise-grade focus?",
+      "answer": "Wicked",
+      "tags": [
+        "networking",
+        "suse",
+        "abstraction"
+      ]
+    },
+    {
+      "id": "networkm_fedora_9",
+      "type": "typing",
+      "question": "Which tool, commonly used in Fedora, acts as the default desktop-oriented network manager?",
+      "answer": "NetworkManager",
+      "tags": [
+        "networking",
+        "fedora",
+        "desktop"
+      ]
+    },
+    {
+      "id": "ip_command_agnostic_10",
+      "type": "typing",
+      "question": "What is the distro-agnostic command-line tool for managing and displaying IP addresses, links, and routes? (e.g., ip addr show)",
+      "answer": "ip",
+      "tags": [
+        "networking",
+        "distro-agnostic",
+        "iproute2"
+      ]
+    },
+    {
+      "id": "bind_utils_package_11",
+      "type": "typing",
+      "question": "Which package should you install to use tools like 'dig' and 'nslookup'?",
+      "answer": "bind-utils or dnsutils",
+      "tags": [
+        "networking",
+        "packages",
+        "dns"
+      ]
+    },
+    {
+      "id": "iproute2_package_12",
+      "type": "typing",
+      "question": "Which package should you install to use the 'ip' command for managing IP addresses and routes?",
+      "answer": "iproute2",
+      "tags": [
+        "networking",
+        "packages"
+      ]
+    },
+    {
+      "id": "nftables_package_13",
+      "type": "typing",
+      "question": "Which package should you install to use the modern firewall management tool replacing iptables?",
+      "answer": "nftables",
+      "tags": [
+        "networking",
+        "packages",
+        "firewall"
+      ]
+    },
+    {
+      "id": "tcpdump_package_14",
+      "type": "typing",
+      "question": "Which package should you install to use the packet analyzer 'tcpdump'?",
+      "answer": "tcpdump",
+      "tags": [
+        "networking",
+        "packages",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "ethtool_package_15",
+      "type": "typing",
+      "question": "Which package should you install to manage and inspect network interface hardware settings (e.g., speed, duplex)?",
+      "answer": "ethtool",
+      "tags": [
+        "networking",
+        "packages",
+        "hardware"
+      ]
+    },
+    {
+      "id": "linux_check_nic",
+      "type": "typing",
+      "question": "What command can you use to find network interfaces in Linux?",
+      "answer": "ip link show"
+    },
+    {
+      "id": "bridge_interface_details",
+      "type": "basic",
+      "question": "How can you identify and associate bridge interfaces in Linux using `nmcli` and `brctl`?",
+      "answer": "<{start-h2}>Bridge Interface Identification:<{end-h2}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>nmcli connection show<{end-terminal}>` to list bridges managed by NetworkManager, showing UUIDs and associated devices.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>nmcli connection show<{break}>NAME                UUID                                  TYPE      DEVICE          <{break}>br-0416cfb330e8     3f586c70-4b29-40a0-89b9-25a0b7738ecd  bridge    br-0416cfb330e8<{break}><{end-terminal}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>brctl show<{end-terminal}>` to list bridges, their IDs, and STP status.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>brctl show<{break}>bridge name\tbridge id\t\tSTP enabled\tinterfaces<{break}>br-0416cfb330e8\t8000.0242afeb4189\tno<{break}><{end-terminal}>",
+      "tags": [
+        "linux",
+        "networking",
+        "bridges"
+      ]
+    },
     {
       "id": "linux_assign_static_ip",
       "type": "basic",
       "question": "How do you assign a static IP to a network interface in Linux?",
       "answer": "Use the command `ip addr add [IP]/[CIDR] dev [interface]`, e.g., `ip addr add 192.168.1.100/24 dev eth0`. Note that this change is temporary and will be lost after a reboot."
     },
-
-{
-  "id": "linux_static_ip_persistent_ubuntu",
-  "type": "basic",
-  "question": "How do you configure a persistent static IP in Ubuntu?",
-  "answer": "In Ubuntu, a persistent static IP can be configured using Netplan. Follow these updated steps to avoid warnings:<{break}><{break}>1. Edit the Netplan configuration file, e.g., `/etc/netplan/01-netcfg.yaml`:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      dhcp4: no<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      routes:<{break}>        - to: 0.0.0.0/0<{break}>          via: 192.168.1.1<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>2. Apply the configuration using the terminal command:<{break}><{break}><{start-terminal}><{break}>sudo netplan apply<{break}><{end-terminal}><{break}><{break}>This setup avoids warnings and ensures the changes are persistent across reboots."
-},
-
-
-
-
-
-{
-  "id": "linux_netplan_apply_restart",
-  "type": "basic",
-  "question": "What is the purpose of the `sudo netplan apply` command?",
-   "answer": "The `sudo netplan apply` command applies changes made to Netplan configuration files. It ensures the network settings defined in YAML files take effect without requiring a system reboot."
-},
-{
-  "id": "linux_static_ip_persistent_redhat",
-  "type": "basic",
-  "question": "How do you configure a persistent static IP in Red Hat-based distributions?",
-  "answer": "<{start-h2}>Configuring a Persistent Static IP in Red Hat-based Distributions:<{end-h2}><{break}><{break}><{start-h3}>1. Older Method: `/etc/sysconfig/network-scripts/` (Pre-Fedora 33 and RHEL 9)<{end-h3}><{break}><{break}><{start-terminal}><{break}>File: /etc/sysconfig/network-scripts/ifcfg-eth0<{break}><{break}>BOOTPROTO=none<{break}>IPADDR=192.168.1.100<{break}>PREFIX=24<{break}>GATEWAY=192.168.1.1<{break}>DNS1=8.8.8.8<{break}>NAME=eth0<{break}>DEVICE=eth0<{break}>ONBOOT=yes<{break}><{end-terminal}><{break}><{break}>After editing the file, restart the network service:<{break}><{start-terminal}>sudo systemctl restart network<{end-terminal}><{break}><{break}><{break}><{start-h3}>2. Modern Method: Using `nmcli` (Fedora 33+, RHEL 9+)<{end-h3}><{break}><{break}>Use the `nmcli` utility to configure a static IP:<{break}><{start-terminal}>sudo nmcli connection modify 'Wired connection 1' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}><{break}>Activate the connection:<{break}><{start-terminal}>sudo nmcli connection up 'Wired connection 1'<{end-terminal}><{break}><{break}>Configuration files for NetworkManager are stored in:<{break}><{start-terminal}>/etc/NetworkManager/system-connections/<{end-terminal}>",
-  "tags": ["linux", "networking", "redhat"]
-},
-{
-  "id": "linux_static_ip_persistent_redhat_classic",
-  "type": "typing",
-  "question": "Which command configured a persistent static IP in Red Had based distros before RHEL 9 / Fedora 33",
-  "answer": "sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0",
-  "tags": ["linux"]
-},
-{
-  "id": "linux_static_ip_persistent_redhat_modern",
-  "type": "typing",
-  "question": "Which command configures a persistent static IP in Red Had based distros since RHEL 9 / Fedora 33",
-  "answer": " sudo nmcli connection modify 'Wired connection 1' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes",
-  "tags": ["linux"]
-},
-   {
+    {
+      "id": "linux_static_ip_persistent_ubuntu",
+      "type": "basic",
+      "question": "How do you configure a persistent static IP in Ubuntu?",
+      "answer": "In Ubuntu, a persistent static IP can be configured using Netplan. Follow these updated steps to avoid warnings:<{break}><{break}>1. Edit the Netplan configuration file, e.g., `/etc/netplan/01-netcfg.yaml`:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      dhcp4: no<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      routes:<{break}>        - to: 0.0.0.0/0<{break}>          via: 192.168.1.1<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>2. Apply the configuration using the terminal command:<{break}><{break}><{start-terminal}><{break}>sudo netplan apply<{break}><{end-terminal}><{break}><{break}>This setup avoids warnings and ensures the changes are persistent across reboots."
+    },
+    {
+      "id": "netplan_static_route_configuration",
+      "type": "basic",
+      "question": "How do you configure a static route in Netplan, and what are the two ways to do it?",
+      "answer": "There are two ways to configure a static route in Netplan:<{break}><{break}>1. **Using `gateway4`:** Simple and concise, suitable for a single default route. Example:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      gateway4: 192.168.1.1<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>2. **Using `routes`:** Flexible, allows multiple or specific routes. Example:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      routes:<{break}>        - to: 10.1.1.0/24<{break}>          via: 192.168.1.254<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>Use `routes` for advanced configurations like multiple subnets or route metrics."
+    },
+    {
+      "id": "netplan_gateway_usage",
+      "type": "basic",
+      "question": "When should you use `gateway` in a Netplan configuration?",
+      "answer": "Use `gateway` when:\n- You have a single default gateway for your network.\n- The network setup is simple (e.g., one interface, no advanced routing).\n- You want a concise configuration without advanced routing requirements.",
+      "tags": [
+        "netplan",
+        "networking",
+        "gateway"
+      ]
+    },
+    {
+      "id": "netplan_routes_usage",
+      "type": "basic",
+      "question": "When should you use `routes` in a Netplan configuration?",
+      "answer": "Use `routes` when:\n- You have multiple interfaces, each with separate gateways.\n- You need to define custom static routes for specific subnets.\n- Advanced routing features (e.g., route metrics) are required.\n- Coexisting gateways or VPNs require explicit routing.",
+      "tags": [
+        "netplan",
+        "networking",
+        "routes"
+      ]
+    },
+    {
+      "id": "netplan_gateway_example",
+      "type": "basic",
+      "question": "Provide an example of a `gateway` configuration in Netplan.",
+      "answer": "```yaml\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      addresses:\n        - 192.168.1.100/24\n      gateway4: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n```",
+      "tags": [
+        "netplan",
+        "gateway",
+        "example"
+      ]
+    },
+    {
+      "id": "netplan_routes_example",
+      "type": "basic",
+      "question": "Provide an example of a `routes` configuration in Netplan.",
+      "answer": "```yaml\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      addresses:\n        - 192.168.1.100/24\n      routes:\n        - to: 0.0.0.0/0\n          via: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n```",
+      "tags": [
+        "netplan",
+        "routes",
+        "example"
+      ]
+    },
+    {
+      "id": "netplan_gateway_vs_routes",
+      "type": "basic",
+      "question": "What is the difference between `gateway` and `routes` in Netplan?",
+      "answer": "- **`gateway4`**: Defines a single default route (`0.0.0.0/0`) for an interface.\n- **`routes`**: Allows defining multiple routes for specific subnets, advanced routing, or alternate gateways.",
+      "tags": [
+        "netplan",
+        "gateway",
+        "routes"
+      ]
+    },
+    {
+      "id": "netplan_priority",
+      "type": "basic",
+      "question": "How are configuration files in `/etc/netplan/` prioritized?",
+      "answer": "Configuration files are prioritized by their filenames in alphanumeric order:\n- Lower numbers (e.g., `01-netcfg.yaml`) are applied first.\n- Higher numbers (e.g., `99-custom-config.yaml`) override settings from lower-priority files.",
+      "tags": [
+        "netplan",
+        "priority",
+        "configuration"
+      ]
+    },
+    {
+      "id": "netplan_dynamic_revert",
+      "type": "basic",
+      "question": "How do you revert a Netplan configuration back to dynamic (DHCP)?",
+      "answer": "Edit the Netplan file to:\n```yaml\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      dhcp4: yes\n```\nThen apply the changes:\n```bash\nsudo netplan apply\n```",
+      "tags": [
+        "netplan",
+        "dhcp",
+        "configuration"
+      ]
+    },
+    {
+      "id": "netplan_config_meaning",
+      "type": "basic",
+      "question": "What do the following Netplan configuration parameters mean?\n- `version: 2`\n- `renderer: networkd`\n- `dhcp4: yes`\n- `addresses:`\n- `nameservers:`",
+      "answer": "- **`version: 2`**: Specifies the schema version for the Netplan configuration. Version 2 is the most common and supports modern features.\n- **`renderer: networkd`**: Defines the backend to apply the configuration. `networkd` uses systemd-networkd, while `NetworkManager` is for desktop environments.\n- **`dhcp4: yes`**: Enables DHCP for IPv4 to dynamically obtain an IP address.\n- **`addresses:`**: Specifies static IP addresses for the interface (e.g., `192.168.1.100/24`).\n- **`nameservers:`**: Lists DNS servers to resolve domain names (e.g., `8.8.8.8`).",
+      "tags": [
+        "netplan",
+        "parameters",
+        "configuration"
+      ]
+    },
+    {
+      "id": "netplan_gateway_warnings",
+      "type": "basic",
+      "question": "What warnings can Netplan generate for a `gateway` configuration, and do they always indicate real problems?",
+      "answer": "Possible warnings:\n- **\"Gateway not on the same subnet as the interface IP\":**\n  *What it means:* Usually a real problem. The `gateway4` address must be reachable from the interface's IP subnet. Double-check the gateway and IP configuration.\n\n- **\"Multiple default routes detected\":**\n  *What it means:* Could be a real issue if conflicting routes exist. However, in advanced setups, this might be intentional and require additional routing rules.\n\n- **\"Cannot reach gateway\":**\n  *What it means:* A cautionary warning. This may occur if the gateway is temporarily unreachable (e.g., disconnected network cable), even though the issue may resolve when the network reconnects.\n\n**Important Note:** Netplan warnings are often cautious and may not always indicate real problems. Always double-check intentional configurations (e.g., multiple gateways) to ensure they work as expected.",
+      "tags": [
+        "netplan",
+        "warnings",
+        "gateway"
+      ]
+    },
+    {
+      "id": "linux_netplan_apply_restart",
+      "type": "basic",
+      "question": "What is the purpose of the `sudo netplan apply` command?",
+      "answer": "The `sudo netplan apply` command applies changes made to Netplan configuration files. It ensures the network settings defined in YAML files take effect without requiring a system reboot."
+    },
+    {
+      "id": "linux_static_ip_persistent_redhat",
+      "type": "basic",
+      "question": "How do you configure a persistent static IP in Red Hat-based distributions?",
+      "answer": "<{start-h2}>Configuring a Persistent Static IP in Red Hat-based Distributions:<{end-h2}><{break}><{break}><{start-h3}>1. Older Method: `/etc/sysconfig/network-scripts/` (Pre-Fedora 33 and RHEL 9)<{end-h3}><{break}><{break}><{start-terminal}><{break}>File: /etc/sysconfig/network-scripts/ifcfg-eth0<{break}><{break}>BOOTPROTO=none<{break}>IPADDR=192.168.1.100<{break}>PREFIX=24<{break}>GATEWAY=192.168.1.1<{break}>DNS1=8.8.8.8<{break}>NAME=eth0<{break}>DEVICE=eth0<{break}>ONBOOT=yes<{break}><{end-terminal}><{break}><{break}>After editing the file, restart the network service:<{break}><{start-terminal}>sudo systemctl restart network<{end-terminal}><{break}><{break}><{break}><{start-h3}>2. Modern Method: Using `nmcli` (Fedora 33+, RHEL 9+)<{end-h3}><{break}><{break}>Use the `nmcli` utility to configure a static IP:<{break}><{start-terminal}>sudo nmcli connection modify 'Wired connection 1' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}><{break}>Activate the connection:<{break}><{start-terminal}>sudo nmcli connection up 'Wired connection 1'<{end-terminal}><{break}><{break}>Configuration files for NetworkManager are stored in:<{break}><{start-terminal}>/etc/NetworkManager/system-connections/<{end-terminal}>",
+      "tags": [
+        "linux",
+        "networking",
+        "redhat"
+      ]
+    },
+    {
+      "id": "linux_static_ip_persistent_redhat_classic",
+      "type": "typing",
+      "question": "Which command configured a persistent static IP in Red Had based distros before RHEL 9 / Fedora 33",
+      "answer": "sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
+      "id": "linux_static_ip_persistent_redhat_modern",
+      "type": "typing",
+      "question": "Which command configures a persistent static IP in Red Had based distros since RHEL 9 / Fedora 33",
+      "answer": " sudo nmcli connection modify 'Wired connection 1' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes",
+      "tags": [
+        "linux"
+      ]
+    },
+    {
       "id": "nmcli_dynamic_ip_configuration",
       "type": "basic",
       "question": "How do you configure a dynamic IP address using nmcli?",
@@ -1013,13 +1221,41 @@
       "type": "multiple-choice",
       "question": "What steps can you take to troubleshoot connectivity issues in Linux?",
       "choices": [
-        { "text": "Ping the default gateway", "correct": true, "explanation": "This checks if the network connection to the gateway is functional." },
-        { "text": "Check DNS configuration", "correct": true, "explanation": "Incorrect DNS settings can cause connectivity issues." },
-        { "text": "Restart the network interface", "correct": true, "explanation": "This can resolve temporary network interface issues." },
-        { "text": "Restart NetworkManager", "correct": true, "explanation": "Restarting NetworkManager can apply new configurations or resolve connectivity issues." },
-        { "text": "Reinstall Linux", "correct": false, "explanation": "This is not a typical troubleshooting step for network issues." },
-        { "text": "Disable the firewall permanently", "correct": false, "explanation": "Disabling the firewall can expose the system to security risks and is not a recommended troubleshooting step." },
-        { "text": "Run a network speed test", "correct": false, "explanation": "While useful for performance checks, this does not directly help with connectivity troubleshooting." }
+        {
+          "text": "Ping the default gateway",
+          "correct": true,
+          "explanation": "This checks if the network connection to the gateway is functional."
+        },
+        {
+          "text": "Check DNS configuration",
+          "correct": true,
+          "explanation": "Incorrect DNS settings can cause connectivity issues."
+        },
+        {
+          "text": "Restart the network interface",
+          "correct": true,
+          "explanation": "This can resolve temporary network interface issues."
+        },
+        {
+          "text": "Restart NetworkManager",
+          "correct": true,
+          "explanation": "Restarting NetworkManager can apply new configurations or resolve connectivity issues."
+        },
+        {
+          "text": "Reinstall Linux",
+          "correct": false,
+          "explanation": "This is not a typical troubleshooting step for network issues."
+        },
+        {
+          "text": "Disable the firewall permanently",
+          "correct": false,
+          "explanation": "Disabling the firewall can expose the system to security risks and is not a recommended troubleshooting step."
+        },
+        {
+          "text": "Run a network speed test",
+          "correct": false,
+          "explanation": "While useful for performance checks, this does not directly help with connectivity troubleshooting."
+        }
       ]
     },
     {
@@ -1052,7 +1288,6 @@
       "question": "What is NetworkManager, and what are its responsibilities?",
       "answer": "NetworkManager is a network management tool that automates network configuration and management. It is responsible for managing network interfaces, establishing connections (wired, wireless, or VPN), handling DNS configuration, and applying user-defined settings. It simplifies networking tasks on Linux systems."
     },
-
     {
       "id": "netplan_permissions_warning",
       "type": "basic",
@@ -1113,7 +1348,7 @@
       "question": "What might cause an SSH connection to fail with an older device?",
       "answer": "SSH connections can fail due to outdated encryption mechanisms on older devices. Update your SSH client configuration to include legacy ciphers or key exchange algorithms if necessary. Example: Add `-oKexAlgorithms=+diffie-hellman-group1-sha1` to your SSH command."
     },
-{
+    {
       "id": "dns_resolvconf_overview",
       "type": "basic",
       "question": "What is resolvconf and what is its purpose?",
@@ -1304,8 +1539,110 @@
       "type": "basic",
       "question": "How do you query specific DNS record types using `dig`?",
       "answer": "Use the command `dig [domain-name] [record-type]`, e.g., `dig example.com MX` to query the MX (mail exchange) records."
+    },
+    {
+      "id": "netplan_gateway_usage",
+      "type": "basic",
+      "question": "When should you use `gateway` in a Netplan configuration?",
+      "answer": "Use `gateway` when:\n- You have a single default gateway for your network.\n- The network setup is simple (e.g., one interface, no advanced routing).\n- You want a concise configuration without advanced routing requirements.",
+      "tags": [
+        "netplan",
+        "networking",
+        "gateway"
+      ]
+    },
+    {
+      "id": "netplan_routes_usage",
+      "type": "basic",
+      "question": "When should you use `routes` in a Netplan configuration?",
+      "answer": "Use `routes` when:\n- You have multiple interfaces, each with separate gateways.\n- You need to define custom static routes for specific subnets.\n- Advanced routing features (e.g., route metrics) are required.\n- Coexisting gateways or VPNs require explicit routing.",
+      "tags": [
+        "netplan",
+        "networking",
+        "routes"
+      ]
+    },
+    {
+      "id": "netplan_gateway_example",
+      "type": "basic",
+      "question": "Provide an example of a `gateway` configuration in Netplan.",
+      "answer": "```yaml\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      addresses:\n        - 192.168.1.100/24\n      gateway4: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n```",
+      "tags": [
+        "netplan",
+        "gateway",
+        "example"
+      ]
+    },
+    {
+      "id": "netplan_routes_example",
+      "type": "basic",
+      "question": "Provide an example of a `routes` configuration in Netplan.",
+      "answer": "```yaml\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      addresses:\n        - 192.168.1.100/24\n      routes:\n        - to: 0.0.0.0/0\n          via: 192.168.1.1\n      nameservers:\n        addresses:\n          - 8.8.8.8\n```",
+      "tags": [
+        "netplan",
+        "routes",
+        "example"
+      ]
+    },
+    {
+      "id": "netplan_gateway_vs_routes",
+      "type": "basic",
+      "question": "What is the difference between `gateway` and `routes` in Netplan?",
+      "answer": "- **`gateway4`**: Defines a single default route (`0.0.0.0/0`) for an interface.\n- **`routes`**: Allows defining multiple routes for specific subnets, advanced routing, or alternate gateways.",
+      "tags": [
+        "netplan",
+        "gateway",
+        "routes"
+      ]
+    },
+    {
+      "id": "netplan_priority",
+      "type": "basic",
+      "question": "How are configuration files in `/etc/netplan/` prioritized?",
+      "answer": "Configuration files are prioritized by their filenames in alphanumeric order:\n- Lower numbers (e.g., `01-netcfg.yaml`) are applied first.\n- Higher numbers (e.g., `99-custom-config.yaml`) override settings from lower-priority files.",
+      "tags": [
+        "netplan",
+        "priority",
+        "configuration"
+      ]
+    },
+    {
+      "id": "netplan_dynamic_revert",
+      "type": "basic",
+      "question": "How do you revert a Netplan configuration back to dynamic (DHCP)?",
+      "answer": "Edit the Netplan file to:\n```yaml\nnetwork:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      dhcp4: yes\n```\nThen apply the changes:\n```bash\nsudo netplan apply\n```",
+      "tags": [
+        "netplan",
+        "dhcp",
+        "configuration"
+      ]
+    },
+    {
+      "id": "netplan_config_meaning",
+      "type": "basic",
+      "question": "What do the following Netplan configuration parameters mean?\n- `version: 2`\n- `renderer: networkd`\n- `dhcp4: yes`\n- `addresses:`\n- `nameservers:`",
+      "answer": "- **`version: 2`**: Specifies the schema version for the Netplan configuration. Version 2 is the most common and supports modern features.\n- **`renderer: networkd`**: Defines the backend to apply the configuration. `networkd` uses systemd-networkd, while `NetworkManager` is for desktop environments.\n- **`dhcp4: yes`**: Enables DHCP for IPv4 to dynamically obtain an IP address.\n- **`addresses:`**: Specifies static IP addresses for the interface (e.g., `192.168.1.100/24`).\n- **`nameservers:`**: Lists DNS servers to resolve domain names (e.g., `8.8.8.8`).",
+      "tags": [
+        "netplan",
+        "parameters",
+        "configuration"
+      ]
+    },
+    {
+      "id": "netplan_gateway_warnings",
+      "type": "basic",
+      "question": "What warnings can Netplan generate for a `gateway` configuration, and do they always indicate real problems?",
+      "answer": "Possible warnings:\n- **\"Gateway not on the same subnet as the interface IP\":**\n  *What it means:* Usually a real problem. The `gateway4` address must be reachable from the interface's IP subnet. Double-check the gateway and IP configuration.\n\n- **\"Multiple default routes detected\":**\n  *What it means:* Could be a real issue if conflicting routes exist. However, in advanced setups, this might be intentional and require additional routing rules.\n\n- **\"Cannot reach gateway\":**\n  *What it means:* A cautionary warning. This may occur if the gateway is temporarily unreachable (e.g., disconnected network cable), even though the issue may resolve when the network reconnects.\n\n**Important Note:** Netplan warnings are often cautious and may not always indicate real problems. Always double-check intentional configurations (e.g., multiple gateways) to ensure they work as expected.",
+      "tags": [
+        "netplan",
+        "warnings",
+        "gateway"
+      ]
     }
-
   ],
-  "tags": ["networking", "linux", "commands"]
+  "tags": [
+    "networking",
+    "linux",
+    "commands"
+  ]
 }
