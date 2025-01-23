@@ -1080,19 +1080,28 @@
       "id": "check_network_interfaces",
       "type": "typing",
       "question": "What command lists all network interfaces on a Linux system?",
-      "answer": "ip link show"
+      "answer": "ip link show",
+      "tags": [
+        "tools"
+      ]
     },
     {
       "id": "ipv4_definition",
       "type": "basic",
       "question": "What is an IPv4 address?",
-      "answer": "An IPv4 address is a 32-bit address represented in decimal format, consisting of four octets separated by dots (e.g., 192.168.1.1). It is widely used in modern networks."
+      "answer": "An IPv4 address is a 32-bit address represented in decimal format, consisting of four octets separated by dots (e.g., 192.168.1.1). It is widely used in modern networks.",
+      "tags": [
+        "definition"
+      ]
     },
     {
       "id": "ipv6_definition",
       "type": "basic",
       "question": "What is an IPv6 address?",
-      "answer": "An IPv6 address is a 128-bit address represented in hexadecimal format, consisting of eight groups of four hexadecimal digits separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334)."
+      "answer": "An IPv6 address is a 128-bit address represented in hexadecimal format, consisting of eight groups of four hexadecimal digits separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).",
+      "tags": [
+        "definition"
+      ]
     },
     {
       "id": "multiple_ips_per_interface",
@@ -1100,8 +1109,6 @@
       "question": "Can a single device have multiple IP addresses across different interfaces? How is this configured?",
       "answer": "Yes, a single device can have multiple IP addresses, one for each network interface. Each interface (e.g., `eth0`, `wlp3s0`) can be configured independently with its own:<br><{break}><{bullet-item}>IP address<{end-bullet-item}><{break}><{bullet-item}>Subnet mask<{end-bullet-item}><{break}><{bullet-item}>Gateway and DNS settings<{end-bullet-item}><br><{break}><{break}>For example, using `nmcli`:<br><{break}><{start-terminal}>sudo nmcli connection modify 'eth0' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><br><{break}><{start-terminal}>sudo nmcli connection modify 'wlp3s0' ipv4.method manual ipv4.addresses 192.168.2.50/24 ipv4.gateway 192.168.2.1 ipv4.dns 8.8.4.4 connection.autoconnect yes<{end-terminal}>",
       "tags": [
-        "linux",
-        "networking",
         "interfaces"
       ]
     },
@@ -1114,6 +1121,83 @@
         "linux",
         "networking",
         "port_aggregation"
+      ]
+    },
+    {
+      "id": "network_management_tools_overview",
+      "type": "basic",
+      "question": "What tools are available for network management across Linux distributions, and where are they used?",
+      "answer": "<{start-h3}>Network Management Tools Across Linux Distributions:<{end-h3}><{break}><{bullet-item}><{start-bold}>Netplan<{end-bold}>: Default on Ubuntu (declarative YAML configuration).<{end-bullet-item}><{break}><{bullet-item}><{start-bold}>NetworkManager (nmcli/nmtui)<{end-bold}>: Default on RHEL, Fedora, CentOS, Arch, and optional on Ubuntu. CLI/TUI for dynamic and advanced setups.<{end-bullet-item}><{break}><{bullet-item}><{start-bold}>Wicked<{end-bold}>: Default on SUSE/OpenSUSE for server-grade configurations.<{end-bullet-item}><{break}><{bullet-item}><{start-bold}>Legacy Scripts (ifupdown/network-scripts)<{end-bold}>: Deprecated but still found on older distros (e.g., RHEL 7/8).<{end-bullet-item}>",
+      "tags": [
+        "tools"
+      ]
+    },
+    {
+      "id": "network_management_tools_comparison",
+      "type": "basic",
+      "question": "What are the advantages and disadvantages of the main Linux network management tools?",
+      "answer": "<{start-table}><{start-tr}><{start-td}><{start-bold}>Tool<{end-bold}><{end-td}><{start-td}><{start-bold}>Advantages<{end-bold}><{end-td}><{start-td}><{start-bold}>Disadvantages<{end-bold}><{end-td}><{end-tr}><{start-tr}><{start-td}>Netplan<{end-td}><{start-td}>Simple YAML files, great for automation on Ubuntu<{end-td}><{start-td}>Limited to Ubuntu, less flexible for advanced setups<{end-td}><{end-tr}><{start-tr}><{start-td}>NetworkManager<{end-td}><{start-td}>Cross-distro support, CLI/TUI, very flexible<{end-td}><{start-td}>Requires familiarity with `nmcli` or `nmtui`<{end-td}><{end-tr}><{start-tr}><{start-td}>Wicked<{end-td}><{start-td}>Server-grade configs, great for SUSE environments<{end-td}><{start-td}>SUSE-specific, not as widely supported<{end-td}><{end-tr}><{start-tr}><{start-td}>Legacy Scripts<{end-td}><{start-td}>Simple manual files, well-documented for older systems<{end-td}><{start-td}>Deprecated and outdated for modern systems<{end-td}><{end-tr}><{end-table}>",
+      "tags": [
+        "tools"
+      ]
+    },
+    {
+      "id": "netplan_definition",
+      "type": "basic",
+      "question": "What is Netplan?",
+      "answer": "Netplan is a network configuration utility used on Ubuntu. It allows declarative YAML-based configuration of network settings. Netplan supports backends like `networkd` (for servers) and `NetworkManager` (for desktops) to apply settings.",
+      "tags": [
+        "netplan",
+        "networking",
+        "ubuntu"
+      ]
+    },
+    {
+      "id": "netplan_configuration_example",
+      "type": "basic",
+      "question": "How do you configure a bonded interface using Netplan?",
+      "answer": "<{start-terminal}>network:\n  version: 2\n  renderer: networkd\n  ethernets:\n    eth0:\n      dhcp4: no\n    eth1:\n      dhcp4: no\n  bonds:\n    bond0:\n      dhcp4: yes\n      interfaces:\n        - eth0\n        - eth1\n      parameters:\n        mode: 802.3ad\n        mii-monitor-interval: 100<{end-terminal}><{break}> Save this to `/etc/netplan/01-netcfg.yaml` and apply it using `sudo netplan apply`.",
+      "tags": [
+        "netplan",
+        "bonding",
+        "networking",
+        "ubuntu"
+      ]
+    },
+    {
+      "id": "networkmanager_definition",
+      "type": "basic",
+      "question": "What is NetworkManager?",
+      "answer": "NetworkManager is a network configuration and management utility available on most modern Linux distributions. It provides both CLI (`nmcli`) and TUI (`nmtui`) interfaces for managing wired, wireless, and advanced network setups such as port aggregation, VLANs, and bridging.",
+      "tags": [
+        "networkmanager",
+        "nmcli",
+        "networking",
+        "tools"
+      ]
+    },
+    {
+      "id": "nmcli_port_aggregation_example",
+      "type": "basic",
+      "question": "How do you configure port aggregation using `nmcli`?",
+      "answer": "<{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode 802.3ad<{break}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{break}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{break}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{break}>sudo nmcli connection up bond0<{end-terminal}>",
+      "tags": [
+        "networkmanager",
+        "nmcli",
+        "port_aggregation",
+        "networking"
+      ]
+    },
+    {
+      "id": "wicked_definition",
+      "type": "basic",
+      "question": "What is Wicked?",
+      "answer": "Wicked is SUSE's native network management service. It is commonly used in server environments for static configurations and supports advanced setups like VLANs, bridges, and bonding.",
+      "tags": [
+        "wicked",
+        "suse",
+        "networking",
+        "tools"
       ]
     },
     {
