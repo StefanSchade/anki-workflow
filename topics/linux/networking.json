@@ -889,25 +889,38 @@
       "id": "network_datagrams_definition",
       "type": "basic",
       "question": "What are datagrams in networking?",
-      "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes."
+      "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "ethernet_frames_definition",
       "type": "basic",
       "question": "What are Ethernet frames in networking?",
-      "answer": "Ethernet frames are units of data used in the Data Link layer (OSI Layer 2). They encapsulate datagrams from the Network layer with MAC addresses and error-checking fields for local transmission."
+      "answer": "Ethernet frames are units of data used in the Data Link layer (OSI Layer 2). They encapsulate datagrams from the Network layer with MAC addresses and error-checking fields for local transmission.",
+      "tags": [
+        "ethernet",
+        "osi"
+      ]
     },
     {
       "id": "segments_vs_datagrams_vs_frames",
       "type": "basic",
       "question": "What are the roles of data segments, datagrams, and Ethernet frames in the OSI model?",
-      "answer": "Data segments operate at Layer 4 (Transport Layer) to ensure proper delivery of application data. Datagrams operate at Layer 3 (Network Layer) to handle routing between networks. Ethernet frames operate at Layer 2 (Data Link Layer) for local transmission using MAC addresses."
+      "answer": "Data segments operate at Layer 4 (Transport Layer) to ensure proper delivery of application data. Datagrams operate at Layer 3 (Network Layer) to handle routing between networks. Ethernet frames operate at Layer 2 (Data Link Layer) for local transmission using MAC addresses.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_layer_encapsulation_hierarchy",
       "type": "basic",
       "question": "How are data segments, datagrams, and Ethernet frames related in the OSI encapsulation process?",
-      "answer": "Application data is encapsulated into a data segment (Layer 4), which is then encapsulated into a datagram (Layer 3) with an IP header. The datagram is further encapsulated into an Ethernet frame (Layer 2) for local transmission."
+      "answer": "Application data is encapsulated into a data segment (Layer 4), which is then encapsulated into a datagram (Layer 3) with an IP header. The datagram is further encapsulated into an Ethernet frame (Layer 2) for local transmission.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "data_encapsulation_osi_layers",
@@ -915,52 +928,71 @@
       "question": "How do Ethernet frames, datagrams, and segments relate to OSI layers, and how are they encapsulated?",
       "answer": "<{start-table}><{break}><{start-tr}><{start-td}><{start-bold}>OSI Layer<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulation Unit<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulates<{end-bold}><{end-td}><{start-td}><{start-bold}>Adds<{end-bold}><{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 7 (Application)<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>N/A<{end-td}><{start-td}>Application-Specific Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 6 (Presentation)<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>Presentation Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 5 (Session)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Session Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 4 (Transport)<{end-td}><{start-td}>Segment (TCP) / Datagram (UDP)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>TCP/UDP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 3 (Network)<{end-td}><{start-td}>Datagram (Packet)<{end-td}><{start-td}>Transport Layer Data<{end-td}><{start-td}>IP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 2 (Data Link)<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Network Layer Data<{end-td}><{start-td}>MAC Header + FCS<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 1 (Physical)<{end-td}><{start-td}>Bits<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Physical Encoding<{end-td}>{<end-tr}><{break}><{end-table}>",
       "tags": [
-        "networking",
-        "osi_model",
-        "encapsulation"
+        "osi"
       ]
     },
     {
       "id": "osi_end_to_end_vs_local",
       "type": "basic",
       "question": "What is the difference between end-to-end delivery and local delivery in the OSI model?",
-      "answer": "End-to-end delivery involves data segments (Layer 4) and datagrams (Layer 3) to ensure the message reaches the correct application on the destination device. Local delivery involves Ethernet frames (Layer 2) for transmitting data across a single network segment."
+      "answer": "End-to-end delivery involves data segments (Layer 4) and datagrams (Layer 3) to ensure the message reaches the correct application on the destination device. Local delivery involves Ethernet frames (Layer 2) for transmitting data across a single network segment.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_real_world_encapsulation",
       "type": "basic",
       "question": "How is an HTTP request encapsulated and transmitted across the OSI layers?",
-      "answer": "An HTTP request (Layer 7) is encapsulated into a TCP segment (Layer 4), which is encapsulated into an IP datagram (Layer 3), and finally into an Ethernet frame (Layer 2) for transmission."
+      "answer": "An HTTP request (Layer 7) is encapsulated into a TCP segment (Layer 4), which is encapsulated into an IP datagram (Layer 3), and finally into an Ethernet frame (Layer 2) for transmission.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_encapsulation_visualized",
       "type": "basic",
       "question": "What does the encapsulation structure of an Ethernet frame containing a datagram and a segment look like?",
-      "answer": "The structure is: | Ethernet Header (MAC addresses) | IP Header (source/destination IP) | TCP/UDP Header (source/destination port) | Application Data |."
+      "answer": "The structure is: | Ethernet Header (MAC addresses) | IP Header (source/destination IP) | TCP/UDP Header (source/destination port) | Application Data |.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_advantages",
       "type": "basic",
       "question": "What is the usefulness of the OSI model?",
-      "answer": "The OSI model provides a framework to understand how devices, protocols, and applications interact, ensuring interoperability and simplifying troubleshooting in networked systems."
+      "answer": "The OSI model provides a framework to understand how devices, protocols, and applications interact, ensuring interoperability and simplifying troubleshooting in networked systems.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "osi_switches",
       "type": "basic",
       "question": "Which layer do network switches operate on in the OSI model?",
-      "answer": "Network switches primarily operate at Layer 2, where they forward frames within a LAN based on MAC addresses. Some switches, known as multi-layer switches, can operate at higher OSI layers, such as Layer 3, to perform routing functions."
+      "answer": "Network switches primarily operate at Layer 2, where they forward frames within a LAN based on MAC addresses. Some switches, known as multi-layer switches, can operate at higher OSI layers, such as Layer 3, to perform routing functions.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "lv7_lv5_session_comparison",
       "type": "basic",
       "question": "What is the relationship between Level 7 session management (e.g., cookies, tokens) and Level 5 session protocols?",
-      "answer": "Level 7 session management provides mechanisms like cookies and tokens for application-layer user session persistence. These are independent of Level 5 session protocols, such as TCP, which manage connection-oriented communication between systems. However, Level 5 sessions are still essential for reliable communication, even in REST-based systems that do not maintain application-layer session persistence."
+      "answer": "Level 7 session management provides mechanisms like cookies and tokens for application-layer user session persistence. These are independent of Level 5 session protocols, such as TCP, which manage connection-oriented communication between systems. However, Level 5 sessions are still essential for reliable communication, even in REST-based systems that do not maintain application-layer session persistence.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "websockets_rest_lv5",
       "type": "basic",
       "question": "How does WebSocket use Level 5 session protocols differently from REST, and what impact does this have on performance?",
-      "answer": "WebSocket uses a Level 5 session to establish a persistent connection, enabling real-time bidirectional communication. REST, in contrast, relies on stateless HTTP, where each request creates a new connection, adding overhead. Persistent connections in WebSocket can significantly reduce latency and improve performance in real-time applications."
+      "answer": "WebSocket uses a Level 5 session to establish a persistent connection, enabling real-time bidirectional communication. REST, in contrast, relies on stateless HTTP, where each request creates a new connection, adding overhead. Persistent connections in WebSocket can significantly reduce latency and improve performance in real-time applications.",
+      "tags": [
+        "osi"
+      ]
     },
     {
       "id": "websockets_rest_difference",
@@ -987,6 +1019,61 @@
           "correct": false,
           "explanation": "WebSockets provide lower latency for real-time applications by maintaining a persistent connection."
         }
+      ],
+      "tags": [
+        "websockets",
+        "rest"
+      ]
+    },
+    {
+      "id": "websockets_definition",
+      "type": "basic",
+      "question": "What is WebSockets?",
+      "answer": "WebSockets is a communication protocol standardized by the IETF as RFC 6455. It provides a full-duplex communication channel over TCP, allowing both the client and server to send and receive data simultaneously. WebSocket connections begin with an HTTP handshake and then switch to the WebSocket protocol, keeping the connection open for real-time communication.",
+      "tags": [
+        "websockets",
+        "protocols"
+      ]
+    },
+    {
+      "id": "rest_definition",
+      "type": "basic",
+      "question": "What is REST?",
+      "answer": "REST (Representational State Transfer) is an architectural style for designing APIs. It emphasizes stateless communication, where each request contains all the information needed for the server to process it. REST commonly uses HTTP or HTTPS as the underlying protocol for transferring data between clients and servers.",
+      "tags": [
+        "rest",
+        "api",
+        "networking"
+      ]
+    },
+    {
+      "id": "websockets_vs_rest",
+      "type": "basic",
+      "question": "How does WebSockets differ from REST?",
+      "answer": "<{start-table}><{start-tr}><{start-td}><{start-bold}>Feature<{end-bold}><{end-td}><{start-td}><{start-bold}>WebSockets<{end-bold}><{end-td}><{start-td}><{start-bold}>REST<{end-bold}><{end-td}><{end-tr}><{start-tr}><{start-td}>Type<{end-td}><{start-td}>Protocol<{end-td}><{start-td}>Architectural style<{end-td}><{end-tr}><{start-tr}><{start-td}>Transport Layer<{end-td}><{start-td}>TCP<{end-td}><{start-td}>HTTP/HTTPS<{end-td}><{end-tr}><{start-tr}><{start-td}>Communication<{end-td}><{start-td}>Full-duplex (real-time) communication<{end-td}><{start-td}>Stateless request/response<{end-td}><{end-tr}><{start-tr}><{start-td}>Use Cases<{end-td}><{start-td}>Real-time applications like chat or live updates<{end-td}><{start-td}>CRUD operations in RESTful APIs<{end-td}><{end-tr}><{end-table}>",
+      "tags": [
+        "websockets",
+        "rest"
+      ]
+    },
+    {
+      "id": "websockets_use_cases",
+      "type": "basic",
+      "question": "What are the use cases for WebSockets?",
+      "answer": "WebSockets are used in scenarios requiring real-time, low-latency communication between clients and servers. Common use cases include:\n<{bullet-item}>Chat applications<{end-bullet-item}><{break}><{bullet-item}>Live updates (e.g., stock prices, sports scores)<{end-bullet-item}><{break}><{bullet-item}>Online gaming<{end-bullet-item}><{break}><{bullet-item}>Collaborative tools (e.g., shared whiteboards)<{end-bullet-item}>",
+      "tags": [
+        "websockets",
+        "use_cases",
+        "networking"
+      ]
+    },
+    {
+      "id": "rest_use_cases",
+      "type": "basic",
+      "question": "What are the use cases for REST?",
+      "answer": "REST is ideal for designing APIs where stateless communication and scalability are important. Common use cases include:\n<{bullet-item}>CRUD operations (Create, Read, Update, Delete)<{end-bullet-item}><{break}><{bullet-item}>Public APIs (e.g., weather, maps, social media integrations)<{end-bullet-item}><{break}><{bullet-item}>Microservices communication<{end-bullet-item}><{break}><{bullet-item}>Mobile and web applications accessing server-side data<{end-bullet-item}>",
+      "tags": [
+        "rest"
       ]
     },
     {
@@ -1110,24 +1197,34 @@
     {
       "id": "ipv4_vs_ipv6_concept",
       "type": "multiple-choice",
-      "question": "Which of the following statements highlight key differences between IPv4 and IPv6?\n\n1. IPv4 relies on NAT, whereas IPv6 does not.\n2. IPv6 addresses are globally unique and routable by default.\n3. IPv4 provides better privacy due to NAT.\n4. IPv6 eliminates the need for address translation by expanding the address space.",
+      "question": "Which statements about the differences between IPv4 and IPv6 are correct?",
       "choices": [
         {
-          "text": "1. IPv4 relies on NAT, whereas IPv6 does not.",
-          "correct": true
+          "text": "IPv4 relies on NAT, whereas IPv6 does not.",
+          "correct": true,
+          "explanation": "IPv6's larger address space eliminates the need for NAT because each device can have a globally routable address."
         },
         {
-          "text": "2. IPv6 addresses are globally unique and routable by default.",
-          "correct": true
+          "text": "IPv6 addresses are globally unique and routable by default.",
+          "correct": true,
+          "explanation": "Unlike IPv4, IPv6 addresses are designed to be globally routable without requiring intermediate address translation."
         },
         {
-          "text": "3. IPv4 provides better privacy due to NAT.",
-          "correct": true
+          "text": "IPv4 provides better privacy due to NAT.",
+          "correct": false,
+          "explanation": "While NAT in IPv4 hides internal network structure, IPv6 provides privacy through temporary, randomly generated addresses."
         },
         {
-          "text": "4. IPv6 eliminates the need for address translation by expanding the address space.",
-          "correct": true
+          "text": "IPv6 eliminates the need for address translation by expanding the address space.",
+          "correct": true,
+          "explanation": "The 128-bit address space of IPv6 supports a vastly larger number of unique addresses, removing the need for NAT."
         }
+      ],
+      "tags": [
+        "ipv4",
+        "ipv6",
+        "networking",
+        "protocols"
       ]
     },
     {
