@@ -149,12 +149,30 @@
       "question": "What is the role of the Physical layer in the OSI model?",
       "answer": "The Physical layer (Layer 1) is responsible for the transmission of raw binary data over physical mediums like cables, fiber optics, or radio waves."
     },
-    {
-      "id": "osi_data_link_layer",
-      "type": "basic",
-      "question": "What does the Data Link layer do in the OSI model?",
-      "answer": "The Data Link layer (Layer 2) ensures reliable data transfer across a physical link, handles MAC addresses, and defines protocols for error detection and flow control."
-    },
+
+{
+  "id": "osi_data_link_layer",
+  "type": "basic",
+  "question": "What are the responsibilities of the Data Link layer in the OSI model?",
+  "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control adapts the sender's transmission rate to match the receiver's capabilities and the network's utilization. Additionally, the Data Link layer manages MAC addresses to ensure correct delivery of data within a LAN (local area network). For inter-network communication, routers handle forwarding to the next hop using higher OSI layers."
+}
+,
+{
+	"id": "osi_data_link_flow_control_routing_diff",
+	"type": "basic",
+	"question": "What is flow control, and how does it differ from routing in the OSI model?",
+	"answer": "Flow control manages data transmission rates to prevent overwhelming the receiver and optimize network utilization. Routing is handled at higher layers (Network layer) and directs data beyond the LAN using IP addresses"
+},
+
+{
+	"id": "osi_data_link_scenario_congested",
+	"type": "basic",
+	"question": "A device in a LAN sends a frame to another device, but the network is congested. How does the Data Link layer handle this?",
+	"answer": "The Data Link layer uses flow control to slow down the sender’s transmission rate to avoid overwhelming the network and ensures data is delivered to the correct MAC address within the LAN."
+},
+
+
+
     {
       "id": "osi_network_layer",
       "type": "basic",
