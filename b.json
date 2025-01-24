@@ -1188,159 +1188,123 @@
         "networking"
       ]
     },
-    {
-      "id": "wicked_definition",
-      "type": "basic",
-      "question": "What is Wicked?",
-      "answer": "Wicked is SUSE's native network management service, used for configuring and managing network connections. It is commonly used in server environments for static configurations and supports advanced setups like VLANs, bridges, bonding, and other complex network topologies.",
-      "tags": [
-        "suse",
-        "tools"
-      ]
-    },
-    {
-      "id": "wicked_definition_typing",
-      "type": "typing",
-      "question": "SUSE has its own network management service, used for configuring and managing network connections. What is it called?",
-      "answer": "Wicked",
-      "tags": [
-        "suse",
-        "tools"
-      ]
-    },
+
+
+{
+  "id": "wicked_definition",
+  "type": "basic",
+  "question": "What is Wicked?",
+  "answer": "Wicked is SUSE's native network management service, used for configuring and managing network connections. It is commonly used in server environments for static configurations and supports advanced setups like VLANs, bridges, bonding, and other complex network topologies.",
+  "tags": [
+    "suse",
+    "tools"
+  ]
+}
+,
+
+
+
+{
+  "id": "wicked_definition_typing",
+  "type": "typing",
+  "question": "SUSE has its own network management service, used for configuring and managing network connections. What is it called?",
+  "answer": "Wicked",
+  "tags": [
+    "suse",
+    "tools"
+  ]
+}
+,
+
+{
+  "id": "wicked_definition",
+  "type": "basic",
+  "question": "What is Wicked?",
+  "answer": "Wicked is SUSE's native network management service, used for configuring and managing network connections. It is commonly used in server environments for static configurations and supports advanced setups like VLANs, bridges, bonding, and other complex network topologies.",
+  "tags": [
+    "suse",
+    "tools"
+  ]
+}
+
+,
     {
       "id": "ipv4_vs_ipv6",
       "type": "basic",
       "question": "What is the primary difference between IPv4 and IPv6?",
-      "answer": "IPv4 uses 32-bit addresses, supporting approximately 4.3 billion unique addresses. IPv6 uses 128-bit addresses, supporting a vastly larger address space to accommodate the growing number of internet-connected devices.",
-      "tags": [
-        "protocols",
-        "ipv6",
-        "ipv4"
-      ]
+      "answer": "IPv4 uses 32-bit addresses, supporting approximately 4.3 billion unique addresses. IPv6 uses 128-bit addresses, supporting a vastly larger address space to accommodate the growing number of internet-connected devices."
     },
     {
-      "id": "ipv6_motivation",
+      "id": "why_ipv6_introduced",
       "type": "basic",
       "question": "Why was IPv6 introduced?",
-      "answer": "IPv6 was introduced to address the limitations of IPv4's address space. IPv4's 4.3 billion addresses are insufficient for the growing number of devices, while IPv6 provides an almost unlimited address space.",
-      "tags": [
-        "protocols",
-        "ipv6"
-      ]
+      "answer": "IPv6 was introduced to address the limitations of IPv4's address space. IPv4's 4.3 billion addresses are insufficient for the growing number of devices, while IPv6 provides an almost unlimited address space."
     },
     {
       "id": "ipv4_nat",
       "type": "basic",
       "question": "How does IPv4 use NAT (Network Address Translation) to overcome address limitations?",
-      "answer": "NAT allows multiple devices on a private network to share a single public IPv4 address by modifying IP addresses in packet headers as they pass through a router.",
-      "tags": [
-        "protocols",
-        "ipv4"
-      ]
+      "answer": "NAT allows multiple devices on a private network to share a single public IPv4 address by modifying IP addresses in packet headers as they pass through a router."
     },
     {
       "id": "ipv6_replace_ipv4_commands",
       "type": "basic",
-      "question": "Can IPv6 be used in commands where IPv4 is shown, such as <{start-terminal}>ip addr add<{end-terminal}>?",
-      "answer": "Yes, IPv6 can replace IPv4 in commands like by using an IPv6 address.",
-      "tags": [
-        "protocols",
-        "ipv6",
-        "ipv4"
-      ]
+      "question": "Can IPv6 be used in commands where IPv4 is shown, such as 'ip addr add'? Should there be separate examples?",
+      "answer": "Yes, IPv6 can replace IPv4 in commands like 'ip addr add' by using an IPv6 address instead of IPv4. It can be useful to provide both IPv4 and IPv6 examples to ensure learners understand the syntax for both."
     },
     {
       "id": "dual_stack_networks",
       "type": "basic",
       "question": "What is a dual-stack network?",
-      "answer": "A dual-stack network supports both IPv4 and IPv6 protocols, allowing devices to communicate using either address format depending on the destination.",
-      "tags": [
-        "protocols",
-        "ipv6",
-        "ipv4"
-      ]
+      "answer": "A dual-stack network supports both IPv4 and IPv6 protocols, allowing devices to communicate using either address format depending on the destination."
     },
     {
       "id": "ipv6_subnet_masks",
       "type": "basic",
       "question": "Does IPv6 use subnet masks? How are they represented?",
-      "answer": "Yes, IPv6 uses subnet masks, but they are represented as CIDR prefix lengths (e.g., /64) rather than dotted decimal notation. The prefix length indicates the number of bits in the network portion of the address.",
-      "tags": [
-        "protocols",
-        "ipv6"
-      ]
+      "answer": "Yes, IPv6 uses subnet masks, but they are represented as CIDR prefix lengths (e.g., /64) rather than dotted decimal notation. The prefix length indicates the number of bits in the network portion of the address."
     },
     {
       "id": "ipv6_common_prefix",
       "type": "basic",
       "question": "What is the most common prefix length used for IPv6 subnets, and why?",
-      "answer": "/64 is the most common prefix length in IPv6 because it allows for a vast number of host addresses (2⁶⁴) and simplifies routing and network management.",
-      "tags": [
-        "protocols",
-        "ipv6"
-      ]
+      "answer": "/64 is the most common prefix length in IPv6 because it allows for a vast number of host addresses (2⁶⁴) and simplifies routing and network management."
     },
     {
       "id": "ipv6_prefix_example",
       "type": "basic",
       "question": "What does the IPv6 address `2001:db8:abcd::/64` mean?",
-      "answer": "The `/64` indicates that the first 64 bits of the address are the network portion, and the remaining 64 bits are available for host addressing.",
-      "tags": [
-        "protocols",
-        "ipv6"
-      ]
+      "answer": "The `/64` indicates that the first 64 bits of the address are the network portion, and the remaining 64 bits are available for host addressing."
     },
     {
       "id": "ipv6_vs_ipv4_subnetting",
       "type": "basic",
       "question": "How does subnetting in IPv6 differ from IPv4?",
-      "answer": "IPv6 uses CIDR prefix lengths (e.g., /64) instead of dotted decimal subnet masks (e.g., 255.255.255.0). IPv6 subnets are much larger, typically allocating 2⁶⁴ addresses per subnet.",
-      "tags": [
-        "protocols",
-        "ipv6",
-        "ipv4"
-      ]
+      "answer": "IPv6 uses CIDR prefix lengths (e.g., /64) instead of dotted decimal subnet masks (e.g., 255.255.255.0). IPv6 subnets are much larger, typically allocating 2⁶⁴ addresses per subnet."
     },
     {
       "id": "ipv6_nat_difference",
       "type": "basic",
       "question": "Does IPv6 use NAT (Network Address Translation)? Why or why not?",
-      "answer": "No, IPv6 does not typically use NAT because its 128-bit address space provides enough unique addresses for every device to have a globally routable address, eliminating the need for address translation.",
-      "tags": [
-        "protocols",
-        "ipv6"
-      ]
+      "answer": "No, IPv6 does not typically use NAT because its 128-bit address space provides enough unique addresses for every device to have a globally routable address, eliminating the need for address translation."
     },
     {
       "id": "ipv4_nat_privacy",
       "type": "basic",
       "question": "How does NAT in IPv4 provide a level of privacy?",
-      "answer": "NAT hides internal private IP addresses behind a single public IP address, so external networks cannot directly identify individual devices on the LAN.",
-      "tags": [
-        "protocols",
-        "ipv4"
-      ]
+      "answer": "NAT hides internal private IP addresses behind a single public IP address, so external networks cannot directly identify individual devices on the LAN."
     },
     {
       "id": "ipv6_privacy",
       "type": "basic",
       "question": "How does IPv6 address privacy concerns without NAT?",
-      "answer": "IPv6 uses privacy extensions, such as temporary, randomly generated addresses for outbound connections, to prevent tracking, while stable addresses are used for inbound traffic.",
-      "tags": [
-        "protocols",
-        "ipv6"
-      ]
+      "answer": "IPv6 uses privacy extensions, such as temporary, randomly generated addresses for outbound connections, to prevent tracking, while stable addresses are used for inbound traffic."
     },
     {
       "id": "ip_address_change_hops",
       "type": "basic",
       "question": "Does the source IP address change as packets travel through different networks?",
-      "answer": "No, the source and destination IP addresses remain constant throughout the journey. Only the Layer 2 details (e.g., MAC addresses) change at each hop.",
-      "tags": [
-        "protocols",
-        "osi"
-      ]
+      "answer": "No, the source and destination IP addresses remain constant throughout the journey. Only the Layer 2 details (e.g., MAC addresses) change at each hop."
     },
     {
       "id": "ipv4_vs_ipv6_concept",
@@ -1371,88 +1335,57 @@
       "tags": [
         "ipv4",
         "ipv6",
-        "protocols",
-        "subnet"
+        "networking",
+        "protocols"
       ]
     },
     {
       "id": "subnet_mask_definition",
       "type": "basic",
       "question": "What is a subnet mask?",
-      "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines which part of the address identifies the network and which part identifies the host.",
-      "tags": [
-        "protocols",
-        "ipv4",
-        "subnet"
-      ]
+      "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines which part of the address identifies the network and which part identifies the host."
     },
     {
       "id": "subnet_mask_example",
       "type": "basic",
       "question": "What does the subnet mask 255.255.255.0 indicate?",
-      "answer": "The subnet mask 255.255.255.0 indicates that the first 24 bits of the IP address represent the network, leaving 8 bits for host addresses. This allows for 256 addresses within the subnet, including network and broadcast addresses.",
-      "tags": [
-        "protocols",
-        "ipv4",
-        "subnet"
-      ]
+      "answer": "The subnet mask 255.255.255.0 indicates that the first 24 bits of the IP address represent the network, leaving 8 bits for host addresses. This allows for 256 addresses within the subnet, including network and broadcast addresses."
     },
     {
       "id": "subnet_mask_purpose",
       "type": "basic",
       "question": "What is the purpose of a subnet mask in networking?",
-      "answer": "The purpose of a subnet mask is to determine whether an IP address belongs to the same subnet or requires routing to another subnet.",
-      "tags": [
-        "protocols",
-        "subnet"
-      ]
+      "answer": "The purpose of a subnet mask is to determine whether an IP address belongs to the same subnet or requires routing to another subnet."
     },
     {
       "id": "subnet_mask_internal_networks",
       "type": "basic",
       "question": "How are subnet masks used in internal networks?",
-      "answer": "Subnet masks are used to segment an internal network into subnets, grouping devices and determining whether an IP address is local or requires routing across subnets.",
-      "tags": [
-        "protocols",
-        "subnet"
-      ]
+      "answer": "Subnet masks are used to segment an internal network into subnets, grouping devices and determining whether an IP address is local or requires routing across subnets."
     },
     {
       "id": "nat_subnet_mask_relationship",
       "type": "basic",
       "question": "How do NAT and subnet masks work together in a network?",
-      "answer": "NAT translates private IP addresses to a public IP address for internet communication, while subnet masks divide the internal network into subnets and determine local routing. NAT hides the internal structure, including subnets, from external networks.",
-      "tags": [
-        "protocols",
-        "subnet"
-      ]
+      "answer": "NAT translates private IP addresses to a public IP address for internet communication, while subnet masks divide the internal network into subnets and determine local routing. NAT hides the internal structure, including subnets, from external networks."
     },
     {
       "id": "static_ip_address_definition",
       "type": "basic",
       "question": "What is a static IP address?",
-      "answer": "A static IP address is manually assigned to a device and does not change over time. It is commonly used for servers, printers, and other devices requiring consistent addresses.",
-      "tags": [
-        "definition"
-      ]
+      "answer": "A static IP address is manually assigned to a device and does not change over time. It is commonly used for servers, printers, and other devices requiring consistent addresses."
     },
     {
       "id": "dynamic_ip_address_definition",
       "type": "basic",
       "question": "What is a dynamically assigned IP address?",
-      "answer": "A dynamically assigned IP address is automatically allocated by a DHCP server and may change over time. It is commonly used for client devices like laptops and smartphones.",
-      "tags": [
-        "definition"
-      ]
+      "answer": "A dynamically assigned IP address is automatically allocated by a DHCP server and may change over time. It is commonly used for client devices like laptops and smartphones."
     },
     {
       "id": "subnetting_benefits",
       "type": "basic",
       "question": "What are the benefits of subnetting in a network?",
-      "answer": "Subnetting improves network organization, reduces congestion, enhances security by isolating groups of devices, and optimizes the use of IP address space.",
-      "tags": [
-        "subnet"
-      ]
+      "answer": "Subnetting improves network organization, reduces congestion, enhances security by isolating groups of devices, and optimizes the use of IP address space."
     },
     {
       "id": "cidr_notation",
@@ -2272,31 +2205,23 @@
       "question": "What is the purpose of the /etc/netplan/00-installer-config.yaml file?",
       "answer": "The /etc/netplan/00-installer-config.yaml file is a default configuration file used by Netplan on Ubuntu systems to define network settings. It typically contains settings for interfaces, IP addresses, gateways, and DNS. Changes to this file require running 'sudo netplan apply' to take effect."
     },
-    {
-      "id": "wicked_static_ip",
-      "type": "basic",
-      "question": "How do you configure a static IP with Wicked on SUSE/openSUSE?",
-      "answer": "<{start-h2}>Steps to Configure a Static IP with Wicked:<{end-h2}><{break}><{break}><{start-ol}><{start-numbered-item}><{start-bold}>Locate or Create the Configuration File:<{end-bold}><{end-numbered-item}> Wicked uses configuration files in `/etc/sysconfig/network/`. For example, to configure `eth0`, edit the file `/etc/sysconfig/network/ifcfg-eth0`.<{break}><{start-numbered-item}><{start-bold}>Edit the Configuration File:<{end-bold}><{end-numbered-item}> Add the following parameters for a static IP configuration:<{break}><{start-terminal}>BOOTPROTO='static'\nIPADDR='192.168.1.100'\nNETMASK='255.255.255.0'\nGATEWAY='192.168.1.1'\nDNS1='8.8.8.8'\nDNS2='8.8.4.4'\nSTARTMODE='auto'<{end-terminal}><{break}><{start-numbered-item}><{start-bold}>Restart the Network Service:<{end-bold}><{end-numbered-item}> Apply the configuration by restarting Wicked using `<{start-terminal}>sudo systemctl restart wicked<{end-terminal}>`.<{break}><{start-numbered-item}><{start-bold}>Verify the Configuration:<{end-bold}><{end-numbered-item}> Use `<{start-terminal}>ip addr show eth0<{end-terminal}>` to confirm the static IP is applied.<{break}><{end-ol}>",
-      "tags": [
-        "wicked",
-        "static_ip",
-        "suse",
-        "networking"
-      ]
-    },
-    {
-      "id": "wicked_vs_networkmanager",
-      "type": "basic",
-      "question": "What are the differences between Wicked and NetworkManager (nmcli)?",
-      "answer": "<{start-h2}>Wicked vs. NetworkManager (nmcli):<{end-h2}><{break}><{start-table}><{start-tr}><{start-td}><{start-bold}>Feature<{end-bold}><{end-td}><{start-td}><{start-bold}>Wicked<{end-bold}><{end-td}><{start-td}><{start-bold}>NetworkManager (nmcli)<{end-bold}><{end-td}><{end-tr}><{start-tr}><{start-td}>Purpose<{end-td}><{start-td}>Designed for static, server-grade configurations<{end-td}><{start-td}>Dynamic management for both servers and desktops<{end-td}><{end-tr}><{start-tr}><{start-td}>Ease of Use<{end-td}><{start-td}>File-based, manual configuration<{end-td}><{start-td}>CLI (nmcli) and TUI (nmtui) for easier management<{end-td}><{end-tr}><{start-tr}><{start-td}>Advanced Features<{end-td}><{start-td}>Supports VLANs, bonding, bridges, and other static setups<{end-td}><{start-td}>Supports advanced features dynamically (e.g., roaming, Wi-Fi switching)<{end-td}><{end-tr}><{start-tr}><{start-td}>Flexibility<{end-td}><{start-td}>Less suited for dynamic or desktop environments<{end-td}><{start-td}>Highly flexible across dynamic and static environments<{end-td}><{end-tr}><{start-tr}><{start-td}>Default Usage<{end-td}><{start-td}>SUSE/openSUSE (servers)<{end-td}><{start-td}>RHEL, Fedora, Ubuntu (optional), and other distros<{end-td}><{end-tr}><{end-table}>",
-      "tags": [
-        "wicked",
-        "networkmanager",
-        "nmcli",
-        "comparison",
-        "tools"
-      ]
-    },
+
+{
+  "id": "wicked_static_ip",
+  "type": "basic",
+  "question": "How do you configure a static IP with Wicked on SUSE/openSUSE?",
+  "answer": "<{start-h2}>Steps to Configure a Static IP with Wicked:<{end-h2}><{break}><{break}>""<{start-ol}><{start-numbered-item}><{start-bold}>Locate or Create the Configuration File:<{end-bold}><{end-numbered-item}> Wicked uses configuration files in `/etc/sysconfig/network/`. For example, to configure `eth0`, edit the file `/etc/sysconfig/network/ifcfg-eth0`.<{break}>""<{start-numbered-item}><{start-bold}>Edit the Configuration File:<{end-bold}><{end-numbered-item}> Add the following parameters for a static IP configuration:<{break}>""<{start-terminal}>BOOTPROTO='static'\nIPADDR='192.168.1.100'\nNETMASK='255.255.255.0'\nGATEWAY='192.168.1.1'\nDNS1='8.8.8.8'\nDNS2='8.8.4.4'\nSTARTMODE='auto'<{end-terminal}><{break}>""<{start-numbered-item}><{start-bold}>Restart the Network Service:<{end-bold}><{end-numbered-item}> Apply the configuration by restarting Wicked using `<{start-terminal}>sudo systemctl restart wicked<{end-terminal}>`.<{break}>""<{start-numbered-item}><{start-bold}>Verify the Configuration:<{end-bold}><{end-numbered-item}> Use `<{start-terminal}>ip addr show eth0<{end-terminal}>` to confirm the static IP is applied.<{break}><{end-ol}>","tags": ["wicked", "static_ip", "suse", "networking"]
+},
+
+{
+  "id": "wicked_vs_networkmanager",
+  "type": "basic",
+  "question": "What are the differences between Wicked and NetworkManager (nmcli)?",
+  "answer": "<{start-h2}>Wicked vs. NetworkManager (nmcli):<{end-h2}><{break}>""<{start-table}><{start-tr}><{start-td}><{start-bold}>Feature<{end-bold}><{end-td}><{start-td}><{start-bold}>Wicked<{end-bold}><{end-td}><{start-td}><{start-bold}>NetworkManager (nmcli)<{end-bold}><{end-td}><{end-tr}>""<{start-tr}><{start-td}>Purpose<{end-td}><{start-td}>Designed for static, server-grade configurations<{end-td}><{start-td}>Dynamic management for both servers and desktops<{end-td}><{end-tr}>""<{start-tr}><{start-td}>Ease of Use<{end-td}><{start-td}>File-based, manual configuration<{end-td}><{start-td}>CLI (nmcli) and TUI (nmtui) for easier management<{end-td}><{end-tr}>""<{start-tr}><{start-td}>Advanced Features<{end-td}><{start-td}>Supports VLANs, bonding, bridges, and other static setups<{end-td}><{start-td}>Supports advanced features dynamically (e.g., roaming, Wi-Fi switching)<{end-td}><{end-tr}>""<{start-tr}><{start-td}>Flexibility<{end-td}><{start-td}>Less suited for dynamic or desktop environments<{end-td}><{start-td}>Highly flexible across dynamic and static environments<{end-td}><{end-tr}>""<{start-tr}><{start-td}>Default Usage<{end-td}><{start-td}>SUSE/openSUSE (servers)<{end-td}><{start-td}>RHEL, Fedora, Ubuntu (optional), and other distros<{end-td}><{end-tr}><{end-table}>",
+  "tags": ["wicked", "networkmanager", "nmcli", "comparison", "tools"]
+}
+
+
     {
       "id": "opensuse_networkmanager_overview",
       "type": "basic",
