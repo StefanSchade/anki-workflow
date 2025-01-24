@@ -205,15 +205,33 @@
         "osi"
       ]
     },
+
+
+
     {
-      "id": "osi_data_link_layer",
-      "type": "basic",
-      "question": "What are the responsibilities of the Data Link layer in the OSI model?",
-      "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control adapts the sender's transmission rate to match the receiver's capabilities and the network's utilization. Additionally, the Data Link layer manages MAC addresses to ensure correct delivery of data within a LAN (local area network). For inter-network communication, routers handle forwarding to the next hop using higher OSI layers.",
+      "id": "osi_data_link_layer_typing",
+      "type": "typing",
+      "question": "List some repsonsibilities of the Data Link layer in the OSI model.",
+      "answer": "The Data Link Layer (Layer 2) is responsible for error detection, flow control and the delivery of data to the correct device within the LAN (node-to-node). The responsibility for inter-network communication lies in higher OSI layers.",
       "tags": [
         "osi"
       ]
     },
+
+
+
+
+{
+  "id": "osi_data_link_layer",
+  "type": "basic",
+  "question": "What are the responsibilities of the Data Link layer in the OSI model?",
+  "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link (i.e., node-to-node communication). It achieves this by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control ensures the sender's transmission rate aligns with the receiver's capacity and network utilization. The Data Link layer also ensures data is transferred to the correct device within a LAN and is divided into two sublayers: Logical Link Control (LLC) and Media Access Control (MAC). The LLC sublayer connects to the Network layer (Layer 3), managing protocol identification and error correction, while the MAC sublayer interfaces with the Physical layer (Layer 1), handling addressing and access to the physical medium.",
+  "tags": [
+    "osi"
+  ]
+}
+,
+
     {
       "id": "osi_data_link_flow_control_routing_diff",
       "type": "basic",
@@ -233,23 +251,54 @@
       ]
     },
     {
-      "id": "osi_network_layer",
-      "type": "basic",
-      "question": "What is the purpose of the Network layer in the OSI model?",
+      "id": "osi_network_layer_typing",
+      "type": "typing",
+      "question": "List some repsonsibilities of the Network layer in the OSI model.",
       "answer": "The Network layer (Layer 3) is responsible for routing and forwarding data, and defines logical addressing (e.g., IP addresses).",
       "tags": [
         "osi"
       ]
     },
-    {
-      "id": "osi_transport_layer",
-      "type": "basic",
-      "question": "What is the role of the Transport layer in the OSI model?",
-      "answer": "The Transport layer (Layer 4) manages end-to-end communication, error checking, and flow control, using protocols like TCP and UDP.",
-      "tags": [
-        "osi"
-      ]
-    },
+
+
+{
+  "id": "osi_network_layer",
+  "type": "basic",
+  "question": "What is the purpose of the Network layer in the OSI model?",
+  "answer": "The Network layer (Layer 3) is responsible for routing, forwarding, and logical addressing (e.g., IP addresses). Routing involves determining the best physical path for data to travel based on factors such as network conditions, configured routes, and priority of service. Packet forwarding refers to the actual transfer of packets between devices based on routing decisions, ensuring data moves through the network toward its destination. \n\nLogical addressing (e.g., IP) is derived from information received from adjacent layers. During encapsulation, it relies on transport layer (Layer 4) headers, assigning a source and destination IP address to the packet. During decapsulation, it extracts these logical addresses from the packet headers, often relying on ARP (Address Resolution Protocol) to map IP addresses to MAC addresses for the next hop in the transmission.\n\nAdditionally, the Network layer facilitates diagnostic and error-reporting functionalities using the Internet Control Message Protocol (ICMP), which identifies issues like unreachable hosts or networks. Routing protocols, such as Routing Information Protocol (RIP), Open Shortest Path First (OSPF), or Border Gateway Protocol (BGP), are employed to dynamically manage and update routing tables, ensuring efficient data delivery across networks.",
+  "tags": [
+    "osi"
+  ]
+}
+
+,
+
+
+
+{
+  "id": "osi_transport_layer",
+  "type": "basic",
+  "question": "What is the role of the Transport layer in the OSI model?",
+  "answer": "The Transport layer (Layer 4) manages end-to-end communication between the source and destination device, ensuring reliable data delivery with error detection, correction mechanisms, and flow control. It segments data from the upper layers into smaller units (segments) for efficient transmission and reassembles them at the destination. The layer provides reliability using protocols like Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). TCP ensures a connection-oriented, reliable communication with error recovery and retransmission, while UDP offers connectionless, faster transmission but without guaranteed delivery. These differences influence how the Transport layer interacts with the Session layer, depending on whether reliable or quick communication is required.",
+  "tags": [
+    "osi"
+  ]
+}
+
+,
+
+{
+  "id": "osi_transport_layer_typing",
+  "type": "typing",
+  "question": "List some responsibilities of the Transport layer in the OSI model.",
+  "answer": "The Transport layer (Layer 4) manages end-to-end communication, error detection and correction, flow control, and data segmentation and reassembly. It uses Transmission Control Protocol (TCP) for reliable, connection-oriented communication and User Datagram Protocol (UDP) for fast, connectionless transmission.",
+  "tags": [
+    "osi"
+  ]
+}
+,
+
+
     {
       "id": "osi_session_layer",
       "type": "basic",
@@ -259,24 +308,80 @@
         "osi"
       ]
     },
+
+
+{
+  "id": "osi_session_layer",
+  "type": "basic",
+  "question": "What does the Session layer do in the OSI model?",
+  "answer": "The Session layer (Layer 5) is responsible for establishing, managing, and terminating sessions between applications on different devices. It ensures that communication sessions remain organized and synchronized, providing features like session checkpointing and recovery to resume communication after interruptions. Protocols operating at this layer include Remote Procedure Call (RPC) and session-related functionalities in protocols like NetBIOS and SQL.",
+  "tags": [
+    "osi"
+  ]
+}
+,
+
+{
+  "id": "osi_application_sessions",
+  "type": "basic",
+  "question": "How do application-level sessions differ from the OSI Session layer?",
+  "answer": "Application-level sessions, such as those implemented using cookies or tokens in web applications, are managed at the Application layer (Layer 7) rather than the OSI Session layer (Layer 5). Stateless protocols like HTTP rely on mechanisms like cookies or tokens to emulate session-like behavior. These sessions are distinct from the OSI Session layer, which focuses on organizing and synchronizing communication between devices.",
+  "tags": [
+    "osi",
+    "application"
+  ]
+}
+,
+
+
+
+{
+  "id": "osi_presentation_layer",
+  "type": "basic",
+  "question": "What is the purpose of the Presentation layer in the OSI model?",
+  "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems by translating between different encodings.",
+  "tags": [
+    "osi"
+  ]
+},
+
+{
+  "id": "osi_presentation_layer_typing",
+  "type": "typing",
+  "question": "List some responsibilities of the Presentation layer in the OSI model.",
+  "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems by translating between different encodings.",
+  "tags": [
+    "osi"
+  ]
+}
+,
+
+
+
     {
-      "id": "osi_presentation_layer",
-      "type": "basic",
-      "question": "What is the purpose of the Presentation layer in the OSI model?",
-      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems.",
-      "tags": [
-        "osi"
-      ]
-    },
-    {
-      "id": "osi_application_layer",
-      "type": "basic",
-      "question": "What is the role of the Application layer in the OSI model?",
-      "answer": "The Application layer (Layer 7) provides network services directly to user applications, such as web browsing (HTTP), email (SMTP), and file transfer (FTP).",
-      "tags": [
-        "osi"
-      ]
-    },
+  "id": "osi_application_layer",
+  "type": "basic",
+  "question": "What is the role of the Application layer in the OSI model?",
+  "answer": "The Application layer (Layer 7) provides network services directly to user applications. Examples include web browsing using the Hypertext Transfer Protocol (HTTP), email communication via the Simple Mail Transfer Protocol (SMTP), and file transfers using the File Transfer Protocol (FTP).",
+  "tags": [
+    "osi"
+  ]
+}
+,
+
+{
+  "id": "osi_application_layer_typing",
+  "type": "typing",
+  "question": "List some responsibilities of the Application layer in the OSI model.",
+  "answer": "The Application layer (Layer 7) provides network services directly to user applications, such as web browsing (HTTP), email (SMTP), and file transfer (FTP).",
+  "tags": [
+    "osi"
+  ]
+}
+
+,
+
+
     {
       "id": "dns_protocol_overview",
       "type": "basic",
@@ -1202,99 +1307,145 @@
       "id": "wicked_definition_typing",
       "type": "typing",
       "question": "SUSE has its own network management service, used for configuring and managing network connections. What is it called?",
-      "answer": "Wicked"
-      , "tags": [ "suse", "tools" ]
+      "answer": "Wicked",
+      "tags": [
+        "suse",
+        "tools"
+      ]
     },
     {
       "id": "ipv4_vs_ipv6",
       "type": "basic",
       "question": "What is the primary difference between IPv4 and IPv6?",
-      "answer": "IPv4 uses 32-bit addresses, supporting approximately 4.3 billion unique addresses. IPv6 uses 128-bit addresses, supporting a vastly larger address space to accommodate the growing number of internet-connected devices."
-      , "tags": [ "protocols" , "ipv6" , "ipv4" ]
+      "answer": "IPv4 uses 32-bit addresses, supporting approximately 4.3 billion unique addresses. IPv6 uses 128-bit addresses, supporting a vastly larger address space to accommodate the growing number of internet-connected devices.",
+      "tags": [
+        "protocols",
+        "ipv6",
+        "ipv4"
+      ]
     },
     {
       "id": "ipv6_motivation",
       "type": "basic",
       "question": "Why was IPv6 introduced?",
-      "answer": "IPv6 was introduced to address the limitations of IPv4's address space. IPv4's 4.3 billion addresses are insufficient for the growing number of devices, while IPv6 provides an almost unlimited address space."
-      , "tags": [ "protocols", "ipv6"  ]
+      "answer": "IPv6 was introduced to address the limitations of IPv4's address space. IPv4's 4.3 billion addresses are insufficient for the growing number of devices, while IPv6 provides an almost unlimited address space.",
+      "tags": [
+        "protocols",
+        "ipv6"
+      ]
     },
     {
       "id": "ipv4_nat",
       "type": "basic",
       "question": "How does IPv4 use NAT (Network Address Translation) to overcome address limitations?",
-      "answer": "NAT allows multiple devices on a private network to share a single public IPv4 address by modifying IP addresses in packet headers as they pass through a router."
-      , "tags": [ "protocols" , "ipv4" ]
+      "answer": "NAT allows multiple devices on a private network to share a single public IPv4 address by modifying IP addresses in packet headers as they pass through a router.",
+      "tags": [
+        "protocols",
+        "ipv4"
+      ]
     },
     {
       "id": "ipv6_replace_ipv4_commands",
       "type": "basic",
       "question": "Can IPv6 be used in commands where IPv4 is shown, such as <{start-terminal}>ip addr add<{end-terminal}>?",
-      "answer": "Yes, IPv6 can replace IPv4 in commands like by using an IPv6 address."
-      , "tags": [ "protocols" , "ipv6" , "ipv4" ]
+      "answer": "Yes, IPv6 can replace IPv4 in commands like by using an IPv6 address.",
+      "tags": [
+        "protocols",
+        "ipv6",
+        "ipv4"
+      ]
     },
     {
       "id": "dual_stack_networks",
       "type": "basic",
       "question": "What is a dual-stack network?",
-      "answer": "A dual-stack network supports both IPv4 and IPv6 protocols, allowing devices to communicate using either address format depending on the destination."
-      , "tags": [ "protocols" , "ipv6" , "ipv4" ]
+      "answer": "A dual-stack network supports both IPv4 and IPv6 protocols, allowing devices to communicate using either address format depending on the destination.",
+      "tags": [
+        "protocols",
+        "ipv6",
+        "ipv4"
+      ]
     },
     {
       "id": "ipv6_subnet_masks",
       "type": "basic",
       "question": "Does IPv6 use subnet masks? How are they represented?",
-      "answer": "Yes, IPv6 uses subnet masks, but they are represented as CIDR prefix lengths (e.g., /64) rather than dotted decimal notation. The prefix length indicates the number of bits in the network portion of the address."
-      , "tags": [ "protocols" , "ipv6" ]
+      "answer": "Yes, IPv6 uses subnet masks, but they are represented as CIDR prefix lengths (e.g., /64) rather than dotted decimal notation. The prefix length indicates the number of bits in the network portion of the address.",
+      "tags": [
+        "protocols",
+        "ipv6"
+      ]
     },
     {
       "id": "ipv6_common_prefix",
       "type": "basic",
       "question": "What is the most common prefix length used for IPv6 subnets, and why?",
-      "answer": "/64 is the most common prefix length in IPv6 because it allows for a vast number of host addresses (2⁶⁴) and simplifies routing and network management."
-      , "tags": [ "protocols" , "ipv6" ]
+      "answer": "/64 is the most common prefix length in IPv6 because it allows for a vast number of host addresses (2⁶⁴) and simplifies routing and network management.",
+      "tags": [
+        "protocols",
+        "ipv6"
+      ]
     },
     {
       "id": "ipv6_prefix_example",
       "type": "basic",
       "question": "What does the IPv6 address `2001:db8:abcd::/64` mean?",
-      "answer": "The `/64` indicates that the first 64 bits of the address are the network portion, and the remaining 64 bits are available for host addressing."
-      , "tags": [ "protocols" , "ipv6" ]
+      "answer": "The `/64` indicates that the first 64 bits of the address are the network portion, and the remaining 64 bits are available for host addressing.",
+      "tags": [
+        "protocols",
+        "ipv6"
+      ]
     },
     {
       "id": "ipv6_vs_ipv4_subnetting",
       "type": "basic",
       "question": "How does subnetting in IPv6 differ from IPv4?",
-      "answer": "IPv6 uses CIDR prefix lengths (e.g., /64) instead of dotted decimal subnet masks (e.g., 255.255.255.0). IPv6 subnets are much larger, typically allocating 2⁶⁴ addresses per subnet."
-      , "tags": [ "protocols" , "ipv6", "ipv4" ]
+      "answer": "IPv6 uses CIDR prefix lengths (e.g., /64) instead of dotted decimal subnet masks (e.g., 255.255.255.0). IPv6 subnets are much larger, typically allocating 2⁶⁴ addresses per subnet.",
+      "tags": [
+        "protocols",
+        "ipv6",
+        "ipv4"
+      ]
     },
     {
       "id": "ipv6_nat_difference",
       "type": "basic",
       "question": "Does IPv6 use NAT (Network Address Translation)? Why or why not?",
-      "answer": "No, IPv6 does not typically use NAT because its 128-bit address space provides enough unique addresses for every device to have a globally routable address, eliminating the need for address translation."
-      , "tags": [ "protocols" , "ipv6" ]
+      "answer": "No, IPv6 does not typically use NAT because its 128-bit address space provides enough unique addresses for every device to have a globally routable address, eliminating the need for address translation.",
+      "tags": [
+        "protocols",
+        "ipv6"
+      ]
     },
     {
       "id": "ipv4_nat_privacy",
       "type": "basic",
       "question": "How does NAT in IPv4 provide a level of privacy?",
-      "answer": "NAT hides internal private IP addresses behind a single public IP address, so external networks cannot directly identify individual devices on the LAN."
-      , "tags": [ "protocols" , "ipv4" ]
+      "answer": "NAT hides internal private IP addresses behind a single public IP address, so external networks cannot directly identify individual devices on the LAN.",
+      "tags": [
+        "protocols",
+        "ipv4"
+      ]
     },
     {
       "id": "ipv6_privacy",
       "type": "basic",
       "question": "How does IPv6 address privacy concerns without NAT?",
-      "answer": "IPv6 uses privacy extensions, such as temporary, randomly generated addresses for outbound connections, to prevent tracking, while stable addresses are used for inbound traffic."
-      , "tags": [ "protocols" , "ipv6" ]
+      "answer": "IPv6 uses privacy extensions, such as temporary, randomly generated addresses for outbound connections, to prevent tracking, while stable addresses are used for inbound traffic.",
+      "tags": [
+        "protocols",
+        "ipv6"
+      ]
     },
     {
       "id": "ip_address_change_hops",
       "type": "basic",
       "question": "Does the source IP address change as packets travel through different networks?",
-      "answer": "No, the source and destination IP addresses remain constant throughout the journey. Only the Layer 2 details (e.g., MAC addresses) change at each hop."
-      , "tags": [ "protocols" , "osi" ]
+      "answer": "No, the source and destination IP addresses remain constant throughout the journey. Only the Layer 2 details (e.g., MAC addresses) change at each hop.",
+      "tags": [
+        "protocols",
+        "osi"
+      ]
     },
     {
       "id": "ipv4_vs_ipv6_concept",
@@ -1325,64 +1476,88 @@
       "tags": [
         "ipv4",
         "ipv6",
-        "protocols"  ,  "subnet"  
+        "protocols",
+        "subnet"
       ]
     },
     {
       "id": "subnet_mask_definition",
       "type": "basic",
       "question": "What is a subnet mask?",
-      "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines which part of the address identifies the network and which part identifies the host."
-      , "tags": [ "protocols" , "ipv4" ,  "subnet"  ]
+      "answer": "A subnet mask is a 32-bit number used in IPv4 to divide an IP address into network and host portions. It determines which part of the address identifies the network and which part identifies the host.",
+      "tags": [
+        "protocols",
+        "ipv4",
+        "subnet"
+      ]
     },
     {
       "id": "subnet_mask_example",
       "type": "basic",
       "question": "What does the subnet mask 255.255.255.0 indicate?",
-      "answer": "The subnet mask 255.255.255.0 indicates that the first 24 bits of the IP address represent the network, leaving 8 bits for host addresses. This allows for 256 addresses within the subnet, including network and broadcast addresses."
-      , "tags": [ "protocols" , "ipv4" ,  "subnet"  ]
+      "answer": "The subnet mask 255.255.255.0 indicates that the first 24 bits of the IP address represent the network, leaving 8 bits for host addresses. This allows for 256 addresses within the subnet, including network and broadcast addresses.",
+      "tags": [
+        "protocols",
+        "ipv4",
+        "subnet"
+      ]
     },
     {
       "id": "subnet_mask_purpose",
       "type": "basic",
       "question": "What is the purpose of a subnet mask in networking?",
-      "answer": "The purpose of a subnet mask is to determine whether an IP address belongs to the same subnet or requires routing to another subnet."
-      , "tags": [ "protocols" ,  "subnet"  ]
+      "answer": "The purpose of a subnet mask is to determine whether an IP address belongs to the same subnet or requires routing to another subnet.",
+      "tags": [
+        "protocols",
+        "subnet"
+      ]
     },
     {
       "id": "subnet_mask_internal_networks",
       "type": "basic",
       "question": "How are subnet masks used in internal networks?",
-      "answer": "Subnet masks are used to segment an internal network into subnets, grouping devices and determining whether an IP address is local or requires routing across subnets."
-      , "tags": [ "protocols" ,  "subnet"  ]
+      "answer": "Subnet masks are used to segment an internal network into subnets, grouping devices and determining whether an IP address is local or requires routing across subnets.",
+      "tags": [
+        "protocols",
+        "subnet"
+      ]
     },
     {
       "id": "nat_subnet_mask_relationship",
       "type": "basic",
       "question": "How do NAT and subnet masks work together in a network?",
-      "answer": "NAT translates private IP addresses to a public IP address for internet communication, while subnet masks divide the internal network into subnets and determine local routing. NAT hides the internal structure, including subnets, from external networks."
-      , "tags": [ "protocols" ,  "subnet"  ]
+      "answer": "NAT translates private IP addresses to a public IP address for internet communication, while subnet masks divide the internal network into subnets and determine local routing. NAT hides the internal structure, including subnets, from external networks.",
+      "tags": [
+        "protocols",
+        "subnet"
+      ]
     },
     {
       "id": "static_ip_address_definition",
       "type": "basic",
       "question": "What is a static IP address?",
-      "answer": "A static IP address is manually assigned to a device and does not change over time. It is commonly used for servers, printers, and other devices requiring consistent addresses."
-      , "tags": [ "definition" ]
+      "answer": "A static IP address is manually assigned to a device and does not change over time. It is commonly used for servers, printers, and other devices requiring consistent addresses.",
+      "tags": [
+        "definition"
+      ]
     },
     {
       "id": "dynamic_ip_address_definition",
       "type": "basic",
       "question": "What is a dynamically assigned IP address?",
-      "answer": "A dynamically assigned IP address is automatically allocated by a DHCP server and may change over time. It is commonly used for client devices like laptops and smartphones."
-      , "tags": [ "definition" ]
+      "answer": "A dynamically assigned IP address is automatically allocated by a DHCP server and may change over time. It is commonly used for client devices like laptops and smartphones.",
+      "tags": [
+        "definition"
+      ]
     },
     {
       "id": "subnetting_benefits",
       "type": "basic",
       "question": "What are the benefits of subnetting in a network?",
-      "answer": "Subnetting improves network organization, reduces congestion, enhances security by isolating groups of devices, and optimizes the use of IP address space."
-      , "tags": [  "subnet" ]
+      "answer": "Subnetting improves network organization, reduces congestion, enhances security by isolating groups of devices, and optimizes the use of IP address space.",
+      "tags": [
+        "subnet"
+      ]
     },
     {
       "id": "cidr_notation",

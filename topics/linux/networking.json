@@ -206,10 +206,19 @@
       ]
     },
     {
+      "id": "osi_data_link_layer_typing",
+      "type": "typing",
+      "question": "List some repsonsibilities of the Data Link layer in the OSI model.",
+      "answer": "The Data Link Layer (Layer 2) is responsible for error detection, flow control and the delivery of data to the correct device within the LAN (node-to-node). The responsibility for inter-network communication lies in higher OSI layers.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
       "id": "osi_data_link_layer",
       "type": "basic",
       "question": "What are the responsibilities of the Data Link layer in the OSI model?",
-      "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control adapts the sender's transmission rate to match the receiver's capabilities and the network's utilization. Additionally, the Data Link layer manages MAC addresses to ensure correct delivery of data within a LAN (local area network). For inter-network communication, routers handle forwarding to the next hop using higher OSI layers.",
+      "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link (i.e., node-to-node communication). It achieves this by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control ensures the sender's transmission rate aligns with the receiver's capacity and network utilization. The Data Link layer also ensures data is transferred to the correct device within a LAN and is divided into two sublayers: Logical Link Control (LLC) and Media Access Control (MAC). The LLC sublayer connects to the Network layer (Layer 3), managing protocol identification and error correction, while the MAC sublayer interfaces with the Physical layer (Layer 1), handling addressing and access to the physical medium.",
       "tags": [
         "osi"
       ]
@@ -233,10 +242,19 @@
       ]
     },
     {
+      "id": "osi_network_layer_typing",
+      "type": "typing",
+      "question": "List some repsonsibilities of the Network layer in the OSI model.",
+      "answer": "The Network layer (Layer 3) is responsible for routing and forwarding data, and defines logical addressing (e.g., IP addresses).",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
       "id": "osi_network_layer",
       "type": "basic",
       "question": "What is the purpose of the Network layer in the OSI model?",
-      "answer": "The Network layer (Layer 3) is responsible for routing and forwarding data, and defines logical addressing (e.g., IP addresses).",
+      "answer": "The Network layer (Layer 3) is responsible for routing, forwarding, and logical addressing (e.g., IP addresses). Routing involves determining the best physical path for data to travel based on factors such as network conditions, configured routes, and priority of service. Packet forwarding refers to the actual transfer of packets between devices based on routing decisions, ensuring data moves through the network toward its destination. \n\nLogical addressing (e.g., IP) is derived from information received from adjacent layers. During encapsulation, it relies on transport layer (Layer 4) headers, assigning a source and destination IP address to the packet. During decapsulation, it extracts these logical addresses from the packet headers, often relying on ARP (Address Resolution Protocol) to map IP addresses to MAC addresses for the next hop in the transmission.\n\nAdditionally, the Network layer facilitates diagnostic and error-reporting functionalities using the Internet Control Message Protocol (ICMP), which identifies issues like unreachable hosts or networks. Routing protocols, such as Routing Information Protocol (RIP), Open Shortest Path First (OSPF), or Border Gateway Protocol (BGP), are employed to dynamically manage and update routing tables, ensuring efficient data delivery across networks.",
       "tags": [
         "osi"
       ]
@@ -245,7 +263,16 @@
       "id": "osi_transport_layer",
       "type": "basic",
       "question": "What is the role of the Transport layer in the OSI model?",
-      "answer": "The Transport layer (Layer 4) manages end-to-end communication, error checking, and flow control, using protocols like TCP and UDP.",
+      "answer": "The Transport layer (Layer 4) manages end-to-end communication between the source and destination device, ensuring reliable data delivery with error detection, correction mechanisms, and flow control. It segments data from the upper layers into smaller units (segments) for efficient transmission and reassembles them at the destination. The layer provides reliability using protocols like Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). TCP ensures a connection-oriented, reliable communication with error recovery and retransmission, while UDP offers connectionless, faster transmission but without guaranteed delivery. These differences influence how the Transport layer interacts with the Session layer, depending on whether reliable or quick communication is required.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_transport_layer_typing",
+      "type": "typing",
+      "question": "List some responsibilities of the Transport layer in the OSI model.",
+      "answer": "The Transport layer (Layer 4) manages end-to-end communication, error detection and correction, flow control, and data segmentation and reassembly. It uses Transmission Control Protocol (TCP) for reliable, connection-oriented communication and User Datagram Protocol (UDP) for fast, connectionless transmission.",
       "tags": [
         "osi"
       ]
@@ -260,10 +287,38 @@
       ]
     },
     {
+      "id": "osi_session_layer",
+      "type": "basic",
+      "question": "What does the Session layer do in the OSI model?",
+      "answer": "The Session layer (Layer 5) is responsible for establishing, managing, and terminating sessions between applications on different devices. It ensures that communication sessions remain organized and synchronized, providing features like session checkpointing and recovery to resume communication after interruptions. Protocols operating at this layer include Remote Procedure Call (RPC) and session-related functionalities in protocols like NetBIOS and SQL.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_application_sessions",
+      "type": "basic",
+      "question": "How do application-level sessions differ from the OSI Session layer?",
+      "answer": "Application-level sessions, such as those implemented using cookies or tokens in web applications, are managed at the Application layer (Layer 7) rather than the OSI Session layer (Layer 5). Stateless protocols like HTTP rely on mechanisms like cookies or tokens to emulate session-like behavior. These sessions are distinct from the OSI Session layer, which focuses on organizing and synchronizing communication between devices.",
+      "tags": [
+        "osi",
+        "application"
+      ]
+    },
+    {
       "id": "osi_presentation_layer",
       "type": "basic",
       "question": "What is the purpose of the Presentation layer in the OSI model?",
-      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems.",
+      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems by translating between different encodings.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_presentation_layer_typing",
+      "type": "typing",
+      "question": "List some responsibilities of the Presentation layer in the OSI model.",
+      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems by translating between different encodings.",
       "tags": [
         "osi"
       ]
@@ -272,6 +327,15 @@
       "id": "osi_application_layer",
       "type": "basic",
       "question": "What is the role of the Application layer in the OSI model?",
+      "answer": "The Application layer (Layer 7) provides network services directly to user applications. Examples include web browsing using the Hypertext Transfer Protocol (HTTP), email communication via the Simple Mail Transfer Protocol (SMTP), and file transfers using the File Transfer Protocol (FTP).",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_application_layer_typing",
+      "type": "typing",
+      "question": "List some responsibilities of the Application layer in the OSI model.",
       "answer": "The Application layer (Layer 7) provides network services directly to user applications, such as web browsing (HTTP), email (SMTP), and file transfer (FTP).",
       "tags": [
         "osi"
