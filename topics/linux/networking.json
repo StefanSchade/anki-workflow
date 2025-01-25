@@ -1082,24 +1082,21 @@
         "osi"
       ]
     },
-
-{
-  "id": "network_datagrams_definition",
-  "type": "basic",
-  "question": "What are datagrams in networking?",
-  "answer": "Unfortunately, despite other terms in networking such as <{start-bold}>segment<{end-bold}> or <{start-bold}>frame<{end-bold}> being strictly defined and carrying a percise meaning, the term <{start-bold}>datagram<{end-bold}> is somewhat ambiguous. Depending on context it can represent distinct concepts and for some of them its association is rather a matter of convention but of a commission setting up a binding definition for everyone.<{break}><{start-bold}>These contexts and their respective meaning are:<{end-bold}><{break}><{start-ol}><{start-numbered-item}>In Layer 4 of the OSI model (Transport Layer), a strict distinction is made between <{start-bold}>segment<{end-bold}>, which is the data structure the TCP protocol operates upon and <{start-bold}>datagram<{end-bold}>, which in turn is used by the UDP protocol. Sometimes the explicit form of <{start-bold}>UDP-datagram<{end-bold}> is used to indicate that this context applies.<{end-numbered-item}><{start-numbered-item}>In Layer 3 of the OSI model (Network Layer), a loose distincion is made between a <{start-bold}>packet<{end-bold}> and a <{start-bold}>datagram<{end-bold}>. Sometimes the use of datagram might indicate that the higher level payload wrapped in the structure is stateless (UDP), while packet is used for stateful (TCP) messages. However this distinction is based on convention and cannot be relied upon.<{end-numbered-item}><{start-numbered-item}>As a generalization of the above the term <{start-bold}>datagram<{end-bold}> is used when a protocol datastructure is passed between layers, especially if the protocol is stateless.<{end-numbered-item}><{end-ol}><{break}><{start-bold}>Remark:<{end-bold}> The distinction between stateless and stateful on Layer 3 makes little sense since the IP protocol in use is inherently stateless. It reflects the nature of the message contained in the communication. It is likely that this contradiction has prevented organisations that lay out standards from offering a precise definition.",
-  "tags": [
-    "osi", "datagram"
-  ]
-}
-
-,
-
+    {
+      "id": "network_datagrams_definition",
+      "type": "basic",
+      "question": "What are datagrams in networking?",
+      "answer": "Unfortunately, despite other terms in networking such as <{start-bold}>segment<{end-bold}> or <{start-bold}>frame<{end-bold}> being strictly defined and carrying a percise meaning, the term <{start-bold}>datagram<{end-bold}> is somewhat ambiguous. Depending on context it can represent distinct concepts. For some contexts, the definition is a matter of convention rather than a precise definiton in the mathematical sense.<{break}><{break}><{start-bold}>These contexts and their respective meaning are:<{end-bold}><{break}><{start-ol}><{start-numbered-item}>In Layer 4 of the OSI model (Transport Layer), a strict distinction is made between <{start-bold}>segment<{end-bold}>, which is the data structure the TCP protocol operates upon and <{start-bold}>datagram<{end-bold}>, which in turn is used by the UDP protocol. Sometimes the explicit form of <{start-bold}>UDP-datagram<{end-bold}> is used to indicate that this context applies.<{end-numbered-item}><{start-numbered-item}>In Layer 3 of the OSI model (Network Layer), a loose distincion is made between a <{start-bold}>packet<{end-bold}> and a <{start-bold}>datagram<{end-bold}>. Sometimes the use of datagram might indicate that the higher level payload wrapped in the structure is stateless (UDP), while packet is used for stateful (TCP) messages. However this distinction is based on convention and cannot be relied upon.<{end-numbered-item}><{start-numbered-item}>As a generalization of the above the term <{start-bold}>datagram<{end-bold}> is used when a protocol data structure is passed between layers, especially if the protocol is stateless.<{end-numbered-item}><{end-ol}><{break}><{start-bold}>Remark:<{end-bold}> The distinction between stateless and stateful on Layer 3 makes little sense since the IP protocol in use is inherently stateless. It reflects the nature of the message contained in the communication. It is likely that this contradiction has prevented organisations that lay out standards from offering a precise definition.",
+      "tags": [
+        "osi",
+        "datagram"
+      ]
+    },
     {
       "id": "ethernet_frames_definition",
       "type": "basic",
       "question": "What are Ethernet frames in networking?",
-      "answer": "Ethernet frames are units of data used in the Data Link layer (OSI Layer 2). They encapsulate datagrams from the Network layer with MAC addresses and error-checking fields for local transmission.",
+      "answer": "Ethernet frames are units of data used in the Data Link layer (OSI Layer 2). They encapsulate packets / datagrams from the Network layer with MAC addresses and error-checking fields for local transmission.",
       "tags": [
         "ethernet",
         "osi"
@@ -1121,7 +1118,7 @@
       "id": "osi_layer_encapsulation_hierarchy",
       "type": "basic",
       "question": "How are data segments, datagrams, and Ethernet frames related in the OSI encapsulation process?",
-      "answer": "Application data is encapsulated into a data segment (Layer 4), which is then encapsulated into a datagram (Layer 3) with an IP header. The datagram is further encapsulated into an Ethernet frame (Layer 2) for local transmission.",
+      "answer": "Application data is encapsulated into a data segment for TCP or datagram for UDP (Layer 4), which is then encapsulated into a packet / datagram (Layer 3) with an IP header. The datagram is further encapsulated into an Ethernet frame (Layer 2) for local transmission.",
       "tags": [
         "osi"
       ]
@@ -1130,7 +1127,7 @@
       "id": "data_encapsulation_osi_layers",
       "type": "basic",
       "question": "How do Ethernet frames, datagrams, and segments relate to OSI layers, and how are they encapsulated?",
-      "answer": "<{start-table}><{break}><{start-tr}><{start-td}><{start-bold}>OSI Layer<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulation Unit<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulates<{end-bold}><{end-td}><{start-td}><{start-bold}>Adds<{end-bold}><{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 7 (Application)<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>N/A<{end-td}><{start-td}>Application-Specific Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 6 (Presentation)<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>Presentation Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 5 (Session)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Session Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 4 (Transport)<{end-td}><{start-td}>Segment (TCP) / Datagram (UDP)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>TCP/UDP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 3 (Network)<{end-td}><{start-td}>Datagram (Packet)<{end-td}><{start-td}>Transport Layer Data<{end-td}><{start-td}>IP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 2 (Data Link)<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Network Layer Data<{end-td}><{start-td}>MAC Header + FCS<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 1 (Physical)<{end-td}><{start-td}>Bits<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Physical Encoding<{end-td}>{<end-tr}><{break}><{end-table}> When Layer 4 names both segment and datagram as the encapsulation unit, this is because it depends on the protocol. TCP provides the capability to assemble multiple segments (each containing a datagram with a theoretical maximum length of 64 KB). In contrast, UDP lacks the segment container and, therefore, the assembly capability. As a result, UDP communication is limited by the MTU (Maximum Transmission Unit) minus headers, which typically results in a maximum message length of approximately 1.4 KB for Ethernet.",
+      "answer": "<{start-table}><{break}><{start-tr}><{start-td}><{start-bold}>OSI Layer<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulation Unit<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulates<{end-bold}><{end-td}><{start-td}><{start-bold}>Adds<{end-bold}><{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 7 (Application)<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>N/A<{end-td}><{start-td}>Application-Specific Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 6 (Presentation)<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>Presentation Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 5 (Session)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Session Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 4 (Transport)<{end-td}><{start-td}>Segment (TCP) / Datagram (UDP)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>TCP/UDP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 3 (Network)<{end-td}><{start-td}>Datagram (Packet)<{end-td}><{start-td}>Transport Layer Data<{end-td}><{start-td}>IP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 2 (Data Link)<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Network Layer Data<{end-td}><{start-td}>MAC Header + FCS<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 1 (Physical)<{end-td}><{start-td}>Bits<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Physical Encoding<{end-td}>{<end-tr}><{break}><{end-table}> When Layer 4 names both segment and datagram as the encapsulation unit, this is because it depends on the protocol. TCP provides the capability to assemble multiple segments (each containing a datagram with a theoretical maximum length of 64 KB). In contrast, UDP lacks this feature and its container is called datagram. As a result, UDP communication is limited by the MTU (Maximum Transmission Unit) minus headers, which typically results in a maximum message length of approximately 1.4 KB for Ethernet.",
       "tags": [
         "osi"
       ]
@@ -1151,7 +1148,7 @@
       "id": "osi_end_to_end_vs_local",
       "type": "basic",
       "question": "What is the difference between end-to-end delivery and local delivery in the OSI model?",
-      "answer": "End-to-end delivery involves data segments (Layer 4) and datagrams (Layer 3) to ensure the message reaches the correct application on the destination device. Local delivery involves Ethernet frames (Layer 2) for transmitting data across a single network segment.",
+      "answer": "End-to-end delivery involves all layers and complete encapsulation / decapsulation. Local delivery involves only the first 2 layers and a decapsulation only up to the Ethernet frame (Layer 2) at the receiving end.",
       "tags": [
         "osi"
       ]
@@ -1160,7 +1157,7 @@
       "id": "osi_real_world_encapsulation",
       "type": "basic",
       "question": "How is an HTTP request encapsulated and transmitted across the OSI layers?",
-      "answer": "An HTTP request (Layer 7) is encapsulated into a TCP segment (Layer 4), which is encapsulated into an IP datagram (Layer 3), and finally into an Ethernet frame (Layer 2) for transmission.",
+      "answer": "An HTTP request (Layer 7) is encapsulated into a TCP segment or UDP datagram (Layer 4), which is encapsulated into an IP datagram or packet (Layer 3), and finally into an Ethernet frame (Layer 2) for transmission.",
       "tags": [
         "osi"
       ]
@@ -1168,7 +1165,7 @@
     {
       "id": "osi_encapsulation_visualized",
       "type": "basic",
-      "question": "What does the encapsulation structure of an Ethernet frame containing a datagram and a segment look like?",
+      "question": "What does the encapsulation structure of an Ethernet frame containing a packet and a segment look like?",
       "answer": "The structure is: | Ethernet Header (MAC addresses) | IP Header (source/destination IP) | TCP/UDP Header (source/destination port) | Application Data |.",
       "tags": [
         "osi"
