@@ -1093,6 +1093,218 @@
       ]
     },
     {
+      "id": "ip_stateless_communication",
+      "type": "basic",
+      "question": "What does it mean that IP is stateless?",
+      "answer": "IP is stateless because it does not maintain any information about ongoing or previous communication sessions. Each IP packet is handled independently, with no inherent relationship to other packets. Any state or connection logic is implemented at higher layers, such as the Transport layer (e.g., TCP).",
+      "tags": [
+        "osi",
+        "ip",
+        "networking"
+      ]
+    },
+    {
+      "id": "transport_layer_connection",
+      "type": "basic",
+      "question": "How does the Transport layer maintain the concept of a connection in a stateless IP network?",
+      "answer": "The Transport layer (e.g., TCP) maintains the concept of a connection by using mechanisms such as sequence numbers, acknowledgments, and retransmissions. These mechanisms allow the Transport layer to track data flows and ensure reliability, even though IP itself is stateless. This creates a logical connection that applications can use as if it were persistent.",
+      "tags": [
+        "osi",
+        "tcp",
+        "networking"
+      ]
+    },
+    {
+      "id": "stateless_vs_stateful_protocols",
+      "type": "basic",
+      "question": "What is the difference between stateless and stateful protocols?",
+      "answer": "A stateless protocol, like IP or HTTP, does not retain information about previous requests or interactions. Each request or packet is treated independently. A stateful protocol, like TCP, maintains information about the session (e.g., connection state, sequence numbers).",
+      "tags": [
+        "networking",
+        "tcp",
+        "ip",
+        "protocols"
+      ]
+    },
+    {
+      "id": "tcp_connection_vs_ip_statelessness",
+      "type": "basic",
+      "question": "If IP is stateless, how does TCP implement a connection?",
+      "answer": "TCP implements a connection over IP by establishing a logical session using the three-way handshake (SYN, SYN-ACK, ACK). TCP keeps track of connection state using sequence and acknowledgment numbers, along with timers and retransmission logic, while IP remains stateless, handling each packet independently.",
+      "tags": [
+        "osi",
+        "tcp",
+        "ip",
+        "networking"
+      ]
+    },
+    {
+      "id": "logical_vs_physical_connections",
+      "type": "basic",
+      "question": "What is the difference between a logical connection and a physical connection in networking?",
+      "answer": "A logical connection is a high-level abstraction created by protocols like TCP to manage communication between devices, ensuring reliable data transfer. A physical connection refers to the actual hardware and media (e.g., cables, switches, wireless signals) that facilitate the transfer of bits. Logical connections operate independently of physical connections.",
+      "tags": [
+        "networking",
+        "tcp",
+        "ip",
+        "osi"
+      ]
+    },
+    {
+      "id": "statelessness_and_scalability",
+      "type": "basic",
+      "question": "Why is the stateless nature of IP beneficial for scalability?",
+      "answer": "The stateless nature of IP makes it highly scalable because routers do not need to store information about ongoing sessions or previous packets. Each packet is treated independently, simplifying routing and reducing memory and processing overhead. This enables the internet to handle a vast number of connections simultaneously.",
+      "tags": [
+        "networking",
+        "ip",
+        "scalability"
+      ]
+    },
+    {
+      "id": "ping_tool_basic",
+      "type": "basic",
+      "question": "What is the purpose of the `ping` command in networking, and how does it relate to the Network layer (OSI Layer 3)?",
+      "answer": "The `ping` command tests connectivity between your system and a target host, using ICMP packets to measure latency and packet loss. It operates at the Network layer (Layer 3) of the OSI model.",
+      "tags": [
+        "osi",
+        "tools",
+        "layer3"
+      ]
+    },
+    {
+      "id": "ping_tool_typing",
+      "type": "typing",
+      "question": "To observe events in the Network layer (OSI Layer 3), type the command to check if the host <{start-bold}>8.8.8.8<{end-bold}> is reachable.",
+      "answer": "ping 8.8.8.8",
+      "tags": [
+        "osi",
+        "tools",
+        "layer3"
+      ]
+    },
+    {
+      "id": "ping_tool_interpretation",
+      "type": "basic",
+      "question": "Analyze the following output and identify the issue for the Network layer (OSI Layer 3):\n<{start-terminal}><{break}>PING 8.8.8.8 (8.8.8.8): 56 data bytes<{break}>Request timeout for icmp_seq 0<{break}>Request timeout for icmp_seq 1<{break}><{end-terminal}>",
+      "answer": "The target host is unreachable, possibly due to network misconfiguration, firewall restrictions, or connectivity issues at the Network layer (Layer 3) of the OSI model.",
+      "tags": [
+        "osi",
+        "tools",
+        "layer3"
+      ]
+    },
+    {
+      "id": "ethtool_basic",
+      "type": "basic",
+      "question": "What is the purpose of the `ethtool` command, and how does it relate to the Data Link layer (OSI Layer 2)?",
+      "answer": "The `ethtool` command is used to query and modify network interface card (NIC) settings, such as speed, duplex mode, and link status. It operates at the Data Link layer (Layer 2) of the OSI model.",
+      "tags": [
+        "osi",
+        "tools",
+        "layer2"
+      ]
+    },
+    {
+      "id": "ethtool_typing",
+      "type": "typing",
+      "question": "To observe and configure the Data Link layer (OSI Layer 2), type the command to display NIC settings for the interface <{start-bold}>eth0<{end-bold}>.",
+      "answer": "ethtool eth0",
+      "tags": [
+        "osi",
+        "tools",
+        "layer2"
+      ]
+    },
+    {
+      "id": "ethtool_interpretation",
+      "type": "basic",
+      "question": "Analyze the following output to interpret the events in the Data Link layer (OSI Layer 2):\n<{start-terminal}><{break}>Settings for eth0:<{break}>    Speed: 100Mb/s<{break}>    Duplex: Full<{break}>    Link detected: no<{break}><{end-terminal}> What does the output indicate?",
+      "answer": "The interface `eth0` is configured for 100Mb/s full-duplex mode, but the link is not detected. This could be due to a disconnected cable or a faulty port at the Data Link layer (Layer 2).",
+      "tags": [
+        "osi",
+        "tools",
+        "layer2"
+      ]
+    },
+    {
+      "id": "ip_link_basic",
+      "type": "basic",
+      "question": "What is the purpose of the `ip link show` command, and how does it relate to the Data Link layer (OSI Layer 2)?",
+      "answer": "The `ip link show` command displays the status and configuration of network interfaces, including their state, MTU, and MAC address. It provides insights into the Data Link layer (Layer 2) of the OSI model.",
+      "tags": [
+        "osi",
+        "tools",
+        "layer2"
+      ]
+    },
+    {
+      "id": "ip_link_typing",
+      "type": "typing",
+      "question": "To observe and manage the Data Link layer (OSI Layer 2), type the command to bring the interface <{start-bold}>eth0<{end-bold}> down.",
+      "answer": "ip link set dev eth0 down",
+      "tags": [
+        "osi",
+        "tools",
+        "layer2"
+      ]
+    },
+    {
+      "id": "ip_link_interpretation",
+      "type": "basic",
+      "question": "Analyze the following output to interpret the events in the Data Link layer (OSI Layer 2):\n<{start-terminal}><{break}>2: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN mode DEFAULT group default qlen 1000<{break}>    link/ether 00:1a:2b:3c:4d:5e brd ff:ff:ff:ff:ff:ff<{break}><{end-terminal}> What does the state and flags indicate?",
+      "answer": "The interface `eth0` is configured to be up but is in a DOWN state with no carrier detected. This indicates a physical disconnection or a link issue at the Data Link layer (Layer 2).",
+      "tags": [
+        "osi",
+        "tools",
+        "layer2"
+      ]
+    },
+    {
+      "id": "tcpdump_basic",
+      "type": "basic",
+      "question": "What is the purpose of the `tcpdump` command, and how does it relate to the Network layer (OSI Layer 3)?",
+      "answer": "The `tcpdump` command is used to capture and analyze network packets in real time, providing insights into network traffic and protocols at the Network layer (Layer 3) of the OSI model.",
+      "tags": [
+        "osi",
+        "tools",
+        "layer3"
+      ]
+    },
+    {
+      "id": "tcpdump_typing",
+      "type": "typing",
+      "question": "To observe events in the Network layer (OSI Layer 3), type the command to capture all packets on the interface <{start-bold}>eth0<{end-bold}>.",
+      "answer": "tcpdump -i eth0",
+      "tags": [
+        "osi",
+        "tools",
+        "layer3"
+      ]
+    },
+    {
+      "id": "tcpdump_interpretation",
+      "type": "basic",
+      "question": "Analyze the following captured packet to interpret events in the Network layer (OSI Layer 3):\n<{start-terminal}><{break}>10:12:34.567890 IP 192.168.1.2.12345 > 192.168.1.1.80: Flags [S], seq 1234567890, win 65535, options [mss 1460], length 0<{break}><{end-terminal}> What does this packet indicate?",
+      "answer": "This is a TCP SYN packet from `192.168.1.2` (port 12345) to `192.168.1.1` (port 80). It indicates the initiation of a TCP handshake at the Network layer (Layer 3).",
+      "tags": [
+        "osi",
+        "tools",
+        "layer3"
+      ]
+    },
+    {
+      "id": "ping_icmp_analysis",
+      "type": "basic",
+      "question": "How can you analyze ICMP messages sent during a `ping` command to understand events in the Network layer (OSI Layer 3)?",
+      "answer": "You can use the `tcpdump` command to capture ICMP packets and analyze their content. For example:\n<{start-terminal}><{break}>tcpdump -i eth0 icmp<{break}><{end-terminal}>\nThis will display details about ICMP Echo Request and Echo Reply messages, including their source and destination IPs. Additionally, check logs with `journalctl -u NetworkManager` for any system-related issues.",
+      "tags": [
+        "osi",
+        "tools",
+        "layer3"
+      ]
+    },
+    {
       "id": "ethernet_frames_definition",
       "type": "basic",
       "question": "What are Ethernet frames in networking?",
