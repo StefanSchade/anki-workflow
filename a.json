@@ -205,9 +205,6 @@
         "osi"
       ]
     },
-
-
-
     {
       "id": "osi_data_link_layer_typing",
       "type": "typing",
@@ -217,21 +214,15 @@
         "osi"
       ]
     },
-
-
-
-
-{
-  "id": "osi_data_link_layer",
-  "type": "basic",
-  "question": "What are the responsibilities of the Data Link layer in the OSI model?",
-  "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link (i.e., node-to-node communication). It achieves this by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control ensures the sender's transmission rate aligns with the receiver's capacity and network utilization. The Data Link layer also ensures data is transferred to the correct device within a LAN and is divided into two sublayers: Logical Link Control (LLC) and Media Access Control (MAC). The LLC sublayer connects to the Network layer (Layer 3), managing protocol identification and error correction, while the MAC sublayer interfaces with the Physical layer (Layer 1), handling addressing and access to the physical medium.",
-  "tags": [
-    "osi"
-  ]
-}
-,
-
+    {
+      "id": "osi_data_link_layer",
+      "type": "basic",
+      "question": "What are the responsibilities of the Data Link layer in the OSI model?",
+      "answer": "The Data Link layer (Layer 2) is responsible for ensuring reliable data transfer across a physical link (i.e., node-to-node communication). It achieves this by handling error detection and flow control. Error detection identifies and mitigates transmission errors, while flow control ensures the sender's transmission rate aligns with the receiver's capacity and network utilization. The Data Link layer also ensures data is transferred to the correct device within a LAN and is divided into two sublayers: Logical Link Control (LLC) and Media Access Control (MAC). The LLC sublayer connects to the Network layer (Layer 3), managing protocol identification and error correction, while the MAC sublayer interfaces with the Physical layer (Layer 1), handling addressing and access to the physical medium.",
+      "tags": [
+        "osi"
+      ]
+    },
     {
       "id": "osi_data_link_flow_control_routing_diff",
       "type": "basic",
@@ -259,46 +250,33 @@
         "osi"
       ]
     },
-
-
-{
-  "id": "osi_network_layer",
-  "type": "basic",
-  "question": "What is the purpose of the Network layer in the OSI model?",
-  "answer": "The Network layer (Layer 3) is responsible for routing, forwarding, and logical addressing (e.g., IP addresses). Routing involves determining the best physical path for data to travel based on factors such as network conditions, configured routes, and priority of service. Packet forwarding refers to the actual transfer of packets between devices based on routing decisions, ensuring data moves through the network toward its destination. \n\nLogical addressing (e.g., IP) is derived from information received from adjacent layers. During encapsulation, it relies on transport layer (Layer 4) headers, assigning a source and destination IP address to the packet. During decapsulation, it extracts these logical addresses from the packet headers, often relying on ARP (Address Resolution Protocol) to map IP addresses to MAC addresses for the next hop in the transmission.\n\nAdditionally, the Network layer facilitates diagnostic and error-reporting functionalities using the Internet Control Message Protocol (ICMP), which identifies issues like unreachable hosts or networks. Routing protocols, such as Routing Information Protocol (RIP), Open Shortest Path First (OSPF), or Border Gateway Protocol (BGP), are employed to dynamically manage and update routing tables, ensuring efficient data delivery across networks.",
-  "tags": [
-    "osi"
-  ]
-}
-
-,
-
-
-
-{
-  "id": "osi_transport_layer",
-  "type": "basic",
-  "question": "What is the role of the Transport layer in the OSI model?",
-  "answer": "The Transport layer (Layer 4) manages end-to-end communication between the source and destination device, ensuring reliable data delivery with error detection, correction mechanisms, and flow control. It segments data from the upper layers into smaller units (segments) for efficient transmission and reassembles them at the destination. The layer provides reliability using protocols like Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). TCP ensures a connection-oriented, reliable communication with error recovery and retransmission, while UDP offers connectionless, faster transmission but without guaranteed delivery. These differences influence how the Transport layer interacts with the Session layer, depending on whether reliable or quick communication is required.",
-  "tags": [
-    "osi"
-  ]
-}
-
-,
-
-{
-  "id": "osi_transport_layer_typing",
-  "type": "typing",
-  "question": "List some responsibilities of the Transport layer in the OSI model.",
-  "answer": "The Transport layer (Layer 4) manages end-to-end communication, error detection and correction, flow control, and data segmentation and reassembly. It uses Transmission Control Protocol (TCP) for reliable, connection-oriented communication and User Datagram Protocol (UDP) for fast, connectionless transmission.",
-  "tags": [
-    "osi"
-  ]
-}
-,
-
-
+    {
+      "id": "osi_network_layer",
+      "type": "basic",
+      "question": "What is the purpose of the Network layer in the OSI model?",
+      "answer": "The Network layer (Layer 3) is responsible for routing, forwarding, and logical addressing (e.g., IP addresses). Routing involves determining the best physical path for data to travel based on factors such as network conditions, configured routes, and priority of service. Packet forwarding refers to the actual transfer of packets between devices based on routing decisions, ensuring data moves through the network toward its destination. \n\nLogical addressing (e.g., IP) is derived from information received from adjacent layers. During encapsulation, it relies on transport layer (Layer 4) headers, assigning a source and destination IP address to the packet. During decapsulation, it extracts these logical addresses from the packet headers, often relying on ARP (Address Resolution Protocol) to map IP addresses to MAC addresses for the next hop in the transmission.\n\nAdditionally, the Network layer facilitates diagnostic and error-reporting functionalities using the Internet Control Message Protocol (ICMP), which identifies issues like unreachable hosts or networks. Routing protocols, such as Routing Information Protocol (RIP), Open Shortest Path First (OSPF), or Border Gateway Protocol (BGP), are employed to dynamically manage and update routing tables, ensuring efficient data delivery across networks.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_transport_layer",
+      "type": "basic",
+      "question": "What is the role of the Transport layer in the OSI model?",
+      "answer": "The Transport layer (Layer 4) manages end-to-end communication between the source and destination device, ensuring reliable data delivery with error detection, correction mechanisms, and flow control. It segments data from the upper layers into smaller units (segments) for efficient transmission and reassembles them at the destination. The layer provides reliability using protocols like Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). TCP ensures a connection-oriented, reliable communication with error recovery and retransmission, while UDP offers connectionless, faster transmission but without guaranteed delivery. These differences influence how the Transport layer interacts with the Session layer, depending on whether reliable or quick communication is required.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_transport_layer_typing",
+      "type": "typing",
+      "question": "List some responsibilities of the Transport layer in the OSI model.",
+      "answer": "The Transport layer (Layer 4) manages end-to-end communication, error detection and correction, flow control, and data segmentation and reassembly. It uses Transmission Control Protocol (TCP) for reliable, connection-oriented communication and User Datagram Protocol (UDP) for fast, connectionless transmission.",
+      "tags": [
+        "osi"
+      ]
+    },
     {
       "id": "osi_session_layer",
       "type": "basic",
@@ -308,80 +286,61 @@
         "osi"
       ]
     },
-
-
-{
-  "id": "osi_session_layer",
-  "type": "basic",
-  "question": "What does the Session layer do in the OSI model?",
-  "answer": "The Session layer (Layer 5) is responsible for establishing, managing, and terminating sessions between applications on different devices. It ensures that communication sessions remain organized and synchronized, providing features like session checkpointing and recovery to resume communication after interruptions. Protocols operating at this layer include Remote Procedure Call (RPC) and session-related functionalities in protocols like NetBIOS and SQL.",
-  "tags": [
-    "osi"
-  ]
-}
-,
-
-{
-  "id": "osi_application_sessions",
-  "type": "basic",
-  "question": "How do application-level sessions differ from the OSI Session layer?",
-  "answer": "Application-level sessions, such as those implemented using cookies or tokens in web applications, are managed at the Application layer (Layer 7) rather than the OSI Session layer (Layer 5). Stateless protocols like HTTP rely on mechanisms like cookies or tokens to emulate session-like behavior. These sessions are distinct from the OSI Session layer, which focuses on organizing and synchronizing communication between devices.",
-  "tags": [
-    "osi",
-    "application"
-  ]
-}
-,
-
-
-
-{
-  "id": "osi_presentation_layer",
-  "type": "basic",
-  "question": "What is the purpose of the Presentation layer in the OSI model?",
-  "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems by translating between different encodings.",
-  "tags": [
-    "osi"
-  ]
-},
-
-{
-  "id": "osi_presentation_layer_typing",
-  "type": "typing",
-  "question": "List some responsibilities of the Presentation layer in the OSI model.",
-  "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems by translating between different encodings.",
-  "tags": [
-    "osi"
-  ]
-}
-,
-
-
-
     {
-  "id": "osi_application_layer",
-  "type": "basic",
-  "question": "What is the role of the Application layer in the OSI model?",
-  "answer": "The Application layer (Layer 7) provides network services directly to user applications. Examples include web browsing using the Hypertext Transfer Protocol (HTTP), email communication via the Simple Mail Transfer Protocol (SMTP), and file transfers using the File Transfer Protocol (FTP).",
-  "tags": [
-    "osi"
-  ]
-}
-,
-
-{
-  "id": "osi_application_layer_typing",
-  "type": "typing",
-  "question": "List some responsibilities of the Application layer in the OSI model.",
-  "answer": "The Application layer (Layer 7) provides network services directly to user applications, such as web browsing (HTTP), email (SMTP), and file transfer (FTP).",
-  "tags": [
-    "osi"
-  ]
-}
-
-,
-
-
+      "id": "osi_session_layer",
+      "type": "basic",
+      "question": "What does the Session layer do in the OSI model?",
+      "answer": "The Session layer (Layer 5) is responsible for establishing, managing, and terminating sessions between applications on different devices. It ensures that communication sessions remain organized and synchronized, providing features like session checkpointing and recovery to resume communication after interruptions. Protocols operating at this layer include Remote Procedure Call (RPC) and session-related functionalities in protocols like NetBIOS and SQL.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_application_sessions",
+      "type": "basic",
+      "question": "How do application-level sessions differ from the OSI Session layer?",
+      "answer": "Application-level sessions, such as those implemented using cookies or tokens in web applications, are managed at the Application layer (Layer 7) rather than the OSI Session layer (Layer 5). Stateless protocols like HTTP rely on mechanisms like cookies or tokens to emulate session-like behavior. These sessions are distinct from the OSI Session layer, which focuses on organizing and synchronizing communication between devices.",
+      "tags": [
+        "osi",
+        "application"
+      ]
+    },
+    {
+      "id": "osi_presentation_layer",
+      "type": "basic",
+      "question": "What is the purpose of the Presentation layer in the OSI model?",
+      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems by translating between different encodings.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_presentation_layer_typing",
+      "type": "typing",
+      "question": "List some responsibilities of the Presentation layer in the OSI model.",
+      "answer": "The Presentation layer (Layer 6) translates data formats, encrypts/decrypts information, and ensures data compatibility between systems by translating between different encodings.",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_application_layer",
+      "type": "basic",
+      "question": "What is the role of the Application layer in the OSI model?",
+      "answer": "The Application layer (Layer 7) provides network services directly to user applications. Examples include web browsing using the Hypertext Transfer Protocol (HTTP), email communication via the Simple Mail Transfer Protocol (SMTP), and file transfers using the File Transfer Protocol (FTP).",
+      "tags": [
+        "osi"
+      ]
+    },
+    {
+      "id": "osi_application_layer_typing",
+      "type": "typing",
+      "question": "List some responsibilities of the Application layer in the OSI model.",
+      "answer": "The Application layer (Layer 7) provides network services directly to user applications, such as web browsing (HTTP), email (SMTP), and file transfer (FTP).",
+      "tags": [
+        "osi"
+      ]
+    },
     {
       "id": "dns_protocol_overview",
       "type": "basic",
@@ -1563,61 +1522,93 @@
       "id": "cidr_notation",
       "type": "basic",
       "question": "What is CIDR notation, and how is it related to subnet masks?",
-      "answer": "CIDR (Classless Inter-Domain Routing) notation represents a subnet mask as a suffix to an IP address, indicating the number of bits used for the network. For example, 192.168.1.0/24 means the first 24 bits represent the network."
+      "answer": "CIDR (Classless Inter-Domain Routing) notation represents a subnet mask as a suffix to an IP address, indicating the number of bits used for the network. For example, 192.168.1.0/24 means the first 24 bits represent the network.",
+      "tags": [
+        "subnet",
+        "protocols"
+      ]
     },
     {
       "id": "network_ports_definition",
       "type": "basic",
       "question": "What is a network port?",
-      "answer": "A network port is a logical endpoint for communication, identified by a number (e.g., 80 for HTTP, 22 for SSH). Ports allow applications to share the same IP address while communicating with different services."
+      "answer": "A network port is a logical endpoint for communication, identified by a number (e.g., 80 for HTTP, 22 for SSH). Ports allow applications to share the same IP address while communicating with different services.",
+      "tags": [
+        "ports"
+      ]
     },
     {
       "id": "socket_definition",
       "type": "basic",
       "question": "What is a socket in networking?",
-      "answer": "A socket is an endpoint for communication between two devices on a network. It consists of an IP address and a port number, enabling applications to send and receive data."
+      "answer": "A socket is an endpoint for communication between two devices on a network. It consists of an IP address and a port number, enabling applications to send and receive data.",
+      "tags": [
+        "ports"
+      ]
     },
     {
       "id": "ports_vs_sockets",
       "type": "basic",
       "question": "What is the difference between a port and a socket in networking?",
-      "answer": "A port is a numbered endpoint that identifies specific services on a device (e.g., port 80 for HTTP). A socket combines an IP address and a port number to create a unique endpoint for communication."
+      "answer": "A port is a numbered endpoint that identifies specific services on a device (e.g., port 80 for HTTP). A socket combines an IP address and a port number to create a unique endpoint for communication.",
+      "tags": [
+        "ports"
+      ]
     },
     {
       "id": "common_ports",
       "type": "basic",
       "question": "What are some common network ports and their purposes?",
-      "answer": "- <{start-bold}>80<{end-bold}>: HTTP (web traffic)\n- <{start-bold}>443<{end-bold}>: HTTPS (secure web traffic)\n- <{start-bold}>22<{end-bold}>: SSH (secure shell for remote access)\n- <{start-bold}>25<{end-bold}>: SMTP (email sending)\n- <{start-bold}>53<{end-bold}>: DNS (domain name resolution)"
+      "answer": "- <{start-bold}>80<{end-bold}>: HTTP (web traffic)\n- <{start-bold}>443<{end-bold}>: HTTPS (secure web traffic)\n- <{start-bold}>22<{end-bold}>: SSH (secure shell for remote access)\n- <{start-bold}>25<{end-bold}>: SMTP (email sending)\n- <{start-bold}>53<{end-bold}>: DNS (domain name resolution)",
+      "tags": [
+        "ports"
+      ]
     },
     {
       "id": "socket_communication_typing",
       "type": "typing",
       "question": "Which combination creates a unique network communication endpoint?",
-      "answer": "IP address + Port number"
+      "answer": "IP address + Port number",
+      "tags": [
+        "ports"
+      ]
     },
     {
       "id": "socket_roles",
       "type": "basic",
       "question": "What roles do sockets play in network communication?",
-      "answer": "Sockets allow applications to send and receive data by creating unique communication endpoints using a combination of IP addresses and port numbers."
+      "answer": "Sockets allow applications to send and receive data by creating unique communication endpoints using a combination of IP addresses and port numbers.",
+      "tags": [
+        "ports"
+      ]
     },
     {
       "id": "tcp_vs_udp_ports",
       "type": "basic",
       "question": "Do TCP and UDP use the same port numbers, and how are they different?",
-      "answer": "TCP and UDP can use the same port numbers, but they handle data differently. <{start-bold}>TCP<{end-bold}> provides reliable, connection-oriented communication, while <{start-bold}>UDP<{end-bold}> offers faster, connectionless communication without guarantees of delivery."
+      "answer": "TCP and UDP can use the same port numbers, but they handle data differently. <{start-bold}>TCP<{end-bold}> provides reliable, connection-oriented communication, while <{start-bold}>UDP<{end-bold}> offers faster, connectionless communication without guarantees of delivery.",
+      "tags": [
+        "ports",
+        "protocols"
+      ]
     },
     {
       "id": "port_numbers_ranges",
       "type": "basic",
       "question": "What are the three main ranges of port numbers in networking?",
-      "answer": "- <{start-bold}>Well-Known Ports (0-1023)<{end-bold}>: Reserved for system services (e.g., HTTP, SSH).\n- <{start-bold}>Registered Ports (1024-49151)<{end-bold}>: Assigned for user applications by IANA.\n- <{start-bold}>Dynamic/Private Ports (49152-65535)<{end-bold}>: Used for ephemeral connections."
+      "answer": "- <{start-bold}>Well-Known Ports (0-1023)<{end-bold}>: Reserved for system services (e.g., HTTP, SSH).\n- <{start-bold}>Registered Ports (1024-49151)<{end-bold}>: Assigned for user applications by the  Internet Assigned Numbers Authority (IANA).\n- <{start-bold}>Dynamic/Private Ports (49152-65535)<{end-bold}>: Used for ephemeral connections.",
+      "tags": [
+        "ports"
+      ]
     },
     {
       "id": "port_safety_typing",
       "type": "typing",
       "question": "Which port is used for secure web traffic?",
-      "answer": "443"
+      "answer": "443",
+      "tags": [
+        "ports"
+      ]
     },
     {
       "id": "ip_link_show_output",
@@ -1625,25 +1616,28 @@
       "question": "What can you learn from this output?<br><br>/n <{start-terminal}> /n $ ip link show /n stefan@Melian:~$ ip link show /n 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000 /n link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 /n 2: enp0s25: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000 /n link/ether 3c:97:0e:be:c4:9d brd ff:ff:ff:ff:ff:ff /n 4: wlp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000 /n link/ether 60:67:20:b7:33:40 brd ff:ff:ff:ff:ff:ff /n 5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:45:be:22:62 brd ff:ff:ff:ff:ff:ff /n 6: br-cd55516d845e: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:84:81:e9:09 brd ff:ff:ff:ff:ff:ff /n 7: br-f31e1b65f3fc: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:4a:b4:7d:6a brd ff:ff:ff:ff:ff:ff /n 8: br-f5d3455a961d: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:cd:ef:5c:14 brd ff:ff:ff:ff:ff:ff /n 9: br-0416cfb330e8: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:84:3b:84:f2 brd ff:ff:ff:ff:ff:ff /n 10: br-385ac45e7493: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default  /n link/ether 02:42:e7:be:6d:03 brd ff:ff:ff:ff:ff:ff /n 49: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 /n link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff /n stefan@Melian:~$ ls^C /n stefan@Melian:~$  /n /n /n /n <{end-terminal}>",
       "answer": "This output provides details on the network interfaces on your system.<{start-ol}><{start-numbered-item}><{start-bold}>index and name for each interface:<{end-bold}> lo -> loopback, enp0s25 -> ethernet, wlp3s0 -> wireless, docker0 -> virtual interface used by docker, br* -> bridge interfaces created by virtualization software or sandbox enviroments (flatpack, snap), -> wwx* or wlx* are typically network devices connected via usb<{end-numbered-item}><{start-numbered-item}><{start-bold}>interface flags in angle brackets <...><{end-bold}> LOOPBACK used for internal communication, UP interface is operational, LOWER_UP physical link is acive, NO-CARRIER not connected, BROADCAST / MULTICAST indicates interface supports this traffic<{end-numbered-item}><{start-numbered-item}><{start-bold}>Maximum Transmission Unit (MTU):<{end-bold}> largest packet size the interface can handle<{end-numbered-item}><{start-numbered-item}><{start-bold}>Queueing Discipline (Qdisc):<{end-bold}> noqueue for loopback, fq_model is fair queue controlled delay<{end-numbered-item}><{start-numbered-item}><{start-bold}>State<{end-bold}> loopback is always operational<{end-numbered-item}><{start-numbered-item}><{start-bold}>MAC address<{end-bold}><{end-numbered-item}><{start-numbered-item}><{start-bold}>Queue length (qlen):<{end-bold}> max. nr. of packages to be queued<{end-numbered-item}><{start-numbered-item}><{start-bold}>Group:<{end-bold}> Standard Group is default<{end-numbered-item}><{start-numbered-item}><{start-bold}>Broadcast address (brd):<{end-bold}> messages sent to this address is processed by all devies on the subnet - used for adress resolution, discovery protocolls, DHCP (Dynamic Host Configuration Protocol) requests - ff:ff:ff:ff:ff:ff is a special address defined by IEEE 802.3<{end-numbered-item}><{end-ol}>",
       "tags": [
-        "linux",
-        "networking"
+        "commands",
+        "ip"
       ]
     },
     {
       "id": "ip_link_show_typing",
       "type": "typing",
       "question": "What command can you use to gather information about the network interfaces on your machine?",
-      "answer": "ip link show"
+      "answer": "ip link show",
+      "tags": [
+        "commands",
+        "ip"
+      ]
     },
     {
       "id": "usb_network_interface_details",
       "type": "basic",
-      "question": "What does the following output for the interface `wwx0215e0ec0100` indicate?<{break}><{break}><{start-terminal}>11: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000<{break}>    link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff<{end-terminal}>",
+      "question": "What does the following output of the command <{start-terminal}>ip link show<{end-terminal}> for the interface `wwx0215e0ec0100` indicate?<{break}><{break}><{start-terminal}>11: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000<{break}>    link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff<{end-terminal}>",
       "answer": "The interface `wwx0215e0ec0100` is likely a USB network device (e.g., a tethered smartphone or USB modem).<br><{break}>- **BROADCAST, MULTICAST:** Supports broadcast and multicast communication.<br><{break}>- **MTU 1500:** Standard maximum packet size for Ethernet.<br><{break}>- **qdisc noop:** No traffic shaping or scheduling is applied.<br><{break}>- **State DOWN:** The interface is inactive (not connected or configured).<br><{break}>- **MAC Address (link/ether):** `02:15:e0:ec:01:00` identifies the device.<br><{break}>- **Broadcast Address:** `ff:ff:ff:ff:ff:ff` for local network communication.",
       "tags": [
-        "linux",
-        "networking",
-        "usb"
+        "commands",
+        "ip"
       ]
     },
     {
@@ -1652,10 +1646,7 @@
       "question": "How do virtual bridges (`br-*`) relate to sandboxing environments like Flatpak, Snap, or Docker?",
       "answer": "Virtual bridges (`br-*`) are used to create isolated network environments for sandboxed applications. In systems using Flatpak or Snap, these bridges provide secure communication between applications, the host, and the internet. They act as intermediaries, ensuring isolation and preventing direct access to the host system's network.",
       "tags": [
-        "linux",
-        "networking",
-        "flatpak",
-        "snap"
+        "devices"
       ]
     },
     {
@@ -1664,8 +1655,8 @@
       "question": "How can you inspect bridge interfaces in Linux?",
       "answer": "<{start-h2}>To inspect bridge interfaces in Linux:<{end-h2}><{break}><{break}><{bullet-item}><{start-bold}>Install `bridge-utils`:<{end-bold}><{end-bullet-item}><{break}><{start-terminal}>sudo apt install bridge-utils<{end-terminal}><{break}><{break}><{bullet-item}><{start-bold}>Use `brctl`:<{end-bold}><{end-bullet-item}><{break}><{start-terminal}>brctl show<{end-terminal}><{break}><{break}><{bullet-item}><{start-bold}>Alternative Commands:<{end-bold}><{end-bullet-item}><{break}><{start-ol}><{break}><{start-numbered-item}>ip link show (view bridges as network interfaces).<{end-numbered-item}><{break}><{start-numbered-item}>nmcli connection show (if using NetworkManager).<{end-numbered-item}><{break}><{start-numbered-item}>docker network ls (for Docker bridges).<{end-numbered-item}><{break}><{end-ol}>",
       "tags": [
-        "linux",
-        "networking",
+        "commands",
+        "devices",
         "bridges"
       ]
     },
@@ -1676,7 +1667,6 @@
       "answer": "The broadcast MAC address `ff:ff:ff:ff:ff:ff` is a special reserved address used to send frames to all devices on the local network segment (LAN).<br><{break}>- <{start-bold}>Binary Representation:<{end-bold}> All bits are set to 1 (`11111111:11111111:11111111:11111111:11111111:11111111`).<br><{break}>- <{start-bold}>Defined by Standard:<{end-bold}> It is specified by the IEEE 802.3 standard.<br><{break}>- <{start-bold}>Purpose:<{end-bold}> Used for network-wide communication, such as ARP requests, DHCP discovery, and service discovery.<br><{break}>- <{start-bold}>Local Use:<{end-bold}> Broadcast frames are confined to the local network and are forwarded to all devices by switches.<br><{break}>- <{start-bold}>Efficiency:<{end-bold}> Broadcasts are useful for small networks but can cause traffic issues on larger networks.",
       "tags": [
         "linux",
-        "networking",
         "broadcast"
       ]
     },
@@ -1685,6 +1675,7 @@
       "type": "basic",
       "question": "What is the difference between the commands `ip link show` and `ip addr show`?",
       "answer": "`ip link show` focuses on link-layer details such as the MAC address, interface state (UP/DOWN), and MTU. `ip addr show` includes these details but also displays IP-layer information, such as assigned IP addresses, scopes, and broadcast addresses."
+      , "tags": ["commands"]
     },
     {
       "id": "networkd_agnostic_1",
@@ -1692,7 +1683,7 @@
       "question": "What is a distro-agnostic lightweight network management daemon for servers and minimal setups?",
       "answer": "systemd-networkd",
       "tags": [
-        "networking",
+        "tools",
         "distro-agnostic"
       ]
     },
@@ -1702,7 +1693,7 @@
       "question": "What is the distro-agnostic desktop-oriented network manager for Wi-Fi, VPNs, Ethernet, and more?",
       "answer": "NetworkManager",
       "tags": [
-        "networking",
+        "tools",
         "distro-agnostic"
       ]
     },
@@ -1712,7 +1703,7 @@
       "question": "What is the modern, distro-agnostic replacement for iptables, used for firewalls and packet filtering?",
       "answer": "nftables",
       "tags": [
-        "networking",
+        "tools",
         "distro-agnostic",
         "firewall"
       ]
@@ -1723,7 +1714,7 @@
       "question": "What is a distro-agnostic tool for analyzing packets to troubleshoot and monitor network traffic?",
       "answer": "tcpdump",
       "tags": [
-        "networking",
+        "tools",
         "distro-agnostic",
         "troubleshooting"
       ]
@@ -1734,7 +1725,7 @@
       "question": "What is a distro-agnostic tool for querying DNS records and troubleshooting DNS resolution?",
       "answer": "dig",
       "tags": [
-        "networking",
+        "tools",
         "distro-agnostic",
         "dns"
       ]
@@ -1745,7 +1736,7 @@
       "question": "What is the distro-agnostic command-line interface for inspecting and managing systemd-networkd configurations?",
       "answer": "networkctl",
       "tags": [
-        "networking",
+        "tools",
         "distro-agnostic"
       ]
     },
@@ -1755,7 +1746,7 @@
       "question": "Which is the abstraction used by Ubuntu to configure networks declaratively?",
       "answer": "Netplan",
       "tags": [
-        "networking",
+        "tools",
         "ubuntu",
         "abstraction"
       ]
@@ -1766,9 +1757,9 @@
       "question": "Which tool, commonly used in Fedora, acts as the default desktop-oriented network manager?",
       "answer": "NetworkManager",
       "tags": [
-        "networking",
+        "tools",
         "fedora",
-        "desktop"
+        "NetworkManager"
       ]
     },
     {
@@ -1777,7 +1768,7 @@
       "question": "What is the distro-agnostic command-line tool for managing and displaying IP addresses, links, and routes? (e.g., ip addr show)",
       "answer": "ip",
       "tags": [
-        "networking",
+        "tools",
         "distro-agnostic",
         "iproute2"
       ]
@@ -1788,7 +1779,7 @@
       "question": "Which package should you install to use tools like 'dig' and 'nslookup'?",
       "answer": "bind-utils or dnsutils",
       "tags": [
-        "networking",
+        "tools",
         "packages",
         "dns"
       ]
@@ -1799,7 +1790,7 @@
       "question": "Which package should you install to use the 'ip' command for managing IP addresses and routes?",
       "answer": "iproute2",
       "tags": [
-        "networking",
+        "tools",
         "packages"
       ]
     },
@@ -1809,7 +1800,7 @@
       "question": "Which package should you install to use the modern firewall management tool replacing iptables?",
       "answer": "nftables",
       "tags": [
-        "networking",
+        "tools",
         "packages",
         "firewall"
       ]
@@ -1820,7 +1811,7 @@
       "question": "Which package should you install to use the packet analyzer 'tcpdump'?",
       "answer": "tcpdump",
       "tags": [
-        "networking",
+        "tools",
         "packages",
         "troubleshooting"
       ]
@@ -1831,16 +1822,18 @@
       "question": "Which package should you install to manage and inspect network interface hardware settings (e.g., speed, duplex)?",
       "answer": "ethtool",
       "tags": [
-        "networking",
+        "tools",
         "packages",
-        "hardware"
+        "hardware",
+	"ethtool"
       ]
     },
     {
       "id": "linux_check_nic",
       "type": "typing",
       "question": "What command can you use to find network interfaces in Linux?",
-      "answer": "ip link show"
+      "answer": "ip link show",
+      "tags": ["tools", "ip"]
     },
     {
       "id": "bridge_interface_details",
@@ -1848,8 +1841,7 @@
       "question": "How can you identify and associate bridge interfaces in Linux using `nmcli` and `brctl`?",
       "answer": "<{start-h2}>Bridge Interface Identification:<{end-h2}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>nmcli connection show<{end-terminal}>` to list bridges managed by NetworkManager, showing UUIDs and associated devices.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>nmcli connection show<{break}>NAME                UUID                                  TYPE      DEVICE          <{break}>br-0416cfb330e8     3f586c70-4b29-40a0-89b9-25a0b7738ecd  bridge    br-0416cfb330e8<{break}><{end-terminal}><{break}><{break}><{bullet-item}>Use `<{start-terminal}>brctl show<{end-terminal}>` to list bridges, their IDs, and STP status.<{end-bullet-item}><{break}><{break}>Example:<{break}><{start-terminal}>brctl show<{break}>bridge name\tbridge id\t\tSTP enabled\tinterfaces<{break}>br-0416cfb330e8\t8000.0242afeb4189\tno<{break}><{end-terminal}>",
       "tags": [
-        "linux",
-        "networking",
+        "tools",
         "bridges"
       ]
     },
@@ -1857,25 +1849,29 @@
       "id": "linux_assign_static_ip",
       "type": "basic",
       "question": "How do you assign a static IP to a network interface in Linux?",
-      "answer": "Use the command `ip addr add [IP]/[CIDR] dev [interface]`, e.g., `ip addr add 192.168.1.100/24 dev eth0`. Note that this change is temporary and will be lost after a reboot."
+      "answer": "Use the command `ip addr add [IP]/[CIDR] dev [interface]`, e.g., `ip addr add 192.168.1.100/24 dev eth0`. Note that this change is temporary and will be lost after a reboot.",
+      "tags": ["tools", "ip"]
     },
     {
       "id": "persist_static_ip_linux",
       "type": "basic",
       "question": "How do you configure a static IP address in Linux so it persists after a reboot?",
-      "answer": "To configure a persistent static IP address in Linux, use `systemd-networkd`:\n\n1. Create or edit a file like `/etc/systemd/network/10-static.network` with the following content:\n```ini\n[Match]\nName=eth0\n\n[Network]\nAddress=192.168.1.100/24\nGateway=192.168.1.1\nDNS=8.8.8.8\n```\n2. Restart `systemd-networkd`:\n<{start-terminal}>\nsudo systemctl restart systemd-networkd\n<{end-terminal}>"
+      "answer": "To configure a persistent static IP address in Linux, use `systemd-networkd`:\n\n1. Create or edit a file like `/etc/systemd/network/10-static.network` with the following content:\n  <{start-terminal}>ini\n[Match]\nName=eth0\n\n[Network]\nAddress=192.168.1.100/24\nGateway=192.168.1.1\nDNS=8.8.8.8\n<{end-terminal}>\n 2. Restart `systemd-networkd`:\n<{start-terminal}>\nsudo systemctl restart systemd-networkd\n<{end-terminal}>",
+      "tags": ["tools", "ip"]
     },
     {
       "id": "revert_to_dynamic_ip",
       "type": "basic",
       "question": "How do you revert a network interface to use dynamic IP assignment in Linux?",
-      "answer": "To revert a network interface to dynamic IP assignment:\n\n1. If using `systemd-networkd`, modify the `.network` file, e.g., `/etc/systemd/network/10-static.network`:\n```ini\n[Match]\nName=eth0\n\n[Network]\nDHCP=yes\n```\n2. Restart `systemd-networkd`:\n<{start-terminal}>\nsudo systemctl restart systemd-networkd\n<{end-terminal}>\n\nAlternatively, if you're using a temporary setup, restart the network service or delete the static IP with:\n<{start-terminal}>\nsudo ip addr flush dev eth0\nsudo dhclient eth0\n<{end-terminal}>"
+      "answer": "To revert a network interface to dynamic IP assignment:\n\n1. If using `systemd-networkd`, modify the `.network` file, e.g., `/etc/systemd/network/10-static.network`:\n<{start-terminal}>ini\n[Match]\nName=eth0\n\n[Network]\nDHCP=yes\n<{end-terminal}\n2. Restart `systemd-networkd`:\n<{start-terminal}>\nsudo systemctl restart systemd-networkd\n<{end-terminal}>\n\nAlternatively, if you're using a temporary setup, restart the network service or delete the static IP with:\n<{start-terminal}>\nsudo ip addr flush dev eth0\nsudo dhclient eth0\n<{end-terminal}>"
+      , "tags": ["tools", "ip"]
     },
     {
       "id": "linux_static_ip_persistent_ubuntu",
       "type": "basic",
       "question": "How do you configure a persistent static IP in Ubuntu?",
       "answer": "In Ubuntu, a persistent static IP can be configured using Netplan. Follow these updated steps to avoid warnings:<{break}><{break}>1. Edit the Netplan configuration file, e.g., `/etc/netplan/01-netcfg.yaml`:<{break}><{break}><{start-terminal}><{break}>network:<{break}>  version: 2<{break}>  renderer: networkd<{break}>  ethernets:<{break}>    eth0:<{break}>      dhcp4: no<{break}>      addresses:<{break}>        - 192.168.1.100/24<{break}>      routes:<{break}>        - to: 0.0.0.0/0<{break}>          via: 192.168.1.1<{break}>      nameservers:<{break}>        addresses:<{break}>          - 8.8.8.8<{break}><{end-terminal}><{break}><{break}>2. Apply the configuration using the terminal command:<{break}><{break}><{start-terminal}><{break}>sudo netplan apply<{break}><{end-terminal}><{break}><{break}>This setup avoids warnings and ensures the changes are persistent across reboots."
+      , "tags": ["tools", "ubuntu"]
     },
     {
       "id": "netplan_static_route_configuration",
@@ -1890,7 +1886,6 @@
       "answer": "Use `gateway` when:\n- You have a single default gateway for your network.\n- The network setup is simple (e.g., one interface, no advanced routing).\n- You want a concise configuration without advanced routing requirements.",
       "tags": [
         "netplan",
-        "networking",
         "gateway"
       ]
     },
@@ -1905,6 +1900,45 @@
         "routes"
       ]
     },
+
+  {
+    "id": "gateway_definition",
+    "type": "basic",
+    "question": "What is a gateway in networking?",
+    "answer": "A gateway is a device that acts as an access point between two different networks, often connecting a local network (e.g., a LAN) to a larger network (e.g., the internet). It translates protocols, routes traffic, and can enforce security policies.",
+ "tags": ["definition", "gateway"]
+  },
+  {
+    "id": "gateway_roles_use_cases",
+    "type": "basic",
+    "question": "What are the roles of a gateway in networking?",
+    "answer": "<{bullet-item}>Translating communication protocols between networks (e.g., IPv4 to IPv6)<{end-bullet-item}><{break}><{bullet-item}>Routing traffic from a local network to the internet<{end-bullet-item}><{break}><{bullet-item}>Acting as a firewall to enhance security<{end-bullet-item}><{break}><{bullet-item}>Connecting networks with different architectures, such as LANs and WANs<{end-bullet-item}>",
+    "tags": [ "gateway", "use_cases"]
+  },
+  {
+    "id": "gateway_examples",
+    "type": "basic",
+    "question": "How does a gateway differ in home and enterprise networks?",
+    "answer": "<{bullet-item}>In a home LAN, the router is typically the gateway, connecting devices to the internet<{end-bullet-item}><{break}><{bullet-item}>In enterprise networks, a Layer 3 switch can act as a gateway, connecting different VLANs and routing traffic between them<{end-bullet-item}>",
+    "tags": [ "gateway"]
+  },
+  {
+    "id": "layer2_gateway_hops",
+    "type": "basic",
+    "question": "If traffic is routed to a remote network, what is the Layer 2 hop destination?",
+    "answer": "When routing remote traffic, the Layer 2 (Data Link Layer) hop's destination is typically the gateway's MAC address. This allows the packet to leave the local subnet and reach its remote destination.",
+    "tags": ["osi", "gateway", "layer2"]
+  },
+  {
+    "id": "layer2_routing_flow",
+    "type": "basic",
+    "question": "How does a device in a local subnet send traffic to a remote destination?",
+    "answer": "<{bullet-item}>The device checks if the destination IP is within its subnet<{end-bullet-item}><{break}><{bullet-item}>If not, it sends the packet to the gateway (default router)<{end-bullet-item}><{break}><{bullet-item}>The gateway's MAC address is resolved using ARP, and the Layer 2 frame is sent to the gateway<{end-bullet-item}><{break}><{bullet-item}>The gateway routes the packet to the next hop or final destination<{end-bullet-item}>",
+    "tags": ["osi", "layer2", "gateway", "routing"]
+  }
+,
+
+
     {
       "id": "netplan_gateway_example",
       "type": "basic",
