@@ -1086,7 +1086,7 @@
       "id": "network_datagrams_definition",
       "type": "basic",
       "question": "What are datagrams in networking?",
-"answer": "Datagrams are units of data used in networking, with different contexts depending on the OSI layer:\n\n- **Layer 3 (Network layer):** An IP datagram (often called a 'packet') includes a Transport layer unit (e.g., a TCP segment or UDP datagram) with an IP header added for routing and addressing purposes.\n\n- **Layer 4 (Transport layer):** A UDP datagram consists of application data with a UDP header (containing source and destination ports, length, and checksum). It is used specifically for the UDP protocol, which is connectionless and lightweight.\n\nNote: While 'datagram' and 'packet' are often used interchangeably at the Network layer, 'datagram' emphasizes the connectionless nature of the communication.",
+      "answer": "Datagrams are units of data used in networking, with different contexts depending on the OSI layer:\n\n- **Layer 3 (Network layer):** An IP datagram (often called a 'packet') includes a Transport layer unit (e.g., a TCP segment or UDP datagram) with an IP header added for routing and addressing purposes.\n\n- **Layer 4 (Transport layer):** A UDP datagram consists of application data with a UDP header (containing source and destination ports, length, and checksum). It is used specifically for the UDP protocol, which is connectionless and lightweight.\n\nNote: While 'datagram' and 'packet' are often used interchangeably at the Network layer, 'datagram' emphasizes the connectionless nature of the communication.",
       "tags": [
         "osi"
       ]
@@ -1104,10 +1104,13 @@
     {
       "id": "segments_vs_datagrams_vs_frames_vs_packet",
       "type": "basic",
-      "question": "What are the roles of data segments, datagrams, packets and Ethernet frames in the OSI model?",
- "answer": "The terms data segment, packet and (Ethernet) frame are fairly well defined in the OSI model - the term datagram is used for multiple meanings:\n\n<{bullet-item}><{start-bold}>Segments<{end-bold}> are used for TCP/IP in Layer 4 (Transport) and contain the TCP header and the payload received from Layer 5<{end-bullet-item}><{bullet-item}><{start-bold}>UDP-Datagrams<{end-bold}> are used for UDP in Layer 4 (Transport) and contain the TCP header and the payload received from Layer 5<{end-bullet-item}><{bullet-item}><{start-bold}>Packets (sometimes also refered to as Datagams)<{end-bold}> are used in Layer 3 (Network) and contain the IP header and the Segment (TCP) or Datagram (UDP) received from Layer 4<{end-bullet-item}><{bullet-item}><{start-bold}>Ethernet Frames<{end-bold}> are used in Layer 2 (Data Link) and contain the MAC adresses of origin and destination and the Packet (aka Datagram) received from Layer 3<{end-bullet-item}>\n\nTo complete the confusion, <{start-bold}>Datagram<{end-bold}> is sometimes used in a broader sense describing any data structure passed between layers",
+      "question": "What are the roles of data segments, datagrams, packets, and Ethernet frames in the OSI model?",
+      "answer": "The terms <{start-bold}>data segment<{end-bold}>, <{start-bold}>packet<{end-bold}>, and <{start-bold}>(Ethernet) frame<{end-bold}> are fairly well-defined in the OSI model, while the term <{start-bold}>datagram<{end-bold}> is used with multiple meanings:\n\n<{bullet-item}><{start-bold}>Segments<{end-bold}> are used for <{start-bold}>TCP<{end-bold}> in Layer 4 (Transport) and contain the TCP header along with the payload received from Layer 5 (Session).<{end-bullet-item}>\n<{bullet-item}><{start-bold}>UDP Datagrams<{end-bold}> are used for <{start-bold}>UDP<{end-bold}> in Layer 4 (Transport) and contain the UDP header along with the payload received from Layer 5 (Session).<{end-bullet-item}>\n<{bullet-item}><{start-bold}>Packets (sometimes also referred to as Datagrams)<{end-bold}> are used in Layer 3 (Network) and contain the IP header along with the Segment (TCP) or Datagram (UDP) received from Layer 4.<{end-bullet-item}>\n<{bullet-item}><{start-bold}>Ethernet Frames<{end-bold}> are used in Layer 2 (Data Link) and contain the MAC addresses of the source and destination, along with the Packet (or Datagram) received from Layer 3.<{end-bullet-item}>\n\nTo add to the confusion, <{start-bold}>Datagram<{end-bold}> is sometimes used in a broader sense to describe any self-contained data structure passed between layers.",
       "tags": [
-        "osi"
+        "osi",
+        "networking",
+        "transport",
+        "data-link"
       ]
     },
     {
@@ -1128,20 +1131,18 @@
         "osi"
       ]
     },
-
-      {
-    "id": "tcp_protocols",
-    "type": "typing",
-    "question": "Name examples of high-level protocols that utilize TCP on Layer 4.",
-    "answer": "HTTP, FTP, SMTP, Telnet, SSH, HTTPS"
-  },
-  {
-    "id": "udp_protocols",
-    "type": "typing",
-    "question": "Name examples of high-level protocols that utilize UDP on Layer 4.",
-    "answer": "DNS, DHCP, VoIP, gaming protocols, TFTP, SNMP"
-  }
-,
+    {
+      "id": "tcp_protocols",
+      "type": "typing",
+      "question": "Name examples of high-level protocols that utilize TCP on Layer 4.",
+      "answer": "HTTP, FTP, SMTP, Telnet, SSH, HTTPS"
+    },
+    {
+      "id": "udp_protocols",
+      "type": "typing",
+      "question": "Name examples of high-level protocols that utilize UDP on Layer 4.",
+      "answer": "DNS, DHCP, VoIP, gaming protocols, TFTP, SNMP"
+    },
     {
       "id": "osi_end_to_end_vs_local",
       "type": "basic",
