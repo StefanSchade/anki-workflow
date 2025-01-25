@@ -1086,7 +1086,7 @@
       "id": "network_datagrams_definition",
       "type": "basic",
       "question": "What are datagrams in networking?",
-      "answer": "Datagrams are units of data used in the Network layer (OSI Layer 3). They consist of data segments from the Transport layer with an added IP header for routing purposes.",
+"answer": "Datagrams are units of data used in networking, with different contexts depending on the OSI layer:\n\n- **Layer 3 (Network layer):** An IP datagram (often called a 'packet') includes a Transport layer unit (e.g., a TCP segment or UDP datagram) with an IP header added for routing and addressing purposes.\n\n- **Layer 4 (Transport layer):** A UDP datagram consists of application data with a UDP header (containing source and destination ports, length, and checksum). It is used specifically for the UDP protocol, which is connectionless and lightweight.\n\nNote: While 'datagram' and 'packet' are often used interchangeably at the Network layer, 'datagram' emphasizes the connectionless nature of the communication.",
       "tags": [
         "osi"
       ]
@@ -1102,10 +1102,10 @@
       ]
     },
     {
-      "id": "segments_vs_datagrams_vs_frames",
+      "id": "segments_vs_datagrams_vs_frames_vs_packet",
       "type": "basic",
-      "question": "What are the roles of data segments, datagrams, and Ethernet frames in the OSI model?",
-      "answer": "Data segments operate at Layer 4 (Transport Layer) to ensure proper delivery of application data. Datagrams operate at Layer 3 (Network Layer) to handle routing between networks. Ethernet frames operate at Layer 2 (Data Link Layer) for local transmission using MAC addresses.",
+      "question": "What are the roles of data segments, datagrams, packets and Ethernet frames in the OSI model?",
+ "answer": "The terms data segment, packet and (Ethernet) frame are fairly well defined in the OSI model - the term datagram is used for multiple meanings:\n\n<{bullet-item}><{start-bold}>Segments<{end-bold}> are used for TCP/IP in Layer 4 (Transport) and contain the TCP header and the payload received from Layer 5<{end-bullet-item}><{bullet-item}><{start-bold}>UDP-Datagrams<{end-bold}> are used for UDP in Layer 4 (Transport) and contain the TCP header and the payload received from Layer 5<{end-bullet-item}><{bullet-item}><{start-bold}>Packets (sometimes also refered to as Datagams)<{end-bold}> are used in Layer 3 (Network) and contain the IP header and the Segment (TCP) or Datagram (UDP) received from Layer 4<{end-bullet-item}><{bullet-item}><{start-bold}>Ethernet Frames<{end-bold}> are used in Layer 2 (Data Link) and contain the MAC adresses of origin and destination and the Packet (aka Datagram) received from Layer 3<{end-bullet-item}>\n\nTo complete the confusion, <{start-bold}>Datagram<{end-bold}> is sometimes used in a broader sense describing any data structure passed between layers",
       "tags": [
         "osi"
       ]
@@ -1123,11 +1123,25 @@
       "id": "data_encapsulation_osi_layers",
       "type": "basic",
       "question": "How do Ethernet frames, datagrams, and segments relate to OSI layers, and how are they encapsulated?",
-      "answer": "<{start-table}><{break}><{start-tr}><{start-td}><{start-bold}>OSI Layer<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulation Unit<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulates<{end-bold}><{end-td}><{start-td}><{start-bold}>Adds<{end-bold}><{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 7 (Application)<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>N/A<{end-td}><{start-td}>Application-Specific Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 6 (Presentation)<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>Presentation Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 5 (Session)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Session Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 4 (Transport)<{end-td}><{start-td}>Segment (TCP) / Datagram (UDP)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>TCP/UDP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 3 (Network)<{end-td}><{start-td}>Datagram (Packet)<{end-td}><{start-td}>Transport Layer Data<{end-td}><{start-td}>IP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 2 (Data Link)<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Network Layer Data<{end-td}><{start-td}>MAC Header + FCS<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 1 (Physical)<{end-td}><{start-td}>Bits<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Physical Encoding<{end-td}>{<end-tr}><{break}><{end-table}>",
+      "answer": "<{start-table}><{break}><{start-tr}><{start-td}><{start-bold}>OSI Layer<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulation Unit<{end-bold}><{end-td}><{start-td}><{start-bold}>Encapsulates<{end-bold}><{end-td}><{start-td}><{start-bold}>Adds<{end-bold}><{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 7 (Application)<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>N/A<{end-td}><{start-td}>Application-Specific Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 6 (Presentation)<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Application Data<{end-td}><{start-td}>Presentation Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 5 (Session)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>Presentation Data<{end-td}><{start-td}>Session Headers<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 4 (Transport)<{end-td}><{start-td}>Segment (TCP) / Datagram (UDP)<{end-td}><{start-td}>Session Data<{end-td}><{start-td}>TCP/UDP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 3 (Network)<{end-td}><{start-td}>Datagram (Packet)<{end-td}><{start-td}>Transport Layer Data<{end-td}><{start-td}>IP Header<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 2 (Data Link)<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Network Layer Data<{end-td}><{start-td}>MAC Header + FCS<{end-td}>{<end-tr}><{break}><{start-tr}><{start-td}>Layer 1 (Physical)<{end-td}><{start-td}>Bits<{end-td}><{start-td}>Ethernet Frame<{end-td}><{start-td}>Physical Encoding<{end-td}>{<end-tr}><{break}><{end-table}> When Layer 4 names both segment and datagram as the encapsulation unit, this is because it depends on the protocol. TCP provides the capability to assemble multiple segments (each containing a datagram with a theoretical maximum length of 64 KB). In contrast, UDP lacks the segment container and, therefore, the assembly capability. As a result, UDP communication is limited by the MTU (Maximum Transmission Unit) minus headers, which typically results in a maximum message length of approximately 1.4 KB for Ethernet.",
       "tags": [
         "osi"
       ]
     },
+
+      {
+    "id": "tcp_protocols",
+    "type": "typing",
+    "question": "Name examples of high-level protocols that utilize TCP on Layer 4.",
+    "answer": "HTTP, FTP, SMTP, Telnet, SSH, HTTPS"
+  },
+  {
+    "id": "udp_protocols",
+    "type": "typing",
+    "question": "Name examples of high-level protocols that utilize UDP on Layer 4.",
+    "answer": "DNS, DHCP, VoIP, gaming protocols, TFTP, SNMP"
+  }
+,
     {
       "id": "osi_end_to_end_vs_local",
       "type": "basic",
