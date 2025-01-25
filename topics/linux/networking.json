@@ -802,9 +802,142 @@
       "id": "ethernet_frame_etherType_values",
       "type": "basic",
       "question": "What are common values for the EtherType field in an Ethernet frame?",
-      "answer": "Common values include 0x0800 for IPv4 and 0x86DD for ARP (Address Resolution Protocol).",
+      "answer": "Common EtherType values include:\n\n<{bullet-item}><{start-bold}>0x0800<{end-bold}>: IPv4<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x0806<{end-bold}>: ARP<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x86DD<{end-bold}>: IPv6<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x8100<{end-bold}>: VLAN-tagged frames (IEEE 802.1Q)<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x88CC<{end-bold}>: LLDP<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x8808<{end-bold}>: Ethernet flow control<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x8035<{end-bold}>: RARP<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x0842<{end-bold}>: Wake-on-LAN<{end-bullet-item}>",
       "tags": [
-        "ethernet"
+        "ethernet",
+        "protocols"
+      ]
+    },
+    {
+      "id": "ethernet_etherType_purpose",
+      "type": "basic",
+      "question": "What is the EtherType field in an Ethernet frame?",
+      "answer": "The EtherType is a 16-bit field that specifies the protocol encapsulated in the payload. It enables efficient identification of the protocol by switches, routers, and other devices and simplifies filtering for troubleshooting.",
+      "tags": [
+        "ethernet",
+        "protocols"
+      ]
+    },
+    {
+      "id": "ethernet_why_protocols_use_etherType",
+      "type": "basic",
+      "question": "Why do protocols like ARP have their own EtherType?",
+      "answer": "Protocols like ARP, IPv4, and VLANs have their own EtherType to distinguish their frames from others. This allows network devices to efficiently identify and process frames, and it simplifies filtering for troubleshooting.",
+      "tags": [
+        "ethernet",
+        "protocols"
+      ]
+    },
+    {
+      "id": "ethernet_etherType_lookup",
+      "type": "basic",
+      "question": "Where can you find a comprehensive list of EtherType values?",
+      "answer": "The complete list of EtherType assignments is maintained by the IEEE and IANA. You can access it at [IANA EtherType Registry](https://www.iana.org/assignments/ieee-802-numbers).",
+      "tags": [
+        "ethernet",
+        "resources"
+      ]
+    },
+    {
+      "id": "ethernet_etherType_ranges",
+      "type": "basic",
+      "question": "What are the ranges of EtherType values, and what do they indicate?",
+      "answer": "EtherType values are grouped into the following ranges:\n\n- **0x0000–0x05FF**: Reserved for IEEE 802 experimental protocols.\n- **0x0600–0xFFFF**: Assigned to various protocols (both standard and proprietary).\n- **Proprietary Use:** Some vendors use their own EtherType values in the higher range.",
+      "tags": [
+        "ethernet",
+        "protocols"
+      ]
+    },
+    {
+      "id": "ethernet_common_etherType_values",
+      "type": "basic",
+      "question": "What are common EtherType values in Ethernet frames?",
+      "answer": "Common EtherType values include:\n\n<{bullet-item}><{start-bold}>0x0800<{end-bold}>: IPv4<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x0806<{end-bold}>: ARP<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x86DD<{end-bold}>: IPv6<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x8100<{end-bold}>: VLAN-tagged frames (IEEE 802.1Q)<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x88CC<{end-bold}>: LLDP<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x8808<{end-bold}>: Ethernet flow control<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x8035<{end-bold}>: RARP<{end-bullet-item}>\n<{bullet-item}><{start-bold}>0x0842<{end-bold}>: Wake-on-LAN<{end-bullet-item}>",
+      "tags": [
+        "ethernet",
+        "protocols"
+      ]
+    },
+    {
+      "id": "ethernet_etherType_typing_ipv4",
+      "type": "typing",
+      "question": "What EtherType value is used for IPv4?",
+      "answer": "0x0800",
+      "tags": [
+        "ethernet",
+        "ipv4"
+      ]
+    },
+    {
+      "id": "ethernet_etherType_typing_arp",
+      "type": "typing",
+      "question": "What is the EtherType value for ARP?",
+      "answer": "0x0806",
+      "tags": [
+        "ethernet",
+        "arp"
+      ]
+    },
+    {
+      "id": "ethernet_etherType_typing_ipv6",
+      "type": "typing",
+      "question": "Which EtherType indicates IPv6?",
+      "answer": "0x86DD",
+      "tags": [
+        "ethernet",
+        "ipv6"
+      ]
+    },
+    {
+      "id": "ethernet_etherType_typing_vlan",
+      "type": "typing",
+      "question": "Which EtherType is used for VLAN-tagged frames?",
+      "answer": "0x8100",
+      "tags": [
+        "ethernet",
+        "vlan"
+      ]
+    },
+    {
+      "id": "ethernet_troubleshooting_wireshark",
+      "type": "basic",
+      "question": "How can you use EtherType filtering in Wireshark?",
+      "answer": "In Wireshark, you can filter traffic by EtherType using expressions like:\n\n- `eth.type == 0x0800`: Display only IPv4 frames.\n- `eth.type == 0x0806`: Display only ARP frames.\n- `eth.type == 0x8100`: Display VLAN-tagged frames.\n\nThis helps isolate traffic for troubleshooting specific protocols.",
+      "tags": [
+        "ethernet",
+        "wireshark",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "ethernet_troubleshooting_tcpdump",
+      "type": "basic",
+      "question": "How can you filter Ethernet frames by EtherType using tcpdump?",
+      "answer": "Use `tcpdump` with the `ether proto` filter:\n\n- `tcpdump ether proto 0x0800`: Capture IPv4 frames.\n- `tcpdump ether proto 0x0806`: Capture ARP frames.\n\nThis is useful for command-line troubleshooting when analyzing specific types of traffic.",
+      "tags": [
+        "ethernet",
+        "tcpdump",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "ethernet_lldp_overview",
+      "type": "basic",
+      "question": "What is LLDP, and what is its EtherType?",
+      "answer": "LLDP (Link Layer Discovery Protocol) is used for device discovery and management in networks. Its EtherType is 0x88CC.",
+      "tags": [
+        "ethernet",
+        "lldp"
+      ]
+    },
+    {
+      "id": "ethernet_macsec_overview",
+      "type": "basic",
+      "question": "What is MACSec, and what is its EtherType?",
+      "answer": "MACSec (Media Access Control Security) provides data confidentiality, integrity, and origin authenticity. Its EtherType is 0x88E5.",
+      "tags": [
+        "ethernet",
+        "security"
       ]
     },
     {
