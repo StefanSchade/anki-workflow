@@ -1076,21 +1076,25 @@
       "id": "data_segments_definition",
       "type": "basic",
       "question": "What are data segments in networking?",
-      "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers, such as TCP or UDP headers.",
+      "answer": "Data segments are units of data used in the Transport layer (OSI Layer 4). They include the application data along with transport layer headers and are used in TCP. take care as the the equivalent data structures for the UDP (also Layer 4) are called UDP-datagrams or just datagrams creating ambiguity as the term datagram is also used in Layer 3 and elsewhere.",
       "tags": [
         "802",
         "osi"
       ]
     },
-    {
-      "id": "network_datagrams_definition",
-      "type": "basic",
-      "question": "What are datagrams in networking?",
-      "answer": "Datagrams are units of data used in networking, with different contexts depending on the OSI layer:\n\n- **Layer 3 (Network layer):** An IP datagram (often called a 'packet') includes a Transport layer unit (e.g., a TCP segment or UDP datagram) with an IP header added for routing and addressing purposes.\n\n- **Layer 4 (Transport layer):** A UDP datagram consists of application data with a UDP header (containing source and destination ports, length, and checksum). It is used specifically for the UDP protocol, which is connectionless and lightweight.\n\nNote: While 'datagram' and 'packet' are often used interchangeably at the Network layer, 'datagram' emphasizes the connectionless nature of the communication.",
-      "tags": [
-        "osi"
-      ]
-    },
+
+{
+  "id": "network_datagrams_definition",
+  "type": "basic",
+  "question": "What are datagrams in networking?",
+  "answer": "The term <{start-bold}>datagram<{end-bold}> in networking is used in different contexts and does not follow a single standardized definition. Unlike other terms such as <{start-bold}>segment<{end-bold}> or <{start-bold}>frame<{end-bold}>, <{start-bold}>datagram<{end-bold}> can have slightly different meanings depending on its use:<{break}>\n\n<{start-ol}>\n<{start-numbered-item}><{start-bold}>Layer 4 (Transport layer):<{end-bold}> At this level, a clear distinction is made between <{start-bold}>TCP segments<{end-bold}> and <{start-bold}>UDP datagrams<{end-bold}>. The term <{start-bold}>UDP datagram<{end-bold}> refers to a data structure containing application data and a UDP header. This naming convention reflects the connectionless nature of UDP.<{end-numbered-item}>\n\n<{start-numbered-item}><{start-bold}>Layer 3 (Network layer):<{end-bold}> At this level, <{start-bold}>datagram<{end-bold}> is often used interchangeably with <{start-bold}>packet<{end-bold}>. However, by convention (not a strict rule), the use of <{start-bold}>datagram<{end-bold}> at this layer might suggest that the payload contains a UDP message rather than a TCP message.<{end-numbered-item}>\n\n<{start-numbered-item}><{start-bold}>General Use: <{end-bold}> More broadly, the term <{start-bold}>datagram<{end-bold}> refers to a data structure exchanged between layers in a network protocol. Conventionally, it implies a connectionless or stateless communication rather than stateful communication.<{end-numbered-item}>\n<{end-ol}>\n\n<{start-bold}>Remark:<{end-bold}> The distinction between stateless and stateful communication at lower layers is not inherent, as the IP protocol itself is stateless. The use of <{start-bold}>datagram<{end-bold}> often points to the character of the payload from higher layers (e.g., UDP vs. TCP). This lack of strict standardization might explain why the term <{start-bold}>datagram<{end-bold}> has multiple overlapping usages in networking.",
+  "tags": [
+    "osi"
+  ]
+}
+
+,
+
     {
       "id": "ethernet_frames_definition",
       "type": "basic",
