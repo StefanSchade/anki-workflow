@@ -32,6 +32,8 @@ tag_replacements = {
     "<{end-numbered-item}>": "</li>",
     "<{start-ol}>": "<ol style=\"text-align: left;\">",
     "<{end-ol}>": "</ol>",
+    "<{start-ul}>": "<ul style=\"text-align: left;\">",
+    "<{end-ul}>": "</ul>",    
     "<{break}>": "<br>",
 }
 

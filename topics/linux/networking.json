@@ -1609,25 +1609,70 @@
         "definition"
       ]
     },
-    {
-      "id": "multiple_ips_per_interface",
-      "type": "basic",
-      "question": "Can a single device have multiple IP addresses across different interfaces? How is this configured?",
-      "answer": "Yes, a single device can have multiple IP addresses, one for each network interface. Each interface (e.g., `eth0`, `wlp3s0`) can be configured independently with its own:<br><{break}><{bullet-item}>IP address<{end-bullet-item}><{break}><{bullet-item}>Subnet mask<{end-bullet-item}><{break}><{bullet-item}>Gateway and DNS settings<{end-bullet-item}><br><{break}><{break}>For example, using `nmcli`:<br><{break}><{start-terminal}>sudo nmcli connection modify 'eth0' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><br><{break}><{start-terminal}>sudo nmcli connection modify 'wlp3s0' ipv4.method manual ipv4.addresses 192.168.2.50/24 ipv4.gateway 192.168.2.1 ipv4.dns 8.8.4.4 connection.autoconnect yes<{end-terminal}>",
-      "tags": [
-        "interfaces"
-      ]
-    },
 
+{
+  "id": "multiple_ips_per_interface",
+  "type": "basic",
+  "question": "Can a single device have multiple IP addresses across different interfaces? How is this configured?",
+  "answer": "<{start-h2}>Configuring Multiple IPs Across Interfaces:<{end-h2}><{break}><{break}>"
+     "<{bullet-item}>Yes, a single device can have multiple IP addresses, one for each network interface.<{end-bullet-item}><{break}>"
+     "<{start-ol}>"
+     "<{start-numbered-item}>Each interface (e.g., `eth0`, `wlp3s0`) can be configured independently with:<{end-numbered-item}>"
+     "<{start-ul}>"
+     "<{bullet-item}>An IP address<{end-bullet-item}>"
+     "<{bullet-item}>A subnet mask<{end-bullet-item}>"
+     "<{bullet-item}>Gateway and DNS settings<{end-bullet-item}>"
+     "<{end-ul}>"
+     "<{start-numbered-item}>Example Configuration Using `nmcli`:<{end-numbered-item}>"
+     "<{start-ul}>"
+     "<{bullet-item}><{start-terminal}>sudo nmcli connection modify 'eth0' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}>"
+     "This command configures the following for `eth0`:<{start-ul}>"
+     "<{bullet-item}><{start-bold}>IP address:<{end-bold}> `192.168.1.100/24` (IP with subnet mask).<{end-bullet-item}>"
+     "<{bullet-item}><{start-bold}>Gateway:<{end-bold}> `192.168.1.1` (default route).<{end-bullet-item}>"
+     "<{bullet-item}><{start-bold}>DNS server:<{end-bold}> `8.8.8.8` (Google's DNS).<{end-bullet-item}>"
+     "<{bullet-item}><{start-bold}>Autoconnect:<{end-bold}> Ensures the connection is reactivated automatically at startup.<{end-bullet-item}>"
+     "<{end-ul}>"
+     "<{bullet-item}><{start-terminal}>sudo nmcli connection modify 'wlp3s0' ipv4.method manual ipv4.addresses 192.168.2.50/24 ipv4.gateway 192.168.2.1 ipv4.dns 8.8.4.4 connection.autoconnect yes<{end-terminal}><{break}>"
+     "This command configures the following for `wlp3s0`:<{start-ul}>"
+     "<{bullet-item}><{start-bold}>IP address:<{end-bold}> `192.168.2.50/24`.<{end-bullet-item}>"
+     "<{bullet-item}><{start-bold}>Gateway:<{end-bold}> `192.168.2.1`.<{end-bullet-item}>"
+     "<{bullet-item}><{start-bold}>DNS server:<{end-bold}> `8.8.4.4` (Google's secondary DNS).<{end-bullet-item}>"
+     "<{bullet-item}><{start-bold}>Autoconnect:<{end-bold}> Ensures the connection starts on boot.<{end-bullet-item}>"
+     "<{end-ul}>"
+    "<{end-ul}>"
+     "<{start-numbered-item}>Notes:<{end-numbered-item}>"
+     "<{start-ul}>"
+     "<{bullet-item}>Each interface must belong to a different subnet to avoid routing conflicts.<{end-bullet-item}>"
+     "<{bullet-item}>The gateway and DNS settings for each interface are specific to their respective subnets.<{end-bullet-item}>"
+     "<{bullet-item}>You can add more interfaces using the same method, each with unique IP settings.<{end-bullet-item}>"
+     "<{end-ul}>"
+     "<{end-ol}>",
+  "tags": [
+    "interfaces",
+    "networking",
+    "linux"
+  ]
+}
 
-
+,
 
     {
       "id": "port_aggregation_ip_assignment",
       "type": "basic",
       "question": "How is IP assignment handled when using port aggregation (e.g., LACP)?",
       "answer": "<{start-h2}>IP Assignment with Port Aggregation:<{end-h2}><{break}><{break}><{bullet-item}>Port aggregation combines multiple physical interfaces (e.g., `eth0`, `eth1`) into a single logical interface (e.g., `bond0`).<{end-bullet-item}><{break}><{bullet-item}>The IP address is assigned to the logical interface (`bond0`), not the individual physical interfaces.<{end-bullet-item}><{break}><{break}><{start-h3}>Configuration Example (Using NetworkManager):<{end-h3}><{break}> <{start-ol}> <{start-numbered-item}> Create a Bond Interface (bond0) <{end-numbered-item}> <{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{end-terminal}><{break}> <{bullet-item}> <{start-bold}> type bond: <{end-bold}> Specifies that we are creating a bonding connection. <{end-bullet-item}> <{bullet-item}> <{start-bold}> con-name bond0: <{end-bold}> Names the connection as bond0. <{end-bullet-item}> <{bullet-item}> <{start-bold}> ifname bond0: <{end-bold}> Defines the logical interface name. <{end-bullet-item}> <{bullet-item}> <{start-bold}> mode active-backup: <{end-bold}> Sets the bonding mode. In active-backup, one interface is active while the other is on standby. If the active interface fails, the standby interface takes over. <{end-bullet-item}> <{start-numbered-item}> Add Physical Interfaces to the Bond: <{end-numbered-item}> Adding eth0: <{break}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{end-terminal}><{break}> Adding eth1: <{break}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{end-terminal}><{break}> These commands link the physical interfaces (eth0 and eth1) to the bond (bond0). <{start-numbered-item}> Assign IP Address and Configure Network Settings: <{end-numbered-item}> <{break}><{start-terminal}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}> <{bullet-item}> <{start-bold}> ipv4.method manual: <{end-bold}> Sets manual IP assignment. <{end-bullet-item}> <{bullet-item}> <{start-bold}> ipv4.addresses 192.168.1.100/24: <{end-bold}> Assigns the IP address with a subnet mask. <{end-bullet-item}> <{bullet-item}> <{start-bold}> ipv4.gateway 192.168.1.1: <{end-bold}> Sets the default gateway. <{end-bullet-item}> <{bullet-item}> <{start-bold}> ipv4.dns 8.8.8.8: <{end-bold}> Configures the DNS server (Google DNS in this case). <{end-bullet-item}> <{bullet-item}> <{start-bold}> connection.autoconnect yes: <{end-bold}> Ensures the connection starts automatically on boot. <{end-bullet-item}> <{start-numbered-item}> Activate the Bond Interface: <{end-numbered-item}> <{break}><{start-terminal}>sudo nmcli connection up bond0<{end-terminal}><{end-ol}>",
-   "tags": [
+      "tags": [
+        "linux",
+        "networking",
+        "port_aggregation"
+      ]
+    },
+    {
+      "id": "port_aggregation_ip_assignment",
+      "type": "basic",
+      "question": "How is IP assignment handled when using port aggregation (e.g., LACP)?",
+      "answer": "<{start-h2}>IP Assignment with Port Aggregation:<{end-h2}><{break}><{break}><{start-ol}><{start-numbered-item}>Create a Bond Interface (bond0):<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-bold}>type bond:<{end-bold}> Specifies a bonding connection.<{end-bullet-item}><{bullet-item}><{start-bold}>mode active-backup:<{end-bold}> Sets bonding mode where one interface is active, the other is on standby.<{end-bullet-item}><{end-ul}><{start-numbered-item}>Add Physical Interfaces to the Bond:<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{end-terminal}><{end-bullet-item}><{bullet-item}>Links physical interfaces (eth0, eth1) to the bond (bond0).<{end-bullet-item}><{end-ul}><{start-numbered-item}>Assign IP Address and Configure Network Settings:<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-bold}>ipv4.method manual:<{end-bold}> Manual IP assignment.<{end-bullet-item}><{bullet-item}><{start-bold}>ipv4.gateway 192.168.1.1:<{end-bold}> Sets the gateway.<{end-bullet-item}><{end-ul}><{start-numbered-item}>Activate the Bond Interface:<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection up bond0<{end-terminal}><{end-bullet-item}><{end-ul}><{start-h3}>Bonding Modes:<{end-h3}><{start-ul}><{bullet-item}><{start-bold}>active-backup:<{end-bold}> One interface active; others on standby.<{end-bullet-item}><{bullet-item}><{start-bold}>balance-rr:<{end-bold}> Round-robin transmission.<{end-bullet-item}><{bullet-item}><{start-bold}>balance-xor:<{end-bold}> Transmit based on XOR formula.<{end-bullet-item}><{bullet-item}><{start-bold}>802.3ad (LACP):<{end-bold}> Dynamic link aggregation using LACP.<{end-bullet-item}><{end-ul}>",
+      "tags": [
         "linux",
         "networking",
         "port_aggregation"
