@@ -1161,9 +1161,6 @@
         "scalability"
       ]
     },
-
-
-
     {
       "id": "ping_tool_basic",
       "type": "basic",
@@ -1175,7 +1172,7 @@
         "layer3"
       ]
     },
-      {
+    {
       "id": "ethtool_basic",
       "type": "basic",
       "question": "What is the purpose of the <{start-bold}>ethtool<{end-bold}> command, and what OSI layer does it operate on?",
@@ -1185,7 +1182,8 @@
         "tools",
         "layer2"
       ]
-    },   {
+    },
+    {
       "id": "ethtool_diagnostic",
       "type": "basic",
       "question": "Which problems can the <{start-bold}>ethtool<{end-bold}> command troubleshoot, and what OSI layer are they associated with?",
@@ -1195,19 +1193,18 @@
         "tools",
         "layer2"
       ]
-    },   {
+    },
+    {
       "id": "ethtool_autoconfigure",
       "type": "basic",
-      "question": "What is a way of action if <{start-bold}>ethtool<{end-bold}> showed, that the autonegotiation between devices failed?",
-      "answer": " <{start-h2}>Non persistent solution<{end-h2}><{break}>One possible fix is to configure the autoegotiation manually, e.g. <{start-terminal}>sudo ethtool -s enp0s25 speed 100 duplex full autoneg of<{end-terminal}> The changes eththool applies to the network interface on runtime will not persist during reboot.  <{start-h2}>Persistent solution<{end-h2}><{break}> <{start-h3}>NetworkManager-based systems (e.g. Fedora, UbuntuDesktop)<{end-h3}><{break}> Edit the Network-Manager config (either by editing a config file typically under `/etc/NetworkManager/system-connections/` or via NetworkManager<{break}><{start-terminal}>sudo nmcli connection modify \"Your Connection Name\" \nethernet.speed 100 \nethernet.duplex full \nethernet.auto-negotiation no\n<{end-terminal}>and start or restart the connection with <{start-terminal}>sudo nmcli connection up \"Your Connection Name\"<{end-terminal}> or <{start-terminal}>sudo nmcli connection reload \"Your Connection Name\"<{end-terminal}> <{start-h3}>systemd-based systems<{end-h3}><{break}> Edit or create a .network configuration file in /etc/systemd/network/: <{start-terminal}> [Match]\n Name=enp0s25\n \n [Link]\n AutoNegotiation=no\n Duplex=full\n Speed=100\n \n <{end-terminal}> and restart the service with <{start-terminal}>sudo systemctl restart systemd-networkd<{end-terminal}> <{start-h3}>Legacy ifupdown-based systems (e.g. Older Debian / Ubuntu)<{end-h3}><{break}> Edit /etc/network/interfaces <{start-terminal}> auto enp0s25\n iface enp0s25 inet dhcp\n pre-up ethtool -s enp0s25 speed 100 duplex full autoneg off\n <{end-terminal}> and restart the service with <{start-terminal}>sudo systemctl restart networking<{end-terminal}> <{start-h3}>Red-Hat-based systems (e.g. CentOS, RHEL)<{end-h3}><{break}> NetworkManager is supported starting from REHL8 - server admins however often use the classic way of editing the interface configuration file in `/etc/sysconfig/network-scripts/ifcfg-enp0s25` like this: <{start-terminal}> ETHTOOL_OPTS=\"speed 100 duplex full autoneg off\" <{end-terminal}> and restart networing with <{start-terminal}> sudo systemctl restart network <{end-terminal}> ",
+      "question": "What actions can you take if <{start-bold}>ethtool<{end-bold}> shows that auto-negotiation between devices failed?",
+      "answer": "<{start-h2}>Non-persistent solution<{end-h2}><{break}>You can manually configure the settings at runtime using <{start-terminal}>sudo ethtool -s enp0s25 speed 100 duplex full autoneg off<{end-terminal}>. This will apply the changes immediately but will not persist after a reboot.<{break}><{break}><{start-h2}>Persistent solution<{end-h2}><{break}><{start-h3}>NetworkManager-based systems (e.g., Fedora, Ubuntu Desktop)<{end-h3}><{break}>Use NetworkManager's CLI or edit its configuration files. Example:<{break}><{start-terminal}>sudo nmcli connection modify \"Your Connection Name\" \nethernet.speed 100 \nethernet.duplex full \nethernet.auto-negotiation no<{end-terminal}><{break}>Restart the connection:<{start-terminal}>sudo nmcli connection up \"Your Connection Name\"<{end-terminal}><{break}><{start-h3}>Systemd-based systems<{end-h3}><{break}>Create or edit a `.network` file in `/etc/systemd/network/`:<{break}><{start-terminal}>[Match]\nName=enp0s25\n\n[Link]\nAutoNegotiation=no\nDuplex=full\nSpeed=100<{end-terminal}><{break}>Restart the service:<{start-terminal}>sudo systemctl restart systemd-networkd<{end-terminal}><{break}><{start-h3}>Legacy ifupdown-based systems (e.g., Older Debian/Ubuntu)<{end-h3}><{break}>Edit `/etc/network/interfaces` to include:<{break}><{start-terminal}>auto enp0s25\niface enp0s25 inet dhcp\npre-up ethtool -s enp0s25 speed 100 duplex full autoneg off<{end-terminal}><{break}>Restart networking:<{start-terminal}>sudo systemctl restart networking<{end-terminal}><{break}><{start-h3}>Red Hat-based systems (e.g., CentOS, RHEL)<{end-h3}><{break}>For RHEL 8+ systems, use NetworkManager (as shown above). For older systems, edit the interface configuration file in `/etc/sysconfig/network-scripts/ifcfg-enp0s25`:<{break}><{start-terminal}>ETHTOOL_OPTS=\"speed 100 duplex full autoneg off\"<{end-terminal}><{break}>Restart networking:<{start-terminal}>sudo systemctl restart network<{end-terminal}>",
       "tags": [
         "osi",
         "tools",
-        "layer2"
+        "layer1"
       ]
     },
-
-
     {
       "id": "ethtool_typing",
       "type": "typing",
@@ -1289,7 +1286,7 @@
       "id": "tcpdump_interpretation",
       "type": "basic",
       "question": "The command <{start-terminal}>tcpdump -i eth0 port 80<{end-terminal}> captures in- and outgoing traffic at port 80 of the interface (-i) eth0 on the packet level (Layer 3).<{break}><{break}>Analyze the following captured packet to interpret events in the Network layer (OSI Layer 3):\n<{start-terminal}><{break}>10:12:34.567890 IP 192.168.1.2.12345 > 192.168.1.1.80: Flags [S], seq 1234567890, win 65535, options [mss 1460], length 0<{break}><{end-terminal}> What does this packet indicate?",
-"answer": "<{start-bold}>Observation: <{end-bold}><{break}><{bullet-item}>Flags refers to the TCP control flags, which indicate the purpouse of the packet in the TCP communication process - in this case S stands for SYN (synchronize)<{end-bullet-item}><{bullet-item}>The IP adresses communicate source and destination of the IP header<{end-bullet-item}><{bullet-item}>the Sequence number is part of the TCP handshake<{end-bullet-item}><{bullet-item}>mms gives the maximum number of bytes the sender can handle in one segment, the value is typical for ethernet<{end-bullet-item}><{bullet-item}>the length gives the length of the data payload and 0 is typical of the handshake as it carries no payload<{end-bullet-item}><{break}><{break}><{start-bold}>Conclusion: <{end-bold}>This is a TCP SYN packet from `192.168.1.2` (port 12345) to `192.168.1.1` (port 80). It indicates the initiation of a TCP handshake at the Network layer (Layer 3).",
+      "answer": "<{start-bold}>Observation: <{end-bold}><{break}><{bullet-item}>Flags refers to the TCP control flags, which indicate the purpouse of the packet in the TCP communication process - in this case S stands for SYN (synchronize)<{end-bullet-item}><{bullet-item}>The IP adresses communicate source and destination of the IP header<{end-bullet-item}><{bullet-item}>the Sequence number is part of the TCP handshake<{end-bullet-item}><{bullet-item}>mms gives the maximum number of bytes the sender can handle in one segment, the value is typical for ethernet<{end-bullet-item}><{bullet-item}>the length gives the length of the data payload and 0 is typical of the handshake as it carries no payload<{end-bullet-item}><{break}><{break}><{start-bold}>Conclusion: <{end-bold}>This is a TCP SYN packet from `192.168.1.2` (port 12345) to `192.168.1.1` (port 80). It indicates the initiation of a TCP handshake at the Network layer (Layer 3).",
       "tags": [
         "osi",
         "tools",
