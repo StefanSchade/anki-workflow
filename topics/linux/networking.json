@@ -1161,50 +1161,53 @@
         "scalability"
       ]
     },
+
+
+
     {
       "id": "ping_tool_basic",
       "type": "basic",
-      "question": "What is the purpose of the `ping` command in networking, and how does it relate to the Network layer (OSI Layer 3)?",
-      "answer": "The `ping` command tests connectivity between your system and a target host, using ICMP packets to measure latency and packet loss. It operates at the Network layer (Layer 3) of the OSI model.",
+      "question": "Explain the `ping` command and its relation to the Network layer (OSI Layer 3)?",
+      "answer": "The `ping` command tests connectivity between your system and a target host. It sends an echo request using ICMP packets - Internet Control Message Protocol operates at Layer 3. The Network layer of the target host on receiving the signal issues a reply signal. This helps to confirm connectivity and to measure latency or packet loss. As it operates at the Network layer (Layer 3) of the OSI model it is unaffected by potential issues above that. The usage is: <{start-terminal}>ping <TARGET_HOST_IP><{end-terminal}><{break}><{break}>Ping is one of the most ubiquitous tools to test connectivity.",
       "tags": [
         "osi",
         "tools",
         "layer3"
       ]
     },
-    {
-      "id": "ping_tool_typing",
-      "type": "typing",
-      "question": "To observe events in the Network layer (OSI Layer 3), type the command to check if the host <{start-bold}>8.8.8.8<{end-bold}> is reachable.",
-      "answer": "ping 8.8.8.8",
-      "tags": [
-        "osi",
-        "tools",
-        "layer3"
-      ]
-    },
-    {
-      "id": "ping_tool_interpretation",
-      "type": "basic",
-      "question": "Analyze the following output and identify the issue for the Network layer (OSI Layer 3):\n<{start-terminal}><{break}>PING 8.8.8.8 (8.8.8.8): 56 data bytes<{break}>Request timeout for icmp_seq 0<{break}>Request timeout for icmp_seq 1<{break}><{end-terminal}>",
-      "answer": "The target host is unreachable, possibly due to network misconfiguration, firewall restrictions, or connectivity issues at the Network layer (Layer 3) of the OSI model.",
-      "tags": [
-        "osi",
-        "tools",
-        "layer3"
-      ]
-    },
-    {
+      {
       "id": "ethtool_basic",
       "type": "basic",
-      "question": "What is the purpose of the `ethtool` command, and how does it relate to the Data Link layer (OSI Layer 2)?",
-      "answer": "The `ethtool` command is used to query and modify network interface card (NIC) settings, such as speed, duplex mode, and link status. It operates at the Data Link layer (Layer 2) of the OSI model.",
+      "question": "What is the purpose of the <{start-bold}>ethtool<{end-bold}> command, and what OSI layer does it operate on?",
+      "answer": "The <{start-bold}>ethtool<{end-bold}> command is used to query and modify network interface card (NIC) settings, such as speed, duplex mode, and link status. It operates at the Data Link layer (Layer 2) of the OSI model, thus it helps to troubleshoot the first 2 layers.",
+      "tags": [
+        "osi",
+        "tools",
+        "layer2"
+      ]
+    },   {
+      "id": "ethtool_diagnostic",
+      "type": "basic",
+      "question": "Which problems can the <{start-bold}>ethtool<{end-bold}> command troubleshoot, and what OSI layer are they associated with?",
+      "answer": "The <{start-bold}>ethtool<{end-bold}> command is used to query and modify network interface card (NIC) settings, such as speed, duplex mode, and link status. It operates at the Data Link layer (Layer 2) of the OSI model, thus it helps to troubleshoot the first 2 layers for issues like:  <{break}><{start-h2}>Layer 1<{end-h2}><{break}><{bullet-item}>connectivity issues caused by a lack of physical connection (faulty or disconnected cables, issues with the physical port)<{end-bullet-item}><{bullet-item}>performance and connectivity issues caused by a missmatch in speed negotiation<{end-bullet-item}><{bullet-item}>autonegotiation deactivated<{end-bullet-item}> <{break}> <{break}><{start-h2}>Layer 2<{end-h2}><{break}><{bullet-item}>driver and firmware issues with the interface (use -i option for information and -d for diagnostics)<{end-bullet-item}><{bullet-item}>Provided the basic command reveals a support for Wake-on-WLAN it can be activated by<{start-terminal}>sudo ethtool -s enp0s25 wol g<{end-terminal}><{end-bullet-item}><{bullet-item}>Check and toggle offloading (pushing CPU tasks on the NIC for performance optimization) with -k option<{end-bullet-item}><{bullet-item}>Check for errors, packet drops, errors using the -Si for Statistics option<{end-bullet-item}> <{break}>",
+      "tags": [
+        "osi",
+        "tools",
+        "layer2"
+      ]
+    },   {
+      "id": "ethtool_autoconfigure",
+      "type": "basic",
+      "question": "What is a way of action if <{start-bold}>ethtool<{end-bold}> showed, that the autonegotiation between devices failed?",
+      "answer": " <{start-h2}>Non persistent solution<{end-h2}><{break}>One possible fix is to configure the autoegotiation manually, e.g. <{start-terminal}>sudo ethtool -s enp0s25 speed 100 duplex full autoneg of<{end-terminal}> The changes eththool applies to the network interface on runtime will not persist during reboot.  <{start-h2}>Persistent solution<{end-h2}><{break}> <{start-h3}>NetworkManager-based systems (e.g. Fedora, UbuntuDesktop)<{end-h3}><{break}> Edit the Network-Manager config (either by editing a config file typically under `/etc/NetworkManager/system-connections/` or via NetworkManager<{break}><{start-terminal}>sudo nmcli connection modify \"Your Connection Name\" \nethernet.speed 100 \nethernet.duplex full \nethernet.auto-negotiation no\n<{end-terminal}>and start or restart the connection with <{start-terminal}>sudo nmcli connection up \"Your Connection Name\"<{end-terminal}> or <{start-terminal}>sudo nmcli connection reload \"Your Connection Name\"<{end-terminal}> <{start-h3}>systemd-based systems<{end-h3}><{break}> Edit or create a .network configuration file in /etc/systemd/network/: <{start-terminal}> [Match]\n Name=enp0s25\n \n [Link]\n AutoNegotiation=no\n Duplex=full\n Speed=100\n \n <{end-terminal}> and restart the service with <{start-terminal}>sudo systemctl restart systemd-networkd<{end-terminal}> <{start-h3}>Legacy ifupdown-based systems (e.g. Older Debian / Ubuntu)<{end-h3}><{break}> Edit /etc/network/interfaces <{start-terminal}> auto enp0s25\n iface enp0s25 inet dhcp\n pre-up ethtool -s enp0s25 speed 100 duplex full autoneg off\n <{end-terminal}> and restart the service with <{start-terminal}>sudo systemctl restart networking<{end-terminal}> <{start-h3}>Red-Hat-based systems (e.g. CentOS, RHEL)<{end-h3}><{break}> NetworkManager is supported starting from REHL8 - server admins however often use the classic way of editing the interface configuration file in `/etc/sysconfig/network-scripts/ifcfg-enp0s25` like this: <{start-terminal}> ETHTOOL_OPTS=\"speed 100 duplex full autoneg off\" <{end-terminal}> and restart networing with <{start-terminal}> sudo systemctl restart network <{end-terminal}> ",
       "tags": [
         "osi",
         "tools",
         "layer2"
       ]
     },
+
+
     {
       "id": "ethtool_typing",
       "type": "typing",
@@ -1285,8 +1288,8 @@
     {
       "id": "tcpdump_interpretation",
       "type": "basic",
-      "question": "Analyze the following captured packet to interpret events in the Network layer (OSI Layer 3):\n<{start-terminal}><{break}>10:12:34.567890 IP 192.168.1.2.12345 > 192.168.1.1.80: Flags [S], seq 1234567890, win 65535, options [mss 1460], length 0<{break}><{end-terminal}> What does this packet indicate?",
-      "answer": "This is a TCP SYN packet from `192.168.1.2` (port 12345) to `192.168.1.1` (port 80). It indicates the initiation of a TCP handshake at the Network layer (Layer 3).",
+      "question": "The command <{start-terminal}>tcpdump -i eth0 port 80<{end-terminal}> captures in- and outgoing traffic at port 80 of the interface (-i) eth0 on the packet level (Layer 3).<{break}><{break}>Analyze the following captured packet to interpret events in the Network layer (OSI Layer 3):\n<{start-terminal}><{break}>10:12:34.567890 IP 192.168.1.2.12345 > 192.168.1.1.80: Flags [S], seq 1234567890, win 65535, options [mss 1460], length 0<{break}><{end-terminal}> What does this packet indicate?",
+"answer": "<{start-bold}>Observation: <{end-bold}><{break}><{bullet-item}>Flags refers to the TCP control flags, which indicate the purpouse of the packet in the TCP communication process - in this case S stands for SYN (synchronize)<{end-bullet-item}><{bullet-item}>The IP adresses communicate source and destination of the IP header<{end-bullet-item}><{bullet-item}>the Sequence number is part of the TCP handshake<{end-bullet-item}><{bullet-item}>mms gives the maximum number of bytes the sender can handle in one segment, the value is typical for ethernet<{end-bullet-item}><{bullet-item}>the length gives the length of the data payload and 0 is typical of the handshake as it carries no payload<{end-bullet-item}><{break}><{break}><{start-bold}>Conclusion: <{end-bold}>This is a TCP SYN packet from `192.168.1.2` (port 12345) to `192.168.1.1` (port 80). It indicates the initiation of a TCP handshake at the Network layer (Layer 3).",
       "tags": [
         "osi",
         "tools",
@@ -1378,7 +1381,7 @@
       "id": "osi_encapsulation_visualized",
       "type": "basic",
       "question": "What does the encapsulation structure of an Ethernet frame containing a packet and a segment look like?",
-      "answer": "The structure is: | Ethernet Header (MAC addresses) | IP Header (source/destination IP) | TCP/UDP Header (source/destination port) | Application Data |.",
+      "answer": "The structure is: | Ethernet Header (MAC addresses) | IP Header (source/destination IP) | TCP Header (source/destination port) | Application Data |.",
       "tags": [
         "osi"
       ]
