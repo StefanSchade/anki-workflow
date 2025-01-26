@@ -1887,6 +1887,10 @@
         "comparison"
       ]
     },
+
+
+
+
     {
       "id": "network_management_tools_overview",
       "type": "basic",
@@ -2171,16 +2175,13 @@
         "subnet"
       ]
     },
-    {
-      "id": "subnet_mask_internal_networks",
-      "type": "basic",
-      "question": "How are subnet masks used in internal networks?",
-      "answer": "Subnet masks are used to segment an internal network into subnets, grouping devices and determining whether an IP address is local or requires routing across subnets.",
-      "tags": [
-        "protocols",
-        "subnet"
-      ]
-    },
+ {
+  "id": "subnet_mask_usage",
+  "type": "basic",
+  "question": "How are subnet masks used in internal networks?",
+  "answer": "<{start-h2}>Subnet Masks in Internal Networks:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Purpose:<{end-bold}> Subnet masks define the boundary of a subnet, grouping devices within a network.<{end-bullet-item}><{bullet-item}><{start-bold}>Function:<{end-bold}> Determines whether an IP address is within the same subnet (local) or requires routing to another subnet.<{end-bullet-item}><{bullet-item}><{start-bold}>Example:<{end-bold}> A subnet mask of `255.255.255.0` divides the network `192.168.1.0/24`, grouping devices with IPs in the range `192.168.1.1` to `192.168.1.254`.<{end-bullet-item}><{end-ul}>",
+  "tags": ["protcols", "subnet"]
+},
     {
       "id": "nat_subnet_mask_relationship",
       "type": "basic",
@@ -2330,16 +2331,19 @@
         "ip"
       ]
     },
-    {
-      "id": "usb_network_interface_details",
-      "type": "basic",
-      "question": "What does the following output of the command <{start-terminal}>ip link show<{end-terminal}> for the interface `wwx0215e0ec0100` indicate?<{break}><{break}><{start-terminal}>11: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000<{break}>    link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff<{end-terminal}>",
-      "answer": "The interface `wwx0215e0ec0100` is likely a USB network device (e.g., a tethered smartphone or USB modem).<br><{break}>- **BROADCAST, MULTICAST:** Supports broadcast and multicast communication.<br><{break}>- **MTU 1500:** Standard maximum packet size for Ethernet.<br><{break}>- **qdisc noop:** No traffic shaping or scheduling is applied.<br><{break}>- **State DOWN:** The interface is inactive (not connected or configured).<br><{break}>- **MAC Address (link/ether):** `02:15:e0:ec:01:00` identifies the device.<br><{break}>- **Broadcast Address:** `ff:ff:ff:ff:ff:ff` for local network communication.",
-      "tags": [
-        "commands",
-        "ip"
-      ]
-    },
+
+{
+  "id": "usb_network_interface_details",
+  "type": "basic",
+  "question": "What does the following output of the command <{start-terminal}>ip link show<{end-terminal}> for the interface `wwx0215e0ec0100` indicate?<{break}><{break}><{start-terminal}>11: wwx0215e0ec0100: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000<{break}>    link/ether 02:15:e0:ec:01:00 brd ff:ff:ff:ff:ff:ff<{end-terminal}>",
+  "answer": "The interface `wwx0215e0ec0100` is likely a USB network device (e.g., a tethered smartphone or USB modem).<{break}>- <{start-bold}>BROADCAST, MULTICAST:<{end-bold}> Supports broadcast and multicast communication.<{break}>- <{start-bold}>MTU 1500:<{end-bold}> Standard maximum packet size for Ethernet.<{break}>- <{start-bold}>qdisc noop:<{end-bold}> No traffic shaping or scheduling is applied.<{break}>- <{start-bold}>State DOWN:<{end-bold}> The interface is inactive (not connected or configured).<{break}>- <{start-bold}>MAC Address (link/ether):<{end-bold}> `02:15:e0:ec:01:00` identifies the device.<{break}>- <{start-bold}>Broadcast Address:<{end-bold}> `ff:ff:ff:ff:ff:ff` for local network communication.",
+  "tags": [
+    "commands",
+    "ip"
+  ]
+}
+,
+
     {
       "id": "bridge_interfaces_sandboxing",
       "type": "basic",
