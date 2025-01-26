@@ -1228,6 +1228,87 @@
       ]
     },
     {
+      "id": "ifconfig_deprecated",
+      "type": "basic",
+      "question": "Which modern tool replaced the once-popular but now deprecated 'ifconfig' command, and why?",
+      "answer": "The 'ifconfig' command, part of the net-tools package, was replaced by the 'ip' command from the iproute2 package. The 'ip' command offers more powerful, flexible, and extensible options for managing network configurations. Modern Linux distributions prioritize 'ip' as 'ifconfig' is no longer maintained and lacks support for newer features like advanced routing and VLAN management.",
+      "tags": [
+        "tools",
+        "networking",
+        "legacy"
+      ]
+    },
+    {
+      "id": "ip_addr_show",
+      "type": "basic",
+      "question": "What is the purpose of the 'ip addr show' command?",
+      "answer": "The 'ip addr show' command displays all IP addresses assigned to network interfaces on a system. It is part of the iproute2 package and is the modern alternative to 'ifconfig'.",
+      "tags": [
+        "tools",
+        "iproute2",
+        "networking"
+      ]
+    },
+    {
+      "id": "ip_link_basic",
+      "type": "basic",
+      "question": "How can you bring a network interface up or down using the 'ip' command?",
+      "answer": "Use 'ip link set dev <interface> up' to bring an interface up, and 'ip link set dev <interface> down' to bring it down. For example: 'ip link set dev eth0 up'.",
+      "tags": [
+        "tools",
+        "iproute2",
+        "networking",
+        "layer2"
+      ]
+    },
+    {
+      "id": "ip_addr_flush",
+      "type": "basic",
+      "question": "How can you flush all IP addresses from an interface using the 'ip' command?",
+      "answer": "Use the 'ip addr flush dev <interface>' command to remove all IP addresses assigned to a specific interface. For example: 'ip addr flush dev eth0'.",
+      "tags": [
+        "tools",
+        "iproute2",
+        "networking",
+        "layer3"
+      ]
+    },
+    {
+      "id": "ip_route_add",
+      "type": "basic",
+      "question": "How do you add a static route to a specific network using the 'ip' command?",
+      "answer": "Use the command 'ip route add <network>/<mask> via <gateway>' to add a static route. For example: 'ip route add 192.168.1.0/24 via 192.168.1.1'.",
+      "tags": [
+        "tools",
+        "iproute2",
+        "networking",
+        "routing"
+      ]
+    },
+    {
+      "id": "ip_route_list",
+      "type": "basic",
+      "question": "Which command can you use to list all routes in the routing table using 'ip'?",
+      "answer": "The 'ip route show' command lists all routes in the routing table. It provides a modern alternative to 'route -n'.",
+      "tags": [
+        "tools",
+        "iproute2",
+        "networking",
+        "routing"
+      ]
+    },
+    {
+      "id": "ifconfig_vs_ip",
+      "type": "basic",
+      "question": "What are the key differences between 'ifconfig' and 'ip' commands?",
+      "answer": "The 'ifconfig' command is part of the deprecated net-tools package, while 'ip' is part of the modern iproute2 package. The 'ip' command provides broader functionality, including support for advanced routing, VLAN management, and IPv6, and is actively maintained. 'ifconfig' lacks many modern features and is no longer installed by default on most Linux distributions.",
+      "tags": [
+        "tools",
+        "networking",
+        "comparison"
+      ]
+    },
+    {
       "id": "ip_link_basic",
       "type": "basic",
       "question": "What is the purpose of the `ip link show` command, and how does it relate to the Data Link layer (OSI Layer 2)?",
@@ -1537,11 +1618,15 @@
         "interfaces"
       ]
     },
+
+
+
+
     {
       "id": "port_aggregation_ip_assignment",
       "type": "basic",
       "question": "How is IP assignment handled when using port aggregation (e.g., LACP)?",
-      "answer": "<{start-h2}>IP Assignment with Port Aggregation:<{end-h2}><{break}><{break}><{bullet-item}>Port aggregation combines multiple physical interfaces (e.g., `eth0`, `eth1`) into a single logical interface (e.g., `bond0`).<{end-bullet-item}><{break}><{bullet-item}>The IP address is assigned to the logical interface (`bond0`), not the individual physical interfaces.<{end-bullet-item}><{break}><{break}><{start-h3}>Configuration Example (Using NetworkManager):<{end-h3}><{break}><{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{break}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{break}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{break}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{break}>sudo nmcli connection up bond0<{end-terminal}>",
+      "answer": "<{start-h2}>IP Assignment with Port Aggregation:<{end-h2}><{break}><{break}><{bullet-item}>Port aggregation combines multiple physical interfaces (e.g., `eth0`, `eth1`) into a single logical interface (e.g., `bond0`).<{end-bullet-item}><{break}><{bullet-item}>The IP address is assigned to the logical interface (`bond0`), not the individual physical interfaces.<{end-bullet-item}><{break}><{break}><{start-h3}>Configuration Example (Using NetworkManager):<{end-h3}><{break}><{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{end-terminal}><{break}><{break}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{end-terminal}><{break}><{break}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{end-terminal}><{break}><{break}><{start-terminal}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}><{break}><{start-terminal}>sudo nmcli connection up bond0<{end-terminal}>",
       "tags": [
         "linux",
         "networking",

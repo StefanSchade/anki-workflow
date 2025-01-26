@@ -1161,9 +1161,6 @@
         "scalability"
       ]
     },
-
-
-
     {
       "id": "ping_tool_basic",
       "type": "basic",
@@ -1175,7 +1172,7 @@
         "layer3"
       ]
     },
-      {
+    {
       "id": "ethtool_basic",
       "type": "basic",
       "question": "What is the purpose of the <{start-bold}>ethtool<{end-bold}> command, and what OSI layer does it operate on?",
@@ -1185,7 +1182,8 @@
         "tools",
         "layer2"
       ]
-    },   {
+    },
+    {
       "id": "ethtool_diagnostic",
       "type": "basic",
       "question": "Which problems can the <{start-bold}>ethtool<{end-bold}> command troubleshoot, and what OSI layer are they associated with?",
@@ -1195,20 +1193,18 @@
         "tools",
         "layer2"
       ]
-    }, 
- {
-  "id": "ethtool_autoconfigure",
-  "type": "basic",
-  "question": "What actions can you take if <{start-bold}>ethtool<{end-bold}> shows that auto-negotiation between devices failed?",
-  "answer": "<{start-h2}>Non-persistent solution<{end-h2}><{break}>You can manually configure the settings at runtime using <{start-terminal}>sudo ethtool -s enp0s25 speed 100 duplex full autoneg off<{end-terminal}>. This will apply the changes immediately but will not persist after a reboot.<{break}><{break}><{start-h2}>Persistent solution<{end-h2}><{break}><{start-h3}>NetworkManager-based systems (e.g., Fedora, Ubuntu Desktop)<{end-h3}><{break}>Use NetworkManager's CLI or edit its configuration files. Example:<{break}><{start-terminal}>sudo nmcli connection modify \"Your Connection Name\" \nethernet.speed 100 \nethernet.duplex full \nethernet.auto-negotiation no<{end-terminal}><{break}>Restart the connection:<{start-terminal}>sudo nmcli connection up \"Your Connection Name\"<{end-terminal}><{break}><{start-h3}>Systemd-based systems<{end-h3}><{break}>Create or edit a `.network` file in `/etc/systemd/network/`:<{break}><{start-terminal}>[Match]\nName=enp0s25\n\n[Link]\nAutoNegotiation=no\nDuplex=full\nSpeed=100<{end-terminal}><{break}>Restart the service:<{start-terminal}>sudo systemctl restart systemd-networkd<{end-terminal}><{break}><{start-h3}>Legacy ifupdown-based systems (e.g., Older Debian/Ubuntu)<{end-h3}><{break}>Edit `/etc/network/interfaces` to include:<{break}><{start-terminal}>auto enp0s25\niface enp0s25 inet dhcp\npre-up ethtool -s enp0s25 speed 100 duplex full autoneg off<{end-terminal}><{break}>Restart networking:<{start-terminal}>sudo systemctl restart networking<{end-terminal}><{break}><{start-h3}>Red Hat-based systems (e.g., CentOS, RHEL)<{end-h3}><{break}>For RHEL 8+ systems, use NetworkManager (as shown above). For older systems, edit the interface configuration file in `/etc/sysconfig/network-scripts/ifcfg-enp0s25`:<{break}><{start-terminal}>ETHTOOL_OPTS=\"speed 100 duplex full autoneg off\"<{end-terminal}><{break}>Restart networking:<{start-terminal}>sudo systemctl restart network<{end-terminal}>",
-  "tags": [
-    "osi",
-    "tools",
-    "layer1"
-  ]
-}
-,
-
+    },
+    {
+      "id": "ethtool_autoconfigure",
+      "type": "basic",
+      "question": "What actions can you take if <{start-bold}>ethtool<{end-bold}> shows that auto-negotiation between devices failed?",
+      "answer": "<{start-h2}>Non-persistent solution<{end-h2}><{break}>You can manually configure the settings at runtime using <{start-terminal}>sudo ethtool -s enp0s25 speed 100 duplex full autoneg off<{end-terminal}>. This will apply the changes immediately but will not persist after a reboot.<{break}><{break}><{start-h2}>Persistent solution<{end-h2}><{break}><{start-h3}>NetworkManager-based systems (e.g., Fedora, Ubuntu Desktop)<{end-h3}><{break}>Use NetworkManager's CLI or edit its configuration files. Example:<{break}><{start-terminal}>sudo nmcli connection modify \"Your Connection Name\" \nethernet.speed 100 \nethernet.duplex full \nethernet.auto-negotiation no<{end-terminal}><{break}>Restart the connection:<{start-terminal}>sudo nmcli connection up \"Your Connection Name\"<{end-terminal}><{break}><{start-h3}>Systemd-based systems<{end-h3}><{break}>Create or edit a `.network` file in `/etc/systemd/network/`:<{break}><{start-terminal}>[Match]\nName=enp0s25\n\n[Link]\nAutoNegotiation=no\nDuplex=full\nSpeed=100<{end-terminal}><{break}>Restart the service:<{start-terminal}>sudo systemctl restart systemd-networkd<{end-terminal}><{break}><{start-h3}>Legacy ifupdown-based systems (e.g., Older Debian/Ubuntu)<{end-h3}><{break}>Edit `/etc/network/interfaces` to include:<{break}><{start-terminal}>auto enp0s25\niface enp0s25 inet dhcp\npre-up ethtool -s enp0s25 speed 100 duplex full autoneg off<{end-terminal}><{break}>Restart networking:<{start-terminal}>sudo systemctl restart networking<{end-terminal}><{break}><{start-h3}>Red Hat-based systems (e.g., CentOS, RHEL)<{end-h3}><{break}>For RHEL 8+ systems, use NetworkManager (as shown above). For older systems, edit the interface configuration file in `/etc/sysconfig/network-scripts/ifcfg-enp0s25`:<{break}><{start-terminal}>ETHTOOL_OPTS=\"speed 100 duplex full autoneg off\"<{end-terminal}><{break}>Restart networking:<{start-terminal}>sudo systemctl restart network<{end-terminal}>",
+      "tags": [
+        "osi",
+        "tools",
+        "layer1"
+      ]
+    },
     {
       "id": "ethtool_typing",
       "type": "typing",
@@ -1231,6 +1227,106 @@
         "layer2"
       ]
     },
+
+{
+  "id": "ifconfig_deprecated",
+  "type": "basic",
+  "question": "Which modern tool replaced the once-popular but now deprecated 'ifconfig' command, and why?",
+  "answer": "The 'ifconfig' command, part of the net-tools package, was replaced by the 'ip' command from the iproute2 package. The 'ip' command offers more powerful, flexible, and extensible options for managing network configurations. Modern Linux distributions prioritize 'ip' as 'ifconfig' is no longer maintained and lacks support for newer features like advanced routing and VLAN management.",
+  "tags": [
+    "tools",
+    "networking",
+    "legacy"
+  ]
+}
+,
+{
+  "id": "ip_addr_show",
+  "type": "basic",
+  "question": "What is the purpose of the 'ip addr show' command?",
+  "answer": "The 'ip addr show' command displays all IP addresses assigned to network interfaces on a system. It is part of the iproute2 package and is the modern alternative to 'ifconfig'.",
+  "tags": [
+    "tools",
+    "iproute2",
+    "networking"
+  ]
+}
+,
+{
+  "id": "ip_link_basic",
+  "type": "basic",
+  "question": "How can you bring a network interface up or down using the 'ip' command?",
+  "answer": "Use 'ip link set dev <interface> up' to bring an interface up, and 'ip link set dev <interface> down' to bring it down. For example: 'ip link set dev eth0 up'.",
+  "tags": [
+    "tools",
+    "iproute2",
+    "networking",
+    "layer2"
+  ]
+}
+
+,
+
+
+{
+  "id": "ip_addr_flush",
+  "type": "basic",
+  "question": "How can you flush all IP addresses from an interface using the 'ip' command?",
+  "answer": "Use the 'ip addr flush dev <interface>' command to remove all IP addresses assigned to a specific interface. For example: 'ip addr flush dev eth0'.",
+  "tags": [
+    "tools",
+    "iproute2",
+    "networking",
+    "layer3"
+  ]
+}
+,
+{
+  "id": "ip_route_add",
+  "type": "basic",
+  "question": "How do you add a static route to a specific network using the 'ip' command?",
+  "answer": "Use the command 'ip route add <network>/<mask> via <gateway>' to add a static route. For example: 'ip route add 192.168.1.0/24 via 192.168.1.1'.",
+  "tags": [
+    "tools",
+    "iproute2",
+    "networking",
+    "routing"
+  ]
+}
+,
+{
+  "id": "ip_route_list",
+  "type": "basic",
+  "question": "Which command can you use to list all routes in the routing table using 'ip'?",
+  "answer": "The 'ip route show' command lists all routes in the routing table. It provides a modern alternative to 'route -n'.",
+  "tags": [
+    "tools",
+    "iproute2",
+    "networking",
+    "routing"
+  ]
+}
+,
+{
+  "id": "ifconfig_vs_ip",
+  "type": "basic",
+  "question": "What are the key differences between 'ifconfig' and 'ip' commands?",
+  "answer": "The 'ifconfig' command is part of the deprecated net-tools package, while 'ip' is part of the modern iproute2 package. The 'ip' command provides broader functionality, including support for advanced routing, VLAN management, and IPv6, and is actively maintained. 'ifconfig' lacks many modern features and is no longer installed by default on most Linux distributions.",
+  "tags": [
+    "tools",
+    "networking",
+    "comparison"
+  ]
+}
+
+,
+
+
+
+
+
+
+
     {
       "id": "ip_link_basic",
       "type": "basic",
@@ -1290,7 +1386,7 @@
       "id": "tcpdump_interpretation",
       "type": "basic",
       "question": "The command <{start-terminal}>tcpdump -i eth0 port 80<{end-terminal}> captures in- and outgoing traffic at port 80 of the interface (-i) eth0 on the packet level (Layer 3).<{break}><{break}>Analyze the following captured packet to interpret events in the Network layer (OSI Layer 3):\n<{start-terminal}><{break}>10:12:34.567890 IP 192.168.1.2.12345 > 192.168.1.1.80: Flags [S], seq 1234567890, win 65535, options [mss 1460], length 0<{break}><{end-terminal}> What does this packet indicate?",
-"answer": "<{start-bold}>Observation: <{end-bold}><{break}><{bullet-item}>Flags refers to the TCP control flags, which indicate the purpouse of the packet in the TCP communication process - in this case S stands for SYN (synchronize)<{end-bullet-item}><{bullet-item}>The IP adresses communicate source and destination of the IP header<{end-bullet-item}><{bullet-item}>the Sequence number is part of the TCP handshake<{end-bullet-item}><{bullet-item}>mms gives the maximum number of bytes the sender can handle in one segment, the value is typical for ethernet<{end-bullet-item}><{bullet-item}>the length gives the length of the data payload and 0 is typical of the handshake as it carries no payload<{end-bullet-item}><{break}><{break}><{start-bold}>Conclusion: <{end-bold}>This is a TCP SYN packet from `192.168.1.2` (port 12345) to `192.168.1.1` (port 80). It indicates the initiation of a TCP handshake at the Network layer (Layer 3).",
+      "answer": "<{start-bold}>Observation: <{end-bold}><{break}><{bullet-item}>Flags refers to the TCP control flags, which indicate the purpouse of the packet in the TCP communication process - in this case S stands for SYN (synchronize)<{end-bullet-item}><{bullet-item}>The IP adresses communicate source and destination of the IP header<{end-bullet-item}><{bullet-item}>the Sequence number is part of the TCP handshake<{end-bullet-item}><{bullet-item}>mms gives the maximum number of bytes the sender can handle in one segment, the value is typical for ethernet<{end-bullet-item}><{bullet-item}>the length gives the length of the data payload and 0 is typical of the handshake as it carries no payload<{end-bullet-item}><{break}><{break}><{start-bold}>Conclusion: <{end-bold}>This is a TCP SYN packet from `192.168.1.2` (port 12345) to `192.168.1.1` (port 80). It indicates the initiation of a TCP handshake at the Network layer (Layer 3).",
       "tags": [
         "osi",
         "tools",
