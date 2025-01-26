@@ -1609,40 +1609,298 @@
         "definition"
       ]
     },
+
+
+{
+  "id": "network_segmentation_overview",
+  "type": "basic",
+  "question": "What are the main options for segmenting a network into pieces?",
+  "answer": "<{start-h2}>Overview of Network Segmentation:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Option 1: Physical Segmentation:<{end-bold}> Isolate traffic using separate physical interfaces (ports).<{end-bullet-item}><{bullet-item}><{start-bold}>Option 2: VLANs (Virtual Local Area Networks):<{end-bold}> Logically segment traffic at Layer 2 (Data Link Layer) using switches.<{end-bullet-item}><{bullet-item}><{start-bold}>Option 3: Subnets (Subnetworks):<{end-bold}> Logically segment traffic at Layer 3 (Network Layer) by defining IP ranges.<{end-bullet-item}><{end-ul}>These approaches can be used independently or combined for more complex setups.",
+  "tags": ["networking", "segmentation", "overview"]
+}
+,
+
+{
+  "id": "physical_segmentation",
+  "type": "basic",
+  "question": "What is physical segmentation in networking?",
+  "answer": "<{start-h2}>Physical Segmentation:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Definition:<{end-bold}> Physical segmentation isolates traffic using separate physical interfaces or ports. Devices are connected to distinct ports to create isolated network segments.<{end-bullet-item}><{bullet-item}><{start-bold}>Key Features:<{end-bold}><{end-bullet-item}><{start-ul}><{bullet-item}>Operates at Layer 1 (Physical Layer).<{end-bullet-item}><{bullet-item}>Does not require IP addressing or routing.<{end-bullet-item}><{bullet-item}>Traffic is isolated through hardware paths.<{end-bullet-item}><{end-ul}><{bullet-item}><{start-bold}>Pros:<{end-bold}> Simplifies traffic isolation, enhances security, avoids switch configuration.<{end-bullet-item}><{bullet-item}><{start-bold}>Cons:<{end-bold}> Limited flexibility, requires additional hardware (ports and cabling), less adaptable to changes.<{end-bullet-item}><{bullet-item}><{start-bold}>Example:<{end-bold}> Use `eth0` for one network segment and `eth1` for another, isolating them physically.<{end-bullet-item}><{end-ul}>",
+  "tags": ["networking", "physical_segmentation", "concept"]
+}
+
+,
+
+{
+  "id": "vlan_concept",
+  "type": "basic",
+  "question": "What is a VLAN (Virtual Local Area Network) in networking?",
+  "answer": "<{start-h2}>Virtual Local Area Network (VLAN):<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Definition:<{end-bold}> VLANs logically segment traffic at Layer 2 (Data Link Layer) within the same physical network.<{end-bullet-item}><{bullet-item}><{start-bold}>Key Features:<{end-bold}><{end-bullet-item}><{start-ul}><{bullet-item}>Operates at Layer 2.<{end-bullet-item}><{bullet-item}>Segments traffic logically within a switch.<{end-bullet-item}><{bullet-item}>Devices within the same VLAN can communicate without routing.<{end-bullet-item}><{end-ul}><{bullet-item}><{start-bold}>Pros:<{end-bold}> Highly flexible, allows logical segmentation without physical changes.<{end-bullet-item}><{bullet-item}><{start-bold}>Cons:<{end-bold}> Requires VLAN-capable switches and configuration.<{end-bullet-item}><{bullet-item}><{start-bold}>Example:<{end-bold}> Create VLAN 10 for the HR department and VLAN 20 for IT, isolating their traffic.<{end-bullet-item}><{end-ul}>",
+  "tags": ["networking", "vlan", "concept"]
+}
+,
+{
+  "id": "subnet_concept",
+  "type": "basic",
+  "question": "What is a subnet in networking?",
+  "answer": "<{start-h2}>Subnetwork (Subnet):<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Definition:<{end-bold}> A subnet divides a network into smaller logical sections at Layer 3 (Network Layer), using IP addresses and subnet masks.<{end-bullet-item}><{bullet-item}><{start-bold}>Key Features:<{end-bold}><{end-bullet-item}><{start-ul}><{bullet-item}>Operates at Layer 3.<{end-bullet-item}><{bullet-item}>Requires IP addressing and routing between subnets.<{end-bullet-item}><{bullet-item}>Used to organize and structure networks logically.<{end-bullet-item}><{end-ul}><{bullet-item}><{start-bold}>Pros:<{end-bold}> Helps with logical organization, enhances routing efficiency.<{end-bullet-item}><{bullet-item}><{start-bold}>Cons:<{end-bold}> Requires routers and careful IP planning.<{end-bullet-item}><{bullet-item}><{start-bold}>Example:<{end-bold}> Assign `192.168.1.0/24` to one department and `192.168.2.0/24` to another.<{end-bullet-item}><{end-ul}>",
+  "tags": ["networking", "subnet", "concept"]
+}
+,
+{
+  "id": "physical_segmentation_vs_vlan",
+  "type": "basic",
+  "question": "What is the difference between physical segmentation and VLANs?",
+  "answer": "<{start-h2}>Physical Segmentation vs. VLANs:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Physical Segmentation:<{end-bold}> Uses separate physical ports to isolate traffic.<{end-bullet-item}><{bullet-item}><{start-bold}>VLANs:<{end-bold}> Logically segments traffic within a switch at Layer 2.<{end-bullet-item}><{bullet-item}><{start-bold}>Key Differences:<{end-bold}><{end-bullet-item}><{start-ul}><{bullet-item}>Physical segmentation requires dedicated hardware; VLANs do not.<{end-bullet-item}><{bullet-item}>VLANs are more flexible and scalable.<{end-bullet-item}><{end-ul}>",
+  "tags": ["networking", "physical_segmentation", "vlan", "comparison"]
+}
+,
+{
+  "id": "physical_segmentation_vs_subnet",
+  "type": "basic",
+  "question": "What is the difference between physical segmentation and subnets?",
+  "answer": "<{start-h2}>Physical Segmentation vs. Subnets:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Physical Segmentation:<{end-bold}> Isolates traffic using separate physical ports (Layer 1).<{end-bullet-item}><{bullet-item}><{start-bold}>Subnets:<{end-bold}> Logically isolate traffic using IP ranges and routing (Layer 3).<{end-bullet-item}><{bullet-item}><{start-bold}>Key Differences:<{end-bold}><{end-bullet-item}><{start-ul}><{bullet-item}>Physical segmentation uses hardware; subnets use logical addressing.<{end-bullet-item}><{bullet-item}>Subnets require routing, while physical segmentation does not.<{end-bullet-item}><{end-ul}>",
+  "tags": ["networking", "physical_segmentation", "subnet", "comparison"]
+}
+,
+{
+  "id": "vlan_vs_subnet",
+  "type": "basic",
+  "question": "What is the difference between VLANs and subnets?",
+  "answer": "<{start-h2}>VLANs vs. Subnets:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>VLANs:<{end-bold}> Logically segment traffic at Layer 2 within a switch.<{end-bullet-item}><{bullet-item}><{start-bold}>Subnets:<{end-bold}> Logically segment traffic at Layer 3 using IP addresses.<{end-bullet-item}><{bullet-item}><{start-bold}>Key Differences:<{end-bold}><{end-bullet-item}><{start-ul}><{bullet-item}>VLANs control traffic within a switch; subnets organize IP traffic across networks.<{end-bullet-item}><{bullet-item}>Subnets require routing between segments; VLANs do not.<{end-bullet-item}><{end-ul}>",
+  "tags": ["networking", "vlan", "subnet", "comparison"]
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "id": "combining_network_segmentation_methods",
+  "type": "basic",
+  "question": "Can VLANs, subnets, and physical segmentation be combined in a network setup?",
+  "answer": "<{start-h2}>Combining Network Segmentation Methods:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Physical Segmentation + VLANs:<{end-bold}> Use VLANs on different physical interfaces for hierarchical isolation.<{end-bullet-item}><{bullet-item}><{start-bold}>VLANs + Subnets:<{end-bold}> Assign subnets to VLANs to manage traffic at both Layer 2 and Layer 3.<{end-bullet-item}><{bullet-item}><{start-bold}>Physical Segmentation + Subnets:<{end-bold}> Assign distinct IP subnets to devices on different physical interfaces.<{end-bullet-item}><{end-ul}>Combining methods enhances flexibility, scalability, and security in complex network setups.",
+  "tags": ["networking", "segmentation", "combined_methods"]
+}
+,
+{
+  "id": "choosing_network_segmentation_method",
+  "type": "basic",
+  "question": "How do you choose the best segmentation method for your network?",
+  "answer": "<{start-h2}>Choosing the Right Segmentation Method:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Physical Segmentation:<{end-bold}> Use for high-security setups or critical systems that need dedicated hardware.<{end-bullet-item}><{bullet-item}><{start-bold}>VLANs:<{end-bold}> Ideal for flexible, logical traffic separation in dynamic environments.<{end-bullet-item}><{bullet-item}><{start-bold}>Subnets:<{end-bold}> Best for organizing IP addressing and routing across a network.<{end-bullet-item}><{end-ul}>Consider scalability, security, and the complexity of your network when deciding.",
+  "tags": ["networking", "segmentation", "choosing_methods"]
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       "id": "multiple_ips_per_interface",
       "type": "basic",
       "question": "Can a single device have multiple IP addresses across different interfaces? How is this configured?",
-      "answer": "Yes, a single device can have multiple IP addresses, one for each network interface. Each interface (e.g., `eth0`, `wlp3s0`) can be configured independently with its own:<br><{break}><{bullet-item}>IP address<{end-bullet-item}><{break}><{bullet-item}>Subnet mask<{end-bullet-item}><{break}><{bullet-item}>Gateway and DNS settings<{end-bullet-item}><br><{break}><{break}>For example, using `nmcli`:<br><{break}><{start-terminal}>sudo nmcli connection modify 'eth0' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><br><{break}><{start-terminal}>sudo nmcli connection modify 'wlp3s0' ipv4.method manual ipv4.addresses 192.168.2.50/24 ipv4.gateway 192.168.2.1 ipv4.dns 8.8.4.4 connection.autoconnect yes<{end-terminal}>",
+      "answer": "<{start-h2}>Configuring Multiple IPs Across Interfaces:<{end-h2}><{break}><{break}><{bullet-item}>Yes, a single device can have multiple IP addresses, one for each network interface.<{end-bullet-item}><{break}><{start-ol}><{start-numbered-item}>Each interface (e.g., `eth0`, `wlp3s0`) can be configured independently with:<{end-numbered-item}><{start-ul}><{bullet-item}>An IP address<{end-bullet-item}><{bullet-item}>A subnet mask<{end-bullet-item}><{bullet-item}>Gateway and DNS settings<{end-bullet-item}><{end-ul}><{start-numbered-item}>Example Configuration Using `nmcli`:<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection modify 'eth0' ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}>This command configures the following for `eth0`:<{start-ul}><{bullet-item}><{start-bold}>IP address:<{end-bold}> `192.168.1.100/24` (IP with subnet mask).<{end-bullet-item}><{bullet-item}><{start-bold}>Gateway:<{end-bold}> `192.168.1.1` (default route).<{end-bullet-item}><{bullet-item}><{start-bold}>DNS server:<{end-bold}> `8.8.8.8` (Google's DNS).<{end-bullet-item}><{bullet-item}><{start-bold}>Autoconnect:<{end-bold}> Ensures the connection is reactivated automatically at startup.<{end-bullet-item}><{end-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection modify 'wlp3s0' ipv4.method manual ipv4.addresses 192.168.2.50/24 ipv4.gateway 192.168.2.1 ipv4.dns 8.8.4.4 connection.autoconnect yes<{end-terminal}><{break}>This command configures the following for `wlp3s0`:<{start-ul}><{bullet-item}><{start-bold}>IP address:<{end-bold}> `192.168.2.50/24`.<{end-bullet-item}><{bullet-item}><{start-bold}>Gateway:<{end-bold}> `192.168.2.1`.<{end-bullet-item}><{bullet-item}><{start-bold}>DNS server:<{end-bold}> `8.8.4.4` (Google's secondary DNS).<{end-bullet-item}><{bullet-item}><{start-bold}>Autoconnect:<{end-bold}> Ensures the connection starts on boot.<{end-bullet-item}><{end-ul}><{end-ul}><{start-numbered-item}>Notes:<{end-numbered-item}><{start-ul}><{bullet-item}>Each interface must belong to a different subnet to avoid routing conflicts.<{end-bullet-item}><{bullet-item}>The gateway and DNS settings for each interface are specific to their respective subnets.<{end-bullet-item}><{bullet-item}>You can add more interfaces using the same method, each with unique IP settings.<{end-bullet-item}><{end-ul}><{end-ol}>",
       "tags": [
-        "interfaces"
+        "interfaces",
+        "networking",
+        "linux"
       ]
     },
     {
-      "id": "port_aggregation_ip_assignment",
+      "id": "port_aggregation_overview",
       "type": "basic",
-      "question": "How is IP assignment handled when using port aggregation (e.g., LACP)?",
-      "answer": "<{start-h2}>IP Assignment with Port Aggregation:<{end-h2}><{break}><{break}><{bullet-item}>Port aggregation combines multiple physical interfaces (e.g., `eth0`, `eth1`) into a single logical interface (e.g., `bond0`).<{end-bullet-item}><{break}><{bullet-item}>The IP address is assigned to the logical interface (`bond0`), not the individual physical interfaces.<{end-bullet-item}><{break}><{break}><{start-h3}>Configuration Example (Using NetworkManager):<{end-h3}><{break}> <{start-ol}> <{start-numbered-item}> Create a Bond Interface (bond0) <{end-numbered-item}> <{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{end-terminal}><{break}> <{bullet-item}> <{start-bold}> type bond: <{end-bold}> Specifies that we are creating a bonding connection. <{end-bullet-item}> <{bullet-item}> <{start-bold}> con-name bond0: <{end-bold}> Names the connection as bond0. <{end-bullet-item}> <{bullet-item}> <{start-bold}> ifname bond0: <{end-bold}> Defines the logical interface name. <{end-bullet-item}> <{bullet-item}> <{start-bold}> mode active-backup: <{end-bold}> Sets the bonding mode. In active-backup, one interface is active while the other is on standby. If the active interface fails, the standby interface takes over. <{end-bullet-item}> <{start-numbered-item}> Add Physical Interfaces to the Bond: <{end-numbered-item}> Adding eth0: <{break}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{end-terminal}><{break}> Adding eth1: <{break}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{end-terminal}><{break}> These commands link the physical interfaces (eth0 and eth1) to the bond (bond0). <{start-numbered-item}> Assign IP Address and Configure Network Settings: <{end-numbered-item}> <{break}><{start-terminal}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{break}> <{bullet-item}> <{start-bold}> ipv4.method manual: <{end-bold}> Sets manual IP assignment. <{end-bullet-item}> <{bullet-item}> <{start-bold}> ipv4.addresses 192.168.1.100/24: <{end-bold}> Assigns the IP address with a subnet mask. <{end-bullet-item}> <{bullet-item}> <{start-bold}> ipv4.gateway 192.168.1.1: <{end-bold}> Sets the default gateway. <{end-bullet-item}> <{bullet-item}> <{start-bold}> ipv4.dns 8.8.8.8: <{end-bold}> Configures the DNS server (Google DNS in this case). <{end-bullet-item}> <{bullet-item}> <{start-bold}> connection.autoconnect yes: <{end-bold}> Ensures the connection starts automatically on boot. <{end-bullet-item}> <{start-numbered-item}> Activate the Bond Interface: <{end-numbered-item}> <{break}><{start-terminal}>sudo nmcli connection up bond0<{end-terminal}><{end-ol}>",
+      "question": "What is port aggregation and what are the common bonding modes?",
+      "answer": "<{start-h2}>Port Aggregation Overview:<{end-h2}><{break}>Port aggregation allows combining multiple network interfaces into a single logical interface to improve redundancy and bandwidth.<{break}><{start-h3}>Common Bonding Modes:<{end-h3}><{start-ul}><{bullet-item}><{start-bold}>active-backup:<{end-bold}> One interface active; others on standby.<{end-bullet-item}><{bullet-item}><{start-bold}>balance-rr:<{end-bold}> Round-robin transmission.<{end-bullet-item}><{bullet-item}><{start-bold}>balance-xor:<{end-bold}> Transmit based on XOR formula.<{end-bullet-item}><{bullet-item}><{start-bold}>802.3ad (LACP):<{end-bold}> Dynamic link aggregation using LACP.<{end-bullet-item}><{end-ul}>",
       "tags": [
         "linux",
         "networking",
         "port_aggregation"
       ]
     },
-
-{
-  "id": "port_aggregation_ip_assignment",
-  "type": "basic",
-  "question": "How is IP assignment handled when using port aggregation (e.g., LACP)?",
-  "answer": "<{start-h2}>IP Assignment with Port Aggregation:<{end-h2}><{break}><{break}><{start-ol}><{start-numbered-item}>Create a Bond Interface (bond0):<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-bold}>type bond:<{end-bold}> Specifies a bonding connection.<{end-bullet-item}><{bullet-item}><{start-bold}>mode active-backup:<{end-bold}> Sets bonding mode where one interface is active, the other is on standby.<{end-bullet-item}><{end-ul}><{start-numbered-item}>Add Physical Interfaces to the Bond:<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{end-terminal}><{end-bullet-item}><{bullet-item}>Links physical interfaces (eth0, eth1) to the bond (bond0).<{end-bullet-item}><{end-ul}><{start-numbered-item}>Assign IP Address and Configure Network Settings:<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-bold}>ipv4.method manual:<{end-bold}> Manual IP assignment.<{end-bullet-item}><{bullet-item}><{start-bold}>ipv4.gateway 192.168.1.1:<{end-bold}> Sets the gateway.<{end-bullet-item}><{end-ul}><{start-numbered-item}>Activate the Bond Interface:<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection up bond0<{end-terminal}><{end-bullet-item}><{end-ul}><{start-h3}>Bonding Modes:<{end-h3}><{start-ul}><{bullet-item}><{start-bold}>active-backup:<{end-bold}> One interface active; others on standby.<{end-bullet-item}><{bullet-item}><{start-bold}>balance-rr:<{end-bold}> Round-robin transmission.<{end-bullet-item}><{bullet-item}><{start-bold}>balance-xor:<{end-bold}> Transmit based on XOR formula.<{end-bullet-item}><{bullet-item}><{start-bold}>802.3ad (LACP):<{end-bold}> Dynamic link aggregation using LACP.<{end-bullet-item}><{end-ul}>",
-  "tags": [
-    "linux",
-    "networking",
-    "port_aggregation"
-  ]
-}
-,
     {
+      "id": "configure_bond_interface",
+      "type": "basic",
+      "question": "How do you configure a bond interface in Linux?",
+      "answer": "<{start-h2}>Configuring a Bond Interface:<{end-h2}><{start-ol}><{start-numbered-item}>Create a Bond Interface (e.g., bond0):<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup<{end-terminal}><{end-bullet-item}><{end-ul}><{start-numbered-item}>Add Physical Interfaces to the Bond:<{end-numbered-item}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{end-terminal}><{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "linux",
+        "networking",
+        "port_aggregation"
+      ]
+    },
+    {
+      "id": "manual_ip_assignment_bond",
+      "type": "basic",
+      "question": "How is IP assigned manually to a bond interface?",
+      "answer": "<{start-h2}>Manual IP Assignment for a Bond Interface:<{end-h2}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8 connection.autoconnect yes<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-bold}>ipv4.method manual:<{end-bold}> Manual IP assignment.<{end-bullet-item}><{bullet-item}><{start-bold}>ipv4.gateway 192.168.1.1:<{end-bold}> Sets the gateway.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "linux",
+        "networking",
+        "ip_assignment"
+      ]
+    },
+    {
+      "id": "dhcp_ip_assignment_bond",
+      "type": "basic",
+      "question": "How is IP assigned dynamically to a bond interface using DHCP?",
+      "answer": "<{start-h2}>Dynamic IP Assignment with DHCP:<{end-h2}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection modify bond0 ipv4.method auto connection.autoconnect yes<{end-terminal}><{end-bullet-item}><{bullet-item}><{start-bold}>ipv4.method auto:<{end-bold}> Enables DHCP for dynamic IP assignment.<{end-bullet-item}><{bullet-item}><{start-bold}>connection.autoconnect yes:<{end-bold}> Ensures the bond interface starts automatically.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "linux",
+        "networking",
+        "ip_assignment"
+      ]
+    },
+    {
+      "id": "activate_bond_interface",
+      "type": "basic",
+      "question": "How do you activate a bond interface after configuration?",
+      "answer": "<{start-h2}>Activating a Bond Interface:<{end-h2}><{start-ul}><{bullet-item}><{start-terminal}>sudo nmcli connection up bond0<{end-terminal}><{end-bullet-item}><{bullet-item}>This command brings the bond interface online and applies the network settings.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "linux",
+        "networking",
+        "port_aggregation"
+      ]
+    },
+    {
+      "id": "multiple_network_outlets_overview",
+      "type": "basic",
+      "question": "If your device offers multiple network outlets, what are the main configuration options?",
+      "answer": "<{start-h2}>Overview of Multiple Network Outlets:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Option 1:<{end-bold}> Configure interfaces independently to participate in distinct VLANs or subnets.<{end-bullet-item}><{bullet-item}><{start-bold}>Option 2:<{end-bold}> Use port aggregation (bonding).<{end-bullet-item}><{bullet-item}><{start-bold}>Option 3:<{end-bold}> Use bridge or switch mode.<{end-bullet-item}><{end-ul}>Each option has specific use cases.",
+      "tags": [
+        "networking",
+        "interfaces"
+      ]
+    },
+    {
+      "id": "configure_interfaces_independently",
+      "type": "basic",
+      "question": "How do you configure network interfaces independently, and when should this option be used?",
+      "answer": "<{start-h2}>Option 1: Configuring Interfaces Independently:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Use Cases:<{end-bold}> Connecting to multiple distinct networks or isolating traffic.<{end-bullet-item}><{bullet-item}><{start-bold}>Pros:<{end-bold}> Flexibility and clear traffic segregation.<{end-bullet-item}><{bullet-item}><{start-bold}>Cons:<{end-bold}> Higher complexity and no bandwidth aggregation.<{end-bullet-item}><{bullet-item}><{start-bold}>Example:<{end-bold}> Assign `192.168.1.100` to `eth0` for an internal network and `10.0.0.50` to `eth1` for an external network.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "networking",
+        "interfaces"
+      ]
+    },
+    {
+      "id": "port_aggregation_bonding",
+      "type": "basic",
+      "question": "What is port aggregation (bonding), and when is it used?",
+      "answer": "<{start-h2}>Option 2: Port Aggregation (Bonding):<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Use Cases:<{end-bold}> Aggregating bandwidth or ensuring redundancy.<{end-bullet-item}><{bullet-item}><{start-bold}>Pros:<{end-bold}> Single IP address simplifies configuration, and it provides redundancy and better performance.<{end-bullet-item}><{bullet-item}><{start-bold}>Cons:<{end-bold}> Requires switch support and all interfaces must connect to the same network.<{end-bullet-item}><{bullet-item}><{start-bold}>Example:<{end-bold}> Combine `eth0` and `eth1` into `bond0` with a single IP.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "networking",
+        "interfaces",
+        "port_aggregation"
+      ]
+    },
+    {
+      "id": "bridge_switch_mode",
+      "type": "basic",
+      "question": "What is bridge or switch mode, and when should it be used?",
+      "answer": "<{start-h2}>Option 3: Bridge or Switch Mode:<{end-h2}><{start-ul}><{bullet-item}><{start-bold}>Bridge:<{end-bold}> Connects a single device or network segment.<{end-bullet-item}><{bullet-item}><{start-bold}>Switch:<{end-bold}> Connects multiple devices or segments and forwards traffic.<{end-bullet-item}><{bullet-item}><{start-bold}>Use Cases:<{end-bold}> Extending networks or connecting additional devices without creating new IP configurations.<{end-bullet-item}><{bullet-item}><{start-bold}>Pros:<{end-bold}> Simplifies network extension.<{end-bullet-item}><{bullet-item}><{start-bold}>Cons:<{end-bold}> May introduce latency and doesn't allow routing for downstream devices.<{end-bullet-item}><{bullet-item}><{start-bold}>Example:<{end-bold}> Use `eth0` for the primary network and `eth1` to connect another device through the bridge.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "networking",
+        "interfaces",
+        "bridge"
+      ]
+    },
+    {
+      "id": "key_considerations_network_outlets",
+      "type": "basic",
+      "question": "What are the key considerations for choosing a configuration for multiple network outlets?",
+      "answer": "<{start-h2}>Key Considerations:<{end-h2}><{start-ul}><{bullet-item}>Use independent configurations when connecting to distinct networks or VLANs.<{end-bullet-item}><{bullet-item}>Use port aggregation when you need higher bandwidth or redundancy and the interfaces connect to the same network.<{end-bullet-item}><{bullet-item}>Use bridge/switch mode to extend a network or connect additional devices without creating new IP configurations.<{end-bullet-item}><{bullet-item}>Balance simplicity, performance, and scalability based on the application's needs.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "networking",
+        "interfaces",
+        "configuration"
+      ]
+    },
+    {
+      "id": "lacp_overview",
+      "type": "basic",
+      "question": "What is LACP, and why is it used in networking?",
+      "answer": "<{start-h2}>LACP: Link Aggregation Control Protocol<{end-h2}><{break}><{break}><{bullet-item}>LACP (Link Aggregation Control Protocol) is a standardized protocol defined by IEEE 802.3ad (now IEEE 802.1AX).<{end-bullet-item}><{bullet-item}>It is used to combine multiple physical network interfaces into a single logical link.<{end-bullet-item}><{break}><{start-bold}>Benefits:<{end-bold}><{break}><{start-ul}><{bullet-item}><{start-bold}>Increased Bandwidth:<{end-bold}> Combines multiple links into one logical connection.<{end-bullet-item}><{bullet-item}><{start-bold}>Redundancy:<{end-bold}> Provides failover capability in case a link fails.<{end-bullet-item}><{bullet-item}><{start-bold}>Dynamic Configuration:<{end-bold}> Automatically negotiates link aggregation between devices.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "networking",
+        "lacp",
+        "link_aggregation"
+      ]
+    },
+    {
+      "id": "lacp_how_it_works",
+      "type": "basic",
+      "question": "How does LACP negotiate and maintain link aggregation?",
+      "answer": "<{start-h2}>How LACP Works<{end-h2}><{break}><{break}><{bullet-item}>LACP negotiates link aggregation between devices using <{start-bold}>Active<{end-bold}> and <{start-bold}>Passive<{end-bold}> modes:<{end-bullet-item}><{start-ul}><{bullet-item}><{start-bold}>Active Mode:<{end-bold}> The device actively initiates LACP negotiation.<{end-bullet-item}><{bullet-item}><{start-bold}>Passive Mode:<{end-bold}> The device responds to LACP requests but does not initiate.<{end-bullet-item}><{bullet-item}>At least one device must be in Active Mode for LACP to establish the aggregation.<{end-bullet-item}><{end-ul}><{break}><{start-bold}>Dynamic Adjustment:<{end-bold}><{break}><{bullet-item}>If one link fails, LACP automatically redistributes traffic across the remaining links without interruption.<{end-bullet-item}>",
+      "tags": [
+        "networking",
+        "lacp",
+        "link_aggregation"
+      ]
+    },
+    {
+      "id": "lacp_use_cases",
+      "type": "basic",
+      "question": "What are the common use cases for LACP in networking?",
+      "answer": "<{start-h2}>LACP Use Cases<{end-h2}><{break}><{break}><{start-ul}><{bullet-item}><{start-bold}>Increased Bandwidth:<{end-bold}> Combining multiple 1 Gbps links to create a higher-bandwidth logical link (e.g., 4 Gbps).<{end-bullet-item}><{bullet-item}><{start-bold}>Redundancy:<{end-bold}> Ensures continuous service by failing over to available links when one fails.<{end-bullet-item}><{bullet-item}><{start-bold}>Simplified Management:<{end-bold}> Consolidates multiple physical links into a single logical interface, reducing routing and switching complexity.<{end-bullet-item}><{end-ul}>",
+      "tags": [
+        "networking",
+        "lacp",
+        "use_cases"
+      ]
+    },
+    {
+      "id": "lacp_configuration",
+      "type": "basic",
+      "question": "How do you configure LACP on a Linux device using `nmcli`?",
+      "answer": "<{start-h2}>Configuring LACP with `nmcli`<{end-h2}><{break}><{break}><{start-terminal}>sudo nmcli connection add type bond con-name bond0 ifname bond0 mode 802.3ad<{end-terminal}><{break}><{bullet-item}>This creates a bonded logical interface named `bond0` in LACP mode (802.3ad).<{end-bullet-item}><{break}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth0 ifname eth0 master bond0<{end-terminal}><{break}><{bullet-item}>This adds the first physical interface (`eth0`) as a slave to the bonded interface (`bond0`).<{end-bullet-item}><{break}><{start-terminal}>sudo nmcli connection add type ethernet con-name slave-eth1 ifname eth1 master bond0<{end-terminal}><{break}><{bullet-item}>This adds the second physical interface (`eth1`) as a slave to the bonded interface (`bond0`).<{end-bullet-item}><{break}><{start-terminal}>sudo nmcli connection modify bond0 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8<{end-terminal}><{break}><{bullet-item}>This assigns a static IP address (`192.168.1.100`), gateway (`192.168.1.1`), and DNS server (`8.8.8.8`) to the bonded interface (`bond0`).<{end-bullet-item}><{break}><{start-terminal}>sudo nmcli connection up bond0<{end-terminal}><{break}><{bullet-item}>This activates the bonded interface, making it operational.<{end-bullet-item}>",
+      "tags": [
+        "networking",
+        "lacp",
+        "configuration",
+        "linux"
+      ]
+    },
+    {
+      "id": "lacp_vs_static",
+      "type": "basic",
+      "question": "What is the difference between LACP and static link aggregation?",
+      "answer": "<{start-h2}>LACP vs. Static Link Aggregation<{end-h2}><{break}><{break}><{start-table}><{start-tr}><{start-td}><{start-bold}>Feature<{end-bold}><{end-td}><{start-td}><{start-bold}>LACP<{end-bold}><{end-td}><{start-td}><{start-bold}>Static Aggregation<{end-bold}><{end-td}><{end-tr}><{start-tr}><{start-td}>Negotiation<{end-td}><{start-td}>Dynamic (auto-negotiation)<{end-td}><{start-td}>Manual (requires exact configuration)<{end-td}><{end-tr}><{start-tr}><{start-td}>Fault Tolerance<{end-td}><{start-td}>Automatically handles link failures<{end-td}><{start-td}>No built-in mechanism<{end-td}><{end-tr}><{start-tr}><{start-td}>Switch Requirement<{end-td}><{start-td}>Requires LACP support on the switch<{end-td}><{start-td}>Works with switches without LACP<{end-td}><{end-tr}><{start-tr}><{start-td}>Ease of Configuration<{end-td}><{start-td}>Easier, as it negotiates automatically<{end-td}><{start-td}>Harder, requires precise setup<{end-td}><{end-tr}><{end-table}>",
+      "tags": [
+        "networking",
+        "lacp",
+        "static_aggregation",
+        "comparison"
+      ]
+    },
+
+
+ {
       "id": "network_management_tools_overview",
       "type": "basic",
       "question": "What tools are available for network management across Linux distributions, and where are they used?",
